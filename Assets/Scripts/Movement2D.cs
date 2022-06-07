@@ -7,6 +7,22 @@ namespace herath{
     {
 
         public float Speed;
+        public Vector3 jump;
+        public float jumpForce = 2.0f;
+     
+        public bool isGrounded;
+        Rigidbody rb;
+
+        void Start(){
+             rb = GetComponent<Rigidbody>();
+             jump = new Vector3(0.0f, 2.0f, 0.0f);
+         }
+
+
+        void OnCollisionStay()
+         {
+             isGrounded = true;
+         }
 
         // Update is called once per frame
         void Update()
@@ -24,6 +40,11 @@ namespace herath{
             if(VirtualInputManager.Instance.MoveLeft){
                 this.gameObject.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
                 this.gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            }
+
+            if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
+                 rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+                 isGrounded = false;
             }
 
         }
