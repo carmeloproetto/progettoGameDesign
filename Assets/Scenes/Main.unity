@@ -280,6 +280,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueChoiceButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3365769474238233701, guid: 9182d879243c8d746a71e684f8820a8a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9182d879243c8d746a71e684f8820a8a, type: 3}
 --- !u!1 &705507993
@@ -511,7 +515,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Choice: {fileID: 122305907}
-  m_DialogueChannel: {fileID: 11400000, guid: 088f744e9a030fc4ba4182c851bbd3a6, type: 2}
+  m_DialogueChannel: {fileID: 0}
 --- !u!1 &2033640915
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3365769474238233696}
   - component: {fileID: 3365769474238233699}
   - component: {fileID: -4276328595951557211}
-  - component: {fileID: -3295141226617726669}
+  - component: {fileID: 2905806120199136604}
   m_Layer: 5
   m_Name: DialogueChoiceButton
   m_TagString: Untagged
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
---- !u!114 &-3295141226617726669
+--- !u!114 &2905806120199136604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,11 +152,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 3365769474238233701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01a082f614dbf6d45bda4946658757c8, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c84fe662f34ef343b90c62d710c5100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Choice: {fileID: 3365769475912324031}
-  m_DialogueChannel: {fileID: 11400000, guid: 20e76ab5c4289f240b52438dbb95e083, type: 2}
+  m_DialogueChannel: {fileID: 11400000, guid: 088f744e9a030fc4ba4182c851bbd3a6, type: 2}
 --- !u!1 &3365769475912324017
 GameObject:
   m_ObjectHideFlags: 0
