@@ -20,6 +20,7 @@ public class PlayerAnimationController : MonoBehaviour
     }
 
     // Update is called once per frame
+    //serve per animare la camminata
     void Update()
     {
         float h = Input.GetAxis("Horizontal");
@@ -29,7 +30,7 @@ public class PlayerAnimationController : MonoBehaviour
 
 
       if(input_script.MoveRight){
-  
+
             _animator.SetFloat("speed", _inputSpeed);
         }
 
