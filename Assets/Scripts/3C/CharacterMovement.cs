@@ -41,14 +41,14 @@ public class CharacterMovement : MonoBehaviour
         //rotazione personaggio
         if(VirtualInputManager.Instance.MoveRight){
             // this.gameObject.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
-            this.gameObject.transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+            this.gameObject.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
             
         }
 
         //rotazione personaggio
         if(VirtualInputManager.Instance.MoveLeft){
             // this.gameObject.transform.Translate(Vector3.forward * Speed * Time.deltaTime);
-            this.gameObject.transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+            this.gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
         }
 
 
