@@ -12,13 +12,14 @@ public class triggerStartFall : MonoBehaviour
        pressSpace = false; 
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void OnTriggerExit(Collider other)
     {
-        
+        if(other.CompareTag("Padre_bambino"))
+        {
+            Debug.Log("Collision Detected"); 
+            
+        }
     }
 
-    void OnCollisionEnter (Collision other){
-        pressSpace = true;
-    }
 }
