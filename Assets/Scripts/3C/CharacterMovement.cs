@@ -13,11 +13,14 @@ public class CharacterMovement : MonoBehaviour
     private Vector3 _inputVector;
     private float _inputSpeed;
 
+    private float z, y;
 
     private void Start()
     {
         m_CharacterController = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
+        z = gameObject.transform.position.z;
+        y = gameObject.transform.position.y;
     }
 
     private void Update()
@@ -55,7 +58,8 @@ public class CharacterMovement : MonoBehaviour
         Vector3 movement = /*forward * moveAxisY +*/ right * moveAxisX;
 
         m_CharacterController.Move(movement);
-
+        gameObject.transform.position = new Vector3(moveAxisX, y, z);
+       
 
     }
 

@@ -13,12 +13,20 @@ public class triggerStartFall : MonoBehaviour
     }
 
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Player"))
+        {
+            Debug.Log("Enter");
+            pressSpace = true;         }
+    }
+
     private void OnTriggerExit(Collider other)
     {
-        if(other.CompareTag("Padre_bambino"))
+        if(other.CompareTag("Player"))
         {
-            Debug.Log("Collision Detected"); 
-            
+            Debug.Log("Exit");
+            pressSpace = false;    
         }
     }
 
