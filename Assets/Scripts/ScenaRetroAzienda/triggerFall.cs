@@ -18,6 +18,11 @@ public class triggerFall : MonoBehaviour
     {
         if(Input.GetKeyDown("space") && trigger_script.pressSpace == true){
             GetComponent<Animator>().Play("CadutaBarile");
+            // GetComponent<Animator>().enabled = false;
         }  
+    }
+
+    void disableAnimator(){
+        GetComponent<Animator>().enabled = false;
     }
 }

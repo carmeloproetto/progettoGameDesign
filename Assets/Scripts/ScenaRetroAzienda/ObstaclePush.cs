@@ -12,7 +12,7 @@ public class ObstaclePush : MonoBehaviour
 
         if(rigidbody != null){
             Vector3 forceDirection = hit.gameObject.transform.position - transform.position;
-            forceDirection.y = 0;
+            forceDirection.x = 0;
             forceDirection.Normalize();
 
             rigidbody.AddForceAtPosition(forceDirection * forceMagnitude, transform.position, ForceMode.Impulse);
