@@ -16,7 +16,7 @@ public class triggerFall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && trigger_script.pressSpace == true){
+        if(Input.GetKeyDown("space") && trigger_script.pressSpace == true){
             GetComponent<Animator>().Play("CadutaBarile");
         }  
     }
