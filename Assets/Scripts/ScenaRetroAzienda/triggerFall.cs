@@ -8,15 +8,19 @@ public class triggerFall : MonoBehaviour
     private triggerStartFall trigger_script;
     public GameObject trigger_object;
 
+    public bool startAnimation;
+
     public void Start()
     {
         trigger_script = trigger_object.GetComponent<triggerStartFall>();
+        startAnimation = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("space") && trigger_script.pressSpace == true){
+        if(Input.GetKeyDown("k") && trigger_script.pressSpace == true){
+            startAnimation = true;
             GetComponent<Animator>().Play("CadutaBarile");
             // GetComponent<Animator>().enabled = false;
         }  

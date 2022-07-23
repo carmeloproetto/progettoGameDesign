@@ -9,34 +9,25 @@ public class PlayerAnimationController : MonoBehaviour
     private float _inputSpeed;
     private Vector3 _inputVector;
 
-    public GameObject VirtualInputManager;
-    private VirtualInputManager input_script;
+    public GameObject obj;
+    private triggerFall script;
 
     // Start is called before the first frame update
     void Start()
     {
         _animator = GetComponent<Animator>();
-        input_script = VirtualInputManager.GetComponent<VirtualInputManager>();
+        script = obj.GetComponent<triggerFall>();
     }
 
     // Update is called once per frame
     //serve per animare la camminata
     void Update()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
-        _inputVector = new Vector3(h, 0, v);
-        _inputSpeed = Mathf.Clamp(_inputVector.magnitude, 0f, 1f);
 
-
-      if(input_script.MoveRight){
-
-            _animator.SetFloat("speed", _inputSpeed);
+      if(script.startAnimation == true){
+            _animator.SetBool("kPress", true);
+           // _animator.SetBool("kPress", false);
         }
 
-        if(input_script.MoveLeft){
-    
-            _animator.SetFloat("speed", _inputSpeed);
-        }  
     }
 }
