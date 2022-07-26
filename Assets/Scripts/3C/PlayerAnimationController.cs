@@ -28,6 +28,8 @@ public class PlayerAnimationController : MonoBehaviour
             _animator.SetBool("kPress", true);
            // _animator.SetBool("kPress", false);
         }
+    else
+        _animator.SetBool("kPress", false);
 
     }
 }

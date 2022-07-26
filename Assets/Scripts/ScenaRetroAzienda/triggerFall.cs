@@ -28,5 +28,6 @@ public class triggerFall : MonoBehaviour
 
     void disableAnimator(){
         GetComponent<Animator>().enabled = false;
+        startAnimation = false;
     }
 }
