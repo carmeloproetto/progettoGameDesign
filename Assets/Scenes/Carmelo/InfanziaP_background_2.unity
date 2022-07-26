@@ -117,7 +117,7 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    accuratePlacement: 1
     maxJobWorkers: 0
     preserveTilesOutsideBounds: 0
     debug:
@@ -11046,7 +11046,6 @@ GameObject:
   - component: {fileID: 460773181}
   - component: {fileID: 460773180}
   - component: {fileID: 460773179}
-  - component: {fileID: 460773182}
   m_Layer: 0
   m_Name: floor
   m_TagString: Untagged
@@ -11130,22 +11129,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460773177}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!208 &460773182
-NavMeshObstacle:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 460773177}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Shape: 1
-  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
-  m_MoveThreshold: 0.1
-  m_Carve: 0
-  m_CarveOnlyStationary: 1
-  m_Center: {x: 0, y: 0, z: 0}
-  m_TimeToStationary: 0.5
 --- !u!1 &467117972
 GameObject:
   m_ObjectHideFlags: 0
@@ -43688,7 +43671,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4416926081881403853}
   m_LocalRotation: {x: -0, y: -0.993875, z: -0, w: -0.11050988}
-  m_LocalPosition: {x: -123.61, y: 10, z: 4.02}
+  m_LocalPosition: {x: -124.37, y: 10.097, z: 4.67}
   m_LocalScale: {x: 0.9469125, y: 0.9469125, z: 0.9469125}
   m_Children:
   - {fileID: 8338988566269331601}
@@ -44005,6 +43988,8 @@ MonoBehaviour:
   BottomClamp: -30
   CameraAngleOverride: 0
   LockCameraPosition: 0
+  destination: {fileID: 131300290}
+  MoveSpeed2: 2
 --- !u!143 &4416926081881403847
 CharacterController:
   m_ObjectHideFlags: 0
@@ -44041,6 +44026,8 @@ GameObject:
   - component: {fileID: 4416926081881403854}
   - component: {fileID: 4416926081881403855}
   - component: {fileID: 4416926081881403856}
+  - component: {fileID: 4416926081881403857}
+  - component: {fileID: 4416926081881403858}
   m_Layer: 8
   m_Name: PlayerArmature
   m_TagString: Player
@@ -44055,7 +44042,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4416926081881403853}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9010a039545061249b8c5f471adc04f8, type: 3}
   m_Name: 
@@ -44082,7 +44069,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4416926081881403853}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.3
   m_Speed: 1
@@ -44097,6 +44084,36 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &4416926081881403857
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926081881403853}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  m_Radius: 0.4
+  m_Height: 2.208998
+  m_Direction: 1
+  m_Center: {x: -0, y: 1.1273923, z: 0}
+--- !u!114 &4416926081881403858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4416926081881403853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733e267d04c1590428074983d2636eee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 131300290}
+  SnapToTarget: 0
+  RotationSpeed: 2
+  MovementSpeed: 4
 --- !u!137 &4529028009782754052
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0

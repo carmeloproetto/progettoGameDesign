@@ -110,6 +110,14 @@ namespace StarterAssets
 
         private bool _hasAnimator;
 
+
+        //trigger movimento automatico 
+        public GameObject destination;
+        private bool block_move;
+        public float MoveSpeed2 = 0;
+        private float gravity = 3;
+        private Vector3 moveDirection;
+
         private bool IsCurrentDeviceMouse
         {
             get
@@ -130,6 +138,8 @@ namespace StarterAssets
             {
                 _mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
             }
+
+            block_move = false;
         }
 
         private void Start()
@@ -158,7 +168,10 @@ namespace StarterAssets
 
             JumpAndGravity();
             GroundedCheck();
-            Move();
+            if(block_move == false)
+                Move();
+            else
+                ReachDestination();
         }
 
         private void LateUpdate()
@@ -210,6 +223,23 @@ namespace StarterAssets
             CinemachineCameraTarget.transform.rotation = Quaternion.Euler(_cinemachineTargetPitch + CameraAngleOverride,
                 _cinemachineTargetYaw, 0.0f);
         }
+
+
+        private void ReachDestination(){
+            if(_controller.isGrounded){
+                float moveX = destination.transform.position.x;
+                float moveZ = destination.transform.position.z;
+
+                moveDirection = new Vector3(moveX, 0, moveZ);
+                moveDirection *= MoveSpeed2;
+                
+                
+            }
+            moveDirection.y -= gravity;
+            _controller.Move(moveDirection * Time.deltaTime);
+        }
+
+
 
         private void Move()
         {
