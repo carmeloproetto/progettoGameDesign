@@ -4,62 +4,45 @@ using UnityEngine;
 
 public class TargetFollower : MonoBehaviour
 {
-    public GameObject Target;
-    public bool SnapToTarget = false;
+    public Transform target;
+    public float speed;
 
-    public float RotationSpeed = 2f;
-    public float MovementSpeed = 4f;
+    public Transform barrel;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Target not assigned through the inspector
-        /*if(Target == null)
-        {
-            //Search Target with Tag
-            //Target = GameObject.FindGameObjectWithTag("Target");
-            
-            //Search Target with GameObject Name
-            //This method should be avoided
-            //Target = GameObject.Find("Target");
+    private Animator _animator;
 
-            //Search Target GameObject with associated class
-            //Finding GameObject with associated scripts is the most robust and secure way
-            
-            SimpleTarget simpleTarget = GameObject.FindObjectOfType<SimpleTarget>();
-            if (simpleTarget != null)
-            {
-                Target = simpleTarget.gameObject;
-            }
-            
+    public GameObject barrel4;
+    private Animator barrelAnimator;
+    
 
-        }*/
-
-        //Snap to target is only for demonstration purposes: SnapToTarget should ALWAYS be false
-        if(SnapToTarget && Target != null)
-            gameObject.transform.position = Target.transform.position;
+    void Start(){
+        _animator = GetComponent<Animator>();
+        barrelAnimator = barrel4.GetComponent<Animator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (SnapToTarget)
-            return;
+    void FixedUpdate(){
+        Vector3 a = transform.position;
+        Vector3 b = target.position;
+        //transform.LookAt(target);
+        transform.position = Vector3.MoveTowards(a, b, speed);
+        
 
-        //Compute target direction
-        Vector3 targetDirection = Target.transform.position - transform.position;
-        targetDirection.y = 0f;
-        targetDirection.Normalize();
 
-        //Rotate toward target direction
-        float rotationStep = RotationSpeed * Time.deltaTime;
-        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, rotationStep, 0.0f);
-        transform.rotation = Quaternion.LookRotation(newDirection, transform.up);
-
-        //Move object along its forward axis
-        transform.Translate(Vector3.forward * MovementSpeed * Time.deltaTime);
-        //IS EQUIVALENT TO 
-        //transform.Translate(transform.forward * MovementSpeed * Time.deltaTime, Space.World);
+        if(transform.position.x == target.position.x && transform.position.z == target.position.z){
+           // transform.LookAt(barrel);
+            transform.eulerAngles = new Vector3(0f, -109f, 0f);
+             _animator.SetBool("kPress", true);
+            GetComponent<TargetFollower>().enabled = false;
+            
+        }
     }
+
+
+    //trigger caduta barile a metà spinta
+    void triggerFallBarrel(){
+         Debug.Log("caduta barile");
+         barrelAnimator.Play("CadutaBarile");
+         //barrelAnimator.enabled = false;
+    }   
 
 }

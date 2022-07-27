@@ -6,8 +6,6 @@ public class PlayerAnimationController : MonoBehaviour
 {
 
     private Animator _animator;
-    private float _inputSpeed;
-    private Vector3 _inputVector;
 
     public GameObject obj;
     private triggerFall script;
