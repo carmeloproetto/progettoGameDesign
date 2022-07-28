@@ -8,10 +8,13 @@ public class TargetFollower2 : MonoBehaviour
     public float speed;
 
     public Transform target2;
+
+    private Animator _animator;
     
     Vector3 b;
 
     void Start(){
+      _animator = GetComponent<Animator>();
       b = target.position;
     }
 
@@ -19,6 +22,8 @@ public class TargetFollower2 : MonoBehaviour
         Vector3 a = transform.position;
         
         //transform.LookAt(target);
+        
+
         transform.position = Vector3.MoveTowards(a, b, speed);
         
 
@@ -32,6 +37,7 @@ public class TargetFollower2 : MonoBehaviour
 
         if(transform.position.x == target2.position.x && transform.position.z == target2.position.z){
             transform.eulerAngles = new Vector3(0f, -190f, 0f);
+            _animator.SetBool("kPress", false);
             GetComponent<TargetFollower2>().enabled = false;
         }
     }

@@ -296,10 +296,21 @@ namespace StarterAssets
 
 
             Vector3 targetDirection = Quaternion.Euler(0.0f, _targetRotation, 0.0f) * Vector3.forward;
+            
+            
 
             // move the player
             _controller.Move(targetDirection.normalized * (_speed * Time.deltaTime) +
                              new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
+            
+           
+            //controlli sulla fuoriuscita dallo schermo
+            if(transform.position.z < -1.943815f)
+                transform.position = new Vector3(transform.position.x, transform.position.y, -1.943815f);
+
+            if(transform.position.z > 5.722689f)
+                transform.position = new Vector3(-124.77f, transform.position.y, 5.722689f);
+            
 
             // update animator if using character
             if (_hasAnimator)

@@ -41,6 +41,7 @@ public class triggerFall : MonoBehaviour
     }
 
     void disableAnimator(){
+        GetComponent<positionControl>().animationEnd = true;
         GetComponent<Animator>().enabled = false;
         //startAnimation = false;
 
