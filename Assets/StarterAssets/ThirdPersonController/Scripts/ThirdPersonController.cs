@@ -305,8 +305,8 @@ namespace StarterAssets
             
            
             //controlli sulla fuoriuscita dallo schermo
-            if(transform.position.z < -1.943815f)
-                transform.position = new Vector3(transform.position.x, transform.position.y, -1.943815f);
+            if(transform.position.z < -1.743815f)
+                transform.position = new Vector3(transform.position.x, transform.position.y, -1.743815f);
 
             if(transform.position.z > 5.722689f)
                 transform.position = new Vector3(-124.77f, transform.position.y, 5.722689f);

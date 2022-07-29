@@ -17,14 +17,15 @@ public class positionControl : MonoBehaviour
     {
 
     if(animationEnd == true){
+        Debug.Log("animazione caduta barile finita");
         transform.eulerAngles = new Vector3(
             1.201f,
             -17.697f,
             270.253f
         );
+
+
     }
 
-        if(transform.position.x > 133f)
-                transform.position = new Vector3(133f, transform.position.y, transform.position.z);
-    }
+       }
 }

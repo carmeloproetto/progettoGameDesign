@@ -26,13 +26,13 @@ public class TargetFollower : MonoBehaviour
         Vector3 b = target.position;
         //transform.LookAt(target);
         transform.position = Vector3.MoveTowards(a, b, speed);
-        _animator.SetFloat("Speed", 1);
+        _animator.SetBool("Destination", true);
 
 
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
            // transform.LookAt(barrel);
             transform.eulerAngles = new Vector3(0f, -109f, 0f);
-            _animator.SetFloat("Speed", 0);
+            _animator.SetBool("Destination", false);
              _animator.SetBool("kPress", true);
             GetComponent<TargetFollower>().enabled = false;
             
