@@ -4,22 +4,18 @@ using UnityEngine;
 
 public class collisionDetection : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+   
+    public bool climbing;
+
+    void Start(){
+        climbing = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
-     private void OnTriggerEnter(Collider other)
-    {
-        if(other.CompareTag("Player")){
-            Debug.Log("Salita Sul camion"); 
+    private void OnTriggerEnter(Collider hit) {    
+        Debug.Log(gameObject.name + " just hit " + hit.name); 
+        if(hit.name == "PlayerArmature"){
+           climbing = true;
         }
     }
 
