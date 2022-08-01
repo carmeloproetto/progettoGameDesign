@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
 #endif
@@ -117,6 +118,8 @@ namespace StarterAssets
         public float MoveSpeed2 = 0;
         private float gravity = 3;
         private Vector3 moveDirection;
+
+        public GameObject colliderJump;
 
         private bool IsCurrentDeviceMouse
         {
@@ -308,9 +311,41 @@ namespace StarterAssets
             /*if(transform.position.z < -1.743815f)
                 transform.position = new Vector3(transform.position.x, transform.position.y, -1.743815f);*/
 
-            if(transform.position.z > 5.722689f)
+            /*if(transform.position.z > 5.722689f)
                 transform.position = new Vector3(-124.77f, transform.position.y, 5.722689f);
-            
+
+                 Vector3 newPosition = PlayerObject.Transform.Position + translateVector;
+            */
+
+            //limito la posiione sull'asse x e z, control position serve per capire se siamo sotto o sopra il camion e limitare il movimento di conseguenza
+            if(GetComponent<TargetFollower3>().controlPosition1 == true){
+                if(transform.position.x < -124.5106f)
+                    transform.position = new Vector3(-124.5106f, transform.position.y, transform.position.z);
+
+                if(transform.position.z > 5.215717f)  
+                    transform.position = new Vector3(transform.position.x, transform.position.y, 5.215717f);   
+
+
+                if(transform.position.x > -122.815f && transform.position.z < -1.788493f)
+                    transform.position = new Vector3(-122.815f, transform.position.y, transform.position.z);
+
+                if(transform.position.z < -1.788493f)  
+                    transform.position = new Vector3(transform.position.x, transform.position.y, -1.788493f);
+            }
+            else{
+                if(transform.position.x < -122.815f && transform.position.y < 9.92531f){
+                    colliderJump.SetActive(true);
+                    GetComponent<TargetFollower3>().controlPosition1 = true;
+
+                }
+
+                if(transform.position.y < 12f && transform.position.x > -122.815f) {
+                    Debug.Log("Sono caduto");
+                    Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+                }
+
+            }
+
 
             // update animator if using character
             if (_hasAnimator)

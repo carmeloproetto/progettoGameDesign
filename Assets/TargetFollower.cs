@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using StarterAssets;
+
 
 public class TargetFollower : MonoBehaviour
 {
@@ -25,6 +27,7 @@ public class TargetFollower : MonoBehaviour
         Vector3 a = transform.position;
         Vector3 b = target.position;
         //transform.LookAt(target);
+        //GetComponent<ThirdPersonController>().enabled = false;
         transform.position = Vector3.MoveTowards(a, b, speed);
         _animator.SetBool("Destination", true);
 
@@ -33,7 +36,8 @@ public class TargetFollower : MonoBehaviour
            // transform.LookAt(barrel);
             transform.eulerAngles = new Vector3(0f, -109f, 0f);
             _animator.SetBool("Destination", false);
-             _animator.SetBool("kPress", true);
+            _animator.SetBool("kPress", true);
+          //  GetComponent<ThirdPersonController>().enabled = true;
             GetComponent<TargetFollower>().enabled = false;
             
         }

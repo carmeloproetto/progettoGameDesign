@@ -43,6 +43,7 @@ public class triggerFall : MonoBehaviour
     void disableAnimator(){
         GetComponent<positionControl>().animationEnd = true;
         GetComponent<Animator>().enabled = false;
+        GetComponent<BoxCollider>().enabled = true;
         //startAnimation = false;
 
         tgFlwscript2.enabled = true;
