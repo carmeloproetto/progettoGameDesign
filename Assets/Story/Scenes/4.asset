@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: 4
   m_EditorClassIdentifier: 
   sentences:
+  - text: "Ogni anno su quest\u2019isola si abbattevano forti tempeste e gli abitanti
+      erano ormai abituati alla frequente distruzione dei loro raccolti."
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   - text: "Poi per\xF2 le tempeste diventarono sempre pi\xF9 forti, cos\xEC si abituarono
       a rimanere senza elettricit\xE0 per alcuni giorni."
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
-  background: {fileID: 21300000, guid: b0fa70abd2a79904cb00b175dfd8ec7e, type: 3}
+  background: {fileID: 21300000, guid: d62fc8b7b7158a942856e840b8dfbbed, type: 3}
   nextScene: {fileID: 11400000, guid: dcd5433d14361904fb64ce5c6cbdd5e0, type: 2}

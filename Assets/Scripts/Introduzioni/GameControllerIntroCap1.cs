@@ -23,7 +23,7 @@ public class GameControllerIntroCap1 : MonoBehaviour
         {
             if (bottomBar.IsCompleted())
             {
-                if (bottomBar.IsLastSentence() && countScene < 5)
+                if (bottomBar.IsLastSentence() && countScene < 4)
                 {
                     currentScene = currentScene.nextScene;
                     bottomBar.PlayScene(currentScene);
@@ -31,11 +31,11 @@ public class GameControllerIntroCap1 : MonoBehaviour
                     countScene++;
                     Debug.Log(countScene);
                 }
-                else if(!bottomBar.IsLastSentence() && countScene < 5)
+                else if(!bottomBar.IsLastSentence() && countScene < 4)
                 {
                     bottomBar.PlayNextSentence();
                 }
-                else if(countScene == 5){
+                else if(countScene == 4){
                     //bisogna caricare la scena corretta
                     SceneManager.LoadScene("InfanziaP_background_2");
                 }

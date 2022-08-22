@@ -16,5 +16,5 @@ MonoBehaviour:
   - text: "Ma alla fine di quell\u2019anno, mio padre e tanti altri si dovettero
       abituare ad una nuova vita."
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
-  background: {fileID: 21300000, guid: df2e195a37fb76146ae42d429e9af554, type: 3}
+  background: {fileID: 21300000, guid: 175a866152de0194fb47d61f235b75db, type: 3}
   nextScene: {fileID: 11400000, guid: f838137e1b394934fbaf81098c8d177e, type: 2}

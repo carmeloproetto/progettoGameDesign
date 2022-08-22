@@ -16,5 +16,5 @@ MonoBehaviour:
   - text: "Mio padre invece \xE8 nato su un\u2019isola, in una casa che oggi non
       esiste pi\xF9."
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
-  background: {fileID: 21300000, guid: 7709396bfc02492408f5ccb108144ef2, type: 3}
-  nextScene: {fileID: 11400000, guid: 1b5ba7a2fdb29b040ab73c6d93049e76, type: 2}
+  background: {fileID: 21300000, guid: 9e5c958e834d19f4b9b7e612e5b476b5, type: 3}
+  nextScene: {fileID: 11400000, guid: 343ea59226a686a438c279edac67a3d7, type: 2}
