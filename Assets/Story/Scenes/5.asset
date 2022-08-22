@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8ed64f743d504b4cbd69dd1ebec8c88, type: 3}
-  m_Name: 1
+  m_Name: 5
   m_EditorClassIdentifier: 
   sentences:
-  - text: "Da quando sono nato ho sempre vissuto nella stessa citt\xE0, nella casa
-      dove \xE8 cresciuta mia madre."
+  - text: "Ma alla fine di quell\u2019anno, mio padre e tanti altri si dovettero
+      abituare ad una nuova vita."
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
-  background: {fileID: 21300000, guid: b7b60a04cdd46654bbfb8269f0ce7145, type: 3}
-  nextScene: {fileID: 11400000, guid: 5ef41f141741005479baa7777df5e54c, type: 2}
+  background: {fileID: 21300000, guid: df2e195a37fb76146ae42d429e9af554, type: 3}
+  nextScene: {fileID: 11400000, guid: f838137e1b394934fbaf81098c8d177e, type: 2}

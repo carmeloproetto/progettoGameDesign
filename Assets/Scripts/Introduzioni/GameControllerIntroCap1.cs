@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameController : MonoBehaviour
+public class GameControllerIntroCap1 : MonoBehaviour
 {
-    public StoryScene currentScene;
+   public StoryScene currentScene;
     public BottomBarController bottomBar;
     public BackgroundController backgroundController;
     private int countScene;
@@ -31,7 +31,7 @@ public class GameController : MonoBehaviour
                     countScene++;
                     Debug.Log(countScene);
                 }
-                else if(countScene < 5)
+                else if(!bottomBar.IsLastSentence() && countScene < 5)
                 {
                     bottomBar.PlayNextSentence();
                 }
