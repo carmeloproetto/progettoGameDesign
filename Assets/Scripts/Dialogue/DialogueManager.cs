@@ -74,6 +74,11 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
     }
 
+
+    private void getTextStory(string text){
+        Debug.Log(text);
+    }
+
     private void ContinueStory(){
          if(currentStory.canContinue){
             dialogueText.text = currentStory.Continue();
@@ -114,7 +119,9 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void MakeChoice(int choiceIndex){
+        Debug.Log("numero della scleta:" + choiceIndex);
         currentStory.ChooseChoiceIndex(choiceIndex);
+        ContinueStory();
     }
 
 }
