@@ -4,11 +4,12 @@
 Ciao! Tu devi essere il nuovo arrivato. Al centro mi hanno detto che eri a fare un giro tutto solo, così sono venuta a cercarti. #speaker:Mom
 Io faccio parte dei volontari del centro di accoglienza, se ti va potrei farti vedere la città. #speaker:Mom
 	* [...] 
-		Avanti, sarà più divertente girare insieme.
+	    Avanti, sarà più divertente girare insieme.
 	* [Certo, volentieri.]
 		Molto bene!
 
-- Questa è la periferia della città. Non c’è nulla di particolare da vedere, solo campi agricoli e allevamenti. Ma se vuoi uscire e andare in un’altra città devi passare da qui e attraversare il bosco. Tu hai visitato molti posti?
+- Questa è la periferia della città. Non c’è nulla di particolare da vedere, solo campi agricoli e allevamenti. Ma se vuoi uscire e andare in un’altra città devi passare da qui e attraversare il bosco. 
+Tu hai visitato molti posti?
 	* [No.]
 		Forse non hai molta voglia di parlare.
 	* [Non molto in realtà. ]

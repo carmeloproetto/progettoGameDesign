@@ -34,11 +34,24 @@ public class DialogueManager : MonoBehaviour
     //private const string PORTRAIT_TAG = "portrait";
     //private const string LAYOUT_TAG = "layout";
 
+    //serve per non poter premere spazio davanti ad una domanda
+    private bool viewChoice;
+
+    //serve per tenere traccia di che dialogo stiamo ascoltando
+    private int countDialogue;
+
+    public Camera cam;
+    public GameObject mom;
+    public GameObject dad;
+
     private void Awake(){
         if(instance != null){
             Debug.LogWarning("Found more than one Dialogue Manager in the scene");
         }
         instance = this;
+
+        viewChoice = false;
+        countDialogue = 1;
     }
 
     public static DialogueManager GetInstance(){
@@ -64,7 +77,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if(Input.GetKeyDown("v")){
+        if(Input.GetKeyDown("space") && viewChoice == false){
             ContinueStory();
         }
     }
@@ -84,6 +97,18 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+        
+        Debug.Log("conversazione finita");
+
+        //cose da fare quando termina il primo dialogo
+        if(countDialogue == 1){
+            mom.GetComponent<followDestination2>().enabled = true;
+            cam.GetComponent<CameraFollow>().enabled = false;
+            cam.GetComponent<CameraFollow2>().enabled = true;
+            dad.GetComponent<PlayerController>().enabled = true;
+        }
+
+        countDialogue++;
     }
 
 
@@ -101,6 +126,7 @@ public class DialogueManager : MonoBehaviour
             HandleTags(currentStory.currentTags);
         }
         else{
+
             StartCoroutine(ExitDialogueMode());
         }
     }
@@ -117,12 +143,10 @@ public class DialogueManager : MonoBehaviour
             switch(tagKey){
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
-                    if(tagValue == "Mom"){
-                        Debug.Log("dentro l'if" + tagValue);
+                    if(tagValue == "Mom"){          
                         imageOfSpeaker.sprite = momImage;
                     }
-                    if(tagValue == "Dad"){
-                        Debug.Log("dentro l'if" + tagValue);
+                    if(tagValue == "Dad"){ 
                         imageOfSpeaker.sprite = dadImage;
                     }
                     break;
@@ -150,12 +174,14 @@ public class DialogueManager : MonoBehaviour
 
         int index = 0;
         foreach(Choice choice in currentChoices){
+            viewChoice = true;
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
             index++;
         }
 
         for(int i = index; i < choices.Length; i++){
+            viewChoice = false;
             choices[i].gameObject.SetActive(false);
         }
 
