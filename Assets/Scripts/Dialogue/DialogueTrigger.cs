@@ -10,6 +10,7 @@ public class DialogueTrigger : MonoBehaviour
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
     [SerializeField] public TextAsset inkJSON2;
+    [SerializeField] public TextAsset inkJSON3;
 
     public TextAsset ink;
 

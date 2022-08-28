@@ -28,6 +28,7 @@ public class followDestination : MonoBehaviour
       b = target.position;
       firstTime = true;
       script_dialogueTrigger = madreBambina.GetComponent<DialogueTrigger>();
+      dad.transform.eulerAngles = new Vector3(0f, 90f, 0f);
     }
 
     // Update is called once per frame

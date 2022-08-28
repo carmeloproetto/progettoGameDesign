@@ -44,6 +44,9 @@ public class DialogueManager : MonoBehaviour
     public GameObject mom;
     public GameObject dad;
 
+    public GameObject tutorialPanel;
+
+
     private void Awake(){
         if(instance != null){
             Debug.LogWarning("Found more than one Dialogue Manager in the scene");
@@ -98,18 +101,39 @@ public class DialogueManager : MonoBehaviour
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
         
-        Debug.Log("conversazione finita");
+        
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
             mom.GetComponent<followDestination2>().enabled = true;
-            cam.GetComponent<CameraFollow>().enabled = false;
-            cam.GetComponent<CameraFollow2>().enabled = true;
-            dad.GetComponent<PlayerController>().enabled = true;
+            cam.GetComponent<CameraFollow>().target_aux = cam.GetComponent<CameraFollow>().target2; 
+           Debug.Log("conversazione 1 finita");
+           //serve per abilitare movimento giocatore e pannello tutorial tasti
+            StartCoroutine(triggerDadControl());
         }
+
+        if(countDialogue == 2){
+            mom.GetComponent<followDestination2>().enabled = false;
+            mom.GetComponent<followDestination3>().enabled = true;
+            Debug.Log("conversazione 2 finita");
+        }
+
+
 
         countDialogue++;
     }
+
+
+    
+    IEnumerator triggerDadControl(){
+        yield return new WaitForSeconds(0.5f);
+        dad.GetComponent<PlayerController>().enabled = true;
+        yield return new WaitForSeconds(2);
+        tutorialPanel.SetActive(true);
+    }
+
+
+
 
 
     private void getTextStory(string text){
