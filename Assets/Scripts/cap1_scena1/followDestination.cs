@@ -21,6 +21,7 @@ public class followDestination : MonoBehaviour
     public GameObject madreBambina;
 
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +41,7 @@ public class followDestination : MonoBehaviour
         _animator.SetFloat("Speed", velocity);
         velocity -= aux * Time.deltaTime;
 
+        //abbiamo raggiunto la destinazione
         if(transform.position.x == target.position.x && transform.position.z == target.position.z && firstTime){
            // transform.LookAt(barrel);
             dad.transform.eulerAngles = new Vector3(0f, -90f, 0f);

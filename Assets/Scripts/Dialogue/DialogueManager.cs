@@ -43,9 +43,12 @@ public class DialogueManager : MonoBehaviour
     public Camera cam;
     public GameObject mom;
     public GameObject dad;
+    public GameObject triggerZone;
 
     public GameObject tutorialPanel;
 
+    //conto il numero di frasi alla quale siamo arrivati nella conversazione
+    private int line;
 
     private void Awake(){
         if(instance != null){
@@ -71,8 +74,7 @@ public class DialogueManager : MonoBehaviour
             choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
             index++;
         }
-
-
+        line = 0;
     }
 
     private void Update(){
@@ -81,6 +83,13 @@ public class DialogueManager : MonoBehaviour
         }
 
         if(Input.GetKeyDown("space") && viewChoice == false){
+            line++;
+            if(line == 2 && countDialogue == 2){
+                Debug.Log("Siamo nella seconda conversazione nella seconda linea!");
+                dad.GetComponent<PlayerController>().enabled = false;
+                mom.GetComponent<followDestination4>().enabled = true;
+                dad.GetComponent<followDestination4>().enabled = true;
+            }
             ContinueStory();
         }
     }
@@ -88,6 +97,7 @@ public class DialogueManager : MonoBehaviour
     public void EnterDialogueMode(TextAsset inkJSON){
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
+        dad.GetComponent<Animator>().SetFloat("Speed", 0f);
         dialoguePanel.SetActive(true);
 
        ContinueStory();
@@ -100,25 +110,24 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
-        
-        
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
+            triggerZone.SetActive(false);
             mom.GetComponent<followDestination2>().enabled = true;
             cam.GetComponent<CameraFollow>().target_aux = cam.GetComponent<CameraFollow>().target2; 
            Debug.Log("conversazione 1 finita");
            //serve per abilitare movimento giocatore e pannello tutorial tasti
-            StartCoroutine(triggerDadControl());
+           StartCoroutine(triggerDadControl());
         }
-
+        //cose da fare quando termina il secondo dialogo
         if(countDialogue == 2){
             mom.GetComponent<followDestination2>().enabled = false;
             mom.GetComponent<followDestination3>().enabled = true;
             Debug.Log("conversazione 2 finita");
         }
 
-
+        line = 0;
 
         countDialogue++;
     }

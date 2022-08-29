@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class followDestination2 : MonoBehaviour
+public class followDestination4 : MonoBehaviour
 {
-
     public Transform target;
     public float speed;
 
@@ -14,9 +13,6 @@ public class followDestination2 : MonoBehaviour
 
     private float velocity = 2f;
 
-    public GameObject triggerDialogueSpace;
-    
-    // Start is called before the first frame update
     void Start()
     {
       _animator = GetComponent<Animator>();
@@ -31,10 +27,8 @@ public class followDestination2 : MonoBehaviour
         _animator.SetFloat("Speed", velocity);
 
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
-           triggerDialogueSpace.SetActive(true);
             transform.eulerAngles = new Vector3(0f, 90f, 0f);
             _animator.SetFloat("Speed", 0f);
-            triggerDialogueSpace.GetComponent<DialogueTrigger>().ink = triggerDialogueSpace.GetComponent<DialogueTrigger>().inkJSON2;
         }
     }
 }

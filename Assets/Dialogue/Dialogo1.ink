@@ -3,8 +3,8 @@
 === main ===
 Ciao! Tu devi essere il nuovo arrivato. Al centro mi hanno detto che eri a fare un giro tutto solo, così sono venuta a cercarti. #speaker:Mom
 Io faccio parte dei volontari del centro di accoglienza, se ti va potrei farti vedere la città. #speaker:Mom
-	* [...] 
-	    Avanti, sarà più divertente girare insieme.
+	* [...]
+	   Avanti, sarà più divertente girare insieme.
 	* [Certo, volentieri.]
 		Molto bene!
 
