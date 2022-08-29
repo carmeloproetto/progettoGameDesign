@@ -50,6 +50,9 @@ public class DialogueManager : MonoBehaviour
     //conto il numero di frasi alla quale siamo arrivati nella conversazione
     private int line;
 
+    //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
+    public bool disableSpace;
+
     private void Awake(){
         if(instance != null){
             Debug.LogWarning("Found more than one Dialogue Manager in the scene");
@@ -58,6 +61,7 @@ public class DialogueManager : MonoBehaviour
 
         viewChoice = false;
         countDialogue = 1;
+        disableSpace = false;
     }
 
     public static DialogueManager GetInstance(){
@@ -83,14 +87,22 @@ public class DialogueManager : MonoBehaviour
         }
 
         if(Input.GetKeyDown("space") && viewChoice == false){
-            line++;
-            if(line == 2 && countDialogue == 2){
-                Debug.Log("Siamo nella seconda conversazione nella seconda linea!");
-                dad.GetComponent<PlayerController>().enabled = false;
-                mom.GetComponent<followDestination4>().enabled = true;
-                dad.GetComponent<followDestination4>().enabled = true;
+            //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
+            if(disableSpace == false){
+                line++;
+                Debug.Log("line: " + line + " countDialogue: " + countDialogue);
+                //serve per far partire la camminata nella scena cap1 quando siamo davanti al parco
+                if(line == 1 && countDialogue == 3){
+                    Debug.Log("Siamo nella terza conversazione alla fine della prima frase frase!");
+                    disableSpace = true;
+                    dad.GetComponent<PlayerController>().enabled = false;
+                    mom.GetComponent<followDestination3>().enabled = false;
+                    mom.GetComponent<followDestination4>().enabled = true;
+                    dad.GetComponent<followDestination4>().enabled = true;
+                }
+                else
+                    ContinueStory();
             }
-            ContinueStory();
         }
     }
 
@@ -231,6 +243,11 @@ public class DialogueManager : MonoBehaviour
     public void MakeChoice(int choiceIndex){
         Debug.Log("numero della scleta:" + choiceIndex);
         currentStory.ChooseChoiceIndex(choiceIndex);
+        ContinueStory();
+    }
+
+
+    public void ContinueStoryByOtherScript(){
         ContinueStory();
     }
 

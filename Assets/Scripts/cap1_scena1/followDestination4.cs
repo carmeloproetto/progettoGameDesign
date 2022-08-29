@@ -27,7 +27,8 @@ public class followDestination4 : MonoBehaviour
         _animator.SetFloat("Speed", velocity);
 
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
-            transform.eulerAngles = new Vector3(0f, 90f, 0f);
+            if(this.name == "MadreBambina")
+                transform.eulerAngles = new Vector3(0f, 90f, 0f);
             _animator.SetFloat("Speed", 0f);
         }
     }

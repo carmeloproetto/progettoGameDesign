@@ -27,16 +27,17 @@ public class PlayerController : MonoBehaviour
 
     public bool _isBehindChest = false; 
 
-    private Vector3 targetDirection;
+    private Vector3 curTarDirection;
 
     private bool _inputEnabled = true;
     private bool _jumpEnabled = true; 
+    private bool _backwardEnabled = true; 
 
     // Start is called before the first frame update
     void Start()
     {
         _controller = GetComponent<CharacterController>();
-        targetDirection = transform.forward;
+        curTarDirection = transform.forward;
         _animator = this.GetComponent<Animator>(); 
     }
 
@@ -61,20 +62,20 @@ public class PlayerController : MonoBehaviour
 
         float horizontal = Input.GetAxisRaw("Horizontal"); 
 
-        if( _isMoving || (horizontal != 0f && _inputEnabled) )
+        if( _isMoving || (horizontal == 1f && _inputEnabled ) || (horizontal == -1f && _backwardEnabled && _inputEnabled ) )
         {
             currAcceleration = acceleration;
 
-            if ( horizontal == 1f && !_isRightForward && _inputEnabled )
+             if ( horizontal == 1f && !_isRightForward && _inputEnabled )
             {
                 _isRightForward = true;
-                targetDirection = transform.forward * -1f;
+                curTarDirection = Vector3.right; 
             }    
-            else if( horizontal == -1f && _isRightForward && _inputEnabled )
+            else if( horizontal == -1f && _isRightForward && _inputEnabled && _backwardEnabled )
             {
                 _isRightForward = false;
-                targetDirection = transform.forward * -1f;
-            }     
+                curTarDirection = Vector3.left;
+            }       
         }
         else
         {
@@ -85,10 +86,10 @@ public class PlayerController : MonoBehaviour
         velocity = Mathf.Clamp(velocity, 0f, maxVelocity);
         _animator.SetFloat("Speed", velocity);
 
-        Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
+        Quaternion targetRotation = Quaternion.LookRotation(curTarDirection, Vector3.up);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed);
 
-        _controller.Move(targetDirection * velocity * Time.deltaTime);
+        _controller.Move(curTarDirection * velocity * Time.deltaTime);
 
         float jump = Input.GetAxisRaw("Jump");
         if( jump != 0f && _isGrounded && _jumpEnabled )
@@ -107,7 +108,7 @@ public class PlayerController : MonoBehaviour
 
     public void SetTargetDirection(Vector3 targetDirection)
     {
-        this.targetDirection = targetDirection; 
+        this.curTarDirection = targetDirection; 
     }
 
     public void IsMoving(bool value)
@@ -134,4 +135,15 @@ public class PlayerController : MonoBehaviour
     {
         _jumpEnabled = true;
     }
+
+        public void DisableBackward()
+    {
+        _backwardEnabled = false;
+    }
+
+    public void EnableBackward()
+    {
+        _backwardEnabled = true;
+    }
+
 }
