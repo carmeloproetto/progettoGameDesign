@@ -53,6 +53,9 @@ public class DialogueManager : MonoBehaviour
     //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
     public bool disableSpace;
 
+    //serve per verificare se il primo incontro dei genitori è andato a buon fine o meno, dipende dalla risposta alla seconda domanda nel cap 1
+    public bool positiveMeet;
+
     private void Awake(){
         if(instance != null){
             Debug.LogWarning("Found more than one Dialogue Manager in the scene");
@@ -110,10 +113,15 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dad.GetComponent<Animator>().SetFloat("Speed", 0f);
-        dialoguePanel.SetActive(true);
-
+        StartCoroutine(activePanelAfterOneSecond());
        ContinueStory();
     }
+
+
+     private IEnumerator activePanelAfterOneSecond(){
+        yield return new WaitForSeconds(1f);
+        dialoguePanel.SetActive(true);
+     }
 
 
     private IEnumerator ExitDialogueMode(){
@@ -126,34 +134,39 @@ public class DialogueManager : MonoBehaviour
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
             triggerZone.SetActive(false);
-            mom.GetComponent<followDestination2>().enabled = true;
+            //mom.GetComponent<followDestination2>().enabled = true;
             cam.GetComponent<CameraFollow>().target_aux = cam.GetComponent<CameraFollow>().target2; 
            Debug.Log("conversazione 1 finita");
            //serve per abilitare movimento giocatore e pannello tutorial tasti
            StartCoroutine(triggerDadControl());
         }
         //cose da fare quando termina il secondo dialogo
-        if(countDialogue == 2){
+        else if(countDialogue == 2){
             mom.GetComponent<followDestination2>().enabled = false;
             mom.GetComponent<followDestination3>().enabled = true;
             Debug.Log("conversazione 2 finita");
         }
+        //cose da fare quando termina il terzo dialogo
+        else if(countDialogue == 3){
+            triggerZone.SetActive(false);
+            mom.GetComponent<followDestination5>().enabled = true;
+        }
+
+
 
         line = 0;
-
         countDialogue++;
     }
 
 
     
-    IEnumerator triggerDadControl(){
-        yield return new WaitForSeconds(0.5f);
-        dad.GetComponent<PlayerController>().enabled = true;
+    IEnumerator triggerDadControl(){    
         yield return new WaitForSeconds(2);
         tutorialPanel.SetActive(true);
+        dad.GetComponent<PlayerController>().enabled = true;
+        yield return new WaitForSeconds(0.5f);
+        mom.GetComponent<followDestination2>().enabled = true;
     }
-
-
 
 
 
@@ -241,7 +254,17 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void MakeChoice(int choiceIndex){
-        Debug.Log("numero della scleta:" + choiceIndex);
+        Debug.Log("numero della scleta:" + choiceIndex + " " + line + " " + countDialogue);
+        
+        if(line == 3 && countDialogue == 1 && choiceIndex == 0){
+            positiveMeet = false;
+            Debug.Log("incontro con la madre negativo");
+        }
+        else if(line == 3 && countDialogue == 1 && choiceIndex == 1){
+            positiveMeet = true;
+            Debug.Log("incontro con la madre positivo");
+        }
+
         currentStory.ChooseChoiceIndex(choiceIndex);
         ContinueStory();
     }

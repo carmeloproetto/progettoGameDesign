@@ -13,10 +13,13 @@ public class followDestination4 : MonoBehaviour
 
     private float velocity = 2f;
 
+    public GameObject dlgManger;
+
     void Start()
     {
       _animator = GetComponent<Animator>();
       b = target.position;
+      
     }
 
     void FixedUpdate()
@@ -27,9 +30,20 @@ public class followDestination4 : MonoBehaviour
         _animator.SetFloat("Speed", velocity);
 
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
-            if(this.name == "MadreBambina")
+            if(this.name == "MadreBambina"){
                 transform.eulerAngles = new Vector3(0f, 90f, 0f);
+                Debug.Log("madre arrivata davanti casa");
+                StartCoroutine(triggerContinueConversation());
+            }   
             _animator.SetFloat("Speed", 0f);
+            this.GetComponent<followDestination4>().enabled = false;
         }
     }
+
+    IEnumerator triggerContinueConversation(){    
+        yield return new WaitForSeconds(1);
+        dlgManger.GetComponent<DialogueManager>().ContinueStoryByOtherScript();
+        dlgManger.GetComponent<DialogueManager>().disableSpace = false;
+    }
+
 }
