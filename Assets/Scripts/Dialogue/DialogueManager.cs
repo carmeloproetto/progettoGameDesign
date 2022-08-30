@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject mom;
     public GameObject dad;
     public GameObject triggerZone;
+    public GameObject ragazzino;
 
     public GameObject tutorialPanel;
 
@@ -150,6 +151,10 @@ public class DialogueManager : MonoBehaviour
         else if(countDialogue == 3){
             triggerZone.SetActive(false);
             mom.GetComponent<followDestination5>().enabled = true;
+        }
+        //cose da fare quando termina il quarto dialogo
+        else if(countDialogue == 4){
+            ragazzino.GetComponent<startBattleAnimation>().enabled = true;
         }
 
 
