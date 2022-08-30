@@ -16,5 +16,11 @@ MonoBehaviour:
   - text: "Come mio padre, anche mia madre ha maturato nel corso della sua vita un
       certo interesse nella salvaguardia dell\u2019ambiente."
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
-  background: {fileID: 21300000, guid: 6417e6e0f0d394c43af1ecdc60bd10dd, type: 3}
-  nextScene: {fileID: 11400000, guid: 95e1fa3981d1f4048a366026a09e7abc, type: 2}
+  - text: "Ma da quando si conobbero, questo interesse prese piede sempre pi\xF9
+      insistentemente nel suo animo."
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: "E a volte, come mi raccont\xF2 anni fa, questo la port\xF2 ad avere dei
+      conflitti con mio nonno."
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  background: {fileID: 21300000, guid: 9369eb148fdeaac4fae05a3a4860c853, type: 3}
+  nextScene: {fileID: 0}

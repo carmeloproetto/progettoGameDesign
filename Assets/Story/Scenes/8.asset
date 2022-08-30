@@ -19,5 +19,5 @@ MonoBehaviour:
   - text: "E a volte, come mi raccont\xF2 anni fa, questo la port\xF2 ad avere dei
       conflitti con mio nonno."
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
-  background: {fileID: 21300000, guid: b86e0be351ca49c4a8e6217f302bb64a, type: 3}
+  background: {fileID: 21300000, guid: 9369eb148fdeaac4fae05a3a4860c853, type: 3}
   nextScene: {fileID: 0}

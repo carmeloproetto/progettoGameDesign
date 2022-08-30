@@ -23,7 +23,7 @@ public class GameControllerIntroCap2 : MonoBehaviour
         {
             if (bottomBar.IsCompleted())
             {
-                if (bottomBar.IsLastSentence() && countScene < 1)
+                if (bottomBar.IsLastSentence() && countScene < 0)
                 {
                     currentScene = currentScene.nextScene;
                     bottomBar.PlayScene(currentScene);
@@ -31,13 +31,13 @@ public class GameControllerIntroCap2 : MonoBehaviour
                     countScene++;
                     Debug.Log(countScene);
                 }
-                else if(!bottomBar.IsLastSentence() && countScene == 1)
+                else if(!bottomBar.IsLastSentence() && countScene == 0)
                 {
                     bottomBar.PlayNextSentence();
                 }
-                else if(countScene == 1){
+                else if(countScene == 0){
                     //bisogna caricare la scena corretta
-                    SceneManager.LoadScene("InfanziaP_background_2");
+                    SceneManager.LoadScene("InfanziaM_casa");
                 }
             }
         }

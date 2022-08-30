@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueTrigger : MonoBehaviour
+public class DialogueTriggerCap2 : MonoBehaviour
 {
     //[Header("Visual Cue")]
    // [SerializeField] private GameObject visualCue;
@@ -19,8 +19,6 @@ public class DialogueTrigger : MonoBehaviour
     //serve per far scattare il dialogo da follow destination
     public bool startConv;
 
-
-
     private int count;
 
     private void Awake(){
@@ -32,11 +30,11 @@ public class DialogueTrigger : MonoBehaviour
 
 
     private void Update(){
-        if(playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying){
+        if(playerInRange && !DialogueManagerCap2.GetInstance().dialogueIsPlaying){
             //visualCue.SetActive(true);
             if(/*Input.GetKeyDown("c") ||*/ startConv){
                 Debug.Log(ink.text);
-                DialogueManager.GetInstance().EnterDialogueMode(ink);
+                DialogueManagerCap2.GetInstance().EnterDialogueMode(ink);
                 startConv = false;
             }
         }
@@ -65,5 +63,10 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
- 
+
+       public void startConvByOtherScript(){
+        startConv = true;
+        playerInRange = true;
+    }
+
 }
