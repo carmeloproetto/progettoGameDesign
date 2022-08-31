@@ -22,6 +22,12 @@ public class followDestinationCap2_1 : MonoBehaviour
 
     public GameObject sindaco;
 
+    public GameObject canvas2;
+
+    private bool momMovment;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +36,7 @@ public class followDestinationCap2_1 : MonoBehaviour
       _animator.SetBool("Angry", false);
       b = target.position;
       b2 = target2.position;
+      momMovment = false;
     }
 
     void FixedUpdate()
@@ -43,17 +50,23 @@ public class followDestinationCap2_1 : MonoBehaviour
 
         if(sindaco.transform.position.x == target2.position.x && sindaco.transform.position.z == target2.position.z){
             sindaco.SetActive(false);
+            momMovment = true;
         }
 
-        transform.eulerAngles = new Vector3(0f, -90f, 0f);
-        Vector3 a = transform.position;
-        transform.position = Vector3.MoveTowards(a, b, speed);
-        _animator.SetFloat("Speed", velocity);
+        if(momMovment == true){
+            transform.eulerAngles = new Vector3(0f, -90f, 0f);
+            Vector3 a = transform.position;
+            transform.position = Vector3.MoveTowards(a, b, speed);
+            _animator.SetFloat("Speed", velocity);
 
-        if(transform.position.x == target.position.x && transform.position.z == target.position.z){
-            
-            _animator.SetFloat("Speed", 0f);
-            
+
+            if(transform.position.x == target.position.x && transform.position.z == target.position.z){
+                _animator.SetFloat("Speed", 0f);
+                _animator.SetBool("Cry", true);
+                canvas2.SetActive(true);
+                GetComponent<followDestinationCap2_1>().enabled = false;
+
+            }
         }
     }
 }

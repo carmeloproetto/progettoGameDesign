@@ -1,0 +1,1 @@
+﻿Non rimarremo con le mani in mano mentre i nostri alberi muoiono! Salviamo il bosco invece di dare soldi alle multinazionali! #speaker:Manifestante1

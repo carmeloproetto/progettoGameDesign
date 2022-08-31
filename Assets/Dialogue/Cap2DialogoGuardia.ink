@@ -1,0 +1,1 @@
+﻿) Non provarci nemmeno a entrare. Qui dentro la gente cerca di lavorare davvero, a differenza di voi ecoterroristi. #speaker:Guardia

@@ -17,6 +17,7 @@ public class DialogueManagerCap2 : MonoBehaviour
 
     public Sprite momImage;
     public Sprite  mayorImage;
+    public Sprite uncknowImage;
 
 
     [Header("Choices UI")]
@@ -48,6 +49,10 @@ public class DialogueManagerCap2 : MonoBehaviour
 
     public GameObject mom;
     public GameObject sindaco;
+    public GameObject canvas2;
+    
+
+    private bool noAnimation;
 
 
 
@@ -80,6 +85,7 @@ public class DialogueManagerCap2 : MonoBehaviour
             index++;
         }
         line = 0;
+        noAnimation = false;
     }
 
     private void Update(){
@@ -98,7 +104,15 @@ public class DialogueManagerCap2 : MonoBehaviour
                 }
 
                 if(line == 15 && countDialogue == 1){
+                    noAnimation = true;
+                    sindaco.GetComponent<Animator>().SetBool("Talk", false);
+                    sindaco.GetComponent<Animator>().SetBool("HeadAround", true);
+                    disableSpace = true;
                     StartCoroutine(phoneRings());
+                }
+
+                if(line == 1 && countDialogue == 2){
+                    mom.transform.eulerAngles = new Vector3(0f, 90f, 0f);
                 }
 
 
@@ -109,9 +123,12 @@ public class DialogueManagerCap2 : MonoBehaviour
 
     private IEnumerator phoneRings(){
         //SI DEVE FAR SQUILLARE IL TELEFONO QUI
+        
         dialoguePanel.SetActive(false);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
+        sindaco.GetComponent<Animator>().SetBool("HeadAround", false);
         dialoguePanel.SetActive(true);
+        disableSpace = false;
     }
 
 
@@ -147,7 +164,7 @@ public class DialogueManagerCap2 : MonoBehaviour
         }
         //cose da fare quando termina il secondo dialogo
         else if(countDialogue == 2){
-           
+            StartCoroutine(finalCanvas());
         }
         //cose da fare quando termina il terzo dialogo
         else if(countDialogue == 3){
@@ -162,6 +179,12 @@ public class DialogueManagerCap2 : MonoBehaviour
         countDialogue++;
     }
 
+
+    private IEnumerator finalCanvas(){
+        yield return new WaitForSeconds(1f);
+        canvas2.GetComponent<fineCap2Scena1>().enabled = true;
+        canvas2.GetComponent<Canvas>().enabled = true;
+     }
 
 
     private void getTextStory(string text){
@@ -203,7 +226,11 @@ public class DialogueManagerCap2 : MonoBehaviour
                     else if(tagValue == "Mayor"){ 
                         imageOfSpeaker.sprite = mayorImage;
                         mom.GetComponent<Animator>().SetBool("Talk", false);
-                        sindaco.GetComponent<Animator>().SetBool("Talk", true);
+                        if(noAnimation == false)
+                            sindaco.GetComponent<Animator>().SetBool("Talk", true);
+                    }
+                    else if(tagValue == "???"){ 
+                        imageOfSpeaker.sprite = uncknowImage;
                     }
                    
                     break;
@@ -271,6 +298,10 @@ public class DialogueManagerCap2 : MonoBehaviour
 
     public void ContinueStoryByOtherScript(){
         ContinueStory();
+    }
+
+    public int getCountDialogue(){
+        return countDialogue;
     }
 
 }

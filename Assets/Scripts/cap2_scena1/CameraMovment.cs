@@ -28,6 +28,7 @@ public class CameraMovment : MonoBehaviour
     }
 
      private IEnumerator startDialogue(){
+        
         yield return new WaitForSeconds(1.5f);
         mom.GetComponent<DialogueTriggerCap2>().startConvByOtherScript();
         this.GetComponent<CameraMovment>().enabled = false;
