@@ -24,7 +24,7 @@ In questo modo i soldi persi dalla vendita del legno saranno compensati da quell
 		La verità è che non pensi al bene della tua casa, ma vuoi solo avere consensi senza risolvere il problema alla radice. Stai valutando solo il lato economico e… #speaker:Mom
 		Adesso basta! Mi sono stancato di ascoltarti!  #speaker:Mayor
 	*[Non mi convince.]
-		e i boschi sono in questo stato la colpa è nostra. E in questo modo, oltre a non risolvere il problema principale, non facciamo altro che affaticare ancora di più la terra chiedendo molto più del necessario. Dobbiamo imparare a prenderci cura di ciò che abbiamo. #speaker:Mom
+		Se i boschi sono in questo stato la colpa è nostra. Oltre a non risolvere il problema principale, non facciamo altro che affaticare ancora di più la terra chiedendo molto più del necessario. Dobbiamo imparare a prenderci cura di ciò che abbiamo. #speaker:Mom
 		Come può essere colpa nostra il fatto che scoppi una tempesta? Non siamo noi a controllare il meteo. #speaker:Mayor
 -Devi fartene una ragione, la mia decisione è presa. Per quanto sia apprezzabile il tuo interesse, non è realistico salvare sia il bosco che le finanze della città. #speaker:Mayor
 Perché non torni ad aiutare davvero le persone nel centro? Sicuramente lì potrai essere più di aiuto. #speaker:Mayor

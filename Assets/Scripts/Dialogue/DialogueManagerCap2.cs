@@ -47,6 +47,9 @@ public class DialogueManagerCap2 : MonoBehaviour
     public bool disableSpace;
 
     public GameObject mom;
+    public GameObject sindaco;
+
+
 
     public float feeling;
 
@@ -89,11 +92,31 @@ public class DialogueManagerCap2 : MonoBehaviour
             if(disableSpace == false){
                 line++;
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
-                
+
+                if(line == 11 && countDialogue == 1){
+                    mom.GetComponent<Animator>().SetBool("Angry", true);
+                }
+
+                if(line == 15 && countDialogue == 1){
+                    StartCoroutine(phoneRings());
+                }
+
+
                 ContinueStory();
             }
         }
     }
+
+    private IEnumerator phoneRings(){
+        //SI DEVE FAR SQUILLARE IL TELEFONO QUI
+        dialoguePanel.SetActive(false);
+        yield return new WaitForSeconds(2f);
+        dialoguePanel.SetActive(true);
+    }
+
+
+
+
 
     public void EnterDialogueMode(TextAsset inkJSON){
         currentStory = new Story(inkJSON.text);
@@ -119,7 +142,8 @@ public class DialogueManagerCap2 : MonoBehaviour
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
-           
+          mom.GetComponent<DialogueTriggerCap2>().closeConv();
+          mom.GetComponent<followDestinationCap2_1>().enabled = true;
         }
         //cose da fare quando termina il secondo dialogo
         else if(countDialogue == 2){
@@ -137,7 +161,6 @@ public class DialogueManagerCap2 : MonoBehaviour
         line = 0;
         countDialogue++;
     }
-
 
 
 
@@ -175,10 +198,12 @@ public class DialogueManagerCap2 : MonoBehaviour
                     if(tagValue == "Mom"){          
                         imageOfSpeaker.sprite = momImage;
                         mom.GetComponent<Animator>().SetBool("Talk", true);
+                        sindaco.GetComponent<Animator>().SetBool("Talk", false);
                     }
                     else if(tagValue == "Mayor"){ 
                         imageOfSpeaker.sprite = mayorImage;
                         mom.GetComponent<Animator>().SetBool("Talk", false);
+                        sindaco.GetComponent<Animator>().SetBool("Talk", true);
                     }
                    
                     break;

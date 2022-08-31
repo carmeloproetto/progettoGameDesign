@@ -64,9 +64,14 @@ public class DialogueTriggerCap2 : MonoBehaviour
     }
 
 
-       public void startConvByOtherScript(){
+    public void startConvByOtherScript(){
         startConv = true;
         playerInRange = true;
+    }
+
+    public void closeConv(){
+        startConv = false;
+        playerInRange = false;
     }
 
 }

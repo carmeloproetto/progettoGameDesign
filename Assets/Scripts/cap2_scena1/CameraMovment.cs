@@ -12,7 +12,7 @@ public class CameraMovment : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        b.Set(-6.105166f, 4.26f, -11.977f);
+        b.Set(-5.26f, 4.26f, -11.98f);
     }
 
     // Update is called once per frame
@@ -21,7 +21,7 @@ public class CameraMovment : MonoBehaviour
         Vector3 a = transform.position;
         transform.position = Vector3.MoveTowards(a, b, 0.04f);
 
-         if(transform.position.x == -6.105166f && transform.position.y ==  4.26f && transform.position.z == -11.977f){
+         if(transform.position.x == -5.26f && transform.position.y ==  4.26f && transform.position.z == -11.98f){
             //this.GetComponent<CameraFollow>().enabled = true;
             StartCoroutine(startDialogue());
         }
@@ -30,6 +30,6 @@ public class CameraMovment : MonoBehaviour
      private IEnumerator startDialogue(){
         yield return new WaitForSeconds(1.5f);
         mom.GetComponent<DialogueTriggerCap2>().startConvByOtherScript();
-        
+        this.GetComponent<CameraMovment>().enabled = false;
      }
 }
