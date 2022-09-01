@@ -33,12 +33,13 @@ public class PlayerController : MonoBehaviour
     private bool _jumpEnabled = true; 
     private bool _backwardEnabled = true; 
 
+    
     // Start is called before the first frame update
     void Start()
     {
         _controller = GetComponent<CharacterController>();
         curTarDirection = transform.forward;
-        _animator = this.GetComponent<Animator>(); 
+        _animator = this.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -46,7 +47,8 @@ public class PlayerController : MonoBehaviour
     {
 
         //blocco il movimento se sto conversando
-        if(DialogueManager.GetInstance().dialogueIsPlaying){
+        if(DialogueManager.GetInstance().dialogueIsPlaying || DialogueManagerCap2_2.GetInstance().dialogueIsPlaying){
+            _animator.SetFloat("Speed", 0);
             return;
         }
 

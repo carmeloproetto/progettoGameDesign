@@ -1,0 +1,69 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class DialogueTriggerCap2_2 : MonoBehaviour
+{
+ [Header("Ink JSON")]
+    [SerializeField] private TextAsset inkJSON;
+    [SerializeField] public TextAsset inkJSON2;
+    [SerializeField] public TextAsset inkJSON3;
+
+    public TextAsset ink;
+
+    private bool playerInRange;
+
+    //serve per far scattare il dialogo da follow destination
+    public bool startConv;
+
+    private int count;
+
+    private void Awake(){
+       // visualCue.SetActive(false);
+        startConv = false;
+        ink = inkJSON;
+    }
+
+
+    private void Update(){
+        if(playerInRange && !DialogueManagerCap2_2.GetInstance().dialogueIsPlaying){
+            //visualCue.SetActive(true);
+            if(Input.GetKeyDown("c") || startConv){
+                Debug.Log(ink.text);
+                DialogueManagerCap2_2.GetInstance().EnterDialogueMode(ink);
+                startConv = false;
+                
+            }
+        }
+        else{
+            //visualCue.SetActive(false);
+        }
+    }
+
+
+    private void OnTriggerEnter(Collider collider){
+        
+        if(collider.CompareTag("Player")){
+            playerInRange = true;
+            
+        }
+    }
+
+    private void OnTriggerExit(Collider collider){
+        if(collider.CompareTag("Player")){
+            playerInRange = false;
+        }
+    }
+
+
+    public void startConvByOtherScript(){
+        startConv = true;
+        playerInRange = true;
+    }
+
+    public void closeConv(){
+        startConv = false;
+        playerInRange = false;
+    }
+
+}
