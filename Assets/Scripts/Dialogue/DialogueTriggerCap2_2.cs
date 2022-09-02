@@ -20,22 +20,47 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
 
     public GameObject visualCue;
     public GameObject mom;
+    public GameObject guardia;
+
+    private bool no;
 
     private void Awake(){
        // visualCue.SetActive(false);
+       
         startConv = false;
         ink = inkJSON;
+        no = true;
     }
 
+   
 
     private void Update(){
+
         if(playerInRange && !DialogueManagerCap2_2.GetInstance().dialogueIsPlaying){
             if(Input.GetKeyDown("c") || startConv){
                 visualCue.SetActive(false);
-                if(this.name == "triggerDialogueZoneGuardia")
+                if(this.name == "triggerDialogueZoneGuardia"){
                     mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "Guardia";
-                else if(this.name == "TriggerDialogueZoneDx")
-                   mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "ManifestanteDx";
+                    guardia.GetComponent<Animator>().SetBool("No", no);
+                    no = false;
+                }
+                else if(this.name == "TriggerDialogueZoneDx"){
+                    mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "ManifestanteDx";
+                    mom.transform.eulerAngles = new Vector3(0f, 0f, 0f);
+                }
+                else if(this.name == "TriggerDialogueZoneSx"){
+                    mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "ManifestanteSx";
+                    mom.transform.eulerAngles = new Vector3(0f, 0f, 0f);
+                }
+                else if(this.name == "TriggerDialogueZoneCentro"){
+                    mom.transform.eulerAngles = new Vector3(0f, 0f, 0f);
+                    if(mom.GetComponent<DialogueManagerCap2_2>().talkedToGuard){
+                        ink = inkJSON2;
+                        //mom.GetComponent<DialogueManagerCap2_2>().talkedToGuard = false;
+                    }
+                   mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "ManifestanteCentro";
+                }
+
                 Debug.Log(ink.text);
                 DialogueManagerCap2_2.GetInstance().EnterDialogueMode(ink);
                 startConv = false;

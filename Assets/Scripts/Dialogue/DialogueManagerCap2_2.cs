@@ -17,6 +17,9 @@ public class DialogueManagerCap2_2 : MonoBehaviour
 
     public Sprite momImage;
     public Sprite guardiaImage;
+    public Sprite manifestante1Image;
+    public Sprite manifestante2Image;
+    public Sprite manifestante3Image;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -52,6 +55,9 @@ public class DialogueManagerCap2_2 : MonoBehaviour
     public GameObject triggerDialogueZoneManifestanteSx;
 
     public string whoSpeak;
+    public bool talkedToGuard;
+
+    public GameObject guardia;
 
 
 
@@ -64,6 +70,7 @@ public class DialogueManagerCap2_2 : MonoBehaviour
         viewChoice = false;
         countDialogue = 1;
         disableSpace = false;
+        talkedToGuard = false;
     }
 
     public static DialogueManagerCap2_2 GetInstance(){
@@ -126,10 +133,20 @@ public class DialogueManagerCap2_2 : MonoBehaviour
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
 
-         if(whoSpeak == "Guardia")
+         if(whoSpeak == "Guardia"){
                 triggerDialogueZoneGuardia.SetActive(false);
+                talkedToGuard = true;
+                triggerDialogueZoneManifestanteCentro.SetActive(true);
+                guardia.GetComponent<Animator>().SetBool("No", false);
+         }
         else if(whoSpeak == "ManifestanteDx")
             triggerDialogueZoneManifestanteDx.SetActive(false);
+        else if(whoSpeak == "ManifestanteSx")
+            triggerDialogueZoneManifestanteSx.SetActive(false);
+        else if(whoSpeak == "ManifestanteCentro" && !talkedToGuard){
+            Debug.Log("ayo");
+            triggerDialogueZoneManifestanteCentro.SetActive(false);
+        }    
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
@@ -192,6 +209,12 @@ public class DialogueManagerCap2_2 : MonoBehaviour
                     else if(tagValue == "Guardia"){          
                         imageOfSpeaker.sprite = guardiaImage;
                     }
+                    else if(tagValue == "Manifestante 1")
+                        imageOfSpeaker.sprite = manifestante1Image;
+                    else if(tagValue == "Manifestante 2")
+                        imageOfSpeaker.sprite = manifestante2Image;
+                    else if(tagValue == "Manifestante 3")
+                        imageOfSpeaker.sprite = manifestante3Image;
                     
                    
                     break;
