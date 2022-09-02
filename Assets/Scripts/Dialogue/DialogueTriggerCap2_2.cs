@@ -18,6 +18,9 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
 
     private int count;
 
+    public GameObject visualCue;
+    public GameObject mom;
+
     private void Awake(){
        // visualCue.SetActive(false);
         startConv = false;
@@ -27,16 +30,17 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
 
     private void Update(){
         if(playerInRange && !DialogueManagerCap2_2.GetInstance().dialogueIsPlaying){
-            //visualCue.SetActive(true);
             if(Input.GetKeyDown("c") || startConv){
+                visualCue.SetActive(false);
+                if(this.name == "triggerDialogueZoneGuardia")
+                    mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "Guardia";
+                else if(this.name == "TriggerDialogueZoneDx")
+                   mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "ManifestanteDx";
                 Debug.Log(ink.text);
                 DialogueManagerCap2_2.GetInstance().EnterDialogueMode(ink);
                 startConv = false;
                 
             }
-        }
-        else{
-            //visualCue.SetActive(false);
         }
     }
 
@@ -45,6 +49,8 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
         
         if(collider.CompareTag("Player")){
             playerInRange = true;
+            visualCue.SetActive(true);
+
             
         }
     }
@@ -52,6 +58,7 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
     private void OnTriggerExit(Collider collider){
         if(collider.CompareTag("Player")){
             playerInRange = false;
+            visualCue.SetActive(false);
         }
     }
 

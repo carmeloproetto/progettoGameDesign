@@ -18,7 +18,6 @@ public class DialogueManagerCap2_2 : MonoBehaviour
     public Sprite momImage;
     public Sprite guardiaImage;
 
-
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
     private TextMeshProUGUI[] choicesText;
@@ -45,6 +44,15 @@ public class DialogueManagerCap2_2 : MonoBehaviour
 
     //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
     public bool disableSpace;
+
+
+    public GameObject triggerDialogueZoneGuardia;
+    public GameObject triggerDialogueZoneManifestanteDx;
+    public GameObject triggerDialogueZoneManifestanteCentro;
+    public GameObject triggerDialogueZoneManifestanteSx;
+
+    public string whoSpeak;
+
 
 
     private void Awake(){
@@ -99,7 +107,6 @@ public class DialogueManagerCap2_2 : MonoBehaviour
     public void EnterDialogueMode(TextAsset inkJSON){
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
-      
         StartCoroutine(activePanelAfterOneSecond());
        ContinueStory();
     }
@@ -119,9 +126,15 @@ public class DialogueManagerCap2_2 : MonoBehaviour
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
 
+         if(whoSpeak == "Guardia")
+                triggerDialogueZoneGuardia.SetActive(false);
+        else if(whoSpeak == "ManifestanteDx")
+            triggerDialogueZoneManifestanteDx.SetActive(false);
+
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
-          
+           
+
         }
         //cose da fare quando termina il secondo dialogo
         else if(countDialogue == 2){

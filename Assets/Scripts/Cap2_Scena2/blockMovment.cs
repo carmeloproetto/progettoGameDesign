@@ -13,7 +13,6 @@ public class blockMovment : MonoBehaviour
     void Update()
     {   
        if(mom.transform.position.x <= -109.965f){
-            Debug.Log("non puoi andare avanti");
             mom.GetComponent<Animator>().SetFloat("Speed", 0f); 
        }
     }
