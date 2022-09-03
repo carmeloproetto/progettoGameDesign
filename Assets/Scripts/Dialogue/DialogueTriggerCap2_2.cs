@@ -22,14 +22,13 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
     public GameObject mom;
     public GameObject guardia;
 
-    private bool no;
 
     private void Awake(){
        // visualCue.SetActive(false);
        
         startConv = false;
         ink = inkJSON;
-        no = true;
+   
     }
 
    
@@ -41,8 +40,7 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
                 visualCue.SetActive(false);
                 if(this.name == "triggerDialogueZoneGuardia"){
                     mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "Guardia";
-                    guardia.GetComponent<Animator>().SetBool("No", no);
-                    no = false;
+                    guardia.GetComponent<Animator>().SetBool("No", true);
                 }
                 else if(this.name == "TriggerDialogueZoneDx"){
                     mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "ManifestanteDx";

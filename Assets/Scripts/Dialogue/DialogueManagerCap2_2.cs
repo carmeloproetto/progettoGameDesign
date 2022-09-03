@@ -59,6 +59,10 @@ public class DialogueManagerCap2_2 : MonoBehaviour
 
     public GameObject guardia;
 
+    public bool retroAzienda;
+
+    public GameObject manifestanteCentro;
+
 
 
     private void Awake(){
@@ -71,6 +75,7 @@ public class DialogueManagerCap2_2 : MonoBehaviour
         countDialogue = 1;
         disableSpace = false;
         talkedToGuard = false;
+        retroAzienda = false;
     }
 
     public static DialogueManagerCap2_2 GetInstance(){
@@ -144,9 +149,14 @@ public class DialogueManagerCap2_2 : MonoBehaviour
         else if(whoSpeak == "ManifestanteSx")
             triggerDialogueZoneManifestanteSx.SetActive(false);
         else if(whoSpeak == "ManifestanteCentro" && !talkedToGuard){
-            Debug.Log("ayo");
             triggerDialogueZoneManifestanteCentro.SetActive(false);
-        }    
+        }
+
+        //if che parte al termine del dialgoo se la madre è pronta per andare dietro l'azienda
+        if(retroAzienda){
+              triggerDialogueZoneManifestanteCentro.SetActive(false);
+              manifestanteCentro.GetComponent<followDestinationCap2_2>().enabled = true;
+        }  
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
@@ -261,7 +271,10 @@ public class DialogueManagerCap2_2 : MonoBehaviour
     public void MakeChoice(int choiceIndex){
         Debug.Log("numero della scleta:" + choiceIndex + " " + line + " " + countDialogue);
         /* inserie cose da fare in base alle scelte*/
-
+        if(choiceIndex == 0){
+            Debug.Log("possiamo andare sul retro");
+            retroAzienda = true;
+        }
        
 
         currentStory.ChooseChoiceIndex(choiceIndex);
