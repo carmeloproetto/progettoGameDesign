@@ -17,6 +17,8 @@ public class followDestinationCap2_2 : MonoBehaviour
     public GameObject guardia;
     public Transform manifestane;
     public GameObject wallSx;
+    public GameObject triggerRetroZone;
+    public GameObject mom;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,11 @@ public class followDestinationCap2_2 : MonoBehaviour
         velocity -= aux * Time.deltaTime;
         transform.LookAt(target);
 
+        if(this.name == "Guardia"){
+            wallSx.SetActive(false);
+             mom.GetComponent<blockMovment>().enabled = false;
+        }
+
         //abbiamo raggiunto la destinazione
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
            // transform.LookAt(barrel);
@@ -47,8 +54,11 @@ public class followDestinationCap2_2 : MonoBehaviour
                 Debug.Log("perchè non ruoti?");
                 transform.LookAt(manifestane);
                 _animator.SetBool("No", true);
-                wallSx.SetActive(false);
+                
+               
+                triggerRetroZone.SetActive(true);
             }
         }
     }
+
 }

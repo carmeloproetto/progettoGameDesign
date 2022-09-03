@@ -96,4 +96,5 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
         playerInRange = false;
     }
 
+
 }
