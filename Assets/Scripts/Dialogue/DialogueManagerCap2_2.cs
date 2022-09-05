@@ -58,6 +58,7 @@ public class DialogueManagerCap2_2 : MonoBehaviour
     public bool talkedToGuard;
 
     public GameObject guardia;
+    public GameObject manifestanteDx;
 
     public bool retroAzienda;
 
@@ -138,18 +139,29 @@ public class DialogueManagerCap2_2 : MonoBehaviour
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
 
+
+         if(whoSpeak == "ManifestanteCentro"){
+             manifestanteCentro.GetComponent<Animator>().SetBool("Talk", false);
+         }
+
          if(whoSpeak == "Guardia"){
                 triggerDialogueZoneGuardia.SetActive(false);
                 talkedToGuard = true;
+                triggerDialogueZoneManifestanteCentro.GetComponent<DialogueTriggerCap2_2>().closeConv();
                 triggerDialogueZoneManifestanteCentro.SetActive(true);
                 guardia.GetComponent<Animator>().SetBool("No", false);
          }
-        else if(whoSpeak == "ManifestanteDx")
+        else if(whoSpeak == "ManifestanteDx"){
             triggerDialogueZoneManifestanteDx.SetActive(false);
-        else if(whoSpeak == "ManifestanteSx")
+            manifestanteDx.GetComponent<Animator>().SetBool("Speak", false);
+        }
+        else if(whoSpeak == "ManifestanteSx"){
             triggerDialogueZoneManifestanteSx.SetActive(false);
+             
+        }
         else if(whoSpeak == "ManifestanteCentro" && !talkedToGuard){
             triggerDialogueZoneManifestanteCentro.SetActive(false);
+           
         }
 
         //if che parte al termine del dialgoo se la madre è pronta per andare dietro l'azienda
@@ -157,24 +169,6 @@ public class DialogueManagerCap2_2 : MonoBehaviour
               triggerDialogueZoneManifestanteCentro.SetActive(false);
               manifestanteCentro.GetComponent<followDestinationCap2_2>().enabled = true;
         }  
-
-        //cose da fare quando termina il primo dialogo
-        if(countDialogue == 1){
-           
-
-        }
-        //cose da fare quando termina il secondo dialogo
-        else if(countDialogue == 2){
-            
-        }
-        //cose da fare quando termina il terzo dialogo
-        else if(countDialogue == 3){
-          
-        }
-        //cose da fare quando termina il quarto dialogo
-        else if(countDialogue == 4){
-            
-        }
 
         line = 0;
         countDialogue++;

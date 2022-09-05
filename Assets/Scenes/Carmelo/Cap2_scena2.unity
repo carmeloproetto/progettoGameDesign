@@ -1284,6 +1284,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4141207164023176, guid: 0a804f15ce1f1d34eabed72f25b3d732, type: 3}
   m_PrefabInstance: {fileID: 57373273}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &59279141 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7757084832641207495, guid: a811ea94811ef44d4a63452d2d3641d4, type: 3}
+  m_PrefabInstance: {fileID: 1530278447}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &61045555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1716,6 +1721,8 @@ MonoBehaviour:
   visualCue: {fileID: 432126071}
   mom: {fileID: 1835265998}
   guardia: {fileID: 460499810}
+  manifestanteDx: {fileID: 0}
+  manifestanteCen: {fileID: 0}
 --- !u!65 &81045215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2581,7 +2588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7433081326219436858, guid: af042f0d31f46406c985d5456356757d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -99.4
+      value: -88.87
       objectReference: {fileID: 0}
     - target: {fileID: 7433081326219436858, guid: af042f0d31f46406c985d5456356757d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2601,7 +2608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7433081326219436858, guid: af042f0d31f46406c985d5456356757d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 7433081326219436858, guid: af042f0d31f46406c985d5456356757d, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2613,7 +2620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7433081326219436858, guid: af042f0d31f46406c985d5456356757d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 7433081326219436858, guid: af042f0d31f46406c985d5456356757d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -16349,6 +16356,8 @@ MonoBehaviour:
   visualCue: {fileID: 247653844}
   mom: {fileID: 1835265998}
   guardia: {fileID: 0}
+  manifestanteDx: {fileID: 59279141}
+  manifestanteCen: {fileID: 0}
 --- !u!65 &869567938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20228,6 +20237,8 @@ MonoBehaviour:
   visualCue: {fileID: 2107988363}
   mom: {fileID: 1835265998}
   guardia: {fileID: 0}
+  manifestanteDx: {fileID: 0}
+  manifestanteCen: {fileID: 590502386}
 --- !u!65 &1053021796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30545,6 +30556,8 @@ MonoBehaviour:
   visualCue: {fileID: 1458748771}
   mom: {fileID: 1835265998}
   guardia: {fileID: 0}
+  manifestanteDx: {fileID: 0}
+  manifestanteCen: {fileID: 0}
 --- !u!65 &1585654795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35850,6 +35863,7 @@ MonoBehaviour:
   whoSpeak: 
   talkedToGuard: 0
   guardia: {fileID: 460499810}
+  manifestanteDx: {fileID: 59279141}
   retroAzienda: 0
   manifestanteCentro: {fileID: 590502386}
 --- !u!114 &1835266005
@@ -36589,7 +36603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7931445720761214834, guid: 85c9e057e465d40d4a1a0371ecde8960, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -102.04
+      value: -100.12
       objectReference: {fileID: 0}
     - target: {fileID: 7931445720761214834, guid: 85c9e057e465d40d4a1a0371ecde8960, type: 3}
       propertyPath: m_LocalPosition.y
@@ -38182,7 +38196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 110828875}
-  speed: 0.05
+  speed: 0.06
   mom: {fileID: 1835265998}
 --- !u!4 &1959585927
 Transform:
