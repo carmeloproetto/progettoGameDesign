@@ -5,14 +5,27 @@ using UnityEngine;
 public class invertPosition : MonoBehaviour
 {
 
-        public void rotate(){
-        
-        if(transform.eulerAngles.y >= 0){
-            //this.transform.eulerAngles = new Vector3(0f, -90f, 0f);
-            transform.Rotate (Vector3.back*6);
-            Debug.Log("siamo quii");
-        }
-        else
-            this.transform.eulerAngles = new Vector3(0f, 90f, 0f); 
+    private bool rotateEnabled;
+    private int x;
+
+    public void Start(){
+          rotateEnabled = false;
+          x = 90;
     }
+
+    public void Update(){
+        if(rotateEnabled == true){
+            this.transform.eulerAngles = new Vector3(0f, x, 0f);
+            rotateEnabled = false;
+        }
+    }
+
+
+
+    public void rotate(){ 
+        rotateEnabled = true;
+        x = -x;
+    }
+    
+
 }

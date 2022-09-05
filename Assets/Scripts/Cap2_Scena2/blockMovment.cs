@@ -12,7 +12,7 @@ public class blockMovment : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-       if(mom.transform.position.x <= -109.965f){
+       if(mom.transform.position.x <= -109.965f || mom.transform.position.x > -85.949566){
             mom.GetComponent<Animator>().SetFloat("Speed", 0f); 
        }
     }
