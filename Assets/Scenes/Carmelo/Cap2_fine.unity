@@ -277,7 +277,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 400}
-  m_SizeDelta: {x: -100, y: 200}
+  m_SizeDelta: {x: -100, y: 262.2318}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &162677796
 MonoBehaviour:
@@ -545,7 +545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScene1: {fileID: 11400000, guid: bb844b40e5b105f42a64f5a77c039de3, type: 2}
   currentScene2: {fileID: 11400000, guid: 82fec9bc53d35c447b5d0ca849d8bd20, type: 2}
-  currentScene3: {fileID: 0}
+  currentScene3: {fileID: 11400000, guid: b835d0023cf692746ae08cbe8434e65e, type: 2}
   auxScene: {fileID: 0}
   bottomBar: {fileID: 162677798}
   backgroundController: {fileID: 1356436400}

@@ -37,7 +37,7 @@ public class GameControllerIntroCap3 : MonoBehaviour
                 }
                 else if(countScene == 1){
                     //bisogna caricare la scena corretta
-                    SceneManager.LoadScene("InfanziaP_background_2");
+                    SceneManager.LoadScene("Cap3_scena1");
                 }
             }
         }

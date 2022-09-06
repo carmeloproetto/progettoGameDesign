@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8ed64f743d504b4cbd69dd1ebec8c88, type: 3}
-  m_Name: FineCap2Male
+  m_Name: Cap3Scena1Intro
   m_EditorClassIdentifier: 
   sentences:
-  - text: "Purtroppo, per quanto ci avesse provato, mia madre non riusc\xEC a farsi
-      valere."
+  - text: Qualche anno prima che nascessi, mio padre stava ultimando il suo dottorato.
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
-  background: {fileID: 21300000, guid: 9369eb148fdeaac4fae05a3a4860c853, type: 3}
-  nextScene: {fileID: 11400000, guid: 8bfd16e9888684045b0ab6b1310bc816, type: 2}
+  background: {fileID: 0}
+  nextScene: {fileID: 0}
