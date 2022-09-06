@@ -34,6 +34,8 @@ public class DialogueTriggerCap2_3 : MonoBehaviour
                 startConv = false;
             }
         }
+
+
     }
 
       private void OnTriggerEnter(Collider collider){
@@ -65,5 +67,6 @@ public class DialogueTriggerCap2_3 : MonoBehaviour
         startConv = false;
         playerInRange = false;
     }
+
 
 }

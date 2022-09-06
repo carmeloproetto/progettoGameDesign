@@ -411,6 +411,7 @@ GameObject:
   - component: {fileID: 760991957}
   - component: {fileID: 760991961}
   - component: {fileID: 760991962}
+  - component: {fileID: 760991963}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -522,12 +523,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760991956}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6f2e9763a3c263c46ac71490e71851e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 72af14f1cda7ab0428f2a4a400e97259, type: 2}
+  bottomBar: {fileID: 162677798}
+  backgroundController: {fileID: 1356436400}
+--- !u!114 &760991963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 760991956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8cfbc1c45a8c68e408b2e6a7a5f125c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScene1: {fileID: 11400000, guid: bb844b40e5b105f42a64f5a77c039de3, type: 2}
+  currentScene2: {fileID: 11400000, guid: 82fec9bc53d35c447b5d0ca849d8bd20, type: 2}
+  currentScene3: {fileID: 0}
+  auxScene: {fileID: 0}
   bottomBar: {fileID: 162677798}
   backgroundController: {fileID: 1356436400}
 --- !u!1 &968039617

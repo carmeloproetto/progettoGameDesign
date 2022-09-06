@@ -44,5 +44,6 @@ public class followDestinationCap2_3 : MonoBehaviour
             this.GetComponent<DialogueTriggerCap2_3>().startConvByOtherScript();
         }
     }
+
 }
 

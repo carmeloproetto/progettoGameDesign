@@ -60,6 +60,8 @@ public class DialogueManagerCap2_3 : MonoBehaviour
 
     public float feeling;
 
+    public static int finale;
+
 
     private void Awake(){
         if(instance != null){
@@ -104,15 +106,20 @@ public class DialogueManagerCap2_3 : MonoBehaviour
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
                 if(line == 3 && countDialogue == 2 && feeling < 0.5){
                     Debug.Log("chiudi la conversazione");
-                    
                     canvas1.SetActive(false);
-                    
+                    finale = 2;
+                    SceneManager.LoadScene("Cap2_fine");
                 }
                 else if(line == 1 && countDialogue == 2 && no){
-                    mom.GetComponent<DialogueTriggerCap2_3>().closeConv();
-                    mom.GetComponent<DialogueTriggerCap2_3>().enabled = false;
+                    //mom.GetComponent<DialogueTriggerCap2_3>().enabled = false;
+                    //this.GetComponent<DialogueManagerCap2_3>().enabled = false;
                     canvas1.SetActive(false);
-                    
+                    mom.GetComponent<Animator>().SetBool("PutBack", false);
+                    mom.GetComponent<Animator>().SetBool("Talk", false);
+                    mom.GetComponent<DialogueTriggerCap2_3>().enabled = false;
+                    this.GetComponent<DialogueManagerCap2_3>().enabled = false;
+                    //mom.GetComponent<followDestinationCap2_3>().enabled = false;
+                    //mom.GetComponent<followDestinationCap2_3_2>().enabled = true;
                 }
                 else
                     ContinueStory();
@@ -155,13 +162,19 @@ public class DialogueManagerCap2_3 : MonoBehaviour
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1 && no){
-          mom.GetComponent<DialogueTriggerCap2_3>().enabled = false;
+            mom.GetComponent<Animator>().SetBool("PutBack", false);
+            mom.GetComponent<Animator>().SetBool("Talk", false);
+            mom.GetComponent<DialogueTriggerCap2_3>().enabled = false;
+            this.GetComponent<DialogueManagerCap2_3>().enabled = false;
+            //mom.GetComponent<followDestinationCap2_3>().enabled = false;
+            //mom.GetComponent<followDestinationCap2_3_2>().enabled = true;
         }
         //cose da fare quando termina il secondo dialogo
         else if(countDialogue == 2){
            mom.GetComponent<DialogueTriggerCap2_3>().enabled = false;
            //canvas2.SetActive(true);
-            SceneManager.LoadScene("Cap2_fine");
+           finale = 1;
+           SceneManager.LoadScene("Cap2_fine");
         }
         //cose da fare quando termina il terzo dialogo
         else if(countDialogue == 3){
@@ -175,6 +188,8 @@ public class DialogueManagerCap2_3 : MonoBehaviour
         line = 0;
         countDialogue++;
     }
+
+
 
 
 
@@ -212,8 +227,10 @@ public class DialogueManagerCap2_3 : MonoBehaviour
                     displayNameText.text = tagValue;
                     if(tagValue == "Mom"){          
                         imageOfSpeaker.sprite = momImage;
-                        if(line != 7)
+                        if(line != 7 || no == false){
+                            Debug.Log("parlaaaa");
                             mom.GetComponent<Animator>().SetBool("Talk", true);
+                        }
                         sindaco.GetComponent<Animator>().SetBool("Talk", false);
                     }
                     else if(tagValue == "Mayor"){ 

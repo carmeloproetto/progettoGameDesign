@@ -15,7 +15,7 @@ public class fineCap3 : MonoBehaviour
 
     public BackgroundController backgroundController;
 
-    public GameObject canvas2;
+    //public GameObject canvas2;
 
     // Start is called before the first frame update
     void Start()
@@ -38,8 +38,9 @@ public class fineCap3 : MonoBehaviour
                     bottomBar.PlayNextSentence();
                 }
                 else if(countScene == 4){
+                    Debug.Log("scena 3 finita");
                     //disattiviamo il canvas e riabilitiamo il movimento del player
-                    canvas2.SetActive(false);
+                    //canvas2.SetActive(false);
                     //DObbiamo caricare la nuova scena qui
                 }
             }
