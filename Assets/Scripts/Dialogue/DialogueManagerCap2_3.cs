@@ -5,6 +5,7 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManagerCap2_3 : MonoBehaviour
 {
@@ -48,9 +49,12 @@ public class DialogueManagerCap2_3 : MonoBehaviour
 
     public GameObject mom;
     public GameObject sindaco;
+    public GameObject canvas1;
+    //public GameObject canvas2;
     
 
     private bool noAnimation;
+    private bool no;
 
 
 
@@ -66,6 +70,8 @@ public class DialogueManagerCap2_3 : MonoBehaviour
         viewChoice = false;
         countDialogue = 1;
         disableSpace = false;
+        feeling = DialogueManagerCap2.feeling;
+        no = false;
     }
 
     public static DialogueManagerCap2_3 GetInstance(){
@@ -96,13 +102,20 @@ public class DialogueManagerCap2_3 : MonoBehaviour
             if(disableSpace == false){
                 line++;
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
-
-
-                if(line == 1 && countDialogue == 2){
+                if(line == 3 && countDialogue == 2 && feeling < 0.5){
+                    Debug.Log("chiudi la conversazione");
+                    
+                    canvas1.SetActive(false);
                     
                 }
-
-                ContinueStory();
+                else if(line == 1 && countDialogue == 2 && no){
+                    mom.GetComponent<DialogueTriggerCap2_3>().closeConv();
+                    mom.GetComponent<DialogueTriggerCap2_3>().enabled = false;
+                    canvas1.SetActive(false);
+                    
+                }
+                else
+                    ContinueStory();
             }
         }
     }
@@ -116,32 +129,39 @@ public class DialogueManagerCap2_3 : MonoBehaviour
     public void EnterDialogueMode(TextAsset inkJSON){
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
-      
-        StartCoroutine(activePanelAfterOneSecond());
+        
+        dialoguePanel.SetActive(true);
+       // StartCoroutine(activePanelAfterOneSecond());
        ContinueStory();
     }
 
 
-     private IEnumerator activePanelAfterOneSecond(){
+   /*  private IEnumerator activePanelAfterOneSecond(){
         yield return new WaitForSeconds(1f);
         dialoguePanel.SetActive(true);
-     }
+     }*/
 
 
     private IEnumerator ExitDialogueMode(){
         yield return new WaitForSeconds(0.2f);
 
+        Debug.Log("sono qui dentro ExitDIalogueMOde");
+
         dialogueIsPlaying = false;
-        dialoguePanel.SetActive(false);
-        dialogueText.text = "";
+        //if(countDialogue != 1 && firstChoice){
+            dialoguePanel.SetActive(false);
+            dialogueText.text = "";
+        //}
 
         //cose da fare quando termina il primo dialogo
-        if(countDialogue == 1){
-          
+        if(countDialogue == 1 && no){
+          mom.GetComponent<DialogueTriggerCap2_3>().enabled = false;
         }
         //cose da fare quando termina il secondo dialogo
         else if(countDialogue == 2){
-           
+           mom.GetComponent<DialogueTriggerCap2_3>().enabled = false;
+           //canvas2.SetActive(true);
+            SceneManager.LoadScene("Cap2_fine");
         }
         //cose da fare quando termina il terzo dialogo
         else if(countDialogue == 3){
@@ -192,7 +212,8 @@ public class DialogueManagerCap2_3 : MonoBehaviour
                     displayNameText.text = tagValue;
                     if(tagValue == "Mom"){          
                         imageOfSpeaker.sprite = momImage;
-                        mom.GetComponent<Animator>().SetBool("Talk", true);
+                        if(line != 7)
+                            mom.GetComponent<Animator>().SetBool("Talk", true);
                         sindaco.GetComponent<Animator>().SetBool("Talk", false);
                     }
                     else if(tagValue == "Mayor"){ 
@@ -245,11 +266,35 @@ public class DialogueManagerCap2_3 : MonoBehaviour
 
     public void MakeChoice(int choiceIndex){
         Debug.Log("numero della scleta:" + choiceIndex + " " + line + " " + countDialogue);
-        if(choiceIndex == 0 && line == 3 && countDialogue == 1)
+        //if(choiceIndex == 0 && line == 3 && countDialogue == 1)
            
-        if(line == 7 && countDialogue == 1)
-            //DEVO SETTARE ANIMAZIONE ESTRAZIONE FOGLIO
-       
+        if(line == 7 && countDialogue == 1){
+            mom.GetComponent<Animator>().SetBool("Talk", false);
+            mom.GetComponent<Animator>().SetBool("PutBack", true);
+        }
+
+        if(choiceIndex == 0 && line == 2 && countDialogue == 1){
+            feeling -= 0.25f;
+        }
+
+        if(choiceIndex == 0 && line == 13 && countDialogue == 1){
+            if(feeling >= 0.5){
+                mom.GetComponent<DialogueTriggerCap2_3>().closeConv();
+                mom.GetComponent<DialogueTriggerCap2_3>().ink = mom.GetComponent<DialogueTriggerCap2_3>().inkJSON2;
+                mom.GetComponent<DialogueTriggerCap2_3>().startConvByOtherScript();
+            }
+            else if(feeling < 0.5){
+                mom.GetComponent<DialogueTriggerCap2_3>().closeConv();
+                mom.GetComponent<DialogueTriggerCap2_3>().ink = mom.GetComponent<DialogueTriggerCap2_3>().inkJSON3;
+                mom.GetComponent<DialogueTriggerCap2_3>().startConvByOtherScript();
+            }
+        }
+        else if(choiceIndex == 1 && line == 13 && countDialogue == 1)
+            no = true;
+        else if(choiceIndex == 1 && line == 0 && countDialogue == 2){
+            no = true;
+
+        }
 
         currentStory.ChooseChoiceIndex(choiceIndex);
         ContinueStory();

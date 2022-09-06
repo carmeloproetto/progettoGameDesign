@@ -35848,8 +35848,8 @@ MonoBehaviour:
   displayNameText: {fileID: 1299850136}
   imageOfSpeaker: {fileID: 530565799}
   momImage: {fileID: 21300000, guid: 7e5e89a3ea1c9d84cb09473dfc5bd431, type: 3}
-  guardiaImage: {fileID: 0}
-  manifestante1Image: {fileID: 0}
+  guardiaImage: {fileID: 21300000, guid: 58d02f9899ea93549a181a49804a7114, type: 3}
+  manifestante1Image: {fileID: 21300000, guid: 0c5a28f64820f2f4ab8b98ad203a6dde, type: 3}
   manifestante2Image: {fileID: 21300000, guid: 342f6f557ad9cec47a110505b9127fd7, type: 3}
   manifestante3Image: {fileID: 21300000, guid: 89e87239337d7d24583c2bb36139e681, type: 3}
   choices:

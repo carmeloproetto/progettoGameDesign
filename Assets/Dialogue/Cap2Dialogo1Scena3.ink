@@ -30,5 +30,5 @@ Basta fare capricci! Ti ho detto di darmelo! #speaker:Mayor
 		-> chosen("L'hai voluto tu! Mi dispiace.")
 
 === chosen(choose) ===
-{choose}
+{choose} #speaker:Mom
 -> END
