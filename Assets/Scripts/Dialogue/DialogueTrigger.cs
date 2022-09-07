@@ -32,11 +32,11 @@ public class DialogueTrigger : MonoBehaviour
 
 
     private void Update(){
-        if(playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying){
+        if(playerInRange && !DialogueManagerCap3_1.GetInstance().dialogueIsPlaying){
             //visualCue.SetActive(true);
             if(/*Input.GetKeyDown("c") ||*/ startConv){
                 Debug.Log(ink.text);
-                DialogueManager.GetInstance().EnterDialogueMode(ink);
+                DialogueManagerCap3_1.GetInstance().EnterDialogueMode(ink);
                 startConv = false;
             }
         }
@@ -65,5 +65,15 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
+    public void startConvByOtherScript(){
+        startConv = true;
+        playerInRange = true;
+    }
+
+
+    public void closeConv(){
+        startConv = false;
+        playerInRange = false;
+    }
  
 }

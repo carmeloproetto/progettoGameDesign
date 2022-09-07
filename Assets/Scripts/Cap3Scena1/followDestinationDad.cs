@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class followDestinationProfessor : MonoBehaviour
+public class followDestinationDad : MonoBehaviour
 {
 
      public Transform target;
@@ -15,8 +15,8 @@ public class followDestinationProfessor : MonoBehaviour
     private float velocity = 5f;
     private float aux = 0.8f;
 
-    public GameObject dad;
 
+    public GameObject dlgMng;
 
       void Start()
     {
@@ -32,11 +32,13 @@ public class followDestinationProfessor : MonoBehaviour
         //_animator.SetFloat("Speed", velocity);
         velocity -= aux * Time.deltaTime;
         transform.LookAt(target);
+        dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = false; 
+
 
         //abbiamo raggiunto la destinazione
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
-            dad.GetComponent<DialogueTrigger>().startConvByOtherScript();
-            this.GetComponent<followDestinationProfessor>().enabled = false;
+           dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = false; 
+           this.GetComponent<followDestinationDad>().enabled = false;
         }
     }
 
