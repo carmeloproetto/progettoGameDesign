@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class followDestinationProfessor : MonoBehaviour
+public class followDestinationProfessor2 : MonoBehaviour
 {
-
-
     public Transform target;
 
     public float speed;
@@ -18,8 +16,6 @@ public class followDestinationProfessor : MonoBehaviour
     private float aux = 0.8f;
 
     public GameObject dad;
-
-
 
       void Start()
     {
@@ -38,13 +34,12 @@ public class followDestinationProfessor : MonoBehaviour
 
         //abbiamo raggiunto la destinazione
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
-              dad.GetComponent<DialogueTrigger>().startConvByOtherScript();
-              dad.GetComponent<Animator>().SetBool("Talk", true);
-              //dad.transform.LookAt(this.transform);
-              dad.transform.eulerAngles = new Vector3(0f, 85.861f, 0f);
-              _animator.SetBool("Talk", true);
-              this.GetComponent<followDestinationProfessor>().enabled = false;
+            this.GetComponent<followDestinationProfessor>().enabled = false;
+            
         }
     }
 
 }
+
+
+

@@ -51,6 +51,8 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
 
     public bool QteScoiattoliEnd;
 
+    public float feeling;
+
 
    
 
@@ -65,6 +67,7 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
         disableSpace = false;
 
         QteScoiattoliEnd = false;
+        feeling = 0f;
     }
 
     public static DialogueManagerCap3_1 GetInstance(){
@@ -94,9 +97,10 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
             if(disableSpace == false){
                 line++;
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
-                //serve per far partire la camminata nella scena cap1 quando siamo davanti al parco
-                if(line == 15 && countDialogue == 1){
-                  
+                if(line == 14 && countDialogue == 1){
+                    professor.GetComponent<Animator>().SetBool("Talk", false);
+                    professor.GetComponent<followDestinationProfessor2>().enabled = true;
+                
                 }
                 else
                     ContinueStory();
@@ -108,9 +112,9 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         StartCoroutine(activePanelAfterOneSecond());
-          //  if(dad.GetComponent<DialogueTrigger>().ink == dad.GetComponent<DialogueTrigger>().inkJSON2){
-                currentStory.EvaluateFunction("changeFeeling", 1);
-          //  }
+            if(dad.GetComponent<DialogueTrigger>().ink == dad.GetComponent<DialogueTrigger>().inkJSON2){
+                currentStory.EvaluateFunction("changeFeeling", feeling);
+            }
         ContinueStory();
     }
 
@@ -235,12 +239,17 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
     public void MakeChoice(int choiceIndex){
         Debug.Log("numero della scleta:" + choiceIndex + " " + line + " " + countDialogue);
         
-        if(line == 3 && countDialogue == 1 && choiceIndex == 0){
-           
+        if(choiceIndex == 0 && line == 3 && countDialogue == 3 && feeling >= 0.5f){
+            feeling -= 0.25f;
+            Debug.Log("nuovo feeling: " + feeling);
+            currentStory.EvaluateFunction("changeFeeling", feeling);
         }
-        else if(line == 3 && countDialogue == 1 && choiceIndex == 1){
-           
+        if(choiceIndex == 0 && line == 7 && countDialogue == 3 && feeling < 0.5f){
+            feeling -= 0.25f;
+            Debug.Log("nuovo feeling: " + feeling);
+            currentStory.EvaluateFunction("changeFeeling", feeling);
         }
+
 
         currentStory.ChooseChoiceIndex(choiceIndex);
         ContinueStory();

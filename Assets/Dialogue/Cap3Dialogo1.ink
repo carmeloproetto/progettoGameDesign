@@ -1,4 +1,7 @@
-﻿Ah buona sera, ancora qui a lavorare. #speaker:Professor
+﻿-> main
+
+=== main ===
+Ah buona sera, ancora qui a lavorare. #speaker:Professor
 Buona sera professore. Si, sono nel pieno della conclusione della tesi. Anzi, se possibile volevo chiederle se fosse possibile rimanere ancora un po’ se non le è di disturbo. #speaker:Dad
 Oh non ci sono problemi. Ho la giornata piena di conferenze, puoi anche andare nel mio ufficio qui accanto se ti è più comodo. #speaker:Professor
 Avrei solo un favore da chiederti, non ti prenderà molto.
@@ -13,3 +16,4 @@ Va bene ho capito. #speaker:Dad
 Bene, allora io scappo. #speaker:Professor
 A più tardi. #speaker:Dad
 Vediamo cosa devo fare.
+-> END
