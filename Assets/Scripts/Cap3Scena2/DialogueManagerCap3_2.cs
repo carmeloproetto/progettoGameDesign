@@ -6,7 +6,8 @@ using Ink.Runtime;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DialogueManagerCap3_1 : MonoBehaviour{
+
+public class DialogueManagerCap3_2 : MonoBehaviour{
     [Header("Dialogue UI")]
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private TextMeshProUGUI dialogueText;
@@ -15,7 +16,7 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
 
 
     public Sprite dadImage;
-    public Sprite professorImage;
+    public Sprite thiefImage;
 
 
     [Header("Choices UI")]
@@ -26,7 +27,7 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
 
     public bool dialogueIsPlaying { get; private set; }
 
-    private static DialogueManagerCap3_1 instance;
+    private static DialogueManagerCap3_2 instance;
 
     private const string SPEAKER_TAG = "speaker";
     //private const string PORTRAIT_TAG = "portrait";
@@ -45,11 +46,14 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
     //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
     public bool disableSpace;
 
-    public GameObject professor;
     public GameObject dad;
 
     public bool QteScoiattoliEnd;
 
+    public float feeling;
+
+
+   
 
     private void Awake(){
         if(instance != null){
@@ -62,10 +66,10 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
         disableSpace = false;
 
         QteScoiattoliEnd = false;
-      
+        feeling = 0f;
     }
 
-    public static DialogueManagerCap3_1 GetInstance(){
+    public static DialogueManagerCap3_2 GetInstance(){
         return instance;
     }
 
@@ -94,17 +98,9 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
                 
                 if(line == 5 && countDialogue == 1){
-                    Debug.Log("riga 102 DialogueMangerCap3_1, BISOGNA FAR PARTIRE ANIMAZIONE DEL PROF CHE POSA GLI SCOIATTOLI SULLA SCRIVANIA");
-                }
 
-
-                if(line == 14 && countDialogue == 1){
-                    professor.GetComponent<Animator>().SetBool("Talk", false);
-                    professor.GetComponent<followDestinationProfessor2>().enabled = true;
-                    Debug.Log("riga 109 DialogueMangerCap3_1, BISOGNA FAR PARTIRE ANIMAZIONE DEL RAGAZZO CHE NON PARLA PIU'");
                 }
-                else
-                    ContinueStory();
+                ContinueStory();
             }
         }
     }
@@ -113,6 +109,10 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         StartCoroutine(activePanelAfterOneSecond());
+            
+        if(countDialogue == 1)
+            currentStory.EvaluateFunction("changeFeeling", feeling);
+
         ContinueStory();
     }
 
@@ -132,13 +132,10 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
-           dad.GetComponent<DialogueTriggerCap3_1>().closeConv();
-           //IL RAGAZZO SI DEVE ALAZARE QUI E VA VERSO GLI SCOIATTOLI;IL MOVIMENTO é GIA' FATTO, MANCA L'ANIMAZIONE DI ALZARSI E CAMMINARE 
-           dad.GetComponent<followDestinationDad>().enabled = true;
-        }
+             }
         //cose da fare quando termina il secondo dialogo
         else if(countDialogue == 2){
-           dad.GetComponent<DialogueTriggerCap3_1>().closeConv();
+       
         }
 
         line = 0;
@@ -181,8 +178,8 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
                     if(tagValue == "Dad"){ 
                         imageOfSpeaker.sprite = dadImage;
                     }
-                    else if(tagValue == "Professor"){
-                        imageOfSpeaker.sprite = professorImage;
+                    else if(tagValue == "Thief"){
+                        imageOfSpeaker.sprite = thiefImage;
                     }
                     break;
                 default: 
@@ -226,6 +223,19 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
 
     public void MakeChoice(int choiceIndex){
         Debug.Log("numero della scleta:" + choiceIndex + " " + line + " " + countDialogue);
+        
+        if(choiceIndex == 0 && line == 3 && countDialogue == 1 && feeling >= 0.5f){
+            feeling -= 0.25f;
+            Debug.Log("nuovo feeling: " + feeling);
+            currentStory.EvaluateFunction("changeFeeling", feeling);
+        }
+        if(choiceIndex == 0 && line == 7 && countDialogue == 1 && feeling < 0.5f){
+            feeling -= 0.25f;
+            Debug.Log("nuovo feeling: " + feeling);
+            currentStory.EvaluateFunction("changeFeeling", feeling);
+        }
+
+
         currentStory.ChooseChoiceIndex(choiceIndex);
         ContinueStory();
     }

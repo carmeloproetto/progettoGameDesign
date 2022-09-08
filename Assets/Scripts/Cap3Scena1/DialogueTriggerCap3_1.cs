@@ -1,12 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class DialogueTrigger : MonoBehaviour
+public class DialogueTriggerCap3_1 : MonoBehaviour
 {
-    //[Header("Visual Cue")]
-   // [SerializeField] private GameObject visualCue;
-
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
     [SerializeField] public TextAsset inkJSON2;
@@ -19,7 +17,7 @@ public class DialogueTrigger : MonoBehaviour
     //serve per far scattare il dialogo da follow destination
     public bool startConv;
 
-
+    private Scene scene;
 
     private int count;
 
@@ -28,20 +26,30 @@ public class DialogueTrigger : MonoBehaviour
         startConv = false;
         ink = inkJSON;
         count = 0;
+         scene = SceneManager.GetActiveScene();
     }
 
 
     private void Update(){
-        if(playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying){
-            //visualCue.SetActive(true);
-            if(/*Input.GetKeyDown("c") ||*/ startConv){
-                Debug.Log(ink.text);
-                DialogueManager.GetInstance().EnterDialogueMode(ink);
-                startConv = false;
+        if(scene.name == "Cap3_scena1"){
+            if(playerInRange && !DialogueManagerCap3_1.GetInstance().dialogueIsPlaying){
+                //visualCue.SetActive(true);
+                if(/*Input.GetKeyDown("c") ||*/ startConv){
+                    Debug.Log(ink.text);
+                    DialogueManagerCap3_1.GetInstance().EnterDialogueMode(ink);
+                    startConv = false;
+                }
             }
         }
         else{
-            //visualCue.SetActive(false);
+            if(playerInRange && !DialogueManagerCap3_2.GetInstance().dialogueIsPlaying){
+                //visualCue.SetActive(true);
+                if(/*Input.GetKeyDown("c") ||*/ startConv){
+                    Debug.Log(ink.text);
+                    DialogueManagerCap3_2.GetInstance().EnterDialogueMode(ink);
+                    startConv = false;
+                }
+            }
         }
     }
 

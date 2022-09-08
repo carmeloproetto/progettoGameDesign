@@ -16,6 +16,7 @@ public class followDestinationProfessor2 : MonoBehaviour
     private float aux = 0.8f;
 
     public GameObject dad;
+    public GameObject dlgMng;
 
       void Start()
     {
@@ -31,11 +32,12 @@ public class followDestinationProfessor2 : MonoBehaviour
         _animator.SetFloat("Speed", velocity);
         velocity -= aux * Time.deltaTime;
         transform.LookAt(target);
+        dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = true;
 
         //abbiamo raggiunto la destinazione
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
             this.GetComponent<followDestinationProfessor>().enabled = false;
-            
+            dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = false;
         }
     }
 

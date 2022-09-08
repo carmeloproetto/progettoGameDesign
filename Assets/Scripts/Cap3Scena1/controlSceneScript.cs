@@ -20,8 +20,8 @@ public class controlSceneScript : MonoBehaviour
 
         //è finito il minigioco degli scoiattoli
         if(dlgMng.GetComponent<DialogueManagerCap3_1>().QteScoiattoliEnd){
-            this.GetComponent<DialogueTrigger>().ink = this.GetComponent<DialogueTrigger>().inkJSON2;
-            this.GetComponent<DialogueTrigger>().startConvByOtherScript();
+            this.GetComponent<DialogueTriggerCap3_1>().ink = this.GetComponent<DialogueTriggerCap3_1>().inkJSON2;
+            this.GetComponent<DialogueTriggerCap3_1>().startConvByOtherScript();
         }
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class followDestinationDad : MonoBehaviour
 {
@@ -14,6 +15,8 @@ public class followDestinationDad : MonoBehaviour
 
     private float velocity = 5f;
     private float aux = 0.8f;
+
+    private Scene scene;
 
 
     public GameObject dlgMng;
@@ -32,13 +35,25 @@ public class followDestinationDad : MonoBehaviour
         //_animator.SetFloat("Speed", velocity);
         velocity -= aux * Time.deltaTime;
         transform.LookAt(target);
-        dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = false; 
+        //dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = true; 
 
 
         //abbiamo raggiunto la destinazione
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
-           dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = false; 
+          
+          scene = SceneManager.GetActiveScene();
+            if(scene.name == "Cap3_scena2"){
+              this.GetComponent<DialogueTriggerCap3_1>().startConvByOtherScript();
+            }
+            else{
+                //BISOGNA FAR PARTIRE IL MINI GIOCO DELLA SCENA 1 CAPITOLO 3 QUI
+
+            }
+          //dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = false; 
            this.GetComponent<followDestinationDad>().enabled = false;
+           
+
+            
         }
     }
 

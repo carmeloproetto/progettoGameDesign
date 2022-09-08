@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Cap3Scena1Intro : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class Cap3Scena1Intro : MonoBehaviour
 
     public GameObject canvas2;
     public GameObject professor;
+    public GameObject dad;
+    public Camera camera;
+
+    private Scene scene;
 
     // Start is called before the first frame update
     void Start()
@@ -25,8 +30,17 @@ public class Cap3Scena1Intro : MonoBehaviour
             if (bottomBar.IsCompleted())
             {
                 canvas2.SetActive(false);
-                professor.GetComponent<followDestinationProfessor>().enabled = true;
-                //CARICHIAMO QUI LA SCENA SUCCESSIVA
+
+                scene = SceneManager.GetActiveScene();
+                if(scene.name == "Cap3_scena1")
+                    professor.GetComponent<followDestinationProfessor>().enabled = true;
+                else{
+                    //GESTIONE SCENA 2 del CAP 3
+                    //BISOGNA FAR ANDARE BENE IL PROFESSORE NELL'ALTRA STANZA
+                    dad.GetComponent<followDestinationDad>().enabled = true;
+                    camera.GetComponent<CameraMovmentCap3>().enabled = true;
+                }
+
             }
         }
     }

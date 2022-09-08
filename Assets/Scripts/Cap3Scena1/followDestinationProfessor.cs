@@ -38,7 +38,7 @@ public class followDestinationProfessor : MonoBehaviour
 
         //abbiamo raggiunto la destinazione
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
-              dad.GetComponent<DialogueTrigger>().startConvByOtherScript();
+              dad.GetComponent<DialogueTriggerCap3_1>().startConvByOtherScript();
               dad.GetComponent<Animator>().SetBool("Talk", true);
               //dad.transform.LookAt(this.transform);
               dad.transform.eulerAngles = new Vector3(0f, 85.861f, 0f);
