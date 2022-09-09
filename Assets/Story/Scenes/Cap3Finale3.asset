@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ed64f743d504b4cbd69dd1ebec8c88, type: 3}
+  m_Name: Cap3Finale3
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: "Mio padre mi raccont\xF2 con grande dispiacere questo gesto. Sentendosi
+      alle strette e senza possibilit\xE0 di cambiare le cose, non gli rest\xF2 altro
+      che questa azione impulsiva. Lasci\xF2 affogare i due scoiattoli nel fiume,
+      incapaci di salvarsi."
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: "Sebbene il professore tent\xF2 di tranquillizzarlo assicurandogli di aver
+      preso la scelta giusta, i sensi di colpa per non aver potuto risolvere la questione
+      col dialogo lo attanagliano tuttora."
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: "Questo fu un altro evento particolarmente formativo della sua vita. Cap\xEC
+      che non basta la buona volont\xE0 per migliorare questo mondo, ma che sono
+      fondamentali anche la conoscenza e la fiducia nelle persone giuste."
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  background: {fileID: 21300000, guid: 9369eb148fdeaac4fae05a3a4860c853, type: 3}
+  nextScene: {fileID: 0}
