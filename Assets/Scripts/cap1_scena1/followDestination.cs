@@ -21,7 +21,6 @@ public class followDestination : MonoBehaviour
     public GameObject madreBambina;
 
 
-
     // Start is called before the first frame update
     void Start()
     {
@@ -44,13 +43,30 @@ public class followDestination : MonoBehaviour
         //abbiamo raggiunto la destinazione
         if(transform.position.x == target.position.x && transform.position.z == target.position.z && firstTime){
            // transform.LookAt(barrel);
-            dad.transform.eulerAngles = new Vector3(0f, -90f, 0f);
+            //dad.transform.eulerAngles = new Vector3(0f, -90f, 0f);
+            StartCoroutine( Rotate( new Vector3(0, -180, 0), 0.3f));
             _animator.SetFloat("Speed", 0f);
             _animator.SetBool("Hello", true);
             firstTime = false;
             //GetComponent<TargetFollower2>().enabled = false;
         }
     }
+
+
+     private IEnumerator Rotate( Vector3 angles, float duration )
+    {
+        Quaternion startRotation = dad.transform.rotation ;
+        Quaternion endRotation = Quaternion.Euler( angles ) * startRotation ;
+        for( float t = 0 ; t < duration ; t+= Time.deltaTime )
+        {
+            dad.transform.rotation = Quaternion.Lerp( startRotation, endRotation, t / duration ) ;
+            yield return null;
+        }
+        dad.transform.rotation = endRotation ;
+        //rotating = false;
+    }
+
+
 
     //funzione che parte quando finisce l'animazione di hello
     void endHello(){

@@ -17,15 +17,19 @@ public class followDestination5 : MonoBehaviour
 
     public GameObject canvas2;
 
+   
+
     void Start()
     {
       _animator = GetComponent<Animator>();
       b = target.position;
+      
     }
 
     void FixedUpdate()
     {
         transform.eulerAngles = new Vector3(0f, -90f, 0f);
+       
         Vector3 a = transform.position;
         transform.position = Vector3.MoveTowards(a, b, speed);
         _animator.SetFloat("Speed", velocity);
@@ -42,5 +46,7 @@ public class followDestination5 : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         canvas2.SetActive(true);
     }
+
+    
 
 }

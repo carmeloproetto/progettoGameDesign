@@ -24,6 +24,7 @@ public class setPart2 : MonoBehaviour
       private IEnumerator EnableDadMovement(){
         yield return new WaitForSeconds(0.5f);
         dad.GetComponent<PlayerController>().enabled = true;
+        dad.GetComponent<limitZone>().enabled = true;
         triggerDialogueBulloRagazzino.SetActive(true);
         ragazzino.SetActive(true);
     }

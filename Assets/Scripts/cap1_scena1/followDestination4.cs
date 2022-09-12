@@ -15,16 +15,19 @@ public class followDestination4 : MonoBehaviour
 
     public GameObject dlgManger;
 
+
+
     void Start()
     {
       _animator = GetComponent<Animator>();
       b = target.position;
-      
+   
     }
 
     void FixedUpdate()
     {
         transform.eulerAngles = new Vector3(0f, -90f, 0f);
+      
         Vector3 a = transform.position;
         transform.position = Vector3.MoveTowards(a, b, speed);
         _animator.SetFloat("Speed", velocity);
@@ -32,6 +35,7 @@ public class followDestination4 : MonoBehaviour
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
             if(this.name == "MadreBambina"){
                 transform.eulerAngles = new Vector3(0f, 90f, 0f);
+                
                 Debug.Log("madre arrivata davanti casa");
                 StartCoroutine(triggerContinueConversation());
             }   
@@ -45,5 +49,7 @@ public class followDestination4 : MonoBehaviour
         dlgManger.GetComponent<DialogueManager>().ContinueStoryByOtherScript();
         dlgManger.GetComponent<DialogueManager>().disableSpace = false;
     }
+
+
 
 }

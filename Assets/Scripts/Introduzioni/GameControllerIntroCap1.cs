@@ -17,6 +17,7 @@ public class GameControllerIntroCap1 : MonoBehaviour
         countScene = 0;
         bottomBar.PlayScene(currentScene);
         backgroundController.SetImage(currentScene.background);
+        FindObjectOfType<AudioManager>().Play("audioIntro");
     }
 
     void Update()

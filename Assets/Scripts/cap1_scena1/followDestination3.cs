@@ -15,25 +15,32 @@ public class followDestination3 : MonoBehaviour
     private float velocity = 2f;
 
     public GameObject triggerDialogueSpace;
+
+
     
     // Start is called before the first frame update
     void Start()
     {
       _animator = GetComponent<Animator>();
       b = target.position;
+   
     }
 
     void FixedUpdate()
     {
         transform.eulerAngles = new Vector3(0f, -90f, 0f);
+       
         Vector3 a = transform.position;
         transform.position = Vector3.MoveTowards(a, b, speed);
         _animator.SetFloat("Speed", velocity);
 
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
             transform.eulerAngles = new Vector3(0f, 90f, 0f);
+           
             _animator.SetFloat("Speed", 0f);
             triggerDialogueSpace.GetComponent<DialogueTrigger>().ink = triggerDialogueSpace.GetComponent<DialogueTrigger>().inkJSON3;
         }
     }
+
+   
 }

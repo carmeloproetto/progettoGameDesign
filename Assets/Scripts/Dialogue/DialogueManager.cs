@@ -18,6 +18,8 @@ public class DialogueManager : MonoBehaviour
 
     public Sprite momImage;
     public Sprite dadImage;
+    public Sprite bullyImage;
+    public Sprite ladImage;
 
 
     [Header("Choices UI")]
@@ -66,6 +68,7 @@ public class DialogueManager : MonoBehaviour
         viewChoice = false;
         countDialogue = 1;
         disableSpace = false;
+        FindObjectOfType<AudioManager>().Play("birdsAudio");
     }
 
     public static DialogueManager GetInstance(){
@@ -93,6 +96,8 @@ public class DialogueManager : MonoBehaviour
         if(Input.GetKeyDown("space") && viewChoice == false){
             //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
             if(disableSpace == false){
+                disableSpace = true;
+                StartCoroutine(disableSpaceFunction());
                 line++;
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
                 //serve per far partire la camminata nella scena cap1 quando siamo davanti al parco
@@ -100,6 +105,7 @@ public class DialogueManager : MonoBehaviour
                     Debug.Log("Siamo nella terza conversazione alla fine della prima frase frase!");
                     disableSpace = true;
                     dad.GetComponent<PlayerController>().enabled = false;
+                    dad.GetComponent<limitZone>().enabled = false;
                     mom.GetComponent<followDestination3>().enabled = false;
                     mom.GetComponent<followDestination4>().enabled = true;
                     dad.GetComponent<followDestination4>().enabled = true;
@@ -110,9 +116,17 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+
+    private IEnumerator disableSpaceFunction(){
+        yield return new WaitForSeconds(1f);
+        disableSpace = false;
+     }
+
+
     public void EnterDialogueMode(TextAsset inkJSON){
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
+        disableSpace = true;
         dad.GetComponent<Animator>().SetFloat("Speed", 0f);
        
         StartCoroutine(activePanelAfterOneSecond());
@@ -123,6 +137,8 @@ public class DialogueManager : MonoBehaviour
      private IEnumerator activePanelAfterOneSecond(){
         yield return new WaitForSeconds(1f);
         dialoguePanel.SetActive(true);
+        yield return new WaitForSeconds(0.5f);
+        disableSpace = false;
      }
 
 
@@ -141,9 +157,9 @@ public class DialogueManager : MonoBehaviour
             triggerZone.SetActive(false);
             //mom.GetComponent<followDestination2>().enabled = true;
             cam.GetComponent<CameraFollow>().target_aux = cam.GetComponent<CameraFollow>().target2; 
-           Debug.Log("conversazione 1 finita");
-           //serve per abilitare movimento giocatore e pannello tutorial tasti
-           StartCoroutine(triggerDadControl());
+            Debug.Log("conversazione 1 finita");
+            //serve per abilitare movimento giocatore e pannello tutorial tasti
+            StartCoroutine(triggerDadControl());
         }
         //cose da fare quando termina il secondo dialogo
         else if(countDialogue == 2){
@@ -173,7 +189,8 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(2);
         tutorialPanel.SetActive(true);
         dad.GetComponent<PlayerController>().enabled = true;
-        yield return new WaitForSeconds(0.5f);
+        dad.GetComponent<limitZone>().enabled = true;
+        yield return new WaitForSeconds(1f);
         mom.GetComponent<followDestination2>().enabled = true;
     }
 
@@ -219,6 +236,12 @@ public class DialogueManager : MonoBehaviour
                         imageOfSpeaker.sprite = dadImage;
                         dad.GetComponent<Animator>().SetBool("Speak", true);
                         mom.GetComponent<Animator>().SetBool("Speak", false);
+                    }
+                    if(tagValue == "Bully"){ 
+                        imageOfSpeaker.sprite = bullyImage;
+                    }
+                    if(tagValue == "Lad"){ 
+                        imageOfSpeaker.sprite = ladImage;
                     }
                     break;
               /*  case PORTRAIT_TAG:

@@ -16,16 +16,19 @@ public class followDestination2 : MonoBehaviour
 
     public GameObject triggerDialogueSpace;
     
+
     // Start is called before the first frame update
     void Start()
     {
       _animator = GetComponent<Animator>();
       b = target.position;
+   
     }
 
     void FixedUpdate()
     {
         transform.eulerAngles = new Vector3(0f, -90f, 0f);
+        
         Vector3 a = transform.position;
         transform.position = Vector3.MoveTowards(a, b, speed);
         _animator.SetFloat("Speed", velocity);
@@ -37,4 +40,6 @@ public class followDestination2 : MonoBehaviour
             triggerDialogueSpace.GetComponent<DialogueTrigger>().ink = triggerDialogueSpace.GetComponent<DialogueTrigger>().inkJSON2;
         }
     }
+
+
 }

@@ -15,5 +15,6 @@ public class blockMovment : MonoBehaviour
        if(mom.transform.position.x <= -109.965f || mom.transform.position.x > -85.949566){
             mom.GetComponent<Animator>().SetFloat("Speed", 0f); 
        }
+     
     }
 }

@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
     }
 
     void Start(){
-        StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioIntro", 2f));
+        //StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioIntro", 2f));
         //Play("audioIntro");
     }
 
