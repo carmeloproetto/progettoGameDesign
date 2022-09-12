@@ -2545,7 +2545,8 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4159981490133942996, guid: af042f0d31f46406c985d5456356757d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: af042f0d31f46406c985d5456356757d, type: 3}
 --- !u!1001 &139755796
 PrefabInstance:
@@ -15856,6 +15857,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48ee977344a0df43869c6816fe3d7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &851898194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851898191}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce79a80f3cc30054c936838c3eae51df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  displayNameText: {fileID: 0}
+  imageOfSpeaker: {fileID: 0}
+  momImage: {fileID: 0}
+  guardiaImage: {fileID: 0}
+  manifestante1Image: {fileID: 0}
+  manifestante2Image: {fileID: 0}
+  manifestante3Image: {fileID: 0}
+  choices: []
+  disableSpace: 0
+  triggerDialogueZoneGuardia: {fileID: 0}
+  triggerDialogueZoneManifestanteDx: {fileID: 0}
+  triggerDialogueZoneManifestanteCentro: {fileID: 0}
+  triggerDialogueZoneManifestanteSx: {fileID: 0}
+  whoSpeak: 
+  talkedToGuard: 0
+  guardia: {fileID: 0}
+  manifestanteDx: {fileID: 0}
+  retroAzienda: 0
+  manifestanteCentro: {fileID: 0}
 --- !u!1001 &853128980
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -40841,6 +40875,14 @@ PrefabInstance:
       propertyPath: mom
       value: 
       objectReference: {fileID: 1835265998}
+    - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
+      propertyPath: dadImage
+      value: 
+      objectReference: {fileID: 21300000, guid: ae9decb65592c034280cfe3a51813537, type: 3}
+    - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
+      propertyPath: momImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e5e89a3ea1c9d84cb09473dfc5bd431, type: 3}
     - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
       propertyPath: ragazzino
       value: 

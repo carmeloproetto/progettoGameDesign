@@ -114,8 +114,7 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dad.GetComponent<Animator>().SetFloat("Speed", 0f);
-        dad.GetComponent<Animator>().SetBool("Speak", true);
-        mom.GetComponent<Animator>().SetBool("Speak", true);
+       
         StartCoroutine(activePanelAfterOneSecond());
        ContinueStory();
     }
@@ -135,7 +134,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
 
         dad.GetComponent<Animator>().SetBool("Speak", false);
-        mom.GetComponent<Animator>().SetBool("Speak", true);
+        mom.GetComponent<Animator>().SetBool("Speak", false);
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
@@ -211,11 +210,15 @@ public class DialogueManager : MonoBehaviour
             switch(tagKey){
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
-                    if(tagValue == "Mom"){          
+                    if(tagValue == "Mom" && countDialogue != 3){          
                         imageOfSpeaker.sprite = momImage;
+                        dad.GetComponent<Animator>().SetBool("Speak", false);
+                        mom.GetComponent<Animator>().SetBool("Speak", true);
                     }
                     if(tagValue == "Dad"){ 
                         imageOfSpeaker.sprite = dadImage;
+                        dad.GetComponent<Animator>().SetBool("Speak", true);
+                        mom.GetComponent<Animator>().SetBool("Speak", false);
                     }
                     break;
               /*  case PORTRAIT_TAG:
