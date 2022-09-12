@@ -10,6 +10,8 @@ public class GameControllerIntroCap1 : MonoBehaviour
     public BackgroundController backgroundController;
     private int countScene;
 
+    public GameObject levelLoader;
+
     void Start()
     {
         countScene = 0;
@@ -36,9 +38,13 @@ public class GameControllerIntroCap1 : MonoBehaviour
                     bottomBar.PlayNextSentence();
                 }
                 else if(countScene == 4){
-                    //bisogna caricare la scena corretta
-                    SceneManager.LoadScene("Cap1_scena1");
+                    //StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioIntro", 4f));
+                    FindObjectOfType<AudioManager>().Stop("audioIntro");
+                    //SceneManager.LoadScene("Cap1_scena1");
+                    this.GetComponent<Canvas>().enabled = false;
+                    levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
+
             }
         }
     }

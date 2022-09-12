@@ -114,6 +114,8 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dad.GetComponent<Animator>().SetFloat("Speed", 0f);
+        dad.GetComponent<Animator>().SetBool("Speak", true);
+        mom.GetComponent<Animator>().SetBool("Speak", true);
         StartCoroutine(activePanelAfterOneSecond());
        ContinueStory();
     }
@@ -131,6 +133,9 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+
+        dad.GetComponent<Animator>().SetBool("Speak", false);
+        mom.GetComponent<Animator>().SetBool("Speak", true);
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){

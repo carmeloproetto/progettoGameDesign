@@ -55,6 +55,7 @@ public class followDestination : MonoBehaviour
     //funzione che parte quando finisce l'animazione di hello
     void endHello(){
         Debug.Log("animazione hello terminata");
+       
         _animator.SetBool("Hello", false);
         script_dialogueTrigger.startConv = true;
         this.GetComponent<followDestination>().enabled = false;
