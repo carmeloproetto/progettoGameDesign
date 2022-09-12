@@ -45,6 +45,7 @@ public class GameControlleIntroCap2FineIncontroMadreSindaco : MonoBehaviour
         //facciamo partire il secondo dialogo
         mom.GetComponent<DialogueTriggerCap2>().ink = mom.GetComponent<DialogueTriggerCap2>().inkJSON2;
         mom.GetComponent<DialogueTriggerCap2>().startConvByOtherScript();
+        FindObjectOfType<AudioManager>().Stop("phoneRing");
         canvas2.GetComponent<GameControlleIntroCap2FineIncontroMadreSindaco>().enabled = false;
        }
 }

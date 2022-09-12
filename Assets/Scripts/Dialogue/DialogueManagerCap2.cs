@@ -96,6 +96,8 @@ public class DialogueManagerCap2 : MonoBehaviour
         if(Input.GetKeyDown("space") && viewChoice == false){
             //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
             if(disableSpace == false){
+                disableSpace = true;
+                StartCoroutine(disableSpaceFunction());
                 line++;
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
 
@@ -105,14 +107,14 @@ public class DialogueManagerCap2 : MonoBehaviour
 
                 if(line == 15 && countDialogue == 1){
                     noAnimation = true;
-                    sindaco.GetComponent<Animator>().SetBool("Talk", false);
+                    sindaco.GetComponent<Animator>().SetBool("Talk2", false);
                     sindaco.GetComponent<Animator>().SetBool("HeadAround", true);
                     disableSpace = true;
                     StartCoroutine(phoneRings());
                 }
 
                 if(line == 1 && countDialogue == 2){
-                    mom.transform.eulerAngles = new Vector3(0f, 90f, 0f);
+                   StartCoroutine( Rotate( new Vector3(0, -180, 0), 0.3f));
                 }
 
 
@@ -121,9 +123,32 @@ public class DialogueManagerCap2 : MonoBehaviour
         }
     }
 
+
+    private IEnumerator Rotate( Vector3 angles, float duration )
+    {
+        Quaternion startRotation = mom.transform.rotation ;
+        Quaternion endRotation = Quaternion.Euler( angles ) * startRotation ;
+        for( float t = 0 ; t < duration ; t+= Time.deltaTime )
+        {
+            mom.transform.rotation = Quaternion.Lerp( startRotation, endRotation, t / duration ) ;
+            yield return null;
+        }
+        mom.transform.rotation = endRotation ;
+        //rotating = false;
+    }
+
+
+
+
+
+    private IEnumerator disableSpaceFunction(){
+        yield return new WaitForSeconds(1f);
+        disableSpace = false;
+     }
+
     private IEnumerator phoneRings(){
         //SI DEVE FAR SQUILLARE IL TELEFONO QUI
-        
+        FindObjectOfType<AudioManager>().Play("phoneRing");
         dialoguePanel.SetActive(false);
         yield return new WaitForSeconds(3f);
         sindaco.GetComponent<Animator>().SetBool("HeadAround", false);
@@ -138,7 +163,7 @@ public class DialogueManagerCap2 : MonoBehaviour
     public void EnterDialogueMode(TextAsset inkJSON){
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
-      
+        disableSpace = true;
         StartCoroutine(activePanelAfterOneSecond());
        ContinueStory();
     }
@@ -147,6 +172,8 @@ public class DialogueManagerCap2 : MonoBehaviour
      private IEnumerator activePanelAfterOneSecond(){
         yield return new WaitForSeconds(1f);
         dialoguePanel.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        disableSpace = false;
      }
 
 
@@ -221,13 +248,13 @@ public class DialogueManagerCap2 : MonoBehaviour
                     if(tagValue == "Mom"){          
                         imageOfSpeaker.sprite = momImage;
                         mom.GetComponent<Animator>().SetBool("Talk", true);
-                        sindaco.GetComponent<Animator>().SetBool("Talk", false);
+                        sindaco.GetComponent<Animator>().SetBool("Talk2", false);
                     }
                     else if(tagValue == "Mayor"){ 
                         imageOfSpeaker.sprite = mayorImage;
                         mom.GetComponent<Animator>().SetBool("Talk", false);
                         if(noAnimation == false)
-                            sindaco.GetComponent<Animator>().SetBool("Talk", true);
+                            sindaco.GetComponent<Animator>().SetBool("Talk2", true);
                     }
                     else if(tagValue == "???"){ 
                         imageOfSpeaker.sprite = uncknowImage;

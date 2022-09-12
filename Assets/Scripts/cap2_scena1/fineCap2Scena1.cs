@@ -11,6 +11,7 @@ public class fineCap2Scena1 : MonoBehaviour
     private int countScene;
 
     public GameObject canvas2;
+    public GameObject levelLoader;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,8 @@ public class fineCap2Scena1 : MonoBehaviour
                 Debug.Log("GamecontrolleCap1Intro countScene= " + countScene);
                 canvas2.GetComponent<Canvas>().enabled = false;
                 //CARICHIAMO QUI LA SCENA SUCCESSIVA
+                this.GetComponent<Canvas>().enabled = false;
+                levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
             }
         }
     }

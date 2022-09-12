@@ -37,6 +37,8 @@ public class followDestinationCap2_1 : MonoBehaviour
       b = target.position;
       b2 = target2.position;
       momMovment = false;
+      
+     
     }
 
     void FixedUpdate()

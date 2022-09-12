@@ -104,6 +104,8 @@ public class DialogueManagerCap2_2 : MonoBehaviour
         if(Input.GetKeyDown("space") && viewChoice == false){
             //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
             if(disableSpace == false){
+                disableSpace = true;
+                StartCoroutine(disableSpaceFunction());
                 line++;
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
 
@@ -116,10 +118,16 @@ public class DialogueManagerCap2_2 : MonoBehaviour
         }
     }
 
+    private IEnumerator disableSpaceFunction(){
+        yield return new WaitForSeconds(1f);
+        disableSpace = false;
+     }
+
 
     public void EnterDialogueMode(TextAsset inkJSON){
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
+        disableSpace = true;
         StartCoroutine(activePanelAfterOneSecond());
        ContinueStory();
     }
@@ -128,6 +136,7 @@ public class DialogueManagerCap2_2 : MonoBehaviour
      private IEnumerator activePanelAfterOneSecond(){
         yield return new WaitForSeconds(1f);
         dialoguePanel.SetActive(true);
+        disableSpace = false;
      }
 
 

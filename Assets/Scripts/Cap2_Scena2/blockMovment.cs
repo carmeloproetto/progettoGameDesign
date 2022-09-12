@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class blockMovment : MonoBehaviour
 {
 
+     void Start(){
+          FindObjectOfType<AudioManager>().Play("birdsAudio");
+     }
 
      public GameObject mom;
     // Update is called once per frame

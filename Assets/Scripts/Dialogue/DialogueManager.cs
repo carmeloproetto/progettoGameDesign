@@ -137,7 +137,7 @@ public class DialogueManager : MonoBehaviour
      private IEnumerator activePanelAfterOneSecond(){
         yield return new WaitForSeconds(1f);
         dialoguePanel.SetActive(true);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         disableSpace = false;
      }
 

@@ -147,3 +147,15 @@ MonoBehaviour:
     pitch: 2.394
     loop: 1
     source: {fileID: 0}
+  - name: rainSound
+    clip: {fileID: 8300000, guid: 579789c30e1a7f0469d7994567358d68, type: 3}
+    volume: 0.484
+    pitch: 2.394
+    loop: 1
+    source: {fileID: 0}
+  - name: phoneRing
+    clip: {fileID: 8300000, guid: 0a0cf7209087ac642892a16e1a6152f9, type: 3}
+    volume: 0.484
+    pitch: 2.394
+    loop: 1
+    source: {fileID: 0}
