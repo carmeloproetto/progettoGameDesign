@@ -22,7 +22,9 @@ public class PilastroInteraction : MonoBehaviour
         if (other.gameObject.name == "PlayerArmature")
         {
             playerAnimator.SetBool("isNearTheWall", true);
-            enemyAnimator.SetTrigger("canWalk"); 
+            enemyAnimator.SetTrigger("canWalk");
+            //FindObjectOfType<AudioManager>().Stop("angryCrowd"); 
+            StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("angryCrowd", 3f));
         }
     }
 
