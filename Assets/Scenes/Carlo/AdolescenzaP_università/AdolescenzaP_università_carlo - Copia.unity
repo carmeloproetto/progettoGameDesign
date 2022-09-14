@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.2
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 137739334}
-  m_IndirectSpecularColor: {r: 0.01054004, g: 0.0048363926, b: 0.0246898, a: 0.2}
+  m_IndirectSpecularColor: {r: 0.009096811, g: 0.0047437027, b: 0.021468183, a: 0.2}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4672,7 +4672,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263496991}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9838389f4d6e4314d8887e99d00149f7, type: 3}
   m_Name: 
@@ -14203,7 +14203,7 @@ PrefabInstance:
     - target: {fileID: 532045139259615398, guid: 64ffd6090b8924cc1b8ce6594fe2069b, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: cb9b90366288cf940842ad51230fac1b, type: 2}
+      objectReference: {fileID: 9100000, guid: 2c0554947ac241f44a39560966e76888, type: 2}
     - target: {fileID: 5873284251968287452, guid: 64ffd6090b8924cc1b8ce6594fe2069b, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -16352,7 +16352,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803822778}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9aa42f6377a80af47a3ab4d820940217, type: 3}
   m_Name: 
@@ -34425,8 +34425,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 2028047224}
+  target2: {fileID: 0}
+  target3: {fileID: 0}
+  target_aux: {fileID: 0}
   offset: {x: 0, y: 1.76, z: -7.5}
   smoothFactor: 0
+  destinationReached: 0
 --- !u!114 &1715853723
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35259,7 +35263,7 @@ PrefabInstance:
     - target: {fileID: 8906441485779407349, guid: 2541e61f4a8534b49bf0f0492204a45c, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: cb9b90366288cf940842ad51230fac1b, type: 2}
+      objectReference: {fileID: 9100000, guid: 2c0554947ac241f44a39560966e76888, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2541e61f4a8534b49bf0f0492204a45c, type: 3}
 --- !u!1 &1752824776
@@ -40295,7 +40299,7 @@ PrefabInstance:
     - target: {fileID: 4590324252442993303, guid: a1f1852300987438c95b4ea5328ca265, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: cb9b90366288cf940842ad51230fac1b, type: 2}
+      objectReference: {fileID: 9100000, guid: 2c0554947ac241f44a39560966e76888, type: 2}
     - target: {fileID: 7070624950883983959, guid: a1f1852300987438c95b4ea5328ca265, type: 3}
       propertyPath: m_Name
       value: Ragazzino
@@ -41031,7 +41035,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028047217}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77678cdad4dcca94f8809e14b84d0421, type: 3}
   m_Name: 

@@ -56,7 +56,7 @@ public class DialogueManagerCap2 : MonoBehaviour
 
 
 
-    public static float feeling;
+    public static float feeling = 0;
 
 
     private void Awake(){

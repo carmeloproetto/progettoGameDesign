@@ -52,7 +52,11 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
 
     public float feeling;
 
-
+    public GameObject ragazzo;
+    public GameObject professore;
+    public GameObject tutorialCorsa;
+    
+    public bool startCorsa;
    
 
     private void Awake(){
@@ -67,6 +71,8 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
 
         QteScoiattoliEnd = false;
         feeling = 0f;
+
+        startCorsa = false;
     }
 
     public static DialogueManagerCap3_2 GetInstance(){
@@ -87,11 +93,11 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
     }
 
     private void Update(){
-        if(!dialogueIsPlaying){
+        if(!dialogueIsPlaying && !startCorsa){
             return;
         }
 
-        if(Input.GetKeyDown("space") && viewChoice == false){
+        if(Input.GetKeyDown("space") && viewChoice == false && !startCorsa){
             //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
             if(disableSpace == false){
                 line++;
@@ -103,16 +109,32 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                 ContinueStory();
             }
         }
-    }
+
+
+        
+        //MINI GIOCO CORSA
+        if(startCorsa){
+            if(Input.GetKeyDown("space")){   
+                startCorsa = false;
+                professore.GetComponent<ProfessoreController>().enabled = true;
+                ragazzo.transform.eulerAngles = new Vector3(0f, 90f, 0f);
+                ragazzo.GetComponent<RagazzoController>().enabled = true;
+                dad.GetComponent<PadreStudenteController>().enabled = true;
+                tutorialCorsa.SetActive(false);
+              }
+        }
+    }   
 
     public void EnterDialogueMode(TextAsset inkJSON){
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
+        disableSpace = true;
         StartCoroutine(activePanelAfterOneSecond());
             
-        if(countDialogue == 1)
+        if(countDialogue == 1){
             currentStory.EvaluateFunction("changeFeeling", feeling);
-
+            ragazzo.transform.eulerAngles = new Vector3(0f, -90f, 0f);
+        }
         ContinueStory();
     }
 
@@ -120,6 +142,8 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
      private IEnumerator activePanelAfterOneSecond(){
         yield return new WaitForSeconds(1f);
         dialoguePanel.SetActive(true);
+         yield return new WaitForSeconds(0.5f);
+        disableSpace = false;
      }
 
 
@@ -132,7 +156,10 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
-             }
+            tutorialCorsa.SetActive(true);
+            dad.GetComponent<DialogueTriggerCap3_1>().closeConv();
+            startCorsa = true;
+        }
         //cose da fare quando termina il secondo dialogo
         else if(countDialogue == 2){
        
@@ -178,7 +205,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                     if(tagValue == "Dad"){ 
                         imageOfSpeaker.sprite = dadImage;
                     }
-                    else if(tagValue == "Thief"){
+                    else if(tagValue == "Lad"){
                         imageOfSpeaker.sprite = thiefImage;
                     }
                     break;

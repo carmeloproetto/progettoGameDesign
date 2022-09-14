@@ -51,7 +51,7 @@ public class ProfessoreController : MonoBehaviour
 
             //if (NTime > 1.0f) animationFinished = true;
 
-            if (Vector3.Distance(ragazzo.transform.position, transform.position) <= 2f)
+            if (Vector3.Distance(ragazzo.transform.position, transform.position) <= 6f)
                 profStartRun = false;
 
 
@@ -62,8 +62,8 @@ public class ProfessoreController : MonoBehaviour
             lookAtNoY.Set(ragazzo.transform.position.x, 2.491f, ragazzo.transform.position.z);
             transform.LookAt(lookAtNoY);
             targetDirection = transform.forward;
-            Debug.Log(targetDirection);
-            Debug.Log("Prof - position:" + ragazzo.transform.position);
+            //Debug.Log(targetDirection);
+            //Debug.Log("Prof - position:" + ragazzo.transform.position);
             velocityComponents = targetDirection * velocity * Time.deltaTime;
             //velocityComponents.y += _gravityValue * Time.deltaTime * Time.deltaTime;
             _controller.Move(velocityComponents);
@@ -86,6 +86,7 @@ public class ProfessoreController : MonoBehaviour
 
     public void Restart()
     {
+        Debug.Log("dentro il restart del professore");
         this.transform.position = startingPosition;
         profStartRun = false;
     }

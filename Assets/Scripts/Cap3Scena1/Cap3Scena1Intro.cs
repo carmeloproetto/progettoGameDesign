@@ -36,7 +36,7 @@ public class Cap3Scena1Intro : MonoBehaviour
                     professor.GetComponent<followDestinationProfessor>().enabled = true;
                 else{
                     //GESTIONE SCENA 2 del CAP 3
-                    //BISOGNA FAR ANDARE BENE IL PROFESSORE NELL'ALTRA STANZA
+                    //BISOGNA FAR ANDARE BENE IL PADRE NELL'ALTRA STANZA
                     dad.GetComponent<followDestinationDad>().enabled = true;
                     camera.GetComponent<CameraMovmentCap3>().enabled = true;
                 }

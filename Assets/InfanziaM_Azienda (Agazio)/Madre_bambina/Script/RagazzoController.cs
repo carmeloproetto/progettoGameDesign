@@ -117,7 +117,7 @@ public class RagazzoController : MonoBehaviour
                 qteStart = false;
                 stumble = true;
                 
-                //_animator.SetBool("Stumble", true);
+                _animator.SetBool("Stumble", true);
             }
             else
                 JumpDetection();
@@ -142,7 +142,7 @@ public class RagazzoController : MonoBehaviour
 
             velocityComponents = targetDirection * qteVelocity * Time.deltaTime;
             velocityComponents.y = _playerVelocity.y * Time.deltaTime;
-            Debug.Log("velocity comp1 " + velocityComponents);
+            //Debug.Log("velocity comp1 " + velocityComponents);
             if(!stumble)
                 _controller.Move(velocityComponents);
 
@@ -203,7 +203,7 @@ public class RagazzoController : MonoBehaviour
     public void JumpDetection()
     {
 
-        Debug.Log("Ragazzo passedObstacles : " + passedObstacles);
+        //Debug.Log("Ragazzo passedObstacles : " + passedObstacles);
 
         if (jumpQTE && currentPositionX >= obstaclesCoo[passedObstacles] + 2f)
         {
@@ -240,7 +240,6 @@ public class RagazzoController : MonoBehaviour
 
         _profController.profStartRun = false;
         profAlreadyStarted = true;
-
     }
 
     public void SetTargetDirection(Vector3 targetDirection)

@@ -62,6 +62,10 @@ public class PadreStudenteController : MonoBehaviour
 
     private Vector3 startingPosition;
 
+    public GameObject dlgMng;
+    public GameObject tutorialCorsa;
+    public GameObject ragazzo;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -83,10 +87,10 @@ public class PadreStudenteController : MonoBehaviour
 
         numObstacles = 6;
 
-        Debug.Log("c:" + c);
+       // Debug.Log("c:" + c);
 
-        for (int i = 0; i < obstaclesCoo.Length; i++)
-            Debug.Log(i + " coo: " + obstaclesCoo[i]);
+        //for (int i = 0; i < obstaclesCoo.Length; i++)
+           // Debug.Log(i + " coo: " + obstaclesCoo[i]);
 
 
     }
@@ -96,7 +100,7 @@ public class PadreStudenteController : MonoBehaviour
     {
         _isGrounded = _controller.isGrounded;
         _animator.SetBool("Grounded", _isGrounded);
-        Debug.Log("Grounded : " + _isGrounded);
+        //Debug.Log("Grounded : " + _isGrounded);
 
         //_playerVelocity.y += _gravityValue * Time.deltaTime;
         //_controller.Move(_playerVelocity * Time.deltaTime);
@@ -115,16 +119,22 @@ public class PadreStudenteController : MonoBehaviour
             DisableInput();
             DisableJump();
 
-            if (passedObstacles >= numObstacles)
+
+            if (Vector3.Distance(ragazzo.transform.position, transform.position) >= 5.5f){
+                Restart();
+            }
+
+
+           /* if (passedObstacles >= numObstacles + 1)
                 startRun = false;
             else
-            {
+            {*/
                 JumpDetection();
                 if (passedObstacles < numObstacles)
                 {
                     if (currentPositionX >= obstaclesCoo[passedObstacles] - 1f && currentPositionX <= obstaclesCoo[passedObstacles] && !clicked)
                     {
-                        Debug.Log("ci siamo bro, starting pos " + startingPosition);
+                        //Debug.Log("ci siamo bro, starting pos " + startingPosition);
                         Restart();
                     }
                     else if (currentPositionX >= obstaclesCoo[passedObstacles] && clicked)
@@ -133,7 +143,7 @@ public class PadreStudenteController : MonoBehaviour
                     }
                 }
 
-            }
+            //}
 
 
             if (jumpQTE)
@@ -153,12 +163,12 @@ public class PadreStudenteController : MonoBehaviour
                 {
                     qteVelocity += 1f;
                     if (qteVelocity > 5f) qteVelocity = 5f;
-                    Debug.Log("qteVelocity : " + qteVelocity);
+                    //Debug.Log("qteVelocity : " + qteVelocity);
                 }
             }
             velocityComponents = targetDirection * qteVelocity * Time.deltaTime;
             velocityComponents.y = _playerVelocity.y * Time.deltaTime;
-            Debug.Log("velocity comp1 " + velocityComponents);
+            //Debug.Log("velocity comp1 " + velocityComponents);
             _controller.Move(velocityComponents);
             _animator.SetFloat("Speed", qteVelocity);
 
@@ -168,7 +178,7 @@ public class PadreStudenteController : MonoBehaviour
         else
         {
             EnableInput();
-            EnableJump();
+            //EnableJump();
 
             float horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -215,7 +225,7 @@ public class PadreStudenteController : MonoBehaviour
             }
             _playerVelocity.y += _gravityValue * Time.deltaTime;
             velocityComponents.y = _playerVelocity.y * Time.deltaTime;
-            Debug.Log("velocity comp1 " + velocityComponents);
+            //Debug.Log("velocity comp1 " + velocityComponents);
             _controller.Move(velocityComponents);
         }
     }
@@ -243,7 +253,7 @@ public class PadreStudenteController : MonoBehaviour
         //if (currentPositionX > obstaclesCoo[passedObstacles] - 2f && currentPositionX < obstaclesCoo[passedObstacles] - 1.8f)
         if (currentPositionX > obstaclesCoo[passedObstacles] - 2f && alreadyJumped)
         {
-            Debug.Log("salta mbare1 + ground: " + _isGrounded + " + jumpEnabled: " + _jumpEnabled);
+          //  Debug.Log("salta mbare1 + ground: " + _isGrounded + " + jumpEnabled: " + _jumpEnabled);
 
             _playerVelocity.y += Mathf.Sqrt(_jumpHeight * -3.0f * _gravityValue);
 
@@ -251,14 +261,14 @@ public class PadreStudenteController : MonoBehaviour
 
             alreadyJumped = false;
         }
-        Debug.Log("player velocity y : " + _playerVelocity.y);
+       // Debug.Log("player velocity y : " + _playerVelocity.y);
         _playerVelocity.y += _gravityValue * Time.deltaTime;
         //_controller.Move(_playerVelocity * Time.deltaTime);
     }
 
     public void JumpDetection()
     {
-        Debug.Log("passedObstacles : " + passedObstacles);
+      //  Debug.Log("passedObstacles : " + passedObstacles);
 
         if (jumpQTE && currentPositionX >= obstaclesCoo[passedObstacles] + 2f)
         {
@@ -277,7 +287,7 @@ public class PadreStudenteController : MonoBehaviour
         currentPositionX = transform.position.x;
         if (passedObstacles < numObstacles && currentPositionX >= obstaclesCoo[passedObstacles] - 3.5f && currentPositionX <= obstaclesCoo[passedObstacles] - 2f) //zona pressione tasto
         {
-            Debug.Log("Press E");
+            //Debug.Log("Press E");
             int c = 0;
             foreach (Transform t in obstacles.transform)
             {
@@ -289,7 +299,7 @@ public class PadreStudenteController : MonoBehaviour
             //binSprite.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("Hai premuto E sei un pazzo");
+                //Debug.Log("Hai premuto E sei un pazzo");
                 jumpQTE = true;
                 _jumpEnabled = true;
                 clicked = true;
@@ -312,19 +322,22 @@ public class PadreStudenteController : MonoBehaviour
 
     public void Restart()
     {
-        //_auxCount = 0;
-        //failed = true;
-        //this.transform.position = startingPosition;
-        //qteVelocity = 0;
-        //passedObstacles = 0;
+        dlgMng.GetComponent<DialogueManagerCap3_2>().startCorsa = true;
+        tutorialCorsa.SetActive(true);
 
-        //foreach (Transform t in obstacles.transform)
-        //    t.GetChild(0).gameObject.SetActive(false);
+        _auxCount = 0;
+
+        this.transform.position = startingPosition;
+        qteVelocity = 0;
+        passedObstacles = 0;
+
+        foreach (Transform t in obstacles.transform)
+            t.GetChild(0).gameObject.SetActive(false);
 
         //ragazzoController.Restart();
         //professoreController.Restart();
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     public void SetTargetDirection(Vector3 targetDirection)
