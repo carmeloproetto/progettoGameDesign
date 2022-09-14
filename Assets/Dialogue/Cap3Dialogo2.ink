@@ -13,7 +13,7 @@ Ehi! Dove vai con quella? #speaker:Dad
 
 
 === first ===
-	{feeling == 0: -> noFeeling | yesFeeling}
+	{feeling == 0: -> noFeeling | -> yesFeeling}
 
 === noFeeling ===
 	Vedo che hai la memoria corta. #speaker:Lad

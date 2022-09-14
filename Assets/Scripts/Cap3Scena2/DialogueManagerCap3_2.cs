@@ -51,6 +51,9 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
     public bool QteScoiattoliEnd;
 
     public float feeling;
+    public float helpLad;
+    public bool auxFinal;
+    public static int finale;
 
     public GameObject ragazzo;
     public GameObject professore;
@@ -70,9 +73,11 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         disableSpace = false;
 
         QteScoiattoliEnd = false;
-        feeling = 0f;
+        //feeling = 0f;
+        helpLad = 0;
 
         startCorsa = false;
+        auxFinal = false;
     }
 
     public static DialogueManagerCap3_2 GetInstance(){
@@ -135,6 +140,13 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
             currentStory.EvaluateFunction("changeFeeling", feeling);
             ragazzo.transform.eulerAngles = new Vector3(0f, -90f, 0f);
         }
+
+        if(countDialogue == 2){
+            currentStory.EvaluateFunction("changeHelp", helpLad);
+            currentStory.EvaluateFunction("changeFeeling", feeling);
+        }
+
+
         ContinueStory();
     }
 
@@ -162,7 +174,24 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         }
         //cose da fare quando termina il secondo dialogo
         else if(countDialogue == 2){
-       
+            if(helpLad == 0){
+                //non lo stiamo aiutando
+                if(feeling < 0.5 && !auxFinal)
+                    finale = 1;
+                else if(feeling >= 0.5 && !auxFinal)
+                    finale = 2;
+                else if(auxFinal)
+                    finale = 3;
+            }
+            else{
+                //lo stiamo aiutando
+                if(!auxFinal)
+                    finale = 5;
+                else if(feeling >= 0.5 && auxFinal)
+                    finale = 1;
+                else if(feeling < 0.5 && auxFinal)
+                    finale = 4;
+            }
         }
 
         line = 0;
@@ -261,6 +290,14 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
             Debug.Log("nuovo feeling: " + feeling);
             currentStory.EvaluateFunction("changeFeeling", feeling);
         }
+        if(choiceIndex == 0 && line == 7 && countDialogue == 1 && feeling >= 0.5f)
+            helpLad = 1;
+
+        if(helpLad == 0 && choiceIndex == 1 && line == 4 && countDialogue == 2)
+            auxFinal = true;
+        
+        if(helpLad == 1 && choiceIndex == 0 && line == 5 && countDialogue == 2)
+            auxFinal = true;
 
 
         currentStory.ChooseChoiceIndex(choiceIndex);
