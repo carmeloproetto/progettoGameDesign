@@ -47,7 +47,6 @@ public class DialogueManager : MonoBehaviour
     public GameObject dad;
     public GameObject triggerZone;
     public GameObject ragazzino;
-    public GameObject bullo;
 
     public GameObject tutorialPanel;
 
@@ -67,7 +66,7 @@ public class DialogueManager : MonoBehaviour
         instance = this;
 
         viewChoice = false;
-        countDialogue = 4;
+        countDialogue = 1;
         disableSpace = false;
         FindObjectOfType<AudioManager>().Play("birdsAudio");
     }
@@ -111,21 +110,6 @@ public class DialogueManager : MonoBehaviour
                     mom.GetComponent<followDestination4>().enabled = true;
                     dad.GetComponent<followDestination4>().enabled = true;
                 }
-                //Linea 2 - Ragazzino
-                else if(line == 1 && countDialogue == 4)
-                {
-                    bullo.GetComponent<Animator>().SetBool("isArguing", false);
-                    ragazzino.GetComponent<Animator>().SetBool("isArguing", true);
-                    ContinueStory();
-                }
-                //Linea 3 - Bullo
-                else if (line == 2 && countDialogue == 4)
-                {
-                    bullo.GetComponent<Animator>().SetBool("isArguing", true);
-                    ragazzino.GetComponent<Animator>().SetBool("isArguing", false);
-                    ContinueStory();
-                }
-
                 else
                     ContinueStory();
             }
@@ -146,12 +130,7 @@ public class DialogueManager : MonoBehaviour
         dad.GetComponent<Animator>().SetFloat("Speed", 0f);
        
         StartCoroutine(activePanelAfterOneSecond());
-        ContinueStory();
-
-        if (countDialogue == 4)
-        {
-            bullo.GetComponent<Animator>().SetBool("isArguing", true);
-        }
+       ContinueStory();
     }
 
 
@@ -195,13 +174,7 @@ public class DialogueManager : MonoBehaviour
         }
         //cose da fare quando termina il quarto dialogo
         else if(countDialogue == 4){
-            //ragazzino.GetComponent<startBattleAnimation>().enabled = true;
-
-            //bullo smette di parlare
-            bullo.GetComponent<Animator>().SetBool("isArguing", false);
-
-            //il ragazzino spinge il bullo
-            ragazzino.GetComponent<Animator>().SetBool("isWalking", true);
+            ragazzino.GetComponent<startBattleAnimation>().enabled = true;
         }
 
 
