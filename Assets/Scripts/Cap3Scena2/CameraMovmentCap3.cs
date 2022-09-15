@@ -17,7 +17,7 @@ public class CameraMovmentCap3 : MonoBehaviour
     void Update()
     {
         Vector3 a = transform.position;
-        transform.position = Vector3.MoveTowards(a, b, 0.04f);
+        transform.position = Vector3.MoveTowards(a, b, 0.046f);
 
          if(transform.position.x == -13.72f && transform.position.y ==  4.26f && transform.position.z == -9.761f){
            

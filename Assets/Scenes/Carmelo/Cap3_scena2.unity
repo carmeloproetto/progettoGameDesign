@@ -3399,9 +3399,7 @@ MonoBehaviour:
   disableSpace: 0
   dad: {fileID: 2028047217}
   QteScoiattoliEnd: 0
-  feeling: 25
-  helpLad: 0
-  auxFinal: 0
+  feeling: 0
   ragazzo: {fileID: 263496991}
   professore: {fileID: 803822778}
   tutorialCorsa: {fileID: 1151799331}
@@ -25649,7 +25647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1006263179
 Transform:
   m_ObjectHideFlags: 0
@@ -38555,7 +38553,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1468461125
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -41278,7 +41276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!23 &1592693408
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -46003,8 +46001,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dad: {fileID: 2028047217}
-  professore: {fileID: 803822778}
-  ragazzo: {fileID: 263496991}
 --- !u!65 &1771430208
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -53340,7 +53336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: b7f8a174431abe14485cd3e903a2e38e, type: 3}
-  inkJSON2: {fileID: 4900000, guid: f4c8e6395b5b2f54a8be46eff16098ea, type: 3}
+  inkJSON2: {fileID: 0}
   inkJSON3: {fileID: 0}
   ink: {fileID: 4900000, guid: b7f8a174431abe14485cd3e903a2e38e, type: 3}
   startConv: 0
@@ -56033,7 +56029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1058378223975085
 BoxCollider:
   m_ObjectHideFlags: 0
