@@ -51,6 +51,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject triggerZoneAfterFight;
 
     public GameObject tutorialPanel;
+    public GameObject canvas2;
 
     //conto il numero di frasi alla quale siamo arrivati nella conversazione
     private int line;
@@ -60,6 +61,10 @@ public class DialogueManager : MonoBehaviour
 
     //serve per verificare se il primo incontro dei genitori è andato a buon fine o meno, dipende dalla risposta alla seconda domanda nel cap 1
     public bool positiveMeet;
+
+    //feeling globale fra padre e ragazzino
+    public static float feeling;
+
 
     private void Awake(){
         if(instance != null){
@@ -205,8 +210,12 @@ public class DialogueManager : MonoBehaviour
         }
         else if(countDialogue == 5){
             triggerZoneAfterFight.SetActive(false);
+            Debug.Log("dialogo con bullo temrinato");
+            canvas2.SetActive(true);
+            canvas2.GetComponent<GameControlleIntroCap1FineIncontroPadreMadre>().enabled = false;
+            canvas2.GetComponent<GameControllerFineScena1>().enabled = true;
         }
-
+       
 
         line = 0;
         countDialogue++;
@@ -328,6 +337,14 @@ public class DialogueManager : MonoBehaviour
         else if(line == 3 && countDialogue == 1 && choiceIndex == 1){
             positiveMeet = true;
             Debug.Log("incontro con la madre positivo");
+        }
+        else if(line == 0 && countDialogue == 5 && choiceIndex == 0){
+            feeling = 0;
+            Debug.Log("feeling con ragazzino: " + feeling);
+        }
+        else if(line == 0 && countDialogue == 5 && choiceIndex == 1){
+            feeling = 1;
+            Debug.Log("feeling con ragazzino: " + feeling);
         }
 
         currentStory.ChooseChoiceIndex(choiceIndex);

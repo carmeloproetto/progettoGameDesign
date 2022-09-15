@@ -15,10 +15,12 @@ MonoBehaviour:
   sentences:
   - text: 'Purtroppo la previsione del professore fu corretta. '
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
-  - text: "Una volta liberata, la coppia riusc\xEC a spopolare in pochissimo tempo.
-      Non solo la concorrenza con la specie autoctona port\xF2 all\u2019estinzione
-      di quest\u2019ultima, ma le conseguenze si ripercossero anche su altri fronti.
-      I frutteti ne uscirono danneggiati e i boschi indeboliti."
+  - text: "Una volta liberata, la coppia riusc\xEC a spopolare in pochissimo tempo. "
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: "Non solo la concorrenza con la specie autoctona port\xF2 all\u2019estinzione
+      di quest\u2019ultima, ma le conseguenze si ripercossero anche su altri fronti."
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: I frutteti ne uscirono danneggiati e i boschi indeboliti.
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   - text: Mio padre aveva cercato di seguire quella che pensava fosse la strada giusta,
       ma alla fine le sue buone intenzioni non portarono a nulla di buono.

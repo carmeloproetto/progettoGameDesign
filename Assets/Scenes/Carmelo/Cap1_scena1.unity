@@ -1783,6 +1783,7 @@ GameObject:
   - component: {fileID: 91016402}
   - component: {fileID: 91016401}
   - component: {fileID: 91016407}
+  - component: {fileID: 91016408}
   m_Layer: 5
   m_Name: Canvas2
   m_TagString: Untagged
@@ -1921,6 +1922,23 @@ MonoBehaviour:
   dad: {fileID: 1429292225}
   dlgMng: {fileID: 851898191}
   setterPart2: {fileID: 1728221634}
+--- !u!114 &91016408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91016400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2636daa9801d29b47a8dadf838d03790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScene1: {fileID: 11400000, guid: bde131d53aabdde4bb9a73339e942c2b, type: 2}
+  currentScene2: {fileID: 11400000, guid: d215299b4c756bb4ab4e84f552fc351b, type: 2}
+  bottomBar: {fileID: 11687623}
+  canvas2: {fileID: 91016400}
+  dlgMng: {fileID: 851898191}
 --- !u!1001 &119059531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41272,6 +41290,10 @@ PrefabInstance:
       propertyPath: bullo
       value: 
       objectReference: {fileID: 1840659760}
+    - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
+      propertyPath: canvas2
+      value: 
+      objectReference: {fileID: 91016400}
     - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
       propertyPath: dadImage
       value: 

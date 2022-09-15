@@ -73,7 +73,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         disableSpace = false;
 
         QteScoiattoliEnd = false;
-        //feeling = 0f;
+        feeling = DialogueManager.feeling;
         helpLad = 0;
 
         startCorsa = false;

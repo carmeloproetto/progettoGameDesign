@@ -20,9 +20,11 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   - text: "Scoprirono che era una persona un po\u2019 irascibile ma di buon cuore,
       che era fermamente convinto della necessit\xE0 di mettersi d\u2019impegno per
-      salvare la Terra e la natura per vivere in armonia con essa. Non era una cattiva
-      persona, ma non aveva mai avuto la possibilit\xE0 di conversare con persone
-      pi\xF9 consapevoli di lui che gli potessero far capire la complessit\xE0 dell\u2019argomento."
+      salvare la Terra e la natura per vivere in armonia con essa. "
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: "Non era una cattiva persona, ma non aveva mai avuto la possibilit\xE0
+      di conversare con persone pi\xF9 consapevoli di lui che gli potessero far capire
+      la complessit\xE0 dell\u2019argomento."
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   - text: "Il professore spieg\xF2 a entrambi le conseguenze cui avrebbe potuto portare
       quel gesto e furono grati di essersi fidati l\u2019uno dell\u2019altro."

@@ -13,6 +13,21 @@ MonoBehaviour:
   m_Name: Cap3Finale4
   m_EditorClassIdentifier: 
   sentences:
+  - text: 'Purtroppo la previsione del professore fu corretta. '
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: "Una volta liberata, la coppia riusc\xEC a spopolare in pochissimo tempo. "
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: "Non solo la concorrenza con la specie autoctona port\xF2 all\u2019estinzione
+      di quest\u2019ultima, ma le conseguenze si ripercossero anche su altri fronti.
+      I frutteti ne uscirono danneggiati e i boschi indeboliti."
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: Mio padre aveva cercato di seguire quella che pensava fosse la strada giusta,
+      ma alla fine le sue buone intenzioni non portarono a nulla di buono.
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: "Questo fu un altro evento particolarmente formativo della sua vita. Cap\xEC
+      che non basta la buona volont\xE0 per migliorare questo mondo, ma che sono
+      fondamentali anche la conoscenza e la fiducia nelle persone giuste."
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   - text: "In seguito, il ragazzo del parco lo accus\xF2 di aver preso parte al piano
       e cos\xEC l\u2019universit\xE0 lo sospese, impedendogli di finire il dottorato."
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
