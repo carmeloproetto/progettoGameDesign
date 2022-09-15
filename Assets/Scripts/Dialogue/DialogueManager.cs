@@ -48,6 +48,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject triggerZone;
     public GameObject ragazzino;
     public GameObject bullo;
+    public GameObject triggerZoneAfterFight;
 
     public GameObject tutorialPanel;
 
@@ -202,7 +203,9 @@ public class DialogueManager : MonoBehaviour
             //il ragazzino spinge il bullo
             ragazzino.GetComponent<Animator>().SetBool("isWalking", true);
         }
-
+        else if(countDialogue == 5){
+            triggerZoneAfterFight.SetActive(false);
+        }
 
 
         line = 0;
