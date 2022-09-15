@@ -34,7 +34,7 @@ public class CameraFollow : MonoBehaviour
 
          if(target_aux == target3 && !destinationReached){
            Vector3 a = transform.position;
-           b.Set(-34.49f, 11.874f, -29.005f);
+           b.Set(-33.703f, 11.874f, -29.005f);
            transform.position = Vector3.MoveTowards(a, b, 0.04f);
         }
 
