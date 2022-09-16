@@ -2,56 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using PathCreation;
+using System;
+using UnityEngine.AI;
+using DG.Tweening;
 
 public class BariliTrigger : InteractableObject
 {
     private PadreController_RetroAzienda _pController;
-    public PathCreator pathCreator;
-
-    private bool canMove = false;
-    private float _speed = 2f;
-    private float distanceTraveled = 0f;
-    private Vector3 _finalPoint;
-    private Vector3 _startPoint; 
+    private NavMeshAgent _agent;
+    private Animator _animator; 
+    public GameObject destination;
+    public GameObject barili; 
+    private bool _interacted = false; 
 
     public override bool Interact()
     {
         //blocco movimento del player 
-        _pController.DisableInput();
-        _pController.DisableJump();
+        _pController.enabled = false;
+        _agent.SetDestination(destination.transform.position);
+        _agent.updateRotation = true;
+        _interacted = true;
+        
 
-        //pathCreator.bezierPath.SetPoint(0, _pController.transform.position);
-        //_pController.transform.position.Set(_startPoint.x, _startPoint.y, _startPoint.z);
-        canMove = true;
-
-        _pController.IsMoving(true);
-
-
-        Debug.Log("Interazione barili");
         return true; 
     }
 
     protected override void Start()
     {
         _pController = GameObject.FindGameObjectWithTag("Player").GetComponent<PadreController_RetroAzienda>();
-        _finalPoint = pathCreator.path.GetPoint(3);
-        _startPoint = pathCreator.path.GetPoint(1);
+        _agent = GameObject.FindGameObjectWithTag("Player").GetComponent<NavMeshAgent>();
+        _animator = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
     }
 
     protected override void Update()
     {
-        if( canMove )
+        if (_interacted && _agent.remainingDistance <= 0.1f)
         {
-            distanceTraveled += _speed * Time.deltaTime;
-            float newX = pathCreator.path.GetPointAtDistance(distanceTraveled).x;
-            float newZ = pathCreator.path.GetPointAtDistance(distanceTraveled).z;
-            _pController.SetTargetDirection(new Vector3(newX, 0f, newZ));
-
-            if( _pController.transform.position == _finalPoint )
-            {
-                canMove = false;
-                _pController.IsMoving(false);
-            }
+            _agent.transform.DORotate(new Vector3(0f, 270f, 0f), 2f);
+            _animator.SetBool("isPushing", true);  
         }
+       
     }
 }
