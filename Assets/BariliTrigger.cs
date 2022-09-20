@@ -12,18 +12,23 @@ public class BariliTrigger : InteractableObject
     private NavMeshAgent _agent;
     private Animator _animator; 
     public GameObject destination;
-    public GameObject barili; 
-    private bool _interacted = false; 
+    public GameObject barili;
+    public ManagerGUI_QTE GUIManager; 
+    private bool _interacted = false;
+    private bool _arrived = false;
 
     public override bool Interact()
     {
         //blocco movimento del player 
         _pController.enabled = false;
+        if( !_interacted )
+        {
+            _animator.SetTrigger("raggiungiBarile_1");
+        }
+        
         _agent.SetDestination(destination.transform.position);
         _agent.updateRotation = true;
         _interacted = true;
-        
-
         return true; 
     }
 
@@ -36,10 +41,12 @@ public class BariliTrigger : InteractableObject
 
     protected override void Update()
     {
-        if (_interacted && _agent.remainingDistance <= 0.1f)
+        if (_interacted && _agent.remainingDistance <= 0.1f && !_arrived )
         {
+            _arrived = true; 
             _agent.transform.DORotate(new Vector3(0f, 270f, 0f), 2f);
-            _animator.SetBool("isPushing", true);  
+            _animator.SetBool("isPushing", true);
+            GUIManager.EaseInButton();
         }
        
     }

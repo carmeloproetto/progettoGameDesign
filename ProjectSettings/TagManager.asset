@@ -7,6 +7,12 @@ TagManager:
   - CinemachineTarget
   - Ragazzino
   - Bullo
+  - Destination_3
+  - Destination_2
+  - Destination_1
+  - Destination_4
+  - Plant
+  - Barile
   layers:
   - Default
   - TransparentFX
