@@ -16,6 +16,8 @@ public class Cap3Scena1Intro : MonoBehaviour
 
     private Scene scene;
 
+    public GameObject audioManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,20 +31,32 @@ public class Cap3Scena1Intro : MonoBehaviour
         {
             if (bottomBar.IsCompleted())
             {
-                canvas2.SetActive(false);
+                
+                canvas2.GetComponent<Canvas>().enabled = false;
 
                 scene = SceneManager.GetActiveScene();
-                if(scene.name == "Cap3_scena1")
+                if(scene.name == "Cap3_scena1"){
+                    canvas2.SetActive(false);
                     professor.GetComponent<followDestinationProfessor>().enabled = true;
+                }
                 else{
                     //GESTIONE SCENA 2 del CAP 3
                     //BISOGNA FAR ANDARE BENE IL PADRE NELL'ALTRA STANZA
-                    dad.GetComponent<followDestinationDad>().enabled = true;
-                    camera.GetComponent<CameraMovmentCap3>().enabled = true;
+                    audioManager.GetComponent<AudioManager>().Play("walkDirt");
+                    StartCoroutine(DadWalk());
                 }
 
             }
         }
+    }
+
+    private IEnumerator DadWalk(){
+        yield return new WaitForSeconds(2f);
+        dad.GetComponent<followDestinationDad>().enabled = true;
+        camera.GetComponent<CameraMovmentCap3>().enabled = true;
+         yield return new WaitForSeconds(2f);
+         audioManager.GetComponent<AudioManager>().Stop("walkDirt");
+        canvas2.SetActive(false);
     }
 
  

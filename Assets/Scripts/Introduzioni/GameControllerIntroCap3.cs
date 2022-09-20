@@ -9,9 +9,16 @@ public class GameControllerIntroCap3 : MonoBehaviour
     public BottomBarController bottomBar;
     public BackgroundController backgroundController;
     private int countScene;
+    private int countText;
+
+    public GameObject levelLoader;
+    public AudioSource audioSource;
+
+    public GameObject canvas;
 
     void Start()
     {
+        countText = 1;
         countScene = 0;
         bottomBar.PlayScene(currentScene);
         backgroundController.SetImage(currentScene.background);
@@ -25,6 +32,8 @@ public class GameControllerIntroCap3 : MonoBehaviour
             {
                 if (bottomBar.IsLastSentence() && countScene < 1)
                 {
+                    Debug.Log(countText);
+                    countText++;
                     currentScene = currentScene.nextScene;
                     bottomBar.PlayScene(currentScene);
                     backgroundController.SwitchImage(currentScene.background);
@@ -33,13 +42,32 @@ public class GameControllerIntroCap3 : MonoBehaviour
                 }
                 else if(!bottomBar.IsLastSentence() && countScene == 1)
                 {
+                    countText++;
+                    Debug.Log(countText);
                     bottomBar.PlayNextSentence();
                 }
                 else if(countScene == 1){
                     //bisogna caricare la scena corretta
-                    SceneManager.LoadScene("Cap3_scena1");
+                    canvas.SetActive(false);
+                    levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
             }
+            if(countText == 3){
+                StartCoroutine(StartFade(audioSource, 10, 0f));
+            }
         }
+    }
+
+     public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
+    {
+        float currentTime = 0;
+        float start = audioSource.volume;
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+            yield return null;
+        }
+        yield break;
     }
 }

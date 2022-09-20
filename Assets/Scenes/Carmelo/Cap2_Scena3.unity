@@ -718,6 +718,7 @@ MonoBehaviour:
   sindaco: {fileID: 698159548}
   canvas1: {fileID: 886151794}
   feeling: 0
+  levelLoader: {fileID: 1984315033}
 --- !u!1 &169865261
 GameObject:
   m_ObjectHideFlags: 0

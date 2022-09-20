@@ -21,6 +21,7 @@ public class followDestinationDad : MonoBehaviour
 
     public GameObject dlgMng;
     public Transform ragazzino;
+    public GameObject ragazzo;
     public Camera camera;
 
       void Start()
@@ -38,7 +39,7 @@ public class followDestinationDad : MonoBehaviour
         velocity -= aux * Time.deltaTime;
         transform.LookAt(target);
         //dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = true; 
-
+        //ragazzo.GetComponent<Animator>().SetFloat("Speed", 2f);
 
         //abbiamo raggiunto la destinazione
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
@@ -50,6 +51,7 @@ public class followDestinationDad : MonoBehaviour
               this.GetComponent<DialogueTriggerCap3_1>().startConvByOtherScript();
               camera.GetComponent<CameraFollow>().enabled = true;
               camera.GetComponent<CameraMovmentCap3>().enabled = false;
+              //ragazzo.GetComponent<Animator>().SetFloat("Speed", 0f);
             }
             else{
                 //BISOGNA FAR PARTIRE IL MINI GIOCO DELLA SCENA 1 CAPITOLO 3 QUI

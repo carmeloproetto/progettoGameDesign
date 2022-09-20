@@ -16,5 +16,5 @@ MonoBehaviour:
   - text: "Una volta cresciuti, i miei genitori decisero di intraprendere gli studi
       in una rinomata universit\xE0 della citt\xE0 accanto."
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
-  background: {fileID: 21300000, guid: 087c678185b9548cd8453f4daa034fe9, type: 3}
+  background: {fileID: 21300000, guid: 9369eb148fdeaac4fae05a3a4860c853, type: 3}
   nextScene: {fileID: 11400000, guid: b8a352132c7c9254094ffd499ccb7cfb, type: 2}

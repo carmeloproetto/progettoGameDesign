@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 10
   m_EditorClassIdentifier: 
   sentences:
-  - text: "Entrambi decisero di inserirsi in settori che gli permettesse di contribuire
+  - text: "Entrambi decisero di inserirsi in settori che gli permettessero di contribuire
       positivamente alla cura del nostro pianeta e dell\u2019umanit\xE0."
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   - text: "Mia madre si specializz\xF2 in Biologia per capire l\u2019impatto dell\u2019uomo

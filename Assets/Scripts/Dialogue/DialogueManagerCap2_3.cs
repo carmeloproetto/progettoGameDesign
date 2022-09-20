@@ -62,6 +62,7 @@ public class DialogueManagerCap2_3 : MonoBehaviour
 
     public static int finale;
 
+    public GameObject levelLoader;
 
     private void Awake(){
         if(instance != null){
@@ -108,7 +109,7 @@ public class DialogueManagerCap2_3 : MonoBehaviour
                     Debug.Log("chiudi la conversazione");
                     canvas1.SetActive(false);
                     finale = 2;
-                    SceneManager.LoadScene("Cap2_fine");
+                    levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
                 else if(line == 1 && countDialogue == 2 && no){
                     //mom.GetComponent<DialogueTriggerCap2_3>().enabled = false;
@@ -184,7 +185,7 @@ public class DialogueManagerCap2_3 : MonoBehaviour
            mom.GetComponent<DialogueTriggerCap2_3>().enabled = false;
            //canvas2.SetActive(true);
            finale = 1;
-           SceneManager.LoadScene("Cap2_fine");
+           levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
         }
         //cose da fare quando termina il terzo dialogo
         else if(countDialogue == 3){

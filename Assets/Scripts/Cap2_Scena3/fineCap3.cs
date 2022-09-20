@@ -48,8 +48,9 @@ public class fineCap3 : MonoBehaviour
                 Debug.Log("scena numero " + countScene);
                 if(DialogueManagerCap2_3.finale == 1){
                     if(!bottomBar.IsLastSentence())
-                    {
+                    {   
                         countAux++;
+                        Debug.Log(countAux);
                         countScene++;
                         bottomBar.PlayNextSentence();
                     }
@@ -61,8 +62,8 @@ public class fineCap3 : MonoBehaviour
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     }
 
-                    if(countScene == 2){
-                        StartCoroutine(StartFade(audioSource, 2, 0f));
+                    if(countAux == 5){
+                        StartCoroutine(StartFade(audioSource, 9, 0f));
                     }
                 }
                 else if(DialogueManagerCap2_3.finale == 2){
@@ -71,6 +72,7 @@ public class fineCap3 : MonoBehaviour
                         auxScene = auxScene.nextScene;
                         bottomBar.PlayScene(auxScene);
                         countAux++;
+                        Debug.Log(countAux);
                         backgroundController.SwitchImage(auxScene.background);
                         countScene++;
                     }
@@ -78,14 +80,15 @@ public class fineCap3 : MonoBehaviour
                     {
                         countScene++;
                         countAux++;
+                        Debug.Log(countAux);
                         bottomBar.PlayNextSentence();
                     }
                     else if(countScene == 3){
                         //bisogna caricare la scena corretta
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     }
-                    if(countAux == 2){
-                        StartCoroutine(StartFade(audioSource, 2, 0f));
+                    if(countAux == 4){
+                        StartCoroutine(StartFade(audioSource, 9, 0f));
                     }
                 }
                 else if(DialogueManagerCap2_3.finale == 3){
@@ -104,7 +107,7 @@ public class fineCap3 : MonoBehaviour
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     }
                     if(countAux == 5){
-                        StartCoroutine(StartFade(audioSource, 4, 0f));
+                        StartCoroutine(StartFade(audioSource, 9, 0f));
                     }
                 }
             }
