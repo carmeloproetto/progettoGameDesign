@@ -12,12 +12,16 @@ public class GameControllerIntroCap2 : MonoBehaviour
 
     public GameObject levelLoader;
 
+    public AudioSource audioSource;
+
+    private int countText;
+
     void Start()
     {
         countScene = 0;
         bottomBar.PlayScene(currentScene);
         backgroundController.SetImage(currentScene.background);
-        FindObjectOfType<AudioManager>().Play("audioIntro");
+        countText = 1;
     }
 
     void Update()
@@ -28,6 +32,7 @@ public class GameControllerIntroCap2 : MonoBehaviour
             {
                 if (bottomBar.IsLastSentence() && countScene < 0)
                 {
+                    countText++;
                     currentScene = currentScene.nextScene;
                     bottomBar.PlayScene(currentScene);
                     backgroundController.SwitchImage(currentScene.background);
@@ -36,16 +41,33 @@ public class GameControllerIntroCap2 : MonoBehaviour
                 }
                 else if(!bottomBar.IsLastSentence() && countScene == 0)
                 {
+                    countText++;
                     bottomBar.PlayNextSentence();
                 }
                 else if(countScene == 0){
-                    //bisogna caricare la scena corretta
-                    FindObjectOfType<AudioManager>().Stop("audioIntro");
+                    //bisogna caricare la scena corretta   
                     this.GetComponent<Canvas>().enabled = false;
                     levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     //SceneManager.LoadScene("Cap2_Scena1_");
                 }
             }
+
+            if(countText == 3){
+                StartCoroutine(StartFade(audioSource, 4, 0f));
+            }
         }
+    }
+
+    public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
+    {
+        float currentTime = 0;
+        float start = audioSource.volume;
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+            yield return null;
+        }
+        yield break;
     }
 }

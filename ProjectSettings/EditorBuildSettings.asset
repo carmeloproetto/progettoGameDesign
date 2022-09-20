@@ -27,10 +27,25 @@ EditorBuildSettings:
     path: Assets/Scenes/Carmelo/Cap2_scena2.unity
     guid: 5d8c931d258795041aadc9e1e000bace
   - enabled: 1
+    path: Assets/InfanziaM_Azienda (Agazio)/Scene/Capitolo_2_Azienda.unity
+    guid: 9caac1ddc51f64edfa81364582acadbe
+  - enabled: 1
     path: Assets/Scenes/Carmelo/Cap2_Scena3.unity
     guid: 58af41e05c383d942a9712d477a2950d
   - enabled: 1
-    path: Assets/InfanziaM_Azienda (Agazio)/Scene/Capitolo_2_Azienda.unity
-    guid: 9caac1ddc51f64edfa81364582acadbe
+    path: Assets/Scenes/Carmelo/Cap2_fine.unity
+    guid: 06228d2973accd44c86d37a7dd156cc0
+  - enabled: 1
+    path: Assets/Scenes/Carmelo/Cap3_intro.unity
+    guid: e662d7fe800c279419fc2b44f4120652
+  - enabled: 1
+    path: Assets/Scenes/Carmelo/Cap3_scena1.unity
+    guid: 41d3096039e48a24e8f06ada07d9a145
+  - enabled: 1
+    path: Assets/Scenes/Carmelo/Cap3_scena2.unity
+    guid: abb36367ca9ba7041bf2a986ee760192
+  - enabled: 1
+    path: Assets/Scenes/Carmelo/Cap3_fine.unity
+    guid: c97b735205e462448be821785eec03bf
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}

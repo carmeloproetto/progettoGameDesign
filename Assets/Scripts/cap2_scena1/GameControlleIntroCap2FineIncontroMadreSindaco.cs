@@ -40,6 +40,7 @@ public class GameControlleIntroCap2FineIncontroMadreSindaco : MonoBehaviour
     private IEnumerator animationMom(){
         yield return new WaitForSeconds(1f);
         mom.GetComponent<Animator>().SetBool("Cry", false);
+        mom.GetComponent<Animator>().SetBool("Call", true);
         //mom.transform.eulerAngles = new Vector3(0f, 90f, 0f);
         yield return new WaitForSeconds(1.5f);
         //facciamo partire il secondo dialogo

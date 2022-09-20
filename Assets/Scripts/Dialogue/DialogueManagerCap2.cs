@@ -113,6 +113,15 @@ public class DialogueManagerCap2 : MonoBehaviour
                     StartCoroutine(phoneRings());
                 }
 
+                if(line == 10 && countDialogue == 1){
+                    noAnimation = true;
+                    sindaco.GetComponent<Animator>().SetBool("AngryDad", true);
+                }
+                if(line == 11 && countDialogue == 1){
+                    noAnimation = false;
+                    sindaco.GetComponent<Animator>().SetBool("AngryDad", false);
+                }
+
                 if(line == 1 && countDialogue == 2){
                    StartCoroutine( Rotate( new Vector3(0, -180, 0), 0.3f));
                 }

@@ -14,6 +14,7 @@ public class CameraMovment : MonoBehaviour
     {
         b.Set(-5.26f, 4.26f, -11.98f);
         FindObjectOfType<AudioManager>().Play("rainSound");
+        mom.GetComponent<Animator>().SetBool("Talk", true);
     }
 
     // Update is called once per frame
