@@ -16,6 +16,8 @@ public class triggerMomMovment : MonoBehaviour
     private bool startMovment;
     public GameObject mom;
 
+    public GameObject levelLoader;
+
     private void Start(){
         startMovment = false;
         _animator = mom.GetComponent<Animator>();
@@ -40,11 +42,19 @@ public class triggerMomMovment : MonoBehaviour
             velocity -= aux * Time.deltaTime;
             mom.transform.LookAt(target);
 
-            if(mom.transform.position.x == target.position.x && mom.transform.position.z == target.position.z){
+            StartCoroutine(LoadScene());
+
+            /*if(mom.transform.position.x == target.position.x && mom.transform.position.z == target.position.z){
             _animator.SetFloat("Speed", 0f);
             this.GetComponent<triggerMomMovment>().enabled = false;
             //BISOGNA CARICARE LA SCENA SUCCESSIVA
-            }
+            levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+            }*/
         }
+    }
+
+    private IEnumerator LoadScene(){
+        yield return new WaitForSeconds(1.5f);
+        levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
     }
 }

@@ -18,6 +18,7 @@ public class DialogueTriggerCap2_3 : MonoBehaviour
 
     private int count;
 
+
     private void Awake(){
        // visualCue.SetActive(false);
         startConv = false;
@@ -67,6 +68,5 @@ public class DialogueTriggerCap2_3 : MonoBehaviour
         startConv = false;
         playerInRange = false;
     }
-
 
 }

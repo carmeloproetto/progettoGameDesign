@@ -228,8 +228,6 @@ public class DialogueManagerCap2_2 : MonoBehaviour
                         imageOfSpeaker.sprite = manifestante2Image;
                     else if(tagValue == "Manifestante 3")
                         imageOfSpeaker.sprite = manifestante3Image;
-                    
-                   
                     break;
              
                 default: 

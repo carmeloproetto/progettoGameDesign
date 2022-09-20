@@ -121,6 +121,16 @@ public class DialogueManagerCap2_3 : MonoBehaviour
                     //mom.GetComponent<followDestinationCap2_3>().enabled = false;
                     //mom.GetComponent<followDestinationCap2_3_2>().enabled = true;
                 }
+                else if(line == 5 && countDialogue == 1){
+                    noAnimation = true;
+                     sindaco.GetComponent<Animator>().SetBool("Talk2", true);
+                     ContinueStory();
+                }
+                else if(line == 6 && countDialogue == 1){
+                    noAnimation = false;
+                     sindaco.GetComponent<Animator>().SetBool("Talk2", false);
+                     ContinueStory();
+                }
                 else
                     ContinueStory();
             }
@@ -227,7 +237,11 @@ public class DialogueManagerCap2_3 : MonoBehaviour
                     displayNameText.text = tagValue;
                     if(tagValue == "Mom"){          
                         imageOfSpeaker.sprite = momImage;
-                        if(line != 7 || no == false){
+                        if(line != 7){
+                            Debug.Log("parlaaaa");
+                            mom.GetComponent<Animator>().SetBool("Talk", true);
+                        }
+                        else if(no == false && line > 7){
                             Debug.Log("parlaaaa");
                             mom.GetComponent<Animator>().SetBool("Talk", true);
                         }

@@ -8,7 +8,7 @@ public class blockMovment : MonoBehaviour
 {
 
      void Start(){
-          FindObjectOfType<AudioManager>().Play("birdsAudio");
+//          FindObjectOfType<AudioManager>().Play("birdsAudio");
      }
 
      public GameObject mom;

@@ -20,6 +20,8 @@ public class followDestinationCap2_3_2 : MonoBehaviour
 
     public bool followDestinationEnabled;
 
+    public GameObject levelLoader;
+
      void Start()
     {
       _animator = GetComponent<Animator>();
@@ -43,12 +45,20 @@ public class followDestinationCap2_3_2 : MonoBehaviour
             //abbiamo raggiunto la destinazione
             if(transform.position.x == target.position.x && transform.position.z == target.position.z){
                 DialogueManagerCap2_3.finale = 3;
-                SceneManager.LoadScene("Cap2_fine");
+
+                StartCoroutine(LoadScene());
             }
         }
     }
 
-    void startFollowDestination(){
+ 
+
+    private IEnumerator LoadScene(){
+        yield return new WaitForSeconds(1f);
+        levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+    }
+
+       void startFollowDestination(){
         followDestinationEnabled = true;      
     }
 }

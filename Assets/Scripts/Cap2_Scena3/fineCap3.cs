@@ -12,14 +12,20 @@ public class fineCap3 : MonoBehaviour
     public StoryScene auxScene;
     public BottomBarController bottomBar; 
     private int countScene;
+    private int countAux;
 
     public BackgroundController backgroundController;
+
+    public AudioSource audioSource;
+
+    public GameObject levelLoader;
 
     //public GameObject canvas2;
 
     // Start is called before the first frame update
     void Start()
     {
+        countAux = 1;
          countScene = 0;
          if(DialogueManagerCap2_3.finale == 1)
             auxScene = currentScene1;
@@ -40,10 +46,10 @@ public class fineCap3 : MonoBehaviour
             if (bottomBar.IsCompleted())
             {
                 Debug.Log("scena numero " + countScene);
-
                 if(DialogueManagerCap2_3.finale == 1){
                     if(!bottomBar.IsLastSentence())
                     {
+                        countAux++;
                         countScene++;
                         bottomBar.PlayNextSentence();
                     }
@@ -52,7 +58,11 @@ public class fineCap3 : MonoBehaviour
                         //disattiviamo il canvas e riabilitiamo il movimento del player
                         //canvas2.SetActive(false);
                         //DObbiamo caricare la nuova scena qui
-                        SceneManager.LoadScene("Cap1_scena1");
+                        levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+                    }
+
+                    if(countScene == 2){
+                        StartCoroutine(StartFade(audioSource, 2, 0f));
                     }
                 }
                 else if(DialogueManagerCap2_3.finale == 2){
@@ -60,42 +70,57 @@ public class fineCap3 : MonoBehaviour
                     {
                         auxScene = auxScene.nextScene;
                         bottomBar.PlayScene(auxScene);
+                        countAux++;
                         backgroundController.SwitchImage(auxScene.background);
                         countScene++;
                     }
                     else if(!bottomBar.IsLastSentence() && countScene < 3)
                     {
                         countScene++;
+                        countAux++;
                         bottomBar.PlayNextSentence();
                     }
                     else if(countScene == 3){
                         //bisogna caricare la scena corretta
-                        SceneManager.LoadScene("Cap1_scena1");
+                        levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+                    }
+                    if(countAux == 2){
+                        StartCoroutine(StartFade(audioSource, 2, 0f));
                     }
                 }
                 else if(DialogueManagerCap2_3.finale == 3){
-                    /*if (bottomBar.IsLastSentence() && countScene < 4)
+                    if (bottomBar.IsLastSentence() && countScene < 4)
                     {
-                        auxScene = auxScene.nextScene;
-                        bottomBar.PlayScene(auxScene);
-                        backgroundController.SwitchImage(auxScene.background);
-                        countScene++;
-                        Debug.Log(countScene);
-                    }*/
+                        countAux++;
+                    }
                     if(!bottomBar.IsLastSentence() && countScene < 4)
                     {
+                        countAux++;
                         countScene++;
                         bottomBar.PlayNextSentence();
                     }
                     else if(countScene == 4){
                         //bisogna caricare la scena corretta
-                        SceneManager.LoadScene("Cap1_scena1");
+                        levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+                    }
+                    if(countAux == 5){
+                        StartCoroutine(StartFade(audioSource, 4, 0f));
                     }
                 }
-
-
-
             }
         }
+    }
+
+    public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
+    {
+        float currentTime = 0;
+        float start = audioSource.volume;
+        while (currentTime < duration)
+        {
+            currentTime += Time.deltaTime;
+            audioSource.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+            yield return null;
+        }
+        yield break;
     }
 }

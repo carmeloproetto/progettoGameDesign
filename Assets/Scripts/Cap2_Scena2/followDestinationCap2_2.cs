@@ -51,7 +51,6 @@ public class followDestinationCap2_2 : MonoBehaviour
                 guardia.GetComponent<followDestinationCap2_2>().enabled = true;
             
             if(this.name == "Guardia"){
-                Debug.Log("perchè non ruoti?");
                 transform.LookAt(manifestane);
                 _animator.SetBool("No", true);
                 
