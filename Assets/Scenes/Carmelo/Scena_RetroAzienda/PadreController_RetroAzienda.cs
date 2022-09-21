@@ -5,6 +5,7 @@ using UnityEngine;
 public class PadreController_RetroAzienda : MonoBehaviour
 {
     private CharacterController _controller;
+    private LedgeChecker ledgeChecker;
     private Animator _animator;
 
     public float acceleration = 3f;
@@ -40,6 +41,7 @@ public class PadreController_RetroAzienda : MonoBehaviour
         _controller = GetComponent<CharacterController>();
         curTarDirection = transform.forward;
         _animator = this.GetComponent<Animator>();
+        ledgeChecker = GetComponentInChildren<LedgeChecker>();
     }
 
     // Update is called once per frame
@@ -86,7 +88,7 @@ public class PadreController_RetroAzienda : MonoBehaviour
         _controller.Move(curTarDirection * velocity * Time.deltaTime);
 
         float jump = Input.GetAxisRaw("Jump");
-        if (jump != 0f && _isGrounded && _jumpEnabled)
+        if (jump != 0f && _isGrounded && _jumpEnabled )
         {
             _playerVelocity.y += Mathf.Sqrt(_jumpHeight * -3.0f * _gravityValue);
             _animator.SetTrigger("Jump");
@@ -95,8 +97,13 @@ public class PadreController_RetroAzienda : MonoBehaviour
         {
             _animator.SetBool("FreeFall", true);
         }
-        _playerVelocity.y += _gravityValue * Time.deltaTime;
-        _controller.Move(_playerVelocity * Time.deltaTime);
+
+        if (!_animator.GetBool("isHanging"))
+        {
+            _playerVelocity.y += _gravityValue * Time.deltaTime;
+            _controller.Move(_playerVelocity * Time.deltaTime);
+        }
+            
 
     }
 
@@ -138,5 +145,15 @@ public class PadreController_RetroAzienda : MonoBehaviour
     public void EnableBackward()
     {
         _backwardEnabled = true;
+    }
+
+    public void DisableGravity()
+    {
+        _gravityValue = 0f; 
+    }
+
+    public void EnableGravity()
+    {
+        _gravityValue = -9.81f;
     }
 }
