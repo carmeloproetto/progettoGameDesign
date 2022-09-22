@@ -5,6 +5,7 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -52,6 +53,8 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject tutorialPanel;
     public GameObject canvas2;
+
+    public PlayableDirector timeline_1; 
 
     //conto il numero di frasi alla quale siamo arrivati nella conversazione
     private int line;
@@ -207,6 +210,8 @@ public class DialogueManager : MonoBehaviour
 
             //il ragazzino spinge il bullo
             ragazzino.GetComponent<Animator>().SetBool("isWalking", true);
+
+            //timeline_1.Play();
         }
         else if(countDialogue == 5){
             triggerZoneAfterFight.SetActive(false);
