@@ -19254,7 +19254,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fillingTime: 4
   _ringImage: {fileID: 463193615}
-  bulloAnim: {fileID: 0}
+  bulloAnim: {fileID: 8771319006750343724}
+  padre: {fileID: 3587029973003726601}
   _currTime: 0
 --- !u!1001 &958012363
 PrefabInstance:
@@ -21088,8 +21089,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb28d272c1d6a421bb71558492ae3968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ragazzino: {fileID: 1043801931}
-  dad: {fileID: 7812703812985909193}
+  _bullo: {fileID: 8771319006750343724}
+  ragazzino: {fileID: 1043801934}
+  dad: {fileID: 3587029973003726601}
 --- !u!195 &1043801933
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -27455,7 +27457,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fillingTime: 2
   _ringImage: {fileID: 360270858}
-  bulloAnim: {fileID: 0}
+  bulloAnim: {fileID: 8771319006750343724}
+  padre: {fileID: 3587029973003726601}
   _currTime: 0
 --- !u!1001 &1395247885
 PrefabInstance:
@@ -34560,7 +34563,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _fillingTime: 3
   _ringImage: {fileID: 424377385}
-  bulloAnim: {fileID: 0}
+  bulloAnim: {fileID: 8771319006750343724}
+  padre: {fileID: 3587029973003726601}
   _currTime: 0
 --- !u!1001 &1702015796
 PrefabInstance:
@@ -37380,8 +37384,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb28d272c1d6a421bb71558492ae3968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ragazzino: {fileID: 1043801931}
-  dad: {fileID: 7812703812985909193}
+  _bullo: {fileID: 8771319006750343724}
+  ragazzino: {fileID: 1043801934}
+  dad: {fileID: 3587029973003726601}
 --- !u!195 &1840659762
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -44877,6 +44882,7 @@ MonoBehaviour:
   _fillingTime: 2
   _ringImage: {fileID: 2727668550460029612}
   bulloAnim: {fileID: 8771319006750343724}
+  padre: {fileID: 3587029973003726601}
   _currTime: 0
 --- !u!224 &2727668550757498302
 RectTransform:
@@ -48108,6 +48114,8 @@ GameObject:
   - component: {fileID: 1429292226}
   - component: {fileID: 1429292233}
   - component: {fileID: 1429292234}
+  - component: {fileID: 7812703812985909196}
+  - component: {fileID: 7812703812985909197}
   m_Layer: 6
   m_Name: PadreBambino
   m_TagString: Player
@@ -48235,6 +48243,37 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
   - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
   landSound: {fileID: 8300000, guid: ff697d3070687ce4583faa0561a145a2, type: 3}
+--- !u!114 &7812703812985909196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812703812985909193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a05ed67c63715489881a9e0c09f7d6aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  qte_1: {fileID: 2727668550757498290}
+  qte_2: {fileID: 951741272}
+  qte_3: {fileID: 1393630911}
+  qte_4: {fileID: 1697102229}
+--- !u!114 &7812703812985909197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7812703812985909193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb28d272c1d6a421bb71558492ae3968, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bullo: {fileID: 8771319006750343724}
+  ragazzino: {fileID: 1043801934}
+  dad: {fileID: 3587029973003726601}
 --- !u!1 &7827760597589228819
 GameObject:
   m_ObjectHideFlags: 0
@@ -48828,6 +48867,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   qte_1: {fileID: 2727668550757498290}
+  qte_2: {fileID: 951741272}
+  qte_3: {fileID: 1393630911}
+  qte_4: {fileID: 1697102229}
 --- !u!4 &8775921212981845108
 Transform:
   m_ObjectHideFlags: 0

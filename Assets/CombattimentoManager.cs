@@ -5,6 +5,9 @@ using UnityEngine;
 public class CombattimentoManager : MonoBehaviour
 {
     public QTEButton qte_1;
+    public QTEButton qte_2;
+    public QTEButton qte_3;
+    public QTEButton qte_4;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +26,18 @@ public class CombattimentoManager : MonoBehaviour
         if( number == 1)
         {
             qte_1.Active();
+        }
+        else if( number == 2 )
+        {
+            qte_2.Active();
+        }
+        else if( number == 3 )
+        {
+            qte_3.Active();
+        }
+        else if (number == 4)
+        {
+            qte_4.Active();
         }
     }
 }

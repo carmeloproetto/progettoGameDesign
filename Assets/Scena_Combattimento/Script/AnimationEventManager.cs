@@ -4,22 +4,10 @@ using UnityEngine;
 
 public class AnimationEventManager : MonoBehaviour
 {
-    private Animator _bullo;
-    public GameObject ragazzino;
+    public Animator _bullo;
+    public Animator ragazzino;
+    public Animator dad;
 
-    public GameObject dad;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        _bullo = GameObject.FindGameObjectWithTag("Bullo").GetComponent<Animator>(); 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void PunchReact()
     {
@@ -35,5 +23,15 @@ public class AnimationEventManager : MonoBehaviour
     //funzione che parte quando il bambino è per terra
     void dadWalks(){
         dad.GetComponent<followDestination6>().enabled = true;
+    }
+
+    public void StartDadReaction()
+    {
+        dad.SetTrigger("startReaction");
+    }
+
+    public void StartBullyReaction()
+    {
+        _bullo.SetTrigger("startReaction");
     }
 }

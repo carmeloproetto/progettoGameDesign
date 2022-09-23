@@ -12,6 +12,7 @@ public class QTEButton : MonoBehaviour
     private bool _active = false; 
 
     public Animator bulloAnim;
+    public Animator padre;
     public float _currTime = 0f; 
 
     // Start is called before the first frame update
@@ -40,6 +41,7 @@ public class QTEButton : MonoBehaviour
                     //QTE Success
                     Debug.Log("Success");
                     bulloAnim.SetTrigger("QTEsuccess");
+                    padre.SetTrigger("QTEsuccess");
                     _active = false; 
 
                 }
@@ -54,6 +56,7 @@ public class QTEButton : MonoBehaviour
                 LeanTween.scale(transform.gameObject, new Vector3(0f, 0f, 0f), 1f).setDelay(.3f).setEase(LeanTweenType.easeInOutElastic);
                 Debug.Log("Failed: timeout!");
                 bulloAnim.SetTrigger("QTEfail");
+                padre.SetTrigger("QTEfail");
             }
         }
         
