@@ -8,6 +8,7 @@ public class CombattimentoManager : MonoBehaviour
     public QTEButton qte_2;
     public QTEButton qte_3;
     public QTEButton qte_4;
+    public QTEButton qte_5;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,10 @@ public class CombattimentoManager : MonoBehaviour
         else if (number == 4)
         {
             qte_4.Active();
+        }
+        else if (number == 5)
+        {
+            qte_5.Active();
         }
     }
 }
