@@ -34,4 +34,9 @@ public class AnimationEventManager : MonoBehaviour
     {
         _bullo.SetTrigger("startReaction");
     }
+
+    public void SpingiBullo()
+    {
+        _bullo.SetTrigger("cadi");
+    }
 }
