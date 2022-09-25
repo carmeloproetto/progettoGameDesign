@@ -11,22 +11,22 @@ public class GarbageInteractionManager : MonoBehaviour
     public float forceScatola;
     public float forceBidone;
 
-    public bool spingi = false;
-    private bool interacted = false; 
+    //public bool spingi = false;
+    //private bool interacted = false; 
 
-    public void spingiBidone()
+    public void SpingiBidone()
     {
         bidone.GetComponent<Rigidbody>().AddForceAtPosition( forceDirectionBidone.forward * forceBidone, forceDirectionBidone.transform.position );
         scatola.GetComponent<Rigidbody>().AddForceAtPosition(forceDirectionScatola.forward * forceScatola, forceDirectionScatola.transform.position);
     }
 
-    private void Update()
+    /*private void Update()
     {
         if( spingi && !interacted)
         {
-            spingiBidone();
+            SpingiBidone();
             interacted = true;
         }
-    }
+    }*/
 
 }
