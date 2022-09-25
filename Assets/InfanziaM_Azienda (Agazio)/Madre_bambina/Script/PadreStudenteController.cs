@@ -72,9 +72,9 @@ public class PadreStudenteController : MonoBehaviour
         _controller = GetComponent<CharacterController>();
         targetDirection = transform.forward;
         _animator = this.GetComponent<Animator>();
-        startingPosition = transform.position;
+        startingPosition = new Vector3(-15.75f, 2.49099994f, -2.21600008f);
         _auxCount = 0;
-
+        this.transform.position = startingPosition;
         clicked = false;
 
         obstacles = GameObject.Find("Obstacles");
@@ -120,8 +120,15 @@ public class PadreStudenteController : MonoBehaviour
             DisableJump();
 
 
-            if (Vector3.Distance(ragazzo.transform.position, transform.position) >= 5.5f){
+            /*if (Vector3.Distance(ragazzo.transform.position, transform.position) >= 7f){
                 Restart();
+                return;
+            }*/
+
+            if(ragazzo.transform.position.x - transform.position.x >= 7f)
+            {
+                Restart();
+                return;
             }
 
 
@@ -134,8 +141,8 @@ public class PadreStudenteController : MonoBehaviour
                 {
                     if (currentPositionX >= obstaclesCoo[passedObstacles] - 1f && currentPositionX <= obstaclesCoo[passedObstacles] && !clicked)
                     {
-                        //Debug.Log("ci siamo bro, starting pos " + startingPosition);
                         Restart();
+                        return;
                     }
                     else if (currentPositionX >= obstaclesCoo[passedObstacles] && clicked)
                     {
@@ -285,7 +292,7 @@ public class PadreStudenteController : MonoBehaviour
         }
 
         currentPositionX = transform.position.x;
-        if (passedObstacles < numObstacles && currentPositionX >= obstaclesCoo[passedObstacles] - 3.5f && currentPositionX <= obstaclesCoo[passedObstacles] - 2f) //zona pressione tasto
+        if (passedObstacles < numObstacles && currentPositionX >= obstaclesCoo[passedObstacles] - 5f && currentPositionX <= obstaclesCoo[passedObstacles] - 2f) //zona pressione tasto
         {
             //Debug.Log("Press E");
             int c = 0;
@@ -322,20 +329,25 @@ public class PadreStudenteController : MonoBehaviour
 
     public void Restart()
     {
-        dlgMng.GetComponent<DialogueManagerCap3_2>().startCorsa = true;
-        tutorialCorsa.SetActive(true);
+        //dlgMng.GetComponent<DialogueManagerCap3_2>().startCorsa = true;
+        //tutorialCorsa.SetActive(true);
 
         _auxCount = 0;
-
+        _controller.enabled = false;
         this.transform.position = startingPosition;
+        _controller.enabled = true;
         qteVelocity = 0;
+        _isGrounded = true;
+        _animator.SetBool("FreeFall", false);
         passedObstacles = 0;
 
         foreach (Transform t in obstacles.transform)
             t.GetChild(0).gameObject.SetActive(false);
 
-        //ragazzoController.Restart();
-        //professoreController.Restart();
+        //ragazzo.transform.position = new Vector3(-12.5240002f, 2.49099994f, -2.21600008f);
+
+        ragazzoController.restart = true;
+        professoreController.Restart();
 
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

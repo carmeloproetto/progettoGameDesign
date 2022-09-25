@@ -24,7 +24,7 @@ public class RagazzoController : MonoBehaviour
     private bool _isGrounded = true;
     private float _gravityValue = -9.81f;
 
-    public float _jumpHeight = 1.0f;
+    public float _jumpHeight = 2.0f;
     private Vector3 _playerVelocity;
 
     public bool _isBehindChest = false;
@@ -56,6 +56,8 @@ public class RagazzoController : MonoBehaviour
 
     public bool stumble;
 
+    public bool restart;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,9 +65,9 @@ public class RagazzoController : MonoBehaviour
         targetDirection = transform.forward;
         _animator = this.GetComponent<Animator>();
         //_playerController = GameObject.Find("Padre studente_Unity").GetComponent<PlayerController>();
-        startingPosition = transform.position;
+        startingPosition = new Vector3(-12.5240002f, 2.49099994f, -2.21600008f);
         qteStart = true;
-        qteVelocity = 5f;
+        qteVelocity = 0f;
         stumble = false;
         obstacles = GameObject.Find("Obstacles");
         int c = 0;
@@ -75,7 +77,7 @@ public class RagazzoController : MonoBehaviour
             c++;
         }
 
-
+        restart = false;
         numObstacles = 6;
     }
 
@@ -84,6 +86,15 @@ public class RagazzoController : MonoBehaviour
     {
         _isGrounded = _controller.isGrounded;
         _animator.SetBool("Grounded", _isGrounded);
+
+
+
+        if (restart)
+        {
+            restart = false;
+            Restart();
+            return;
+        }
 
         if(currentPositionX >= 13.75f)
             if (profAlreadyStarted)
@@ -106,9 +117,12 @@ public class RagazzoController : MonoBehaviour
                 _playerController.startRun = true;
                 padreAlreadyStarted = false;
             }
-            
+
             //_controller.Move(targetDirection * qteVelocity * Time.deltaTime);
-            
+            if (qteVelocity < 5f)
+                qteVelocity += 0.05f;
+            else
+                qteVelocity = 5f;
 
             if (passedObstacles == numObstacles && transform.position.x >= stone.transform.position.x)
             {
@@ -122,10 +136,13 @@ public class RagazzoController : MonoBehaviour
             else
                 JumpDetection();
 
+
             if (jumpQTE)
                 JumpRoutine();
             else
                 alreadyJumped = true;
+
+            //Inciampo con la roccia
 
             if (stumble)
             {
@@ -234,10 +251,13 @@ public class RagazzoController : MonoBehaviour
 
     public void Restart()
     {
+        Debug.Log("starting position ragazzo " + startingPosition);
+        _controller.enabled = false;
         this.transform.position = startingPosition;
+        _controller.enabled = true;
         qteVelocity = 0;
         passedObstacles = 0;
-
+        _isGrounded = true;
         _profController.profStartRun = false;
         profAlreadyStarted = true;
     }

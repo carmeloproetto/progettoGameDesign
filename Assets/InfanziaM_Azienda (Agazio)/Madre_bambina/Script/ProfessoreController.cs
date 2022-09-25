@@ -20,6 +20,9 @@ public class ProfessoreController : MonoBehaviour
 
     private Vector3 startingPosition;
 
+    public bool restart;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -30,6 +33,7 @@ public class ProfessoreController : MonoBehaviour
         velocity = 3.5f;
         profStartRun = false;
         startingPosition = transform.position;
+        restart = false;
     }
 
     // Update is called once per frame
@@ -37,6 +41,13 @@ public class ProfessoreController : MonoBehaviour
     {
         _isGrounded = _controller.isGrounded;
         _animator.SetBool("Grounded", _isGrounded);
+
+        if (restart)
+        {
+            restart = false;
+            Restart();
+            return;
+        }
 
         if (_isGrounded && velocityComponents.y < 0)
         {
@@ -51,7 +62,7 @@ public class ProfessoreController : MonoBehaviour
 
             //if (NTime > 1.0f) animationFinished = true;
 
-            if (Vector3.Distance(ragazzo.transform.position, transform.position) <= 6f)
+            if (Vector3.Distance(ragazzo.transform.position, transform.position) <= 2f)
                 profStartRun = false;
 
 
@@ -62,32 +73,21 @@ public class ProfessoreController : MonoBehaviour
             lookAtNoY.Set(ragazzo.transform.position.x, 2.491f, ragazzo.transform.position.z);
             transform.LookAt(lookAtNoY);
             targetDirection = transform.forward;
-            //Debug.Log(targetDirection);
-            //Debug.Log("Prof - position:" + ragazzo.transform.position);
-            velocityComponents = targetDirection * velocity * Time.deltaTime;
-            //velocityComponents.y += _gravityValue * Time.deltaTime * Time.deltaTime;
-            _controller.Move(velocityComponents);
-
-            _animator.SetFloat("Speed", velocity);
-            //logica distanza dal ragazzino
         }
         else
-        {
-            
             velocity = velocity > 0 ? velocity - 0.1f : velocity = 0 ;
-            //if (velocity < 0) velocity = 0;
-            velocityComponents = targetDirection * velocity * Time.deltaTime;
-            //velocityComponents.y += _gravityValue * Time.deltaTime * Time.deltaTime;
-            _controller.Move(velocityComponents);
-
-            _animator.SetFloat("Speed", velocity);
-        }
+           
+        velocityComponents = targetDirection * velocity * Time.deltaTime;
+        _controller.Move(velocityComponents);
+        _animator.SetFloat("Speed", velocity);
     }
 
     public void Restart()
     {
-        Debug.Log("dentro il restart del professore");
+        velocity = 0;
+        _controller.enabled = false;
         this.transform.position = startingPosition;
+        _controller.enabled = true;
         profStartRun = false;
     }
 }
