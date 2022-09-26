@@ -33,6 +33,10 @@ public class RaggiungiPadre_2 : StateMachineBehaviour
             _agent.updateRotation = false;
             _agent.SetDestination(GameObject.FindGameObjectWithTag("Destination_1").transform.position);
             Debug.Log(_agent.stoppingDistance);
+            animator.gameObject.GetComponent<InteractDialogueManager>().enableDialoguePanel();
+            GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManager>().ContinueStoryByOtherScript();
+            GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManager>().disableSpace = false;
+
         }
     }
 }

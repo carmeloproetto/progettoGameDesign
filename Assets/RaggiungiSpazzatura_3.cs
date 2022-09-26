@@ -3,32 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class SpostatiDietroBidoneState : StateMachineBehaviour
+public class RaggiungiSpazzatura_3 : StateMachineBehaviour
 {
-    private Transform _destination;
     private NavMeshAgent _agent;
+    private Transform _spazzatura_1;
+    private bool arrived = false; 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        _destination = GameObject.FindGameObjectWithTag("Destination_2").transform;
         _agent = animator.GetComponent<NavMeshAgent>();
-        _agent.SetDestination(_destination.position);
+        _spazzatura_1 = GameObject.FindGameObjectWithTag("Spazzatura_3").transform;
+
+        _agent.speed = 1.5f;
+        _agent.updatePosition = true;
+        _agent.updateRotation = true;
+        _agent.stoppingDistance = 0.5f;
+        _agent.SetDestination(_spazzatura_1.position);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (_agent.remainingDistance <= _agent.stoppingDistance)
+        if (_agent.remainingDistance <= _agent.stoppingDistance && !arrived)
         {
-            animator.SetTrigger("calciaBidone");
+            animator.SetTrigger("qteTrigger");
+            arrived = true;
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        _agent.SetDestination(GameObject.FindGameObjectWithTag("Destination_1").transform.position);
-        _agent.speed = 0f; 
+
     }
 }

@@ -5,7 +5,6 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using UnityEngine.Playables;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -53,8 +52,7 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject tutorialPanel;
     public GameObject canvas2;
-
-    public PlayableDirector timeline_1; 
+    public GameObject canvas; 
 
     //conto il numero di frasi alla quale siamo arrivati nella conversazione
     private int line;
@@ -203,15 +201,12 @@ public class DialogueManager : MonoBehaviour
         }
         //cose da fare quando termina il quarto dialogo
         else if(countDialogue == 4){
-            //ragazzino.GetComponent<startBattleAnimation>().enabled = true;
 
             //bullo smette di parlare
             bullo.GetComponent<Animator>().SetBool("isArguing", false);
 
-            //il ragazzino spinge il bullo
+            //il ragazzino si dirige verso il bullo e lo spinge
             ragazzino.GetComponent<Animator>().SetBool("isWalking", true);
-
-            //timeline_1.Play();
         }
         else if(countDialogue == 5){
             triggerZoneAfterFight.SetActive(false);
@@ -338,22 +333,33 @@ public class DialogueManager : MonoBehaviour
         if(line == 3 && countDialogue == 1 && choiceIndex == 0){
             positiveMeet = false;
             Debug.Log("incontro con la madre negativo");
+
+            currentStory.ChooseChoiceIndex(choiceIndex);
+            ContinueStory();
         }
         else if(line == 3 && countDialogue == 1 && choiceIndex == 1){
             positiveMeet = true;
             Debug.Log("incontro con la madre positivo");
+
+            currentStory.ChooseChoiceIndex(choiceIndex);
+            ContinueStory();
         }
         else if(line == 0 && countDialogue == 5 && choiceIndex == 0){
             feeling = 0;
+            bullo.GetComponent<Animator>().SetTrigger("sceltaUno");
             Debug.Log("feeling con ragazzino: " + feeling);
+            dialoguePanel.SetActive(false);
+            disableSpace = true;
+
+            currentStory.ChooseChoiceIndex(choiceIndex);
         }
         else if(line == 0 && countDialogue == 5 && choiceIndex == 1){
             feeling = 1;
+            bullo.GetComponent<Animator>().SetTrigger("sceltaDue");
             Debug.Log("feeling con ragazzino: " + feeling);
-        }
 
-        currentStory.ChooseChoiceIndex(choiceIndex);
-        ContinueStory();
+            currentStory.ChooseChoiceIndex(choiceIndex);
+        }
     }
 
 

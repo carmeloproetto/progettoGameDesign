@@ -377,7 +377,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: combattimento
+    m_ConditionEvent: sceltaDue
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 3937582342912750318}
@@ -879,7 +879,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: sceltaImmondizia
+    m_ConditionEvent: sceltaUno
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -848912399828790626}
@@ -1039,7 +1039,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: combattimento
+  - m_Name: sceltaDue
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -1087,7 +1087,7 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: sceltaImmondizia
+  - m_Name: sceltaUno
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0

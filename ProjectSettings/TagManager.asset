@@ -13,6 +13,11 @@ TagManager:
   - Destination_4
   - Plant
   - Barile
+  - Spazzatura_1
+  - Spazzatura_2
+  - Spazzatura_3
+  - DialogueManager
+  - Canvas
   layers:
   - Default
   - TransparentFX

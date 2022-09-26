@@ -22,9 +22,11 @@ public class GarbageQTEManager : MonoBehaviour
     {
         if( qteStart )
         {
+            GetComponent<PlayerController>().enabled = false;
+            
             if( setDestination && currItem < garbageItems.Length )
             {
-                GetComponent<PlayerController>().enabled = false; 
+                
                 _agent.SetDestination(garbageItems[currItem].transform.position);
                 _agent.speed = 1.5f; 
                 _agent.stoppingDistance = 0f;

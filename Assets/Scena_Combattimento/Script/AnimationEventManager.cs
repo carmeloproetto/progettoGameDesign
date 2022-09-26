@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations.Rigging;
 
 public class AnimationEventManager : MonoBehaviour
 {
     public Animator _bullo;
     public Animator ragazzino;
     public Animator dad;
+    public Transform rightHandIK;
 
 
     public void PunchReact()
@@ -39,4 +41,31 @@ public class AnimationEventManager : MonoBehaviour
     {
         _bullo.SetTrigger("cadi");
     }
+
+    public void RaccogliLattina_1()
+    {
+        Transform lattina = GameObject.FindGameObjectWithTag("Spazzatura_1").transform;
+        rightHandIK.position = lattina.position;
+        dad.gameObject.GetComponentInChildren<Rig>().weight = 1;
+    }
+
+    public void RaccogliLattina_2()
+    {
+        Transform lattina = GameObject.FindGameObjectWithTag("Spazzatura_2").transform;
+        rightHandIK.position = lattina.position;
+        dad.gameObject.GetComponentInChildren<Rig>().weight = 1;
+    }
+
+    public void RaccogliLattina_3()
+    {
+        Transform lattina = GameObject.FindGameObjectWithTag("Spazzatura_3").transform;
+        rightHandIK.position = lattina.position;
+        dad.gameObject.GetComponentInChildren<Rig>().weight = 1;
+    }
+
+    public void AzzeraWeight()
+    {
+        dad.gameObject.GetComponentInChildren<Rig>().weight = 0;
+    }
+
 }
