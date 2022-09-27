@@ -30,7 +30,8 @@ public class RaggiungiPadreState : StateMachineBehaviour
             arrived = true;
             _agent.speed = 0f; 
             _agent.updatePosition = false;
-            _agent.updateRotation = false; 
+            _agent.updateRotation = false;
+            _agent.SetDestination(GameObject.FindGameObjectWithTag("Destination_1").transform.position);
             Debug.Log(_agent.stoppingDistance);
         }
     }

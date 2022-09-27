@@ -18,15 +18,19 @@ public class RaggiungiSpazzatura_2 : StateMachineBehaviour
         _agent.speed = 1.5f;
         _agent.updatePosition = true;
         _agent.updateRotation = true;
-        _agent.stoppingDistance = 0.5f;
+        _agent.stoppingDistance = 0.6f;
         _agent.SetDestination(_spazzatura_1.position);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        var targetRotation = Quaternion.LookRotation(_spazzatura_1.transform.position - animator.transform.position);
+        animator.transform.rotation = Quaternion.Slerp(animator.transform.rotation, targetRotation, 10f * Time.deltaTime);
+
         if (_agent.remainingDistance <= _agent.stoppingDistance && !arrived)
         {
+            
             animator.SetTrigger("qteTrigger");
             arrived = true;
         }
@@ -35,6 +39,5 @@ public class RaggiungiSpazzatura_2 : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
     }
 }

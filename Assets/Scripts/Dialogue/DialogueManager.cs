@@ -356,9 +356,17 @@ public class DialogueManager : MonoBehaviour
         else if(line == 0 && countDialogue == 5 && choiceIndex == 1){
             feeling = 1;
             bullo.GetComponent<Animator>().SetTrigger("sceltaDue");
+            dad.GetComponent<Animator>().SetTrigger("inizioCombattimento");
             Debug.Log("feeling con ragazzino: " + feeling);
 
+            dialoguePanel.SetActive(false);
+            disableSpace = true;
+
             currentStory.ChooseChoiceIndex(choiceIndex);
+        }
+        else if (line == 1 && countDialogue == 5 && choiceIndex == 0)
+        {
+            
         }
     }
 

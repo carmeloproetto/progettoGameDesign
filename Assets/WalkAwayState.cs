@@ -34,7 +34,6 @@ public class WalkAwayState : StateMachineBehaviour
             _agent.updatePosition = false;
             _agent.updateRotation = false;
             _agent.speed = 0f;
-            Debug.Log(_agent.stoppingDistance);
         }
     }
 }

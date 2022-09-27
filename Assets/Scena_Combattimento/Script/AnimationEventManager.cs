@@ -9,6 +9,8 @@ public class AnimationEventManager : MonoBehaviour
     public Animator ragazzino;
     public Animator dad;
     public Transform rightHandIK;
+    public Transform rightHandBone; 
+    public Rig rig; 
 
 
     public void PunchReact()
@@ -42,30 +44,73 @@ public class AnimationEventManager : MonoBehaviour
         _bullo.SetTrigger("cadi");
     }
 
-    public void RaccogliLattina_1()
+    public void RaccogliLattina(Transform lattina)
     {
-        Transform lattina = GameObject.FindGameObjectWithTag("Spazzatura_1").transform;
         rightHandIK.position = lattina.position;
-        dad.gameObject.GetComponentInChildren<Rig>().weight = 1;
-    }
-
-    public void RaccogliLattina_2()
-    {
-        Transform lattina = GameObject.FindGameObjectWithTag("Spazzatura_2").transform;
-        rightHandIK.position = lattina.position;
-        dad.gameObject.GetComponentInChildren<Rig>().weight = 1;
-    }
-
-    public void RaccogliLattina_3()
-    {
-        Transform lattina = GameObject.FindGameObjectWithTag("Spazzatura_3").transform;
-        rightHandIK.position = lattina.position;
-        dad.gameObject.GetComponentInChildren<Rig>().weight = 1;
     }
 
     public void AzzeraWeight()
     {
-        dad.gameObject.GetComponentInChildren<Rig>().weight = 0;
+        StartCoroutine(SmoothRig(rig, 1f, 0f));
+        Debug.Log("Azzero weight");
+    }
+
+    public void SettaWeight()
+    {
+        StartCoroutine(SmoothRig(rig, 0f, 1f));
+        Debug.Log("Setto weight");
+
+    }
+
+    public void ParentLattina_1()
+    {
+        GameObject.FindGameObjectWithTag("Spazzatura_1").GetComponent<Rigidbody>().isKinematic = true; 
+        GameObject.FindGameObjectWithTag("Spazzatura_1").transform.SetParent(rightHandBone);
+    }
+    public void ParentLattina_2()
+    {
+        GameObject.FindGameObjectWithTag("Spazzatura_2").GetComponent<Rigidbody>().isKinematic = true;
+        GameObject.FindGameObjectWithTag("Spazzatura_2").transform.SetParent(rightHandBone);
+    }
+    public void ParentLattina_3()
+    {
+        GameObject.FindGameObjectWithTag("Spazzatura_3").GetComponent<Rigidbody>().isKinematic = true;
+        GameObject.FindGameObjectWithTag("Spazzatura_3").transform.SetParent(rightHandBone);
+    }
+
+    public void DeleteLattina(int number)
+    {
+        if( number == 1)
+        {
+            GameObject.FindGameObjectWithTag("Spazzatura_1").transform.LeanScale(new Vector3(0f, 0f, 0f), 1f).setDestroyOnComplete(true);
+        }
+        else if( number == 2)
+        {
+            GameObject.FindGameObjectWithTag("Spazzatura_2").transform.LeanScale(new Vector3(0f, 0f, 0f), 1f).setDestroyOnComplete(true);
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("Spazzatura_3").transform.LeanScale(new Vector3(0f, 0f, 0f), 1f).setDestroyOnComplete(true);
+        }
+
+    }
+
+    IEnumerator SmoothRig(Rig rig, float start, float end)
+
+    {
+
+        float elapsedTime = 0;
+        float waitTime = 0.5f;
+
+
+
+        while (elapsedTime < waitTime)
+        {
+            rig.weight = Mathf.Lerp(start, end, (elapsedTime / waitTime));
+            elapsedTime += Time.deltaTime;
+
+            yield return null;
+        }
     }
 
 }

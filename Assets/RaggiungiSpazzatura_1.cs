@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Animations.Rigging;
 
 public class RaggiungiSpazzatura_1 : StateMachineBehaviour
 {
@@ -18,35 +19,27 @@ public class RaggiungiSpazzatura_1 : StateMachineBehaviour
         _agent.speed = 1.5f;
         _agent.updatePosition = true;
         _agent.updateRotation = true;
-        _agent.stoppingDistance = 0.5f; 
+        _agent.stoppingDistance = 0.6f; 
         _agent.SetDestination(_spazzatura_1.position);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        var targetRotation = Quaternion.LookRotation(_spazzatura_1.transform.position - animator.transform.position);
+        animator.transform.rotation = Quaternion.Slerp(animator.transform.rotation, targetRotation, 10f * Time.deltaTime);
+
         if( _agent.remainingDistance <= _agent.stoppingDistance && !arrived)
         {
+            
+
             animator.SetTrigger("qteTrigger");
-            arrived = true;
+            arrived = true; 
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
     }
-
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 }
