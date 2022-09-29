@@ -22,7 +22,7 @@ public class FineCombattimentoState : StateMachineBehaviour
 
         if (timer > maxTime)
         {
-            Debug.Log("timer scaduto!");
+            //Debug.Log("timer scaduto!");
             _ragazzino.SetTrigger("raggiungiBullo");
         }
     }

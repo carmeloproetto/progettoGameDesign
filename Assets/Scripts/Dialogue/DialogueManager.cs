@@ -48,11 +48,12 @@ public class DialogueManager : MonoBehaviour
     public GameObject triggerZone;
     public GameObject ragazzino;
     public GameObject bullo;
-    public GameObject triggerZoneAfterFight;
 
     public GameObject tutorialPanel;
     public GameObject canvas2;
     public GameObject canvas; 
+    public GameObject dlgMgn;
+    public GameObject triggerDialogueBulloRagazzinoZone;
 
     //conto il numero di frasi alla quale siamo arrivati nella conversazione
     private int line;
@@ -132,6 +133,19 @@ public class DialogueManager : MonoBehaviour
                     ragazzino.GetComponent<Animator>().SetBool("isArguing", false);
                     ContinueStory();
                 }
+                else if( line ==  3 && countDialogue == 5){
+                    dad.GetComponent<Animator>().SetBool("Speak", false);
+                    bullo.GetComponent<Animator>().SetTrigger("sceltaDue");
+                    dad.GetComponent<Animator>().SetTrigger("inizioCombattimento");
+                    Debug.Log("feeling con ragazzino: " + feeling);
+                    dialoguePanel.SetActive(false);
+                    disableSpace = true;
+                }
+                else if(line == 4 && countDialogue == 5){
+                    bullo.GetComponent<Animator>().SetTrigger("esciDiScena");
+                    ragazzino.GetComponent<Animator>().SetBool("isTalking", true);
+                    ContinueStory();
+                }
                 else
                     ContinueStory();
             }
@@ -208,12 +222,20 @@ public class DialogueManager : MonoBehaviour
             //il ragazzino si dirige verso il bullo e lo spinge
             ragazzino.GetComponent<Animator>().SetBool("isWalking", true);
         }
-        else if(countDialogue == 5){
-            triggerZoneAfterFight.SetActive(false);
-            Debug.Log("dialogo con bullo temrinato");
+        else if(countDialogue == 5 && feeling == 0){
+            Debug.Log("conv finita");
+            ragazzino.GetComponent<Animator>().SetTrigger("corriVersoBullo");
+            dlgMgn.GetComponent<DialogueManager>().enabled = false;
+            dialoguePanel.SetActive(false);
+            triggerDialogueBulloRagazzinoZone.SetActive(false);
+            //cam.GetComponent<CameraFollow>().target_aux = cam.GetComponent<CameraFollow>().target_aux;
+            cam.GetComponent<CameraFollow>().enabled = false;
             canvas2.SetActive(true);
-            canvas2.GetComponent<GameControlleIntroCap1FineIncontroPadreMadre>().enabled = false;
-            canvas2.GetComponent<GameControllerFineScena1>().enabled = true;
+            canvas2.GetComponent<Canvas>().enabled = false;
+            dad.GetComponent<Animator>().SetTrigger("iniziaQteSpazzatura");
+        }
+        else if(countDialogue == 5 && feeling == 1){
+            ragazzino.GetComponent<Animator>().SetBool("isTalking", false);
         }
        
 
@@ -350,23 +372,27 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("feeling con ragazzino: " + feeling);
             dialoguePanel.SetActive(false);
             disableSpace = true;
-
+            line++;
             currentStory.ChooseChoiceIndex(choiceIndex);
         }
         else if(line == 0 && countDialogue == 5 && choiceIndex == 1){
             feeling = 1;
-            bullo.GetComponent<Animator>().SetTrigger("sceltaDue");
+            /*bullo.GetComponent<Animator>().SetTrigger("sceltaDue");
             dad.GetComponent<Animator>().SetTrigger("inizioCombattimento");
             Debug.Log("feeling con ragazzino: " + feeling);
-
+            line++;
             dialoguePanel.SetActive(false);
-            disableSpace = true;
-
+            disableSpace = true;*/
+            line++;
             currentStory.ChooseChoiceIndex(choiceIndex);
+            ContinueStory();
         }
         else if (line == 1 && countDialogue == 5 && choiceIndex == 0)
         {
+            Debug.Log("siamo qui ");
             
+            currentStory.ChooseChoiceIndex(choiceIndex);
+            ContinueStory();
         }
     }
 

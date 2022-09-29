@@ -18,6 +18,7 @@ TagManager:
   - Spazzatura_3
   - DialogueManager
   - Canvas
+  - Canvas2
   layers:
   - Default
   - TransparentFX

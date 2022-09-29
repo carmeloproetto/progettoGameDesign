@@ -14154,8 +14154,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1172695357}
+  target2: {fileID: 0}
+  target3: {fileID: 0}
+  target_aux: {fileID: 0}
   offset: {x: -5, y: 1, z: 0}
   smoothFactor: 0
+  destinationReached: 0
 --- !u!114 &634117055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20076,8 +20080,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1172695357}
+  target2: {fileID: 0}
+  target3: {fileID: 0}
+  target_aux: {fileID: 0}
   offset: {x: 0, y: 2, z: -8}
   smoothFactor: 0
+  destinationReached: 0
 --- !u!114 &982977460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41533,9 +41541,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   trigger_object: {fileID: 854755061}
   startAnimation: 0
-  tgFlw: {fileID: 4416926081881403853}
-  target: {fileID: 1899887710}
-  speed: 0.05
 --- !u!95 &2052822206
 Animator:
   serializedVersion: 3
@@ -44365,10 +44370,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 733e267d04c1590428074983d2636eee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 131300291}
-  speed: 0.05
-  barrel: {fileID: 342756344}
-  barrel4: {fileID: 2052822203}
+  Target: {fileID: 0}
+  SnapToTarget: 0
+  RotationSpeed: 2
+  MovementSpeed: 4
 --- !u!137 &4529028009782754052
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
