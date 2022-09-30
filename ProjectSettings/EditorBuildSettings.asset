@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Carmelo/Cap2_scena2.unity
     guid: 5d8c931d258795041aadc9e1e000bace
   - enabled: 1
+    path: Assets/Scenes/Carmelo/Scena_RetroAzienda (Agazio).unity
+    guid: 6bc6e25e07f5144cda429fc33b5ff57e
+  - enabled: 1
     path: Assets/InfanziaM_Azienda (Agazio)/Scene/Capitolo_2_Azienda.unity
     guid: 9caac1ddc51f64edfa81364582acadbe
   - enabled: 1

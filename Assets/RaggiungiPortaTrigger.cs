@@ -9,10 +9,12 @@ public class RaggiungiPortaTrigger : MonoBehaviour
     public bool _isTriggered = false;
     public bool _isArrived = false;
     public Transform destination;
+    public GameObject levelLoader;
 
     // Start is called before the first frame update
     void Start()
     {
+        
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class RaggiungiPortaTrigger : MonoBehaviour
             _padre.speed = 0f;
             _padre.updateRotation = false;
             _padre.updatePosition = false; 
+            levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
         }
         
     }
@@ -34,6 +37,8 @@ public class RaggiungiPortaTrigger : MonoBehaviour
     {
         if( other.gameObject.tag == "Player")
         {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PadreController_RetroAzienda>().enabled = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<NavMeshAgent>().enabled = true;
             _padre.gameObject.GetComponent<PadreController_RetroAzienda>().DisableInput();
             _padre.gameObject.GetComponent<PadreController_RetroAzienda>().DisableJump();
             _padre.SetDestination(destination.position);

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class ClimbingState : StateMachineBehaviour
 {
@@ -17,6 +18,7 @@ public class ClimbingState : StateMachineBehaviour
         pos = GameObject.FindGameObjectWithTag("Destination_3").transform;
 
         _controller = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
+        GameObject.FindGameObjectWithTag("Player").GetComponent<NavMeshAgent>().enabled = false;
     }
 
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -33,7 +35,7 @@ public class ClimbingState : StateMachineBehaviour
         animator.SetBool("isHanging", false);
         animator.GetComponent<PadreController_RetroAzienda>().EnableInput();
         animator.GetComponent<PadreController_RetroAzienda>().EnableJump();
-
         GameObject.FindGameObjectWithTag("Player").GetComponent<PadreController_RetroAzienda>().enabled = true;
+        
     }
 }
