@@ -7,7 +7,8 @@ public class RaggiungiSpazzatura_3 : StateMachineBehaviour
 {
     private NavMeshAgent _agent;
     private Transform _spazzatura_1;
-    private bool arrived = false; 
+    private bool arrived = false;
+    private GameObject canvas2;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -20,6 +21,8 @@ public class RaggiungiSpazzatura_3 : StateMachineBehaviour
         _agent.updateRotation = true;
         _agent.stoppingDistance = 0.6f;
         _agent.SetDestination(_spazzatura_1.position);
+
+        canvas2 = GameObject.FindGameObjectWithTag("Canvas2");
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -40,5 +43,9 @@ public class RaggiungiSpazzatura_3 : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        GameControllerQTESpazzatura.aux = false;
+        GameControllerQTESpazzatura.countDialogueQte = 2;
+        canvas2.GetComponent<GameControllerQTESpazzatura>().enabled = true;
+        canvas2.GetComponent<Canvas>().enabled = true;
     }
 }

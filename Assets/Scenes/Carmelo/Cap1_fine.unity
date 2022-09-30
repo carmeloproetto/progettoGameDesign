@@ -577,6 +577,7 @@ MonoBehaviour:
   bottomBar: {fileID: 162677798}
   backgroundController: {fileID: 1356436400}
   levelLoader: {fileID: 317522774}
+  audioSource: {fileID: 815343737}
 --- !u!1001 &815343736
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -584,6 +585,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7195858161761497104, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497105, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -632,8 +637,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+--- !u!82 &815343737 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7195858161761497104, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+  m_PrefabInstance: {fileID: 815343736}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &968039617
 GameObject:
   m_ObjectHideFlags: 0
@@ -873,8 +888,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.2984, y: -54.2335}
-  m_SizeDelta: {x: 966.3337, y: 845.156}
+  m_AnchoredPosition: {x: 12.970703, y: -46.241863}
+  m_SizeDelta: {x: 1035.5947, y: 866.4672}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1385313908
 MonoBehaviour:

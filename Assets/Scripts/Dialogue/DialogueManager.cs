@@ -133,28 +133,15 @@ public class DialogueManager : MonoBehaviour
                     ragazzino.GetComponent<Animator>().SetBool("isArguing", false);
                     ContinueStory();
                 }
-
-                else if( line ==  3 && countDialogue == 5){
-
-                    /*dad.GetComponent<Animator>().SetBool("Speak", false);
+                else if(line == 3 && countDialogue == 5 && feeling == 1){
+                    //il bullo fa rissa con il padre
+                    dad.GetComponent<Animator>().SetBool("Speak", false);
                     bullo.GetComponent<Animator>().SetTrigger("sceltaDue");
                     dad.GetComponent<Animator>().SetTrigger("inizioCombattimento");
-                    Debug.Log("feeling con ragazzino: " + feeling);
                     dialoguePanel.SetActive(false);
-                    disableSpace = true;*/
-
-                    Debug.Log("conversazione tra padre e ragazzino finita");
-                    ragazzino.GetComponent<Animator>().SetTrigger("corriVersoBullo");
-                    dlgMgn.GetComponent<DialogueManager>().enabled = false;
-                    dialoguePanel.SetActive(false);
-                    triggerDialogueBulloRagazzinoZone.SetActive(false);
-                    //cam.GetComponent<CameraFollow>().target_aux = cam.GetComponent<CameraFollow>().target_aux;
-                    cam.GetComponent<CameraFollow>().enabled = false;
-                    canvas2.SetActive(true);
-                    canvas2.GetComponent<Canvas>().enabled = false;
-                    dad.GetComponent<Animator>().SetTrigger("iniziaQteSpazzatura");
+                    disableSpace = true;
                 }
-                else if(line == 4 && countDialogue == 5){
+                else if(line == 4 && countDialogue == 5 && feeling == 1){
                     bullo.GetComponent<Animator>().SetTrigger("esciDiScena");
                     ragazzino.GetComponent<Animator>().SetBool("isTalking", true);
                     ContinueStory();
@@ -236,19 +223,25 @@ public class DialogueManager : MonoBehaviour
             ragazzino.GetComponent<Animator>().SetBool("isWalking", true);
         }
         else if(countDialogue == 5 && feeling == 0){
-            Debug.Log("conv finita");
+
+            
+            Debug.Log("conversazione tra padre e ragazzino finita");
             ragazzino.GetComponent<Animator>().SetTrigger("corriVersoBullo");
             dlgMgn.GetComponent<DialogueManager>().enabled = false;
             dialoguePanel.SetActive(false);
             triggerDialogueBulloRagazzinoZone.SetActive(false);
-            //cam.GetComponent<CameraFollow>().target_aux = cam.GetComponent<CameraFollow>().target_aux;
             cam.GetComponent<CameraFollow>().enabled = false;
             canvas2.SetActive(true);
             canvas2.GetComponent<Canvas>().enabled = false;
-            dad.GetComponent<Animator>().SetTrigger("iniziaQteSpazzatura");
+            StartCoroutine(triggerDadQte());
+
         }
         else if(countDialogue == 5 && feeling == 1){
             ragazzino.GetComponent<Animator>().SetBool("isTalking", false);
+            canvas.GetComponent<Canvas>().enabled = false;
+            disableSpace = true;
+            canvas2.SetActive(true);
+            canvas2.GetComponent<GameControllerQTERissa>().enabled = true;
         }
        
 
@@ -266,6 +259,20 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         mom.GetComponent<followDestination2>().enabled = true;
     }
+
+
+
+    IEnumerator triggerDadQte(){    
+        yield return new WaitForSeconds(1.5f);
+        dad.GetComponent<Animator>().SetTrigger("iniziaQteSpazzatura");
+        GameControllerQTESpazzatura.countDialogueQte = 0;
+        GameControllerQTESpazzatura.aux = true;
+        canvas2.GetComponent<GameControllerQTESpazzatura>().enabled = true;
+        canvas2.GetComponent<Canvas>().enabled = true;
+        print("canvas2 attivato");
+    }
+
+
 
 
 
@@ -400,11 +407,11 @@ public class DialogueManager : MonoBehaviour
             currentStory.ChooseChoiceIndex(choiceIndex);
             ContinueStory();
         }
-        else if (line == 1 && countDialogue == 5 && choiceIndex == 0)
+        else if (line == 1 && countDialogue == 5)
         {
-            Debug.Log("siamo qui ");
-            
+            Debug.Log("ho scelto ... ");
             currentStory.ChooseChoiceIndex(choiceIndex);
+            line++;
             ContinueStory();
         }
     }

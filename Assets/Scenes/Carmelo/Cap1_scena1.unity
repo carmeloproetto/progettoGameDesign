@@ -1792,6 +1792,8 @@ GameObject:
   - component: {fileID: 91016401}
   - component: {fileID: 91016407}
   - component: {fileID: 91016408}
+  - component: {fileID: 91016409}
+  - component: {fileID: 91016410}
   m_Layer: 5
   m_Name: Canvas2
   m_TagString: Canvas2
@@ -1919,7 +1921,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91016400}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fcbb8aa689534754f981510303343a40, type: 3}
   m_Name: 
@@ -1938,7 +1940,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 91016400}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2636daa9801d29b47a8dadf838d03790, type: 3}
   m_Name: 
@@ -1948,6 +1950,43 @@ MonoBehaviour:
   bottomBar: {fileID: 11687623}
   canvas2: {fileID: 91016400}
   dlgMng: {fileID: 851898191}
+--- !u!114 &91016409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91016400}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8df858eca743104e9fa2810d4dddb1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScene1: {fileID: 11400000, guid: bde131d53aabdde4bb9a73339e942c2b, type: 2}
+  currentScene2: {fileID: 11400000, guid: 9008fc3d18fa0d340b7fb844a0bdd681, type: 2}
+  currentScene3: {fileID: 11400000, guid: a66d132a7ab97b64cb0dfe384c88f9c7, type: 2}
+  currentScene4: {fileID: 11400000, guid: 66976fb1ad8cf7042aa3b8006a658222, type: 2}
+  bottomBar: {fileID: 11687623}
+  currentScene_aux: {fileID: 11400000, guid: bde131d53aabdde4bb9a73339e942c2b, type: 2}
+  canvas2: {fileID: 91016400}
+  dad: {fileID: 7812703812985909193}
+  barText: {fileID: 327194764}
+  levelLoader: {fileID: 1834632921}
+--- !u!114 &91016410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91016400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 693d40fc6e877424fbdaefc99379a368, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelLoader: {fileID: 1834632921}
+  bottomBar: {fileID: 11687623}
+  currentScene: {fileID: 11400000, guid: d215299b4c756bb4ab4e84f552fc351b, type: 2}
 --- !u!1 &113764932
 GameObject:
   m_ObjectHideFlags: 0
@@ -39362,6 +39401,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4737365782299246, guid: adb55fed5a5012b458c398a0b618390c, type: 3}
   m_PrefabInstance: {fileID: 1831946239}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1834632921 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2005275578008658022, guid: bac2b5675bbf57c4eaebf0dcb26761a0, type: 3}
+  m_PrefabInstance: {fileID: 618043103}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1835265998 stripped
 GameObject:
