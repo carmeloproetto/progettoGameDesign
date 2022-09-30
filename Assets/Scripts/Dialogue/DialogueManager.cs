@@ -119,27 +119,40 @@ public class DialogueManager : MonoBehaviour
                     mom.GetComponent<followDestination4>().enabled = true;
                     dad.GetComponent<followDestination4>().enabled = true;
                 }
-                //Linea 2 - Ragazzino
+                //"Adessi avrai capito che..."
                 else if (line == 1 && countDialogue == 4)
                 {
                     bullo.GetComponent<Animator>().SetBool("isArguing", false);
                     ragazzino.GetComponent<Animator>().SetBool("isArguing", true);
                     ContinueStory();
                 }
-                //Linea 3 - Bullo
+                //"Vediamo che sei in grado di fare"
                 else if (line == 2 && countDialogue == 4)
                 {
                     bullo.GetComponent<Animator>().SetBool("isArguing", true);
                     ragazzino.GetComponent<Animator>().SetBool("isArguing", false);
                     ContinueStory();
                 }
+
                 else if( line ==  3 && countDialogue == 5){
-                    dad.GetComponent<Animator>().SetBool("Speak", false);
+
+                    /*dad.GetComponent<Animator>().SetBool("Speak", false);
                     bullo.GetComponent<Animator>().SetTrigger("sceltaDue");
                     dad.GetComponent<Animator>().SetTrigger("inizioCombattimento");
                     Debug.Log("feeling con ragazzino: " + feeling);
                     dialoguePanel.SetActive(false);
-                    disableSpace = true;
+                    disableSpace = true;*/
+
+                    Debug.Log("conversazione tra padre e ragazzino finita");
+                    ragazzino.GetComponent<Animator>().SetTrigger("corriVersoBullo");
+                    dlgMgn.GetComponent<DialogueManager>().enabled = false;
+                    dialoguePanel.SetActive(false);
+                    triggerDialogueBulloRagazzinoZone.SetActive(false);
+                    //cam.GetComponent<CameraFollow>().target_aux = cam.GetComponent<CameraFollow>().target_aux;
+                    cam.GetComponent<CameraFollow>().enabled = false;
+                    canvas2.SetActive(true);
+                    canvas2.GetComponent<Canvas>().enabled = false;
+                    dad.GetComponent<Animator>().SetTrigger("iniziaQteSpazzatura");
                 }
                 else if(line == 4 && countDialogue == 5){
                     bullo.GetComponent<Animator>().SetTrigger("esciDiScena");

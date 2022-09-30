@@ -31,7 +31,7 @@ public class RaggiungiSpazzatura_2 : StateMachineBehaviour
         if (_agent.remainingDistance <= _agent.stoppingDistance && !arrived)
         {
             
-            animator.SetTrigger("qteTrigger");
+            animator.SetTrigger("arrivato");
             arrived = true;
         }
     }

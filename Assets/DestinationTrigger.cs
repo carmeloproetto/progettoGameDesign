@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Animations.Rigging;
 
 public class DestinationTrigger : MonoBehaviour
@@ -10,6 +11,7 @@ public class DestinationTrigger : MonoBehaviour
     private bool enableTransition = false;
     public float transitionSpeed = 1f;
     public Transform barile;
+    public Transform destinazionePorta;
 
     public void OnTriggerEnter(Collider other)
     {
@@ -24,6 +26,10 @@ public class DestinationTrigger : MonoBehaviour
 
             barile.parent = null;
             barile.GetComponent<Rigidbody>().isKinematic = false;
+            player.GetComponent<NavMeshAgent>().speed = 0f;
+            //player.GetComponent<NavMeshAgent>().updatePosition = false;
+            //player.GetComponent<NavMeshAgent>().updateRotation = false; 
+            player.GetComponent<NavMeshAgent>().SetDestination(destinazionePorta.position);
         }
         
     }

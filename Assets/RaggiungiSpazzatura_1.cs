@@ -33,7 +33,7 @@ public class RaggiungiSpazzatura_1 : StateMachineBehaviour
         {
             
 
-            animator.SetTrigger("qteTrigger");
+            animator.SetTrigger("arrivato");
             arrived = true; 
         }
     }
