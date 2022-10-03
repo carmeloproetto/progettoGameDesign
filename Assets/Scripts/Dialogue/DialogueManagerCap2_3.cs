@@ -236,19 +236,18 @@ public class DialogueManagerCap2_3 : MonoBehaviour
             switch(tagKey){
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
-                    if(tagValue == "Mom"){          
+                    if(tagValue == "Mom" || tagValue == "Mamma"){          
                         imageOfSpeaker.sprite = momImage;
                         if(line != 7){
-                            Debug.Log("parlaaaa");
                             mom.GetComponent<Animator>().SetBool("Talk", true);
                         }
                         else if(no == false && line > 7){
-                            Debug.Log("parlaaaa");
+                            
                             mom.GetComponent<Animator>().SetBool("Talk", true);
                         }
                         sindaco.GetComponent<Animator>().SetBool("Talk", false);
                     }
-                    else if(tagValue == "Mayor"){ 
+                    else if(tagValue == "Mayor" || tagValue == "Sindaco"){ 
                         imageOfSpeaker.sprite = mayorImage;
                         mom.GetComponent<Animator>().SetBool("Talk", false);
                         if(noAnimation == false)

@@ -44,7 +44,10 @@ public class GameControlleIntroCap2FineIncontroMadreSindaco : MonoBehaviour
         //mom.transform.eulerAngles = new Vector3(0f, 90f, 0f);
         yield return new WaitForSeconds(1.5f);
         //facciamo partire il secondo dialogo
-        mom.GetComponent<DialogueTriggerCap2>().ink = mom.GetComponent<DialogueTriggerCap2>().inkJSON2;
+        if(mom.GetComponent<DialogueTriggerCap2>().language == 1)
+            mom.GetComponent<DialogueTriggerCap2>().ink = mom.GetComponent<DialogueTriggerCap2>().inkJSON2;
+        else if(mom.GetComponent<DialogueTriggerCap2>().language == 0)
+            mom.GetComponent<DialogueTriggerCap2>().ink = mom.GetComponent<DialogueTriggerCap2>().inkJSON2_Eng;
         mom.GetComponent<DialogueTriggerCap2>().startConvByOtherScript();
         FindObjectOfType<AudioManager>().Stop("phoneRing");
         canvas2.GetComponent<GameControlleIntroCap2FineIncontroMadreSindaco>().enabled = false;

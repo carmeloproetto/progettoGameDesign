@@ -216,17 +216,17 @@ public class DialogueManagerCap2_2 : MonoBehaviour
             switch(tagKey){
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
-                    if(tagValue == "Mom"){          
+                    if(tagValue == "Mom" || tagValue == "Mamma"){          
                         imageOfSpeaker.sprite = momImage;
                     }
-                    else if(tagValue == "Guardia"){          
+                    else if(tagValue == "Guardia" || tagValue == "Guard"){          
                         imageOfSpeaker.sprite = guardiaImage;
                     }
-                    else if(tagValue == "Manifestante 1")
+                    else if(tagValue == "Manifestante 1" || tagValue == "Protester 1")
                         imageOfSpeaker.sprite = manifestante1Image;
-                    else if(tagValue == "Manifestante 2")
+                    else if(tagValue == "Manifestante 2" || tagValue == "Protester 2")
                         imageOfSpeaker.sprite = manifestante2Image;
-                    else if(tagValue == "Manifestante 3")
+                    else if(tagValue == "Manifestante 3" || tagValue == "Protester 3")
                         imageOfSpeaker.sprite = manifestante3Image;
                     break;
              

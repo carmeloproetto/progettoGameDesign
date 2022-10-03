@@ -8,6 +8,8 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
     [SerializeField] private TextAsset inkJSON;
     [SerializeField] public TextAsset inkJSON2;
     [SerializeField] public TextAsset inkJSON3;
+    [SerializeField] private TextAsset inkJSON_Eng;
+    [SerializeField] public TextAsset inkJSON2_Eng;
 
     public TextAsset ink;
 
@@ -24,16 +26,22 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
     public GameObject manifestanteDx;
     public GameObject manifestanteCen;
 
+    public int language;
 
     private void Awake(){
        // visualCue.SetActive(false);
-       
+       language = 1;
+
+
         startConv = false;
-        ink = inkJSON;
+
+        if(language == 1)
+            ink = inkJSON;
+        else 
+            ink = inkJSON_Eng;
    
     }
 
-   
 
     private void Update(){
 
@@ -57,7 +65,10 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
                     mom.transform.eulerAngles = new Vector3(0f, 0f, 0f);
                     manifestanteCen.GetComponent<Animator>().SetBool("Talk", true);
                     if(mom.GetComponent<DialogueManagerCap2_2>().talkedToGuard){
-                        ink = inkJSON2;
+                        if(language == 1)
+                            ink = inkJSON2;
+                        else 
+                            ink = inkJSON2_Eng;
                         //mom.GetComponent<DialogueManagerCap2_2>().talkedToGuard = false;
                     }
                    mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "ManifestanteCentro";

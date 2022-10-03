@@ -1716,6 +1716,8 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: ea61033072e12b946afb0038031c81ce, type: 3}
   inkJSON2: {fileID: 0}
   inkJSON3: {fileID: 0}
+  inkJSON_Eng: {fileID: 4900000, guid: 1161bef839dd66447bd98ddf87eca68f, type: 3}
+  inkJSON2_Eng: {fileID: 0}
   ink: {fileID: 0}
   startConv: 0
   visualCue: {fileID: 432126071}
@@ -1723,6 +1725,7 @@ MonoBehaviour:
   guardia: {fileID: 460499810}
   manifestanteDx: {fileID: 0}
   manifestanteCen: {fileID: 0}
+  language: 0
 --- !u!65 &81045215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16454,6 +16457,8 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: c656655a419b8cb46b5e1eeb5269eed4, type: 3}
   inkJSON2: {fileID: 0}
   inkJSON3: {fileID: 0}
+  inkJSON_Eng: {fileID: 4900000, guid: 98091a2d21e7ff5468e6e09b0e5a84d9, type: 3}
+  inkJSON2_Eng: {fileID: 0}
   ink: {fileID: 0}
   startConv: 0
   visualCue: {fileID: 247653844}
@@ -16461,6 +16466,7 @@ MonoBehaviour:
   guardia: {fileID: 0}
   manifestanteDx: {fileID: 59279141}
   manifestanteCen: {fileID: 0}
+  language: 0
 --- !u!65 &869567938
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20335,6 +20341,8 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: 642b2a24f9e90e34ebdc03178b32e44e, type: 3}
   inkJSON2: {fileID: 4900000, guid: 56007c54e88084c49b14335c5b696d52, type: 3}
   inkJSON3: {fileID: 0}
+  inkJSON_Eng: {fileID: 4900000, guid: c7faa72820a4f434586efcbb59e3bd18, type: 3}
+  inkJSON2_Eng: {fileID: 4900000, guid: 4328e8e49b6713945a252bbc17ca7432, type: 3}
   ink: {fileID: 0}
   startConv: 0
   visualCue: {fileID: 2107988363}
@@ -20342,6 +20350,7 @@ MonoBehaviour:
   guardia: {fileID: 0}
   manifestanteDx: {fileID: 0}
   manifestanteCen: {fileID: 590502386}
+  language: 0
 --- !u!65 &1053021796
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30654,6 +30663,8 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: be33052776b86264e91fd999b6548ba9, type: 3}
   inkJSON2: {fileID: 0}
   inkJSON3: {fileID: 0}
+  inkJSON_Eng: {fileID: 4900000, guid: f2a040c789989b14dab17d8022d80216, type: 3}
+  inkJSON2_Eng: {fileID: 0}
   ink: {fileID: 0}
   startConv: 0
   visualCue: {fileID: 1458748771}
@@ -30661,6 +30672,7 @@ MonoBehaviour:
   guardia: {fileID: 0}
   manifestanteDx: {fileID: 0}
   manifestanteCen: {fileID: 0}
+  language: 0
 --- !u!65 &1585654795
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -39273,6 +39285,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelLoader
       objectReference: {fileID: 0}
+    - target: {fileID: 4803170773279010277, guid: bac2b5675bbf57c4eaebf0dcb26761a0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.000061035156
+      objectReference: {fileID: 0}
     - target: {fileID: 6641510548945635723, guid: bac2b5675bbf57c4eaebf0dcb26761a0, type: 3}
       propertyPath: m_RootOrder
       value: 40
@@ -41889,6 +41905,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4276218020089099858, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 317.15625
+      objectReference: {fileID: 0}
     - target: {fileID: 4276218020131943734, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -41900,6 +41920,10 @@ PrefabInstance:
     - target: {fileID: 4276218020131943734, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: DialogueManagerCap2_2, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276218020626212875, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4276218020633457544, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
       propertyPath: m_Name
@@ -41988,6 +42012,18 @@ PrefabInstance:
     - target: {fileID: 4276218020633457545, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276218020633457547, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
+      propertyPath: m_ScaleFactor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276218020633457547, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276218021012008067, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 228.125
       objectReference: {fileID: 0}
     - target: {fileID: 4276218021281380467, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

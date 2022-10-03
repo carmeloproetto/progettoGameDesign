@@ -254,12 +254,12 @@ public class DialogueManagerCap2 : MonoBehaviour
             switch(tagKey){
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
-                    if(tagValue == "Mom"){          
+                    if(tagValue == "Mom" || tagValue == "Mamma"){          
                         imageOfSpeaker.sprite = momImage;
                         mom.GetComponent<Animator>().SetBool("Talk", true);
                         sindaco.GetComponent<Animator>().SetBool("Talk2", false);
                     }
-                    else if(tagValue == "Mayor"){ 
+                    else if(tagValue == "Mayor" || tagValue == "Sindaco"){ 
                         imageOfSpeaker.sprite = mayorImage;
                         mom.GetComponent<Animator>().SetBool("Talk", false);
                         if(noAnimation == false)
