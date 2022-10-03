@@ -13,6 +13,7 @@ public class SpostatiDietroBidoneState : StateMachineBehaviour
     {
         _destination = GameObject.FindGameObjectWithTag("Destination_2").transform;
         _agent = animator.GetComponent<NavMeshAgent>();
+        _agent.speed = 1.5f;
         _agent.SetDestination(_destination.position);
     }
 

@@ -19,7 +19,7 @@ public class RaggiungiSpazzatura_3 : StateMachineBehaviour
         _agent.speed = 1.5f;
         _agent.updatePosition = true;
         _agent.updateRotation = true;
-        _agent.stoppingDistance = 0.6f;
+        _agent.stoppingDistance = 0.2f;
         _agent.SetDestination(_spazzatura_1.position);
 
         canvas2 = GameObject.FindGameObjectWithTag("Canvas2");
@@ -37,6 +37,9 @@ public class RaggiungiSpazzatura_3 : StateMachineBehaviour
 
             animator.SetTrigger("arrivato");
             arrived = true;
+            _agent.speed = 0f;
+            _agent.updatePosition = false;
+            _agent.updateRotation = false;
         }
     }
 

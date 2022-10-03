@@ -13,15 +13,20 @@ public class forwardBulloState : StateMachineBehaviour
     {
         _bullo = GameObject.FindGameObjectWithTag("Bullo");
         _agent = animator.GetComponent<NavMeshAgent>();
+        _agent.updatePosition = true;
+        _agent.updateRotation = true;
+        _agent.speed = 1.5f;
+        _agent.stoppingDistance = 0.5f; 
         _agent.SetDestination(_bullo.transform.position);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(_agent.remainingDistance < 0.5f)
+        if(_agent.remainingDistance <= _agent.stoppingDistance)
         {
             animator.SetBool("isWalking", false);
+            _agent.speed = 0f;
         }
     }
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 467117973}
-  m_IndirectSpecularColor: {r: 0.1285102, g: 0.39423317, b: 0.874984, a: 1}
+  m_IndirectSpecularColor: {r: 0.1412368, g: 0.33631372, b: 0.63772166, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20208,7 +20208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: febfaef910f8042c58f7f68f89635639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fillingTime: 4
+  _fillingTime: 2
   _ringImage: {fileID: 463193615}
   bulloAnim: {fileID: 8771319006750343724}
   padre: {fileID: 3587029973003726601}
@@ -36586,7 +36586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: febfaef910f8042c58f7f68f89635639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fillingTime: 3
+  _fillingTime: 2
   _ringImage: {fileID: 424377385}
   bulloAnim: {fileID: 8771319006750343724}
   padre: {fileID: 3587029973003726601}
@@ -39517,7 +39517,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.38
-  m_Speed: 1.5
+  m_Speed: 0
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -48657,7 +48657,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 1561f98e65ee0460599221d7d5ebd3d8, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1

@@ -14,15 +14,17 @@ public class RaggiungiBulloState : StateMachineBehaviour
     {
         _bullo = GameObject.FindGameObjectWithTag("Bullo").transform;
         _agent = animator.GetComponent<NavMeshAgent>();
-        _agent.speed = 1.5f; 
-        _agent.stoppingDistance = 1f;
+        _agent.speed = 1.5f;
+        _agent.updatePosition = true;
+        _agent.updateRotation = true; 
+        _agent.stoppingDistance = 0.6f;
         _agent.SetDestination(_bullo.position);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (_agent.remainingDistance <= 1f && !arrived)
+        if (_agent.remainingDistance <= _agent.stoppingDistance && !arrived)
         {
             animator.SetTrigger("spingiBullo");
             arrived = true;

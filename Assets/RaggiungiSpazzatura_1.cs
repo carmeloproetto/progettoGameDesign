@@ -13,13 +13,14 @@ public class RaggiungiSpazzatura_1 : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.GetComponent<PlayerController>().enabled = false; 
         _agent = animator.GetComponent<NavMeshAgent>();
         _spazzatura_1 = GameObject.FindGameObjectWithTag("Spazzatura_1").transform;
 
         _agent.speed = 1.5f;
         _agent.updatePosition = true;
         _agent.updateRotation = true;
-        _agent.stoppingDistance = 0.6f; 
+        _agent.stoppingDistance = 0.2f; 
         _agent.SetDestination(_spazzatura_1.position);
     }
 
@@ -34,6 +35,9 @@ public class RaggiungiSpazzatura_1 : StateMachineBehaviour
             
 
             animator.SetTrigger("arrivato");
+            _agent.speed = 0f;
+            _agent.updatePosition = false;
+            _agent.updateRotation = false;
             arrived = true; 
         }
     }

@@ -13,6 +13,7 @@ public class ForwardRagaizzino_2 : StateMachineBehaviour
     {
         _agent = animator.GetComponent<NavMeshAgent>();
         _ragazzino = GameObject.FindGameObjectWithTag("Ragazzino");
+        _agent.speed = 1.5f; 
         _agent.stoppingDistance = 0.8f;
         _agent.SetDestination(_ragazzino.transform.position - new Vector3(0f, 0.5f, 0f));
     }
@@ -23,6 +24,7 @@ public class ForwardRagaizzino_2 : StateMachineBehaviour
         if (_agent.remainingDistance <= 0.8f)
         {
             animator.SetBool("arrivato", true);
+            _agent.speed = 0f; 
         }
     }
 

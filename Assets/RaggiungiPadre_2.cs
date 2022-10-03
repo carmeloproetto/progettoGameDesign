@@ -15,7 +15,7 @@ public class RaggiungiPadre_2 : StateMachineBehaviour
         _padre = GameObject.FindGameObjectWithTag("Player").transform;
         _agent = animator.GetComponent<NavMeshAgent>();
         _agent.speed = 1.5f;
-        _agent.stoppingDistance = 1f;
+        _agent.stoppingDistance = 0.5f;
         _agent.updatePosition = true;
         _agent.updateRotation = true;
         _agent.SetDestination(_padre.position);
