@@ -75,7 +75,7 @@ public class DialogueManager : MonoBehaviour
         instance = this;
 
         viewChoice = false;
-        countDialogue = 4;
+        countDialogue = 1;
         disableSpace = false;
         FindObjectOfType<AudioManager>().Play("birdsAudio");
     }
@@ -290,7 +290,7 @@ public class DialogueManager : MonoBehaviour
             HandleTags(currentStory.currentTags);
         }
         else{
-
+            Debug.Log("perchè siamo qui?????");
             StartCoroutine(ExitDialogueMode());
         }
     }
@@ -307,20 +307,20 @@ public class DialogueManager : MonoBehaviour
             switch(tagKey){
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
-                    if(tagValue == "Mom" && countDialogue != 3){          
+                    if((tagValue == "Mom" && countDialogue != 3) || (tagValue == "Mamma" && countDialogue != 3)){          
                         imageOfSpeaker.sprite = momImage;
                         dad.GetComponent<Animator>().SetBool("Speak", false);
                         mom.GetComponent<Animator>().SetBool("Speak", true);
                     }
-                    if(tagValue == "Dad"){ 
+                    if(tagValue == "Dad" || tagValue == "Papà"){ 
                         imageOfSpeaker.sprite = dadImage;
                         dad.GetComponent<Animator>().SetBool("Speak", true);
                         mom.GetComponent<Animator>().SetBool("Speak", false);
                     }
-                    if(tagValue == "Bully"){ 
+                    if(tagValue == "Bully" || tagValue == "Bullo"){ 
                         imageOfSpeaker.sprite = bullyImage;
                     }
-                    if(tagValue == "Lad"){ 
+                    if(tagValue == "Lad" || tagValue == "Ragazzino"){ 
                         imageOfSpeaker.sprite = ladImage;
                     }
                     break;
@@ -372,6 +372,7 @@ public class DialogueManager : MonoBehaviour
     public void MakeChoice(int choiceIndex){
         Debug.Log("numero della scleta:" + choiceIndex + " " + line + " " + countDialogue);
         
+       
         if(line == 3 && countDialogue == 1 && choiceIndex == 0){
             positiveMeet = false;
             Debug.Log("incontro con la madre negativo");
@@ -412,6 +413,10 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("ho scelto ... ");
             currentStory.ChooseChoiceIndex(choiceIndex);
             line++;
+            ContinueStory();
+        }
+        else{
+            currentStory.ChooseChoiceIndex(choiceIndex);
             ContinueStory();
         }
     }

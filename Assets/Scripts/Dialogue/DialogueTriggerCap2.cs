@@ -28,7 +28,7 @@ public class DialogueTriggerCap2 : MonoBehaviour
     private int count;
 
     private void Awake(){
-        language = 0;
+        language = 1;
        // visualCue.SetActive(false);
         startConv = false;
         if(language == 1)

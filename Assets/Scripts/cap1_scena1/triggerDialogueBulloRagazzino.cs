@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class triggerDialogueBulloRagazzino : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class triggerDialogueBulloRagazzino : MonoBehaviour
             //dad.GetComponent<Animator>().SetFloat("Speed", 0);
             dad.GetComponent<PlayerController>().DisableInput();
             dad.GetComponent<PlayerController>().DisableJump();
+            dad.GetComponent<NavMeshAgent>().enabled = true;
             //dad.GetComponent<Animator>().applyRootMotion = true; 
             StartCoroutine(startConv());
         }

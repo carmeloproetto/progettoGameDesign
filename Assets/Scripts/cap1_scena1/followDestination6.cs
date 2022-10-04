@@ -27,11 +27,18 @@ public class followDestination6 : MonoBehaviour
         Vector3 a = transform.position;
         transform.position = Vector3.MoveTowards(a, b, speed);
         _animator.SetFloat("Speed", velocity);
+        this.GetComponent<PlayerController>().enabled = false;
 
     
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
             _animator.SetFloat("Speed", 0);
-            triggerDialogueZone.GetComponent<DialogueTrigger>().ink = triggerDialogueZone.GetComponent<DialogueTrigger>().inkJSON2;
+            this.GetComponent<PlayerController>().enabled = false;
+            
+            if( triggerDialogueZone.GetComponent<DialogueTrigger>().language == 1)
+                triggerDialogueZone.GetComponent<DialogueTrigger>().ink = triggerDialogueZone.GetComponent<DialogueTrigger>().inkJSON2;
+            else
+                triggerDialogueZone.GetComponent<DialogueTrigger>().ink = triggerDialogueZone.GetComponent<DialogueTrigger>().inkJSON2_Eng;
+
             triggerDialogueZone.GetComponent<DialogueTrigger>().startConvByOtherScript();
             this.GetComponent<followDestination6>().enabled = false;
         }  

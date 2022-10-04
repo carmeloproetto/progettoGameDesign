@@ -8,6 +8,7 @@ public class setPart2 : MonoBehaviour
     public GameObject dad;
     public GameObject triggerDialogueBulloRagazzino;
     public GameObject ragazzino;
+    public GameObject bullo;
 
     // Start is called before the first frame update
     void Start()
@@ -27,5 +28,6 @@ public class setPart2 : MonoBehaviour
         dad.GetComponent<limitZone>().enabled = true;
         triggerDialogueBulloRagazzino.SetActive(true);
         ragazzino.SetActive(true);
+        bullo.SetActive(true);
     }
 }

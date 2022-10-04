@@ -29,10 +29,10 @@ public class GameControllerQTESpazzatura : MonoBehaviour
     {
         Debug.Log("countDialogueQTE: " + countDialogueQte);
         countScene = 0;
-        
+        barText.text = "";
         currentScene_aux = currentScene1;
 
-        bottomBar.PlayScene(currentScene_aux);
+        bottomBar.PlayScene(currentScene1);
     }
 
     void Update(){

@@ -38,7 +38,11 @@ public class followDestination3 : MonoBehaviour
             transform.eulerAngles = new Vector3(0f, 90f, 0f);
            
             _animator.SetFloat("Speed", 0f);
-            triggerDialogueSpace.GetComponent<DialogueTrigger>().ink = triggerDialogueSpace.GetComponent<DialogueTrigger>().inkJSON3;
+            if( triggerDialogueSpace.GetComponent<DialogueTrigger>().language == 1)
+                triggerDialogueSpace.GetComponent<DialogueTrigger>().ink = triggerDialogueSpace.GetComponent<DialogueTrigger>().inkJSON3;
+            else
+                triggerDialogueSpace.GetComponent<DialogueTrigger>().ink = triggerDialogueSpace.GetComponent<DialogueTrigger>().inkJSON3_Eng;
+
         }
     }
 
