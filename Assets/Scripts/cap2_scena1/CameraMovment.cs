@@ -12,7 +12,7 @@ public class CameraMovment : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        b.Set(-5.26f, 4.26f, -11.98f);
+        b.Set(-4.769f, 3.88f, -8.351f);
         FindObjectOfType<AudioManager>().Play("rainSound");
         mom.GetComponent<Animator>().SetBool("Talk", true);
     }
@@ -23,7 +23,8 @@ public class CameraMovment : MonoBehaviour
         Vector3 a = transform.position;
         transform.position = Vector3.MoveTowards(a, b, 0.04f);
         
-         if(transform.position.x == -5.26f && transform.position.y ==  4.26f && transform.position.z == -11.98f){
+         if(transform.position.x == -4.769f && transform.position.y == 3.88f && transform.position.z == -8.351f)
+        {
             //this.GetComponent<CameraFollow>().enabled = true;
             StartCoroutine(startDialogue());
         }

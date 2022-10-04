@@ -2337,7 +2337,7 @@ MonoBehaviour:
   target2: {fileID: 0}
   target3: {fileID: 0}
   target_aux: {fileID: 0}
-  offset: {x: -1, y: 1.76, z: -7.5}
+  offset: {x: -0.91, y: 1.76, z: -4.39}
   smoothFactor: 0
   destinationReached: 0
 --- !u!114 &813012458
@@ -2431,7 +2431,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813012456}
   m_LocalRotation: {x: 0.05530465, y: 0.16511531, z: -0.00877027, w: 0.9846834}
-  m_LocalPosition: {x: -4.769, y: 3.88, z: -8.351}
+  m_LocalPosition: {x: -7.66, y: 3.82, z: -6.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
