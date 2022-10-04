@@ -19,6 +19,7 @@ public class followDestination : MonoBehaviour
 
     private DialogueTrigger script_dialogueTrigger;
     public GameObject madreBambina;
+    public GameObject canvas;
 
 
     // Start is called before the first frame update
@@ -73,6 +74,7 @@ public class followDestination : MonoBehaviour
         Debug.Log("animazione hello terminata");
        
         _animator.SetBool("Hello", false);
+        canvas.GetComponent<Canvas>().enabled = true;
         script_dialogueTrigger.startConv = true;
         this.GetComponent<followDestination>().enabled = false;
     }
