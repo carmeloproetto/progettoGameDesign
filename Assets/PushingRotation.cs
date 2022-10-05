@@ -5,6 +5,7 @@ using UnityEngine;
 public class PushingRotation : MonoBehaviour
 {
     private Animator _player;
+    public bool isPushing = false; 
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,7 @@ public class PushingRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( _player.GetFloat("Speed") != 0f && _player.GetBool("isPushing") )
+        if( _player.GetFloat("Speed") != 0f && isPushing )
         {
             transform.Rotate(Vector3.up * -30f * _player.GetFloat("Speed") * Time.deltaTime);
         } 

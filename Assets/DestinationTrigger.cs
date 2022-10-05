@@ -18,18 +18,20 @@ public class DestinationTrigger : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             player.GetComponent<Animator>().SetBool("isPushing", false);
+            player.GetComponent<PadreController_RetroAzienda>().DisableInput();
             enableTransition = true;
 
-            player.GetComponent<PadreController_RetroAzienda>().EnableJump();
-            player.GetComponent<PadreController_RetroAzienda>().EnableBackward();
-            player.GetComponent<PadreController_RetroAzienda>().maxVelocity = 2f;
+            //player.GetComponent<PadreController_RetroAzienda>().EnableJump();
+            //player.GetComponent<PadreController_RetroAzienda>().EnableBackward();
+            //player.GetComponent<PadreController_RetroAzienda>().maxVelocity = 2f;
 
-            barile.parent = null;
+            //barile.parent = null;
             barile.GetComponent<Rigidbody>().isKinematic = false;
             player.GetComponent<NavMeshAgent>().speed = 0f;
             //player.GetComponent<NavMeshAgent>().updatePosition = false;
             //player.GetComponent<NavMeshAgent>().updateRotation = false; 
             player.GetComponent<NavMeshAgent>().SetDestination(destinazionePorta.position);
+            this.GetComponent<BoxCollider>().enabled = false;
         }
         
     }

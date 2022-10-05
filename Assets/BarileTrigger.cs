@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Animations.Rigging; 
 
@@ -11,6 +12,7 @@ public class BarileTrigger : InteractableObject
     public GameObject rightArmIK;
     public GameObject leftArmIK;
     public GameObject barile;
+    public GameObject destinationTrigger; 
     public Rig rig; 
     public bool enableRig = false;
     private float transitionSpeed = 2f; 
@@ -18,6 +20,7 @@ public class BarileTrigger : InteractableObject
 
     public override bool Interact()
     {
+
         //sposto il target IK lungo il bordo del barile
         rightArmIK.transform.position = rightArmPin.transform.position;
 
@@ -42,7 +45,10 @@ public class BarileTrigger : InteractableObject
         //abilito il peso di IK 
         enableRig = true;
 
-        return true; 
+        barile.GetComponent<PushingRotation>().isPushing = true;
+        destinationTrigger.GetComponent<BoxCollider>().enabled = true;
+
+        return true;
     }
 
     protected override void Start()
