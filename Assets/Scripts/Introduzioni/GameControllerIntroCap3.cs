@@ -52,10 +52,17 @@ public class GameControllerIntroCap3 : MonoBehaviour
                     levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
             }
-            if(countText == 3){
+            else if (!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            {
+                bottomBar.EndCurrentSentence();
+            }
+
+
+            if (countText == 3){
                 StartCoroutine(StartFade(audioSource, 10, 0f));
             }
         }
+        
     }
 
      public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)

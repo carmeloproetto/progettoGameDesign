@@ -16,6 +16,8 @@ public class GameControllerIntroCap1 : MonoBehaviour
 
     public AudioSource audioSource;
 
+    private bool firstSpacePressed;
+
     void Start()
     {
         countScene = 0;
@@ -23,13 +25,19 @@ public class GameControllerIntroCap1 : MonoBehaviour
         backgroundController.SetImage(currentScene.background);
         //FindObjectOfType<AudioManager>().Play("audioIntro");
         countText = 1;
+        firstSpacePressed = false;
     }
 
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-           
+            //if (firstSpacePressed)
+            //{
+            //    bottomBar.EndCurrentSentence();
+            //    firstSpacePressed = !firstSpacePressed;
+            //}
+                
             if (bottomBar.IsCompleted())
             {
                  countText++;
@@ -56,6 +64,9 @@ public class GameControllerIntroCap1 : MonoBehaviour
                     levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
 
+            }else if(!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            {
+                bottomBar.EndCurrentSentence();
             }
 
             if(countText == 7){

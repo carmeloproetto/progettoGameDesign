@@ -69,6 +69,10 @@ public class GameControllerFineCap3 : MonoBehaviour
                     
                     }
                 }
+                else if (!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+                {
+                    bottomBar.EndCurrentSentence();
+                }
             }
             else if(DialogueManagerCap3_2.finale == 2){
                 if (bottomBar.IsCompleted())
@@ -94,6 +98,10 @@ public class GameControllerFineCap3 : MonoBehaviour
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     
                     }
+                }
+                else if (!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+                {
+                    bottomBar.EndCurrentSentence();
                 }
             }
             else if(DialogueManagerCap3_2.finale == 3){
@@ -121,6 +129,10 @@ public class GameControllerFineCap3 : MonoBehaviour
                     
                     }
                 }
+                else if (!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+                {
+                    bottomBar.EndCurrentSentence();
+                }
             }
             else if(DialogueManagerCap3_2.finale == 4){
                 if (bottomBar.IsCompleted())
@@ -144,8 +156,11 @@ public class GameControllerFineCap3 : MonoBehaviour
                         FindObjectOfType<AudioManager>().Stop("audioIntro");
                         this.GetComponent<Canvas>().enabled = false;
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
-                    
                     }
+                }
+                else if (!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+                {
+                    bottomBar.EndCurrentSentence();
                 }
             }
             else if(DialogueManagerCap3_2.finale == 5){
@@ -172,6 +187,10 @@ public class GameControllerFineCap3 : MonoBehaviour
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     
                     }
+                }
+                else if (!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+                {
+                    bottomBar.EndCurrentSentence();
                 }
             }
         }

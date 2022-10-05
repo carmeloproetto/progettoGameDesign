@@ -54,6 +54,10 @@ public class GameControllerFineCap1 : MonoBehaviour
                     //SceneManager.LoadScene("Cap2_Scena1_");
                 }
             }
+            else if (!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            {
+                bottomBar.EndCurrentSentence();
+            }
         }
     }
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 467117973}
-  m_IndirectSpecularColor: {r: 0.1285102, g: 0.39423317, b: 0.874984, a: 1}
+  m_IndirectSpecularColor: {r: 0.12665077, g: 0.3805186, b: 0.8785193, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -210,6 +210,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barText: {fileID: 327194764}
   personNameText: {fileID: 1273903385}
+  endNow: 0
 --- !u!224 &11687624
 RectTransform:
   m_ObjectHideFlags: 0
@@ -27959,8 +27960,12 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: dfeb5d0fc8f184643b9604caf0311ee5, type: 3}
   inkJSON2: {fileID: 0}
   inkJSON3: {fileID: 0}
+  inkJSON_Eng: {fileID: 0}
+  inkJSON2_Eng: {fileID: 0}
+  inkJSON3_Eng: {fileID: 0}
   ink: {fileID: 0}
   startConv: 0
+  language: 0
 --- !u!1001 &1483423151
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34131,6 +34136,7 @@ MonoBehaviour:
   dad: {fileID: 1429292225}
   triggerDialogueBulloRagazzino: {fileID: 1478787383}
   ragazzino: {fileID: 0}
+  bullo: {fileID: 0}
 --- !u!4 &1728221636
 Transform:
   m_ObjectHideFlags: 0
@@ -41907,7 +41913,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4276218020089099858, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 317.15625
+      value: 835.7001
       objectReference: {fileID: 0}
     - target: {fileID: 4276218020131943734, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -42019,11 +42025,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4276218020633457547, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
       propertyPath: m_UiScaleMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4276218021012008067, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 228.125
+      value: -327
       objectReference: {fileID: 0}
     - target: {fileID: 4276218021281380467, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

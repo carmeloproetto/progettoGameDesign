@@ -51,8 +51,12 @@ public class GameControllerIntroCap2 : MonoBehaviour
                     //SceneManager.LoadScene("Cap2_Scena1_");
                 }
             }
+            else if (!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            {
+                bottomBar.EndCurrentSentence();
+            }
 
-            if(countText == 3){
+            if (countText == 3){
                 StartCoroutine(StartFade(audioSource, 4, 0f));
             }
         }

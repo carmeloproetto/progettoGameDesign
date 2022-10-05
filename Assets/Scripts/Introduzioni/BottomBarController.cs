@@ -11,6 +11,7 @@ public class BottomBarController : MonoBehaviour
     private int sentenceIndex = -1;
     private StoryScene currentScene;
     private State state = State.COMPLETED;
+    private bool endNow = false;
 
     private enum State
     {
@@ -50,13 +51,20 @@ public class BottomBarController : MonoBehaviour
 
         while (state != State.COMPLETED)
         {
+
             barText.text += text[wordIndex];
-            yield return new WaitForSeconds(0.05f);
+            if(!endNow) yield return new WaitForSeconds(0.05f);
             if(++wordIndex == text.Length)
             {
                 state = State.COMPLETED;
+                endNow = false;
                 break;
             }
         }
+    }
+
+    public void EndCurrentSentence()
+    {
+        endNow = true;
     }
 }
