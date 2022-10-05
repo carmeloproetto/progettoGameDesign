@@ -8,7 +8,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Carmelo/Cap1_intro.unity
     guid: 6e756c0e8efd0b9498cb227a9a344fe3
   - enabled: 1

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 467117973}
-  m_IndirectSpecularColor: {r: 0.12665077, g: 0.3805186, b: 0.8785193, a: 1}
+  m_IndirectSpecularColor: {r: 0.1412284, g: 0.3363084, b: 0.6380224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -218,7 +218,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barText: {fileID: 327194764}
   personNameText: {fileID: 1273903385}
-  endNow: 0
 --- !u!224 &11687624
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2126,6 +2125,7 @@ GameObject:
   - component: {fileID: 119686352}
   - component: {fileID: 119686351}
   - component: {fileID: 119686350}
+  - component: {fileID: 119686353}
   m_Layer: 5
   m_Name: Choice0
   m_TagString: Untagged
@@ -2247,6 +2247,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 119686348}
   m_CullTransparentMesh: 1
+--- !u!114 &119686353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119686348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 851898193}
+          m_TargetAssemblyTypeName: hoverButton, Assembly-CSharp
+          m_MethodName: ChangeColor1
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &121400357
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17973,6 +18002,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48ee977344a0df43869c6816fe3d7b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &851898193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851898191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c864c03a01439b40a49514d8be5814f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textmeshPro: {fileID: 637251963}
+  textmeshPro2: {fileID: 190142188}
+  btn: {fileID: 119686350}
+  btn2: {fileID: 1135430027}
 --- !u!114 &851898194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24470,6 +24515,7 @@ GameObject:
   - component: {fileID: 1135430029}
   - component: {fileID: 1135430028}
   - component: {fileID: 1135430027}
+  - component: {fileID: 1135430031}
   m_Layer: 5
   m_Name: Choice1
   m_TagString: Untagged
@@ -24591,6 +24637,35 @@ RectTransform:
   m_AnchoredPosition: {x: 440, y: -845}
   m_SizeDelta: {x: 547.38, y: 33.418}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1135430031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135430026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 851898193}
+          m_TargetAssemblyTypeName: hoverButton, Assembly-CSharp
+          m_MethodName: ChangeColor2
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1001 &1136039148
 PrefabInstance:
   m_ObjectHideFlags: 0
