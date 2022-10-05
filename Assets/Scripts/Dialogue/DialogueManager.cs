@@ -5,6 +5,7 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -67,6 +68,7 @@ public class DialogueManager : MonoBehaviour
     //feeling globale fra padre e ragazzino
     public static float feeling;
 
+    public GameObject audioManager;
 
     private void Awake(){
         if(instance != null){
@@ -77,7 +79,7 @@ public class DialogueManager : MonoBehaviour
         viewChoice = false;
         countDialogue = 1;
         disableSpace = false;
-        FindObjectOfType<AudioManager>().Play("birdsAudio");
+        //audioManager.GetComponent<AudioManager>().Play("birdsAudio");
     }
 
     public static DialogueManager GetInstance(){
@@ -102,7 +104,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if(Input.GetKeyDown("space") && viewChoice == false){
+        if(Keyboard.current.spaceKey.isPressed && viewChoice == false){
             //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
             if(disableSpace == false){
                 disableSpace = true;

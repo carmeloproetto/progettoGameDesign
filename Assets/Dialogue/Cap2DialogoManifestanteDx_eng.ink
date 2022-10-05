@@ -1,1 +1,1 @@
-We’re not gonna sit around while our trees die! Save the forest instead of giving money to corporations! #speaker:Protester 3
+We’re not gonna sit around while our trees die! Save the forest instead of giving money to corporations! #speaker: Protester 3
