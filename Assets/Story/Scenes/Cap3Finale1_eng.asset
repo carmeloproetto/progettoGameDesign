@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ed64f743d504b4cbd69dd1ebec8c88, type: 3}
+  m_Name: Cap3Finale1_eng
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: "Unfortunately, the professor\u2019s prediction was correct. "
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: 'Once freed, the couple managed to depopulate in no time. '
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: Not only the competition with the native species lead to the extinction
+      of the latter, but the consequences also affected other fronts.
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: The orchards were damaged and the forests weakened.
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: My father had tried to follow what he thought was the right path, but in
+      the end his good intentions did not lead to anything good.
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: This was another particularly formative event of his life. He understood
+      that good will is not enough to improve this world, but that knowledge and
+      trust in the right people are also fundamental.
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  background: {fileID: 21300000, guid: 9369eb148fdeaac4fae05a3a4860c853, type: 3}
+  nextScene: {fileID: 0}

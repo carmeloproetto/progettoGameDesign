@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ed64f743d504b4cbd69dd1ebec8c88, type: 3}
+  m_Name: Cap3Finale3_eng
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: My father told me this story with great regret. Feeling pressed and unable
+      to change things, he had nothing left but this impulsive action. He drowned
+      the two squirrels in the river, unable to save themselves.
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: Although the professor tried to reassure him assuring him that he had made
+      the right choice, the guilt of not being able to solve the issue through dialogue
+      still grips him.
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: This was another particularly formative event of his life. He understood
+      that good will is not enough to improve this world, but that knowledge and
+      trust in the right people are also fundamental.
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  background: {fileID: 21300000, guid: 9369eb148fdeaac4fae05a3a4860c853, type: 3}
+  nextScene: {fileID: 0}

@@ -43,7 +43,7 @@ public class MenuButton : MonoBehaviour
                 }
 				else if(thisIndex == 2)
                 {
-					Debug.Log("Quit!");
+					Debug.Log("Quit! This works only during buikd ");
 					Application.Quit();
                 }
 			

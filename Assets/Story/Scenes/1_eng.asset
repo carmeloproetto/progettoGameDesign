@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8ed64f743d504b4cbd69dd1ebec8c88, type: 3}
-  m_Name: 6
+  m_Name: 1_eng
   m_EditorClassIdentifier: 
   sentences:
-  - text: "Fu cos\xEC che mio padre si trasfer\xEC e conobbe mia madre."
+  - text: "Since I was born  I\u2019ve lived in the same town, in the house where
+      my mother grew up."
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   background: {fileID: 21300000, guid: 9369eb148fdeaac4fae05a3a4860c853, type: 3}
-  nextScene: {fileID: 0}
+  nextScene: {fileID: 11400000, guid: 210376e0d34b05f49bccc76a1c27335a, type: 2}

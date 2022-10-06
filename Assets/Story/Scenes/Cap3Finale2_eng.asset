@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ed64f743d504b4cbd69dd1ebec8c88, type: 3}
+  m_Name: Cap3Finale2_eng
+  m_EditorClassIdentifier: 
+  sentences:
+  - text: 'That night my father and the professor managed to prevent what could have
+      been a catastrophe. '
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: 'Stopping that boy gave them a chance to talk to him. '
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: 'They found out that he was a bit short-tempered but kind-hearted person,
+      who was firmly convinced of the need to make an effort to save the Earth and
+      nature to live in harmony with it. '
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: He was not a bad person, but he had never had the opportunity to talk with
+      people more aware than him that could make him understand the complexity of
+      the subject.
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: The professor explained the consequences to both of them, and they were
+      grateful that they trusted each other.
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  background: {fileID: 21300000, guid: 9369eb148fdeaac4fae05a3a4860c853, type: 3}
+  nextScene: {fileID: 0}
