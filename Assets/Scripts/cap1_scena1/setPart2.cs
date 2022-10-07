@@ -9,6 +9,8 @@ public class setPart2 : MonoBehaviour
     public GameObject triggerDialogueBulloRagazzino;
     public GameObject ragazzino;
     public GameObject bullo;
+    public GameObject canvas2;
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,5 +31,6 @@ public class setPart2 : MonoBehaviour
         triggerDialogueBulloRagazzino.SetActive(true);
         ragazzino.SetActive(true);
         bullo.SetActive(true);
+        canvas2.GetComponent<GameControlleIntroCap1FineIncontroPadreMadre>().enabled = false;
     }
 }

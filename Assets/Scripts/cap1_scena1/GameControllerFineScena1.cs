@@ -86,6 +86,9 @@ public class GameControllerFineScena1 : MonoBehaviour
                     
                     }
                 }     
+            }else if(!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            {
+                bottomBar.EndCurrentSentence();
             }
         }
     }

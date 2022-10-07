@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19450872, g: 0.2924528, b: 0.2924528, a: 0.8156863}
+  m_Color: {r: 0.07450981, g: 0.21568628, b: 0.32941177, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1997,6 +1997,7 @@ MonoBehaviour:
   levelLoader: {fileID: 1834632921}
   bottomBar: {fileID: 11687623}
   currentScene: {fileID: 11400000, guid: d215299b4c756bb4ab4e84f552fc351b, type: 2}
+  currentScene_eng: {fileID: 11400000, guid: f0fbdcf61c42c304ea7929e39f625fcc, type: 2}
 --- !u!1 &113764932
 GameObject:
   m_ObjectHideFlags: 0
@@ -4402,6 +4403,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7195858161761497104, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497104, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -37671,6 +37676,7 @@ MonoBehaviour:
   triggerDialogueBulloRagazzino: {fileID: 1478787383}
   ragazzino: {fileID: 2644488261116814969}
   bullo: {fileID: 8771319006750343725}
+  canvas2: {fileID: 91016400}
 --- !u!4 &1728221636
 Transform:
   m_ObjectHideFlags: 0
@@ -50651,7 +50657,7 @@ PrefabInstance:
     - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
       propertyPath: ladImage
       value: 
-      objectReference: {fileID: 21300000, guid: 59b2ce3c27bba364cb5bffbd65d90c90, type: 3}
+      objectReference: {fileID: 21300000, guid: 8307edc75cb3ed4479efb86346a3b6e0, type: 3}
     - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
       propertyPath: momImage
       value: 

@@ -87,6 +87,10 @@ public class GameControllerQTESpazzatura : MonoBehaviour
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     }
             }
+            else if(!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            {
+                bottomBar.EndCurrentSentence();
+            }
         }
 
 

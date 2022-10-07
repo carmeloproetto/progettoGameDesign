@@ -65,6 +65,10 @@ public class GameControlleIntroCap1FineIncontroPadreMadre : MonoBehaviour
                     setterPart2.SetActive(true);
                 }
             }
+            else if(!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            {
+                bottomBar.EndCurrentSentence();
+            }
         }
     }
 

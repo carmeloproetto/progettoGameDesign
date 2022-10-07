@@ -7,14 +7,20 @@ public class GameControllerQTERissa : MonoBehaviour
 {
   
     public GameObject levelLoader;
+
     public BottomBarController bottomBar; 
     private int countScene;
 
     public StoryScene currentScene;
+    public StoryScene currentScene_eng;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        if(LanguageChangeScript.language == 0)
+            currentScene = currentScene_eng;
+
         countScene = 0;
         bottomBar.PlayScene(currentScene);
         
@@ -44,6 +50,10 @@ public class GameControllerQTERissa : MonoBehaviour
                     this.GetComponent<Canvas>().enabled = false;
                     levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
+            }
+            else if(!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            {
+                bottomBar.EndCurrentSentence();
             }
 
         }

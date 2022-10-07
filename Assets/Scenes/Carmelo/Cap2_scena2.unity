@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19450872, g: 0.2924528, b: 0.2924528, a: 0.8156863}
+  m_Color: {r: 0.07450981, g: 0.21568628, b: 0.32941177, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1878,6 +1878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 90a167233b4453b4c90a682d8a5ccc11, type: 2}
+  currentScene_eng: {fileID: 0}
   bottomBar: {fileID: 11687623}
   backgroundController: {fileID: 0}
   levelLoader: {fileID: 0}
@@ -1895,6 +1896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 72af14f1cda7ab0428f2a4a400e97259, type: 2}
+  currentScene_eng: {fileID: 0}
   bottomBar: {fileID: 11687623}
   backgroundController: {fileID: 0}
 --- !u!114 &91016403
@@ -1992,6 +1994,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScene1: {fileID: 11400000, guid: 90a167233b4453b4c90a682d8a5ccc11, type: 2}
   currentScene2: {fileID: 11400000, guid: 8a787f63994447444af87d41ad56de9c, type: 2}
+  currentScene1_eng: {fileID: 0}
+  currentScene2_eng: {fileID: 0}
   bottomBar: {fileID: 11687623}
   canvas2: {fileID: 91016400}
   dad: {fileID: 1429292225}
@@ -34152,6 +34156,7 @@ MonoBehaviour:
   triggerDialogueBulloRagazzino: {fileID: 1478787383}
   ragazzino: {fileID: 0}
   bullo: {fileID: 0}
+  canvas2: {fileID: 0}
 --- !u!4 &1728221636
 Transform:
   m_ObjectHideFlags: 0

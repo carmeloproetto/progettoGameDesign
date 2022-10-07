@@ -37,6 +37,10 @@ public class fineCap2Scena1 : MonoBehaviour
                 this.GetComponent<Canvas>().enabled = false;
                 levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
             }
+            else if(!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            {
+                bottomBar.EndCurrentSentence();
+            }
         }
     }
 

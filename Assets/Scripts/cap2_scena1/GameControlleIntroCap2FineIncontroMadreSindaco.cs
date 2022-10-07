@@ -37,6 +37,10 @@ public class GameControlleIntroCap2FineIncontroMadreSindaco : MonoBehaviour
                     StartCoroutine(animationMom());
 
             }
+            else if(!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            {
+                bottomBar.EndCurrentSentence();
+            }
         }
     }
 

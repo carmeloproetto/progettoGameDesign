@@ -107,8 +107,8 @@ public class DialogueManager : MonoBehaviour
         if(Keyboard.current.spaceKey.isPressed && viewChoice == false){
             //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
             if(disableSpace == false){
-                disableSpace = true;
-                StartCoroutine(disableSpaceFunction());
+                //disableSpace = true;
+                //StartCoroutine(disableSpaceFunction());
                 line++;
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
                 //serve per far partire la camminata nella scena cap1 quando siamo davanti al parco
@@ -124,6 +124,8 @@ public class DialogueManager : MonoBehaviour
                 //"Adessi avrai capito che..."
                 else if (line == 1 && countDialogue == 4)
                 {
+                    disableSpace = true;
+                    StartCoroutine(disableSpaceFunction());
                     bullo.GetComponent<Animator>().SetBool("isArguing", false);
                     ragazzino.GetComponent<Animator>().SetBool("isArguing", true);
                     ContinueStory();
@@ -131,6 +133,8 @@ public class DialogueManager : MonoBehaviour
                 //"Vediamo che sei in grado di fare"
                 else if (line == 2 && countDialogue == 4)
                 {
+                    disableSpace = true;
+                    StartCoroutine(disableSpaceFunction());
                     bullo.GetComponent<Animator>().SetBool("isArguing", true);
                     ragazzino.GetComponent<Animator>().SetBool("isArguing", false);
                     ContinueStory();
@@ -144,19 +148,24 @@ public class DialogueManager : MonoBehaviour
                     disableSpace = true;
                 }
                 else if(line == 4 && countDialogue == 5 && feeling == 1){
+                    disableSpace = true;
+                    StartCoroutine(disableSpaceFunction());
                     bullo.GetComponent<Animator>().SetTrigger("esciDiScena");
                     ragazzino.GetComponent<Animator>().SetBool("isTalking", true);
                     ContinueStory();
                 }
-                else
+                else{
+                    disableSpace = true;
+                    StartCoroutine(disableSpaceFunction());
                     ContinueStory();
+                }
             }
         }
     }
 
 
     private IEnumerator disableSpaceFunction(){
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.3f);
         disableSpace = false;
      }
 

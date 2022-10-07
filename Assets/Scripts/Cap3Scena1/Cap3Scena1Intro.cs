@@ -51,6 +51,10 @@ public class Cap3Scena1Intro : MonoBehaviour
                 }
 
             }
+            else if(!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            {
+                bottomBar.EndCurrentSentence();
+            }
         }
     }
 
