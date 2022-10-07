@@ -190,13 +190,13 @@ public class DialogueManagerAzienda : MonoBehaviour
             switch(tagKey){
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
-                    if(tagValue == "Mom"){          
+                    if(tagValue == "Mom" || tagValue == "Mamma"){          
                         imageOfSpeaker.sprite = momImage;
                     }
-                    else if(tagValue == "employee 1"){          
+                    else if(tagValue == "employee 1" || tagValue == "dipendente 1"){          
                         imageOfSpeaker.sprite = employee1Image;
                     }
-                    else if(tagValue == "employee 2"){          
+                    else if(tagValue == "employee 2" || tagValue == "dipendente 2"){          
                         imageOfSpeaker.sprite = employee2Image;
                     }
                   

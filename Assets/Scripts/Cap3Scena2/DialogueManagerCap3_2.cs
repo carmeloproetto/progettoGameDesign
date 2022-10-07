@@ -17,6 +17,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
 
     public Sprite dadImage;
     public Sprite thiefImage;
+    public Sprite professorImage;
 
 
     [Header("Choices UI")]
@@ -231,11 +232,14 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
             switch(tagKey){
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
-                    if(tagValue == "Dad"){ 
+                    if(tagValue == "Dad" || tagValue == "Papà"){ 
                         imageOfSpeaker.sprite = dadImage;
                     }
-                    else if(tagValue == "Lad"){
+                    else if(tagValue == "Lad" || tagValue == "Ragazzo"){
                         imageOfSpeaker.sprite = thiefImage;
+                    }
+                    else if(tagValue == "Professor" || tagValue == "Professore"){
+                        imageOfSpeaker.sprite = professorImage;
                     }
                     break;
                 default: 

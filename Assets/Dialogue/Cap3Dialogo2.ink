@@ -3,7 +3,7 @@
 -> main
 
 === main ===
-Ehi! Dove vai con quella? #speaker:Dad
+Ehi! Dove vai con quella? #speaker:Papà
 	*[Chi Sei?]
 		->first
 		
@@ -16,15 +16,15 @@ Ehi! Dove vai con quella? #speaker:Dad
 	{feeling == 0: -> noFeeling | -> yesFeeling}
 
 === noFeeling ===
-	Vedo che hai la memoria corta. #speaker:Lad
-	Sono il ragazzo che hai lasciato venisse picchiato da un energumeno al parco. #speaker:Lad
-	… #speaker:Dad
-	Non sono stupito di trovarti qui. #speaker:Lad
+	Vedo che hai la memoria corta. #speaker:Ragazzo
+	Sono il ragazzo che hai lasciato venisse picchiato da un energumeno al parco. #speaker:Ragazzo
+	… #speaker:Papà
+	Non sono stupito di trovarti qui. #speaker:Ragazzo
 	-> continueStory
 
 === yesFeeling === 
-	Vengo dalla tua città, non ricordi? Abbiamo dato una lezione a quell’energumeno che faceva il gradasso. #speaker:Lad
-	Ma certo! Adesso mi ricordo. #speaker:Dad
+	Vengo dalla tua città, non ricordi? Abbiamo dato una lezione a quell’energumeno che faceva il gradasso. #speaker:Ragazzo
+	Ma certo! Adesso mi ricordo. #speaker:Papà
 	-> continueStory
 
 

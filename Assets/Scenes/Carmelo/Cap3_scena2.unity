@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.2
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 26739539}
-  m_IndirectSpecularColor: {r: 0.00909835, g: 0.004744144, b: 0.021466935, a: 0.2}
+  m_IndirectSpecularColor: {r: 0.009096811, g: 0.0047437027, b: 0.021468183, a: 0.2}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3398,6 +3398,7 @@ MonoBehaviour:
   imageOfSpeaker: {fileID: 223988604}
   dadImage: {fileID: 21300000, guid: 09d15112d6682724aba417e37c601149, type: 3}
   thiefImage: {fileID: 21300000, guid: 59b2ce3c27bba364cb5bffbd65d90c90, type: 3}
+  professorImage: {fileID: 21300000, guid: 88d08ac2213bdff429d048cee76a1422, type: 3}
   choices:
   - {fileID: 223988606}
   - {fileID: 223988605}
@@ -7509,6 +7510,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 0
+  interactionUI: {fileID: 0}
+  interactionText: {fileID: 0}
+  icon: {fileID: 0}
 --- !u!143 &263496996
 CharacterController:
   m_ObjectHideFlags: 0
@@ -20668,6 +20672,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 0
+  interactionUI: {fileID: 0}
+  interactionText: {fileID: 0}
+  icon: {fileID: 0}
 --- !u!143 &803822783
 CharacterController:
   m_ObjectHideFlags: 0
@@ -24197,6 +24204,9 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: b7f8a174431abe14485cd3e903a2e38e, type: 3}
   inkJSON2: {fileID: 0}
   inkJSON3: {fileID: 0}
+  inkJSON_eng: {fileID: 0}
+  inkJSON2_eng: {fileID: 0}
+  inkJSON3_eng: {fileID: 0}
   ink: {fileID: 4900000, guid: b7f8a174431abe14485cd3e903a2e38e, type: 3}
   startConv: 0
 --- !u!114 &980734615
@@ -36062,6 +36072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene1: {fileID: 11400000, guid: caf295c96e2510043925b41aca00d70e, type: 2}
+  currentScene1_eng: {fileID: 11400000, guid: 4790905405225aa429fab66898a69ffb, type: 2}
   bottomBar: {fileID: 135656830}
   canvas2: {fileID: 1389453594}
   professor: {fileID: 1233645603}
@@ -53278,6 +53289,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 0
+  interactionUI: {fileID: 0}
+  interactionText: {fileID: 0}
+  icon: {fileID: 0}
 --- !u!143 &2028047222
 CharacterController:
   m_ObjectHideFlags: 0
@@ -53363,6 +53377,9 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: b7f8a174431abe14485cd3e903a2e38e, type: 3}
   inkJSON2: {fileID: 4900000, guid: f4c8e6395b5b2f54a8be46eff16098ea, type: 3}
   inkJSON3: {fileID: 0}
+  inkJSON_eng: {fileID: 4900000, guid: 8d3ce3b187880974494ac6900cf8e12b, type: 3}
+  inkJSON2_eng: {fileID: 4900000, guid: 7edf073ab3f7d7d4fbd26529d5024ac9, type: 3}
+  inkJSON3_eng: {fileID: 0}
   ink: {fileID: 4900000, guid: b7f8a174431abe14485cd3e903a2e38e, type: 3}
   startConv: 0
 --- !u!1 &2033129242

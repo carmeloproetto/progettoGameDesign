@@ -178,10 +178,10 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
             switch(tagKey){
                 case SPEAKER_TAG:
                     displayNameText.text = tagValue;
-                    if(tagValue == "Dad"){ 
+                    if(tagValue == "Dad" || tagValue == "Papà"){ 
                         imageOfSpeaker.sprite = dadImage;
                     }
-                    else if(tagValue == "Professor"){
+                    else if(tagValue == "Professor" || tagValue == "Professore"){
                         imageOfSpeaker.sprite = professorImage;
                     }
                     break;

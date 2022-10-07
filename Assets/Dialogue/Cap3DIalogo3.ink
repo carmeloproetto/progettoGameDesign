@@ -4,52 +4,52 @@ VAR help = 0
 -> main
 
 === main ===
-Ehi? Chi va là? Cosa state facendo? 
+Ehi? Chi va là? Cosa state facendo?  #speaker:Professore
 {help == 0: -> firstChoice | -> secondChoice}
 
 === firstChoice ===
-Basta! Ho detto che devi ridarmeli!
-No!
+Basta! Ho detto che devi ridarmeli! #speaker:Papà
+No! #speaker:Ragazzo
 	* [Dammi la gabbia.]
 		->continue
 	* [(avvicinati)]
 		->continue
 
 === continue ===
-Non li lascerò nelle tue mani!
+Non li lascerò nelle tue mani! #speaker:Ragazzo
 	* [Avanti, smettila di insistere.]
 		-> continue2
 	* [(avvicinati)]
 		-> continue2
 
 === continue2 ===
-Non cambierò idea! Piuttosto li libero qui.
-Non lasciarglielo fare!
-Non possono essere liberati qui! Le conseguenze potrebbero essere drammatiche!
+Non cambierò idea! Piuttosto li libero qui. #speaker:Ragazzo
+Non lasciarglielo fare! #speaker:Professore
+Non possono essere liberati qui! Le conseguenze potrebbero essere drammatiche! #speaker:Professore
 	* [Abbi fiducia in noi. ]
-		Ti prego.
+		Ti prego. #speaker:Papà
 		{feeling < 0.5: -> final1 | -> final2}
 	* [(spingilo nel fiume)]
-		Non volelvo farlo, perdonami.
+		Non volelvo farlo, perdonami. #speaker:Papà
 		-> DONE
 		
 
 === final1 ===
-No.
+No. #speaker:Ragazzo
 -> DONE
 
 === final2 ===
-...
-E va bene.
-Avete vinto voi.
+... #speaker:Ragazzo
+E va bene. #speaker:Ragazzo
+Avete vinto voi. #speaker:Ragazzo
 -> DONE
 
 === secondChoice ===
-Accidenti! Non riesco più a correre!
-Avanti, dammi la gabbia. Lascia che ti aiuti.
-Va bene. Supera il ponte, troverai un pick up che ti aspetta.
-Non farlo!
-Non possono essere liberati! Le conseguenze potrebbero essere drammatiche!
+Accidenti! Non riesco più a correre! #speaker:Ragazzo
+Avanti, dammi la gabbia. Lascia che ti aiuti. #speaker:Papà
+Va bene. Supera il ponte, troverai un pick up che ti aspetta. #speaker:Ragazzo
+Non farlo! #speaker:Professore
+Non possono essere liberati! Le conseguenze potrebbero essere drammatiche! #speaker:Professore
 	* [(sali in macchina)]
 		->fine1
 	* [(non salire in macchina)]
@@ -57,12 +57,12 @@ Non possono essere liberati! Le conseguenze potrebbero essere drammatiche!
 
 
 === fine1 ===
-Va bene. Non posso non fidarmi di lei.
+Va bene. Non posso non fidarmi di lei. #speaker:Papà
 -> DONE
 
 
 === fine2 ===
-Mi dispiace.
+Mi dispiace. #speaker:Papà
 -> DONE
 
 === function changeFeeling(newFeeling) ===

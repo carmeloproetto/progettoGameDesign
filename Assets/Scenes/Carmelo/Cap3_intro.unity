@@ -331,7 +331,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barText: {fileID: 1676244727}
   personNameText: {fileID: 968039619}
-  endNow: 0
 --- !u!82 &298196081 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 7195858161761497104, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
@@ -518,6 +517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 9235309c0e89ed04d9d5f02ec7e54cb1, type: 2}
+  currentScene_eng: {fileID: 11400000, guid: 0b31dd8879e1d8a46ba444e5a07dc880, type: 2}
   bottomBar: {fileID: 162677798}
   backgroundController: {fileID: 1356436400}
   levelLoader: {fileID: 1529406698}

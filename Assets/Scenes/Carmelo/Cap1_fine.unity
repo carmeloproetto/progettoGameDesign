@@ -331,7 +331,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barText: {fileID: 1676244727}
   personNameText: {fileID: 968039619}
-  endNow: 0
 --- !u!1 &317522774 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2005275578008658022, guid: bac2b5675bbf57c4eaebf0dcb26761a0, type: 3}
@@ -579,6 +578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 789a74764d9054940aa6f9471fc189ff, type: 2}
+  currentScene_eng: {fileID: 11400000, guid: 3e21b5b60e03c4c47be08fc940d6a2b7, type: 2}
   bottomBar: {fileID: 162677798}
   backgroundController: {fileID: 1356436400}
   levelLoader: {fileID: 317522774}

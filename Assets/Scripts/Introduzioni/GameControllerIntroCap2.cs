@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameControllerIntroCap2 : MonoBehaviour
 {
-  public StoryScene currentScene;
+    public StoryScene currentScene;
+    public StoryScene currentScene_eng;
     public BottomBarController bottomBar;
     public BackgroundController backgroundController;
     private int countScene;
@@ -19,6 +20,10 @@ public class GameControllerIntroCap2 : MonoBehaviour
     void Start()
     {
         countScene = 0;
+
+        if(LanguageChangeScript.language == 0)
+            currentScene = currentScene_eng;
+
         bottomBar.PlayScene(currentScene);
         backgroundController.SetImage(currentScene.background);
         countText = 1;

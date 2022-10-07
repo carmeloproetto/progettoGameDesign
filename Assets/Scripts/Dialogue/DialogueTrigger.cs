@@ -29,7 +29,7 @@ public class DialogueTrigger : MonoBehaviour
     public int language;
 
     private void Awake(){
-        language = 0;
+        language = LanguageChangeScript.language;
        // visualCue.SetActive(false);
         startConv = false;
         if(language == 0)

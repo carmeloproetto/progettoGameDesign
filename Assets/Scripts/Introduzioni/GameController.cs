@@ -6,12 +6,20 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public StoryScene currentScene;
+    public StoryScene currentScene_eng;
     public BottomBarController bottomBar;
     public BackgroundController backgroundController;
     private int countScene;
 
+    private int language;
+
     void Start()
     {
+        language = LanguageChangeScript.language;
+
+         if(language == 0)
+            currentScene = currentScene_eng;
+
         countScene = 0;
         bottomBar.PlayScene(currentScene);
         backgroundController.SetImage(currentScene.background);

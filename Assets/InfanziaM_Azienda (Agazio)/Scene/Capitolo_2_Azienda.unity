@@ -1567,6 +1567,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
+  icon: {fileID: 0}
+  text: 
 --- !u!1001 &348120104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3397,6 +3399,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
+  icon: {fileID: 0}
+  text: 
 --- !u!54 &643490241
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3839,6 +3843,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
+  icon: {fileID: 0}
+  text: 
   totalSeconds: 2
   maxIntensity: 1
   myLight: {fileID: 2000493325}
@@ -10383,6 +10389,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
+  icon: {fileID: 0}
+  text: 
   target: {fileID: 1679994036}
   cassettiera: {fileID: 214700900}
   enemy: {fileID: 1589494459064905456}
@@ -14561,6 +14569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 6140dbc4ca2d82d4a88e2f0ee6bdd3d5, type: 3}
+  inkJSON_eng: {fileID: 4900000, guid: a8516440abbdf5d4883af45ac0801193, type: 3}
   ink: {fileID: 0}
   startConv: 0
   dlgMng: {fileID: 1742200516}

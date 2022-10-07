@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 467117973}
-  m_IndirectSpecularColor: {r: 0.1412284, g: 0.3363084, b: 0.6380224, a: 1}
+  m_IndirectSpecularColor: {r: 0.1285102, g: 0.39423317, b: 0.874984, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1814,6 +1814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 90a167233b4453b4c90a682d8a5ccc11, type: 2}
+  currentScene_eng: {fileID: 11400000, guid: 1e9f8b63bd50efa46922f1225069ddbd, type: 2}
   bottomBar: {fileID: 11687623}
   backgroundController: {fileID: 0}
   levelLoader: {fileID: 0}
@@ -1831,6 +1832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 72af14f1cda7ab0428f2a4a400e97259, type: 2}
+  currentScene_eng: {fileID: 11400000, guid: 0ce2562a009d1d54b9841f200110f464, type: 2}
   bottomBar: {fileID: 11687623}
   backgroundController: {fileID: 0}
 --- !u!114 &91016403
@@ -1928,6 +1930,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScene1: {fileID: 11400000, guid: 90a167233b4453b4c90a682d8a5ccc11, type: 2}
   currentScene2: {fileID: 11400000, guid: 8a787f63994447444af87d41ad56de9c, type: 2}
+  currentScene1_eng: {fileID: 11400000, guid: 1e9f8b63bd50efa46922f1225069ddbd, type: 2}
+  currentScene2_eng: {fileID: 11400000, guid: da5573ded4f35fd4fac11fd9878e2fa3, type: 2}
   bottomBar: {fileID: 11687623}
   canvas2: {fileID: 91016400}
   dad: {fileID: 7812703812985909193}
@@ -1947,6 +1951,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentScene1: {fileID: 11400000, guid: bde131d53aabdde4bb9a73339e942c2b, type: 2}
   currentScene2: {fileID: 11400000, guid: d215299b4c756bb4ab4e84f552fc351b, type: 2}
+  currentScene1_eng: {fileID: 11400000, guid: c2abb4619d5605e4886915910860d6c7, type: 2}
+  currentScene2_eng: {fileID: 11400000, guid: f0fbdcf61c42c304ea7929e39f625fcc, type: 2}
   bottomBar: {fileID: 11687623}
   canvas2: {fileID: 91016400}
   dlgMng: {fileID: 851898191}
@@ -1966,6 +1972,10 @@ MonoBehaviour:
   currentScene2: {fileID: 11400000, guid: 9008fc3d18fa0d340b7fb844a0bdd681, type: 2}
   currentScene3: {fileID: 11400000, guid: a66d132a7ab97b64cb0dfe384c88f9c7, type: 2}
   currentScene4: {fileID: 11400000, guid: 66976fb1ad8cf7042aa3b8006a658222, type: 2}
+  currentScene1_eng: {fileID: 11400000, guid: c2abb4619d5605e4886915910860d6c7, type: 2}
+  currentScene2_eng: {fileID: 11400000, guid: c37412e244389d74fa8e6fbc407d260c, type: 2}
+  currentScene3_eng: {fileID: 11400000, guid: 7de67f0d1dffb53489a11d54689dad55, type: 2}
+  currentScene4_eng: {fileID: 11400000, guid: 3f56cca14ece0fc419464049a858b2bd, type: 2}
   bottomBar: {fileID: 11687623}
   currentScene_aux: {fileID: 0}
   canvas2: {fileID: 91016400}
@@ -50273,6 +50283,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 0
+  interactionUI: {fileID: 0}
+  interactionText: {fileID: 0}
+  icon: {fileID: 0}
 --- !u!114 &4159981488305689757
 MonoBehaviour:
   m_ObjectHideFlags: 0

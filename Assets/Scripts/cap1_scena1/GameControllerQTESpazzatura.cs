@@ -10,6 +10,10 @@ public class GameControllerQTESpazzatura : MonoBehaviour
     public StoryScene currentScene2;
     public StoryScene currentScene3;
     public StoryScene currentScene4;
+    public StoryScene currentScene1_eng;
+    public StoryScene currentScene2_eng;
+    public StoryScene currentScene3_eng;
+    public StoryScene currentScene4_eng;
 
     public BottomBarController bottomBar; 
     private int countScene;
@@ -30,6 +34,16 @@ public class GameControllerQTESpazzatura : MonoBehaviour
         Debug.Log("countDialogueQTE: " + countDialogueQte);
         countScene = 0;
         barText.text = "";
+
+        if(LanguageChangeScript.language == 0){
+            currentScene1 = currentScene1_eng;
+            currentScene2 = currentScene2_eng;
+            currentScene3 = currentScene3_eng;
+            currentScene4 = currentScene4_eng;
+        }
+
+
+
         currentScene_aux = currentScene1;
 
         bottomBar.PlayScene(currentScene1);

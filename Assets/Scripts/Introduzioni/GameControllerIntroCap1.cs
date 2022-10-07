@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameControllerIntroCap1 : MonoBehaviour
 {
    public StoryScene currentScene;
+   public StoryScene currentScene_eng;
     public BottomBarController bottomBar;
     public BackgroundController backgroundController;
     private int countScene;
@@ -18,12 +19,18 @@ public class GameControllerIntroCap1 : MonoBehaviour
 
     private bool firstSpacePressed;
 
+    private int language;
+
     void Start()
     {
+        language = LanguageChangeScript.language;
         countScene = 0;
+
+        if(language == 0)
+            currentScene = currentScene_eng;
+
         bottomBar.PlayScene(currentScene);
         backgroundController.SetImage(currentScene.background);
-        //FindObjectOfType<AudioManager>().Play("audioIntro");
         countText = 1;
         firstSpacePressed = false;
     }
@@ -32,11 +39,7 @@ public class GameControllerIntroCap1 : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-            //if (firstSpacePressed)
-            //{
-            //    bottomBar.EndCurrentSentence();
-            //    firstSpacePressed = !firstSpacePressed;
-            //}
+            
                 
             if (bottomBar.IsCompleted())
             {
@@ -57,9 +60,6 @@ public class GameControllerIntroCap1 : MonoBehaviour
                     bottomBar.PlayNextSentence();
                 }
                 else if(countScene == 4){
-                    //StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioIntro", 4f));
-                    //FindObjectOfType<AudioManager>().Stop("audioIntro");
-                    //SceneManager.LoadScene("Cap1_scena1");
                     this.GetComponent<Canvas>().enabled = false;
                     levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
@@ -70,7 +70,6 @@ public class GameControllerIntroCap1 : MonoBehaviour
             }
 
             if(countText == 7){
-                //StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioIntro", 4f));
                 StartCoroutine(StartFade(audioSource, 2, 0f));
             }
         }

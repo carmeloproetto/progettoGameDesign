@@ -2946,6 +2946,9 @@ MonoBehaviour:
   inkJSON: {fileID: 4900000, guid: e798bc45fb2c45a438861f3c11d4c8f5, type: 3}
   inkJSON2: {fileID: 4900000, guid: 5d27e5b4de803a84fb119ca2499a4f6c, type: 3}
   inkJSON3: {fileID: 4900000, guid: dce1005f4aafd83458fc44117f83ee8b, type: 3}
+  inkJSON_eng: {fileID: 4900000, guid: 964cf745ab5232246a0767808ed09923, type: 3}
+  inkJSON2_eng: {fileID: 4900000, guid: 17d167e233a85f9458275982a3e0f00d, type: 3}
+  inkJSON3_eng: {fileID: 4900000, guid: 8ab85ae72c5f22143950ac8c92b10816, type: 3}
   ink: {fileID: 0}
   startConv: 0
 --- !u!114 &1200755675

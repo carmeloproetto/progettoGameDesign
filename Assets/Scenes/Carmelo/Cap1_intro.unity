@@ -537,6 +537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 72af14f1cda7ab0428f2a4a400e97259, type: 2}
+  currentScene_eng: {fileID: 11400000, guid: 0ce2562a009d1d54b9841f200110f464, type: 2}
   bottomBar: {fileID: 162677798}
   backgroundController: {fileID: 1356436400}
   levelLoader: {fileID: 2104500961}

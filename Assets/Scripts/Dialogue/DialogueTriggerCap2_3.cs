@@ -8,6 +8,9 @@ public class DialogueTriggerCap2_3 : MonoBehaviour
     [SerializeField] private TextAsset inkJSON;
     [SerializeField] public TextAsset inkJSON2;
     [SerializeField] public TextAsset inkJSON3;
+    [SerializeField] private TextAsset inkJSON_eng;
+    [SerializeField] public TextAsset inkJSON2_eng;
+    [SerializeField] public TextAsset inkJSON3_eng;
 
     public TextAsset ink;
 
@@ -20,7 +23,13 @@ public class DialogueTriggerCap2_3 : MonoBehaviour
 
 
     private void Awake(){
-       // visualCue.SetActive(false);
+
+        if(LanguageChangeScript.language == 0){
+            inkJSON = inkJSON_eng;
+            inkJSON2 = inkJSON2_eng;
+            inkJSON3 = inkJSON3_eng;
+        }
+
         startConv = false;
         ink = inkJSON;
         count = 0;

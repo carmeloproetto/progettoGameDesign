@@ -7,6 +7,7 @@ public class GameControlleIntroCap2FineIncontroMadreSindaco : MonoBehaviour
 {
 
     public StoryScene currentScene1;
+    public StoryScene currentScene1_eng;
     public BottomBarController bottomBar; 
     private int countScene;
 
@@ -16,6 +17,8 @@ public class GameControlleIntroCap2FineIncontroMadreSindaco : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(LanguageChangeScript.language == 0)
+            currentScene1 = currentScene1_eng;
 
          countScene = 0;
          bottomBar.PlayScene(currentScene1);

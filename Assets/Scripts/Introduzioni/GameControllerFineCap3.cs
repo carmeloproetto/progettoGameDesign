@@ -11,6 +11,12 @@ public class GameControllerFineCap3 : MonoBehaviour
     public StoryScene final4;
     public StoryScene final5;
 
+    public StoryScene final1_eng;
+    public StoryScene final2_eng;
+    public StoryScene final3_eng;
+    public StoryScene final4_eng;
+    public StoryScene final5_eng;
+
     public BottomBarController bottomBar; 
     private int countScene;
 
@@ -24,6 +30,14 @@ public class GameControllerFineCap3 : MonoBehaviour
     void Start()
     {
         countScene = 0;
+
+        if(LanguageChangeScript.language == 0){
+            final1 = final1_eng;
+            final2 = final2_eng;
+            final3 = final3_eng;
+            final4 = final4_eng;
+            final5 = final5_eng;
+        }
         
         if(DialogueManagerCap3_2.finale == 1)
             currentScene_aux = final1;

@@ -331,7 +331,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   barText: {fileID: 1676244727}
   personNameText: {fileID: 968039619}
-  endNow: 0
 --- !u!1 &444525389
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,6 +514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 72af14f1cda7ab0428f2a4a400e97259, type: 2}
+  currentScene_eng: {fileID: 0}
   bottomBar: {fileID: 162677798}
   backgroundController: {fileID: 1356436400}
 --- !u!114 &760991962
@@ -530,6 +530,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 72af14f1cda7ab0428f2a4a400e97259, type: 2}
+  currentScene_eng: {fileID: 0}
   bottomBar: {fileID: 162677798}
   backgroundController: {fileID: 1356436400}
   levelLoader: {fileID: 0}
@@ -549,6 +550,9 @@ MonoBehaviour:
   currentScene1: {fileID: 11400000, guid: bb844b40e5b105f42a64f5a77c039de3, type: 2}
   currentScene2: {fileID: 11400000, guid: 82fec9bc53d35c447b5d0ca849d8bd20, type: 2}
   currentScene3: {fileID: 11400000, guid: b835d0023cf692746ae08cbe8434e65e, type: 2}
+  currentScene1_eng: {fileID: 11400000, guid: 2cd24b635b8c44a42bfd513cf3644cbd, type: 2}
+  currentScene2_eng: {fileID: 11400000, guid: 42d0b89b15cbbd84c92f036a89b4a506, type: 2}
+  currentScene3_eng: {fileID: 11400000, guid: 47b06d58d0d5c37478e5146ca2805b8d, type: 2}
   auxScene: {fileID: 0}
   bottomBar: {fileID: 162677798}
   backgroundController: {fileID: 1356436400}

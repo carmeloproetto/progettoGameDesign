@@ -9,6 +9,7 @@ public class DialogueTriggerAzienda : MonoBehaviour
 
     [Header("Ink JSON")]
     [SerializeField] private TextAsset inkJSON;
+    [SerializeField] private TextAsset inkJSON_eng;
 
     public TextAsset ink;
 
@@ -27,6 +28,11 @@ public class DialogueTriggerAzienda : MonoBehaviour
     private bool aux;
 
     private void Awake(){
+
+        if(LanguageChangeScript.language == 0)
+            inkJSON = inkJSON_eng;
+
+
        // visualCue.SetActive(false);
         startConv = false;
         ink = inkJSON;

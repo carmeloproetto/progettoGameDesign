@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.2
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 26739539}
-  m_IndirectSpecularColor: {r: 0.00909835, g: 0.004744144, b: 0.021466935, a: 0.2}
+  m_IndirectSpecularColor: {r: 0.009096811, g: 0.0047437027, b: 0.021468183, a: 0.2}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2896,7 +2896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19450872, g: 0.2924528, b: 0.2924528, a: 0.8156863}
+  m_Color: {r: 0.07450981, g: 0.21568628, b: 0.32941177, a: 0.5882353}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13330,7 +13330,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 1005d667ffe7a0948ae7876be41d2e17, type: 3}
   inkJSON2: {fileID: 4900000, guid: fc8c440b2622af4489fb221f62d1107c, type: 3}
-  inkJSON3: {fileID: 0}
+  inkJSON3: {fileID: 4900000, guid: 23a9c043f726d3d4a8b40babddb05801, type: 3}
+  inkJSON_eng: {fileID: 4900000, guid: b4f46a6c6881b8449874fefd08ef89d6, type: 3}
+  inkJSON2_eng: {fileID: 0}
+  inkJSON3_eng: {fileID: 0}
   ink: {fileID: 4900000, guid: 1005d667ffe7a0948ae7876be41d2e17, type: 3}
   startConv: 0
 --- !u!114 &980734615
@@ -19310,6 +19313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene1: {fileID: 11400000, guid: dda7757a48a533c4aaee7aabae6b5667, type: 2}
+  currentScene1_eng: {fileID: 11400000, guid: bbe68f6a71cc6184ea6b8f97fb00e3b1, type: 2}
   bottomBar: {fileID: 135656830}
   canvas2: {fileID: 1389453594}
   professor: {fileID: 1233645603}

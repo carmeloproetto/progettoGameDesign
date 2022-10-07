@@ -16,6 +16,7 @@ public class MenuButton : MonoBehaviour
 	public AudioClip audioClip;
 
 	public GameObject levelLoader;
+	public GameObject canvas;
 
 
     // Update is called once per frame
@@ -33,6 +34,7 @@ public class MenuButton : MonoBehaviour
 				if(thisIndex == 0)
                 {
 					//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+					canvas.GetComponent<Canvas>().enabled = false;
 					levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
 				else if(thisIndex == 1)

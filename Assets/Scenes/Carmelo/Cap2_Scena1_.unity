@@ -3819,6 +3819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene1: {fileID: 11400000, guid: 62f9327e6428b0a41a8de1956b45b462, type: 2}
+  currentScene1_eng: {fileID: 11400000, guid: c9172f7e4485e654f8384f5b737dd03a, type: 2}
   bottomBar: {fileID: 176461556}
   canvas2: {fileID: 1151394172}
   mom: {fileID: 1200755669}
@@ -3835,6 +3836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene1: {fileID: 11400000, guid: 2a28b8e93aa944248a7b49e70f124890, type: 2}
+  currentScene1_eng: {fileID: 11400000, guid: f151fccc3c5e5364ca4a6e9aca457624, type: 2}
   bottomBar: {fileID: 176461556}
   canvas2: {fileID: 1151394172}
   levelLoader: {fileID: 611818782}

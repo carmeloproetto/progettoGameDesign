@@ -7,6 +7,8 @@ public class GameControlleIntroCap1FineIncontroPadreMadre : MonoBehaviour
 {
    public StoryScene currentScene1;
    public StoryScene currentScene2;
+   public StoryScene currentScene1_eng;
+   public StoryScene currentScene2_eng;
     public BottomBarController bottomBar; 
     private int countScene;
 
@@ -17,10 +19,19 @@ public class GameControlleIntroCap1FineIncontroPadreMadre : MonoBehaviour
     public GameObject dlgMng;
     public GameObject setterPart2;
 
+    private int language;
+
     void Start()
     {
         countScene = 0;
         
+        language = LanguageChangeScript.language;
+
+        if(language == 0){
+            currentScene1 = currentScene1_eng;
+            currentScene2 = currentScene2_eng;
+        }
+
         if(dlgMng.GetComponent<DialogueManager>().positiveMeet == false)
             currentScene_aux = currentScene1;
         else

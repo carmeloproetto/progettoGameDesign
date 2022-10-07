@@ -9,6 +9,9 @@ public class fineCap3 : MonoBehaviour
     public StoryScene currentScene1;
     public StoryScene currentScene2;
     public StoryScene currentScene3;
+    public StoryScene currentScene1_eng;
+    public StoryScene currentScene2_eng;
+    public StoryScene currentScene3_eng;
     public StoryScene auxScene;
     public BottomBarController bottomBar; 
     private int countScene;
@@ -25,6 +28,14 @@ public class fineCap3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if(LanguageChangeScript.language == 0){
+            currentScene1 = currentScene1_eng;
+            currentScene2 = currentScene2_eng;
+            currentScene3 = currentScene3_eng;
+        }
+
+
+
         countAux = 1;
          countScene = 0;
          if(DialogueManagerCap2_3.finale == 1)
