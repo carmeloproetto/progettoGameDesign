@@ -50683,6 +50683,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 335336351}
     - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
+      propertyPath: btn_choice_sx
+      value: 
+      objectReference: {fileID: 1135430026}
+    - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
       propertyPath: dialoguePanel
       value: 
       objectReference: {fileID: 868195706}

@@ -70,6 +70,14 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject audioManager;
 
+
+    /////////////////////////////SELEZIONE PRIMO PULSANTE NELLE SCELTE/////////////////////////////////
+    /*EventSystem m_EventSystem;
+    public GameObject btn_choice_sx;
+    private bool setActiveBtnSx;*/
+
+
+
     private void Awake(){
         if(instance != null){
             Debug.LogWarning("Found more than one Dialogue Manager in the scene");
@@ -86,6 +94,8 @@ public class DialogueManager : MonoBehaviour
         return instance;
     }
 
+
+
     private void Start(){
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
@@ -97,9 +107,21 @@ public class DialogueManager : MonoBehaviour
             index++;
         }
         line = 0;
+
+        /////////////////////////////SELEZIONE PRIMO PULSANTE NELLE SCELTE/////////////////////////////////
+        //m_EventSystem = EventSystem.current;
+        //setActiveBtnSx = true;
+        
     }
 
     private void Update(){
+
+        /////////////////////////////SELEZIONE PRIMO PULSANTE NELLE SCELTE/////////////////////////////////
+        /*if(setActiveBtnSx == true){
+            m_EventSystem.SetSelectedGameObject(btn_choice_sx);
+            setActiveBtnSx = false;
+        }*/
+
         if(!dialogueIsPlaying){
             return;
         }
