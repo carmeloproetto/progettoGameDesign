@@ -5,44 +5,45 @@ using UnityEngine;
 
 public class PlantInteraction : MonoBehaviour
 {
-    private new Rigidbody rigidbody;
-    private Vector3 forceVector; 
-    private float forceValue;
-    private bool isInteractable = false;
+    //private new Rigidbody rigidbody;
+    //private Vector3 forceVector; 
+    //private float forceValue;
+    //private bool isInteractable = false;
     private AudioSource audioSource;
     public AudioClip clip; 
 
     public GameObject enemy_1;
     public GameObject enemy_2; 
 
-    public bool interact;
+    //public bool interact;
     public bool aux;
 
     public GameObject dlgMng;
     public GameObject canvas;
-    public GameObject tutorial;
+    //public GameObject tutorial;
     public GameObject employee2;
 
 
     private void Start()
     {
-        rigidbody = this.GetComponent<Rigidbody>();
+        /*rigidbody = this.GetComponent<Rigidbody>();
         forceVector = this.GetComponent<Transform>().forward;
-        forceValue = UnityEngine.Random.Range(50f, 100f);
+        forceValue = UnityEngine.Random.Range(50f, 100f);*/
         audioSource = GetComponent<AudioSource>(); 
-        interact = false;
+        //interact = false;
         aux = false;
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if(Input.GetKeyDown(KeyCode.E) && isInteractable && interact)
         {
             rigidbody.AddForce(forceVector * forceValue);
             tutorial.SetActive(false);
         }
-    }
+    }*/
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "floor")
@@ -69,8 +70,8 @@ public class PlantInteraction : MonoBehaviour
     }
 
 
-    public void setInteractable(bool value)
+    /*public void setInteractable(bool value)
     {
         isInteractable = value; 
-    }
+    }*/
 }

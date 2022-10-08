@@ -11,11 +11,13 @@ public class CabinetInteractable : InteractableObject
         if( _cabinet.isOpen )
         {
             _cabinet.CloseDoors();
+            this.GetComponent<BoxCollider>().enabled = false; 
             return true; 
         }
         else if( !_cabinet.isOpen)
         {
             _cabinet.OpenDoors();
+            this.GetComponent<BoxCollider>().enabled = false;
             return true; 
         }
         return false; 

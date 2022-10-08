@@ -20,8 +20,9 @@ public class DialogueTriggerAzienda : MonoBehaviour
 
     public GameObject dlgMng;
     public GameObject canvas;
-    public GameObject plant;
-    public GameObject tutorial;
+    //public GameObject tutorial;
+
+    public BoxCollider plantTrigger; 
 
     private int count;
 
@@ -73,8 +74,8 @@ public class DialogueTriggerAzienda : MonoBehaviour
         dlgMng.GetComponent<DialogueManagerAzienda>().ContinueStoryByOtherScript();
         yield return new WaitForSeconds(2);
         canvas.SetActive(false);
-        plant.GetComponent<PlantInteraction>().interact = true;
-        tutorial.SetActive(true);
+        plantTrigger.enabled = true;
+        //tutorial.SetActive(true);
     }
 
 

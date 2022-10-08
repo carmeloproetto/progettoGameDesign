@@ -13,12 +13,12 @@ public class PlantInteractionTrigger : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        plant.setInteractable(true);
+        //plant.setInteractable(true);
     }
 
     void OnTriggerExit(Collider other)
     {
-        plant.setInteractable(false);
+        //plant.setInteractable(false);
     }
 
 

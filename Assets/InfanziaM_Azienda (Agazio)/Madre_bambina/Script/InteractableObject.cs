@@ -17,7 +17,8 @@ public abstract class InteractableObject : MonoBehaviour
 
     protected abstract void Update();
 
-    public string getText(int languageSetting) {
+    public virtual string GetText(int languageSetting)
+    {
         if( languageSetting == 0)
         {
             return italian_text; 

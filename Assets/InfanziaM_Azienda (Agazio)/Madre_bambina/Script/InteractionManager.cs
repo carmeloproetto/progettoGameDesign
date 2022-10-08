@@ -16,6 +16,9 @@ public class InteractionManager : MonoBehaviour
     public Image icon;
     public int languageSetting; //0= Italian, 1= English
 
+    public bool uiEnabledOntriggerStay = false;
+    public bool uiDisplayed = true; 
+
     private void OnTriggerEnter(Collider other)
     {
         InteractableObject ob = other.gameObject.GetComponent<InteractableObject>(); 
@@ -24,8 +27,8 @@ public class InteractionManager : MonoBehaviour
             canInteract = true;
             interactableObject = ob;
             //interactionUI.SetActive(true);
-            LeanTween.scale(interactionUI, new Vector3(0.4779364f, 0.4779364f, 0.4779364f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine);
-            interactionText.text = ob.getText(languageSetting);
+            LeanTween.scale(interactionUI, new Vector3(0.4779364f, 0.4779364f, 0.4779364f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => { uiDisplayed = true; });
+            interactionText.text = ob.GetText(languageSetting);
             if( languageSetting == 0)
             {
                 pressText.text = "PREMI";
@@ -39,6 +42,14 @@ public class InteractionManager : MonoBehaviour
         }
     }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if( uiEnabledOntriggerStay && !uiDisplayed)
+        {
+            LeanTween.scale(interactionUI, new Vector3(0.4779364f, 0.4779364f, 0.4779364f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => { uiDisplayed = true; }); 
+        }
+    }
+
     private void OnTriggerExit(Collider other)
     {
         InteractableObject ob = other.gameObject.GetComponent<InteractableObject>();
@@ -47,7 +58,7 @@ public class InteractionManager : MonoBehaviour
             canInteract = false;
             interactableObject = null;
             //interactionUI.SetActive(false);
-            LeanTween.scale(interactionUI, new Vector3(0f, 0f, 0f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine);
+            LeanTween.scale(interactionUI, new Vector3(0f, 0f, 0f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => { uiDisplayed = false; });
         }
     }
 
@@ -56,8 +67,8 @@ public class InteractionManager : MonoBehaviour
         if( canInteract && Input.GetKeyDown(KeyCode.E) )
         {
             interactableObject.Interact();
-            //interactionUI.SetActive(false);
-            LeanTween.scale(interactionUI, new Vector3(0f, 0f, 0f), 0.5f).setDelay(.3f).setEase(LeanTweenType.easeInOutSine);
+            LeanTween.scale(interactionUI, new Vector3(0f, 0f, 0f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => { uiDisplayed = false; });
+            //interactionUI.SetActive(false); 
         }
     }
 

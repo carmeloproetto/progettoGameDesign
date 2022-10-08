@@ -35,8 +35,9 @@ public class SosBlinkingLight : InteractableObject
         if( !isOn && interactable )
         {
             Debug.Log("Interacting with SOS button");
-            trigger.SetActive(false); 
-            interactable = false; //non potrò interagire di nuovo
+            trigger.SetActive(false);
+            this.GetComponent<BoxCollider>().enabled = false; 
+            //interactable = false; //non potrò interagire di nuovo
             myLight.enabled = true; //abilito la luce
             audioSource.Play();
 
