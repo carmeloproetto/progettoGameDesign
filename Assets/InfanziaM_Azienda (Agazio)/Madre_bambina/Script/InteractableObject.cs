@@ -8,7 +8,8 @@ public abstract class InteractableObject : MonoBehaviour
 {
     [SerializeField] protected bool interactable = true;
     [SerializeField] protected Sprite icon;
-    [SerializeField] protected string text; 
+    [SerializeField] protected string italian_text;
+    [SerializeField] protected string english_text;
 
     public abstract bool Interact();
 
@@ -16,8 +17,15 @@ public abstract class InteractableObject : MonoBehaviour
 
     protected abstract void Update();
 
-    public string getText() {
-        return text; 
+    public string getText(int languageSetting) {
+        if( languageSetting == 0)
+        {
+            return italian_text; 
+        }
+        else
+        {
+            return english_text; 
+        }
     }
 
     public Sprite getImageIcon()

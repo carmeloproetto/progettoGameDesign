@@ -12,7 +12,9 @@ public class InteractionManager : MonoBehaviour
 
     public GameObject interactionUI;
     public TextMeshProUGUI interactionText;
+    public TextMeshProUGUI pressText;
     public Image icon;
+    public int languageSetting; //0= Italian, 1= English
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,7 +25,15 @@ public class InteractionManager : MonoBehaviour
             interactableObject = ob;
             //interactionUI.SetActive(true);
             LeanTween.scale(interactionUI, new Vector3(0.4779364f, 0.4779364f, 0.4779364f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine);
-            interactionText.text = ob.getText();
+            interactionText.text = ob.getText(languageSetting);
+            if( languageSetting == 0)
+            {
+                pressText.text = "PREMI";
+            }
+            else
+            {
+                pressText.text = "PRESS";
+            }
             icon.overrideSprite = ob.getImageIcon();
             
         }
