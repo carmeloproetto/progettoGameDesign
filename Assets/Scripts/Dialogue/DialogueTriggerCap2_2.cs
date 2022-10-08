@@ -30,7 +30,7 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
 
     private void Awake(){
        // visualCue.SetActive(false);
-       language = 1;
+       language = LanguageChangeScript.language;
 
 
         startConv = false;
@@ -46,7 +46,7 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
     private void Update(){
 
         if(playerInRange && !DialogueManagerCap2_2.GetInstance().dialogueIsPlaying){
-            if(Input.GetKeyDown("c") || startConv){
+            if(Input.GetKeyDown("e") || startConv){
                 visualCue.SetActive(false);
                 if(this.name == "triggerDialogueZoneGuardia"){
                     mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "Guardia";

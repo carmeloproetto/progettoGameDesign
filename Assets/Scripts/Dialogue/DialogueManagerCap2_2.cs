@@ -168,22 +168,22 @@ public class DialogueManagerCap2_2 : MonoBehaviour
          }
 
          if(whoSpeak == "Guardia"){
-                triggerDialogueZoneGuardia.SetActive(false);
+                //triggerDialogueZoneGuardia.SetActive(false);
                 talkedToGuard = true;
                 triggerDialogueZoneManifestanteCentro.GetComponent<DialogueTriggerCap2_2>().closeConv();
-                triggerDialogueZoneManifestanteCentro.SetActive(true);
+                //triggerDialogueZoneManifestanteCentro.SetActive(true);
                 guardia.GetComponent<Animator>().SetBool("No", false);
          }
         else if(whoSpeak == "ManifestanteDx"){
-            triggerDialogueZoneManifestanteDx.SetActive(false);
+            //triggerDialogueZoneManifestanteDx.SetActive(false);
             manifestanteDx.GetComponent<Animator>().SetBool("Speak", false);
         }
         else if(whoSpeak == "ManifestanteSx"){
-            triggerDialogueZoneManifestanteSx.SetActive(false);
+            //triggerDialogueZoneManifestanteSx.SetActive(false);
              
         }
         else if(whoSpeak == "ManifestanteCentro" && !talkedToGuard){
-            triggerDialogueZoneManifestanteCentro.SetActive(false);
+            //triggerDialogueZoneManifestanteCentro.SetActive(false);
            
         }
 
@@ -229,19 +229,38 @@ public class DialogueManagerCap2_2 : MonoBehaviour
             string tagValue = splitTag[1].Trim();
             switch(tagKey){
                 case SPEAKER_TAG:
-                    displayNameText.text = tagValue;
+                    //displayNameText.text = tagValue;
                     if(tagValue == "Mom" || tagValue == "Mamma"){          
                         imageOfSpeaker.sprite = momImage;
+                        displayNameText.text = tagValue;
                     }
                     else if(tagValue == "Guardia" || tagValue == "Guard"){          
                         imageOfSpeaker.sprite = guardiaImage;
+                        displayNameText.text = tagValue;
                     }
-                    else if(tagValue == "Manifestante 1" || tagValue == "Protester 1")
+                    else if(tagValue == "Manifestante 1" || tagValue == "Protester 1"){
                         imageOfSpeaker.sprite = manifestante1Image;
-                    else if(tagValue == "Manifestante 2" || tagValue == "Protester 2")
+                        if(tagValue == "Manifestante 1")
+                            displayNameText.text = "Manifestante";
+                        else
+                            displayNameText.text = "Protester";
+                    }
+                    else if(tagValue == "Manifestante 2" || tagValue == "Protester 2"){
                         imageOfSpeaker.sprite = manifestante2Image;
-                    else if(tagValue == "Manifestante 3" || tagValue == "Protester 3")
+                        if(tagValue == "Manifestante 2")
+                            displayNameText.text = "Manifestante";
+                        else
+                            displayNameText.text = "Protester";
+                    }
+                    else if(tagValue == "Manifestante 3" || tagValue == "Protester 3"){
                         imageOfSpeaker.sprite = manifestante3Image;
+                        if(tagValue == "Manifestante 3")
+                            displayNameText.text = "Manifestante";
+                        else
+                            displayNameText.text = "Protester";
+                    }
+                    else 
+                        displayNameText.text = tagValue;
                     break;
              
                 default: 
