@@ -62,7 +62,7 @@ public class ProfessoreController : MonoBehaviour
 
             //if (NTime > 1.0f) animationFinished = true;
 
-            if (Vector3.Distance(ragazzo.transform.position, transform.position) <= 2f)
+            if (Vector3.Distance(ragazzo.transform.position, transform.position) <= 4f)
                 profStartRun = false;
 
 
