@@ -13334,9 +13334,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inkJSON: {fileID: 4900000, guid: 1005d667ffe7a0948ae7876be41d2e17, type: 3}
   inkJSON2: {fileID: 4900000, guid: fc8c440b2622af4489fb221f62d1107c, type: 3}
-  inkJSON3: {fileID: 4900000, guid: 23a9c043f726d3d4a8b40babddb05801, type: 3}
-  inkJSON_eng: {fileID: 4900000, guid: b4f46a6c6881b8449874fefd08ef89d6, type: 3}
-  inkJSON2_eng: {fileID: 0}
+  inkJSON3: {fileID: 0}
+  inkJSON_eng: {fileID: 4900000, guid: 23a9c043f726d3d4a8b40babddb05801, type: 3}
+  inkJSON2_eng: {fileID: 4900000, guid: b4f46a6c6881b8449874fefd08ef89d6, type: 3}
   inkJSON3_eng: {fileID: 0}
   ink: {fileID: 4900000, guid: 1005d667ffe7a0948ae7876be41d2e17, type: 3}
   startConv: 0

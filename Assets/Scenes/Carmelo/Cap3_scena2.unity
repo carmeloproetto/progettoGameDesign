@@ -7367,7 +7367,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263496991}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9838389f4d6e4314d8887e99d00149f7, type: 3}
   m_Name: 
@@ -7518,9 +7518,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 0
-  interactionUI: {fileID: 0}
+  interactionUI: {fileID: 1151799331}
   interactionText: {fileID: 0}
+  pressText: {fileID: 0}
   icon: {fileID: 0}
+  languageSetting: 0
 --- !u!143 &263496996
 CharacterController:
   m_ObjectHideFlags: 0
@@ -20680,9 +20682,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 0
-  interactionUI: {fileID: 0}
+  interactionUI: {fileID: 1151799331}
   interactionText: {fileID: 0}
+  pressText: {fileID: 0}
   icon: {fileID: 0}
+  languageSetting: 0
 --- !u!143 &803822783
 CharacterController:
   m_ObjectHideFlags: 0
@@ -40166,7 +40170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0011902, y: 341.35168}
+  m_AnchoredPosition: {x: -0.0011902, y: 135}
   m_SizeDelta: {x: 312.24, y: 52.3631}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558409476
@@ -45556,7 +45560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8129518475885366094, guid: 2541e61f4a8534b49bf0f0492204a45c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.75
+      value: -22.94
       objectReference: {fileID: 0}
     - target: {fileID: 8129518475885366094, guid: 2541e61f4a8534b49bf0f0492204a45c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -45564,7 +45568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8129518475885366094, guid: 2541e61f4a8534b49bf0f0492204a45c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.216
+      value: -4.81
       objectReference: {fileID: 0}
     - target: {fileID: 8129518475885366094, guid: 2541e61f4a8534b49bf0f0492204a45c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -45597,6 +45601,10 @@ PrefabInstance:
     - target: {fileID: 8906441485779407348, guid: 2541e61f4a8534b49bf0f0492204a45c, type: 3}
       propertyPath: m_Name
       value: Padre studente
+      objectReference: {fileID: 0}
+    - target: {fileID: 8906441485779407348, guid: 2541e61f4a8534b49bf0f0492204a45c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8906441485779407348, guid: 2541e61f4a8534b49bf0f0492204a45c, type: 3}
       propertyPath: m_TagString
@@ -53297,9 +53305,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canInteract: 0
-  interactionUI: {fileID: 0}
+  interactionUI: {fileID: 1151799331}
   interactionText: {fileID: 0}
+  pressText: {fileID: 0}
   icon: {fileID: 0}
+  languageSetting: 0
 --- !u!143 &2028047222
 CharacterController:
   m_ObjectHideFlags: 0
@@ -53325,7 +53335,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2028047217}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77678cdad4dcca94f8809e14b84d0421, type: 3}
   m_Name: 
