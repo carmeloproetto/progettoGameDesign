@@ -2175,6 +2175,10 @@ MonoBehaviour:
   professor: {fileID: 1233645603}
   dad: {fileID: 980734611}
   QteScoiattoliEnd: 0
+  btn_choice_sx: {fileID: 223988606}
+  btn_choice_dx: {fileID: 223988605}
+  textmeshPro: {fileID: 1695159399}
+  textmeshPro2: {fileID: 432886480}
 --- !u!114 &117690221
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -3380,6 +3380,10 @@ MonoBehaviour:
   professor: {fileID: 1233645603}
   dad: {fileID: 980734611}
   QteScoiattoliEnd: 0
+  btn_choice_sx: {fileID: 0}
+  btn_choice_dx: {fileID: 0}
+  textmeshPro: {fileID: 0}
+  textmeshPro2: {fileID: 0}
 --- !u!114 &117690221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3412,6 +3416,10 @@ MonoBehaviour:
   professore: {fileID: 803822778}
   tutorialCorsa: {fileID: 1151799331}
   startCorsa: 0
+  btn_choice_sx: {fileID: 223988606}
+  btn_choice_dx: {fileID: 223988605}
+  textmeshPro: {fileID: 223988611}
+  textmeshPro2: {fileID: 223988609}
 --- !u!114 &117690222
 MonoBehaviour:
   m_ObjectHideFlags: 0

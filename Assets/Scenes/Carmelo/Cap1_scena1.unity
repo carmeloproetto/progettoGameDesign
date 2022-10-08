@@ -6879,6 +6879,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueChoiceButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3365769474238233701, guid: 9182d879243c8d746a71e684f8820a8a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9182d879243c8d746a71e684f8820a8a, type: 3}
 --- !u!1001 &287685227
@@ -50675,6 +50679,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1693441044}
     - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
+      propertyPath: textmeshPro
+      value: 
+      objectReference: {fileID: 637251963}
+    - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
       propertyPath: triggerZone
       value: 
       objectReference: {fileID: 1383914459}
@@ -50683,9 +50691,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 335336351}
     - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
-      propertyPath: btn_choice_sx
+      propertyPath: textmeshPro2
+      value: 
+      objectReference: {fileID: 190142188}
+    - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
+      propertyPath: btn_choice_dx
       value: 
       objectReference: {fileID: 1135430026}
+    - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
+      propertyPath: btn_choice_sx
+      value: 
+      objectReference: {fileID: 119686348}
     - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
       propertyPath: dialoguePanel
       value: 

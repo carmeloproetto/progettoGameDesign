@@ -708,6 +708,10 @@ MonoBehaviour:
   mom: {fileID: 1200755669}
   sindaco: {fileID: 698159548}
   canvas2: {fileID: 0}
+  btn_choice_sx: {fileID: 0}
+  btn_choice_dx: {fileID: 0}
+  textmeshPro: {fileID: 0}
+  textmeshPro2: {fileID: 0}
 --- !u!114 &155432211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -735,6 +739,10 @@ MonoBehaviour:
   canvas1: {fileID: 886151794}
   feeling: 0
   levelLoader: {fileID: 1984315033}
+  btn_choice_sx: {fileID: 1053166347}
+  btn_choice_dx: {fileID: 1053166346}
+  textmeshPro: {fileID: 1053166352}
+  textmeshPro2: {fileID: 1053166350}
 --- !u!1 &169865261
 GameObject:
   m_ObjectHideFlags: 0

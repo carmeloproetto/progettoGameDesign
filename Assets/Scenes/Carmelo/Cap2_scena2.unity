@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 467117973}
-  m_IndirectSpecularColor: {r: 0.1412284, g: 0.3363084, b: 0.6380224, a: 1}
+  m_IndirectSpecularColor: {r: 0.1285102, g: 0.39423317, b: 0.874984, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -36007,6 +36007,10 @@ MonoBehaviour:
   manifestanteDx: {fileID: 59279141}
   retroAzienda: 0
   manifestanteCentro: {fileID: 590502386}
+  btn_choice_sx: {fileID: 119686348}
+  btn_choice_dx: {fileID: 1135430026}
+  textmeshPro: {fileID: 4276218020251365884}
+  textmeshPro2: {fileID: 4276218020251365883}
 --- !u!114 &1835266005
 MonoBehaviour:
   m_ObjectHideFlags: 0

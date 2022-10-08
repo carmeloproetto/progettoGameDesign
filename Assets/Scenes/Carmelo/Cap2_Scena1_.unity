@@ -708,6 +708,10 @@ MonoBehaviour:
   mom: {fileID: 1200755669}
   sindaco: {fileID: 698159548}
   canvas2: {fileID: 1151394172}
+  btn_choice_sx: {fileID: 1053166347}
+  btn_choice_dx: {fileID: 1053166346}
+  textmeshPro: {fileID: 1272346093}
+  textmeshPro2: {fileID: 1053166350}
 --- !u!1 &169865261
 GameObject:
   m_ObjectHideFlags: 0

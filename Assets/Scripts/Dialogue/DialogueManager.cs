@@ -72,9 +72,12 @@ public class DialogueManager : MonoBehaviour
 
 
     /////////////////////////////SELEZIONE PRIMO PULSANTE NELLE SCELTE/////////////////////////////////
-    /*EventSystem m_EventSystem;
+    EventSystem m_EventSystem;
     public GameObject btn_choice_sx;
-    private bool setActiveBtnSx;*/
+    public GameObject btn_choice_dx;
+    private bool setFirstActiveBtnSx;
+    public TextMeshProUGUI textmeshPro;
+    public TextMeshProUGUI textmeshPro2;
 
 
 
@@ -109,18 +112,15 @@ public class DialogueManager : MonoBehaviour
         line = 0;
 
         /////////////////////////////SELEZIONE PRIMO PULSANTE NELLE SCELTE/////////////////////////////////
-        //m_EventSystem = EventSystem.current;
-        //setActiveBtnSx = true;
+        m_EventSystem = EventSystem.current;
+        setFirstActiveBtnSx = true;
         
     }
 
     private void Update(){
 
-        /////////////////////////////SELEZIONE PRIMO PULSANTE NELLE SCELTE/////////////////////////////////
-        /*if(setActiveBtnSx == true){
-            m_EventSystem.SetSelectedGameObject(btn_choice_sx);
-            setActiveBtnSx = false;
-        }*/
+        setFirstActiveButton();
+        
 
         if(!dialogueIsPlaying){
             return;
@@ -405,7 +405,9 @@ public class DialogueManager : MonoBehaviour
     public void MakeChoice(int choiceIndex){
         Debug.Log("numero della scleta:" + choiceIndex + " " + line + " " + countDialogue);
         
-       
+        setFirstActiveBtnSx = true;
+
+
         if(line == 3 && countDialogue == 1 && choiceIndex == 0){
             positiveMeet = false;
             Debug.Log("incontro con la madre negativo");
@@ -459,4 +461,17 @@ public class DialogueManager : MonoBehaviour
         ContinueStory();
     }
 
+
+
+    public void setFirstActiveButton(){
+        if(setFirstActiveBtnSx == true){
+            Debug.Log("setto il pulsante di sinistra come attivo");
+            m_EventSystem.SetSelectedGameObject(btn_choice_sx);
+            btn_choice_sx.GetComponent<Image>().color = new Color32(0, 0, 0, 150);
+            btn_choice_dx.GetComponent<Image>().color = new Color32(0, 0, 0, 50);
+            textmeshPro.color = new Color32(231, 231, 231, 255);
+            textmeshPro2.color = new Color32(231, 231, 231, 50);
+            setFirstActiveBtnSx = false;
+        }
+    }
 }

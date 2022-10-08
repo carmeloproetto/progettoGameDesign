@@ -50,6 +50,13 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
 
     public bool QteScoiattoliEnd;
 
+    EventSystem m_EventSystem;
+    public GameObject btn_choice_sx;
+    public GameObject btn_choice_dx;
+    private bool setFirstActiveBtnSx;
+    public TextMeshProUGUI textmeshPro;
+    public TextMeshProUGUI textmeshPro2;
+
 
     private void Awake(){
         if(instance != null){
@@ -80,9 +87,16 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
             index++;
         }
         line = 0;
+
+        m_EventSystem = EventSystem.current;
+        setFirstActiveBtnSx = true;
     }
 
     private void Update(){
+
+        setFirstActiveButton();
+
+
         if(!dialogueIsPlaying){
             return;
         }
@@ -233,6 +247,18 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
 
     public void ContinueStoryByOtherScript(){
         ContinueStory();
+    }
+
+    public void setFirstActiveButton(){
+        if(setFirstActiveBtnSx == true){
+            Debug.Log("setto il pulsante di sinistra come attivo");
+            m_EventSystem.SetSelectedGameObject(btn_choice_sx);
+            btn_choice_sx.GetComponent<Image>().color = new Color32(0, 0, 0, 150);
+            btn_choice_dx.GetComponent<Image>().color = new Color32(0, 0, 0, 50);
+            textmeshPro.color = new Color32(231, 231, 231, 255);
+            textmeshPro2.color = new Color32(231, 231, 231, 50);
+            setFirstActiveBtnSx = false;
+        }
     }
 
 }
