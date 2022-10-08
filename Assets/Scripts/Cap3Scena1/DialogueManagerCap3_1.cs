@@ -116,6 +116,7 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
                     professor.GetComponent<Animator>().SetBool("Talk", false);
                     professor.GetComponent<followDestinationProfessor2>().enabled = true;
                     Debug.Log("riga 109 DialogueMangerCap3_1, BISOGNA FAR PARTIRE ANIMAZIONE DEL RAGAZZO CHE NON PARLA PIU'");
+                    dad.GetComponent<Animator>().SetBool("Talk", false);
                 }
                 else
                     ContinueStory();
@@ -147,8 +148,8 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
            dad.GetComponent<DialogueTriggerCap3_1>().closeConv();
-           //IL RAGAZZO SI DEVE ALAZARE QUI E VA VERSO GLI SCOIATTOLI;IL MOVIMENTO é GIA' FATTO, MANCA L'ANIMAZIONE DI ALZARSI E CAMMINARE 
-           dad.GetComponent<followDestinationDad>().enabled = true;
+            //IL RAGAZZO SI DEVE ALAZARE QUI E VA VERSO GLI SCOIATTOLI;IL MOVIMENTO é GIA' FATTO, MANCA L'ANIMAZIONE DI ALZARSI E CAMMINARE
+           dad.GetComponent<Animator>().SetTrigger("StandUp");
         }
         //cose da fare quando termina il secondo dialogo
         else if(countDialogue == 2){
