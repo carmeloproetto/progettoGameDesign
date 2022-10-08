@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class AudioChangeScript : MonoBehaviour
 {
     public Text buttonText;
+    [SerializeField] LanguageChangeScript langChange;
 
     private bool isOn = true;
 
@@ -27,14 +28,30 @@ public class AudioChangeScript : MonoBehaviour
     {
         if (isOn)
         {
-            buttonText.text = "< O F F >";
+            if(langChange.isEng)
+            {
+                buttonText.text = "< O F F >";
+            }
+            else
+            {
+                buttonText.text = "< N O >";
+            }
+           
 
             isOn = false;
             audioSource.mute = true;
         }
         else
         {
-            buttonText.text = "< O N >";
+
+            if (langChange.isEng)
+            {
+                buttonText.text = "< O N >";
+            }
+            else
+            {
+                buttonText.text = "< S I >";
+            }
 
             isOn = true;
             audioSource.mute = false;

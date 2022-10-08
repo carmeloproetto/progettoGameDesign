@@ -224,7 +224,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &354916932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,6 +238,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: {fileID: 754977595}
+  newGameBtnText: {fileID: 0}
+  optionsBtnText: {fileID: 0}
+  tutorialBtnText: {fileID: 0}
+  quitBtnText: {fileID: 0}
+  audioOptionText: {fileID: 0}
+  langLabelText: {fileID: 0}
+  backBtnText: {fileID: 0}
+  backBtn2Text: {fileID: 0}
+  tutorialText: {fileID: 0}
+  isEng: 1
 --- !u!114 &354916933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonText: {fileID: 2122328989}
+  langChange: {fileID: 0}
   audioSource: {fileID: 354916934}
 --- !u!82 &354916934
 AudioSource:

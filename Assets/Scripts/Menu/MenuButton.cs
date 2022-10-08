@@ -12,6 +12,7 @@ public class MenuButton : MonoBehaviour
 
 	public GameObject optionsMenu;
 	public GameObject mainMenu;
+	public GameObject tutorialMenu;
 
 	public AudioClip audioClip;
 
@@ -43,12 +44,18 @@ public class MenuButton : MonoBehaviour
 					mainMenu.SetActive(false);
 					menuButtonController.index = 0;
                 }
-				else if(thisIndex == 2)
-                {
+				else if (thisIndex == 2)
+				{
+					tutorialMenu.SetActive(true);
+					mainMenu.SetActive(false);
+					menuButtonController.index = 0;
+				}
+				else if (thisIndex == 3)
+				{
 					Debug.Log("Quit! This works only during buikd ");
 					Application.Quit();
-                }
-			
+				}
+
 			}
 		}else{
 			animator.SetBool ("selected", false);
