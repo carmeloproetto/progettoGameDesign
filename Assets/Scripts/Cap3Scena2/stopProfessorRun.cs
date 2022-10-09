@@ -20,6 +20,7 @@ public class stopProfessorRun : MonoBehaviour
         Debug.Log("Destinazione finale triggerata");
         if(collider.CompareTag("Professor")){
             professore.GetComponent<ProfessoreController>().profStartRun = false;
+            professore.GetComponent<Animator>().SetFloat("Speed", 0f);
             professore.GetComponent<ProfessoreController>().enabled = false;
         }
     }

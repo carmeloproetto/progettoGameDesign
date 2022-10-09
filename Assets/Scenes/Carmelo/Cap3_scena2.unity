@@ -7374,7 +7374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerController: {fileID: 2028047223}
   _profController: {fileID: 803822779}
-  acceleration: 3
+  acceleration: 3.5
   currAcceleration: 0
   qteVelocity: 5
   rotationSpeed: 0.1
