@@ -41,7 +41,7 @@ public class Cap3Scena1Intro : MonoBehaviour
                 scene = SceneManager.GetActiveScene();
                 if(scene.name == "Cap3_scena1"){
                     canvas2.SetActive(false);
-                    professor.GetComponent<followDestinationProfessor>().enabled = true;
+                    professor.GetComponentInParent<followDestinationProfessor>().enabled = true;
                 }
                 else{
                     //GESTIONE SCENA 2 del CAP 3

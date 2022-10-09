@@ -18,9 +18,10 @@ public class followDestinationProfessor2 : MonoBehaviour
     public GameObject dad;
     public GameObject dlgMng;
 
+    public Animator animator; 
+
       void Start()
     {
-      _animator = GetComponent<Animator>();
       b = target.position;
     }
 
@@ -29,7 +30,7 @@ public class followDestinationProfessor2 : MonoBehaviour
     {
         Vector3 a = transform.position;
         transform.position = Vector3.MoveTowards(a, b, speed);
-        _animator.SetFloat("Speed", velocity);
+        animator.SetFloat("Speed", velocity);
         velocity -= aux * Time.deltaTime;
         transform.LookAt(target);
         dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = true;
