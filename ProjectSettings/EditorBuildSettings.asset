@@ -53,5 +53,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Carmelo/Cap3_fine.unity
     guid: c97b735205e462448be821785eec03bf
+  - enabled: 1
+    path: Assets/Scenes/Giulia/PauseMenuV2.unity
+    guid: b03107364449f994e9d1fb4b00fe6043
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
