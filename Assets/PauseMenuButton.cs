@@ -38,6 +38,8 @@ public class PauseMenuButton : MonoBehaviour
 				if (thisIndex == 0)
 				{
 					Debug.Log("RESUME!");
+					tutorialMenu.SetActive(false);
+					optionsMenu.SetActive(false);
 					pauseMenuScript.Resume();
 				}
 				else if (thisIndex == 1)

@@ -27,7 +27,8 @@ public class TutorialMenuBtn : MonoBehaviour
 
 			animator.SetBool("selected", true);
 
-			if (Input.GetAxis("Submit") == 1)
+			if (Input.GetKeyDown(KeyCode.Space))
+			//if (Input.GetAxis("Submit") == 1)
 			{
 				animator.SetBool("pressed", true);
 			}
