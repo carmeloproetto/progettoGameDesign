@@ -10,7 +10,7 @@ public class followDestinationProfessor : MonoBehaviour
 
     public float speed;
 
-    private Animator _animator;
+    public Animator _animator;
 
     Vector3 b;
 
@@ -23,7 +23,6 @@ public class followDestinationProfessor : MonoBehaviour
 
       void Start()
     {
-      _animator = GetComponent<Animator>();
       b = target.position;
     }
 

@@ -5,6 +5,7 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
 public class DialogueManagerCap3_1 : MonoBehaviour{
     [Header("Dialogue UI")]
@@ -16,6 +17,7 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
 
     public Sprite dadImage;
     public Sprite professorImage;
+    public PlayableDirector director; 
 
 
     [Header("Choices UI")]
@@ -109,12 +111,13 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
                 
                 if(line == 5 && countDialogue == 1){
                     Debug.Log("riga 102 DialogueMangerCap3_1, BISOGNA FAR PARTIRE ANIMAZIONE DEL PROF CHE POSA GLI SCOIATTOLI SULLA SCRIVANIA");
+                    director.Play();
                 }
 
 
                 if(line == 14 && countDialogue == 1){
                     professor.GetComponent<Animator>().SetBool("Talk", false);
-                    professor.GetComponent<followDestinationProfessor2>().enabled = true;
+                    professor.GetComponentInParent<followDestinationProfessor2>().enabled = true;
                     Debug.Log("riga 109 DialogueMangerCap3_1, BISOGNA FAR PARTIRE ANIMAZIONE DEL RAGAZZO CHE NON PARLA PIU'");
                     dad.GetComponent<Animator>().SetBool("Talk", false);
                 }
