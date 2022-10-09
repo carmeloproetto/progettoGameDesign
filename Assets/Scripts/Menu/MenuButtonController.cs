@@ -16,15 +16,21 @@ public class MenuButtonController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetAxis ("Vertical") != 0){
+		//if(Input.GetAxis ("Vertical") != 0){
+		if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)){
 			if(!keyDown){
-				if (Input.GetAxis ("Vertical") < 0) {
+				//if(Input.GetAxis ("Vertical") < 0){
+				if (Input.GetKeyDown(KeyCode.S)) {
+					Debug.Log("Premo giù");
 					if(index < maxIndex){
 						index++;
 					}else{
 						index = 0;
 					}
-				} else if(Input.GetAxis ("Vertical") > 0){
+				} 
+				//else if(Input.GetAxis ("Vertical") > 0){
+				else if(Input.GetKeyDown(KeyCode.W)){
+					Debug.Log("Premo su");
 					if(index > 0){
 						index --; 
 					}else{

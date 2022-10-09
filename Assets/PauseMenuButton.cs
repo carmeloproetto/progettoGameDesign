@@ -22,7 +22,7 @@ public class PauseMenuButton : MonoBehaviour
 	{
 		if (menuButtonController.index == thisIndex)
 		{
-			Debug.Log("INDEX " + thisIndex);
+			//Debug.Log("INDEX " + thisIndex);
 
 			animator.SetBool("selected", true);
 			if (Input.GetAxis("Submit") == 1)

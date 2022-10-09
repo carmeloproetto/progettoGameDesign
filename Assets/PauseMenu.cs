@@ -5,7 +5,7 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    public GameObject canvas;
+    //public GameObject canvas;
     public GameObject pauseMenuUI;
     public GameObject background; 
 
@@ -25,6 +25,12 @@ public class PauseMenu : MonoBehaviour
                 Pause();
             }
         }
+        else if(Input.GetKeyDown(KeyCode.W)){
+            Debug.Log("sto mpremendo su");
+
+
+
+        }
     }
 
     public void Resume()
@@ -32,7 +38,7 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("RESUME");
         background.SetActive(false);
         pauseMenuUI.SetActive(false);
-        canvas.SetActive(false);
+        //canvas.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
      
@@ -43,7 +49,7 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("PAUSE");
         background.SetActive(true);
         pauseMenuUI.SetActive(true);
-        canvas.SetActive(true);
+        //canvas.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
