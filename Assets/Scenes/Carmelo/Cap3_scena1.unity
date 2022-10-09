@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.2
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 26739539}
-  m_IndirectSpecularColor: {r: 0.010468583, g: 0.0048507913, b: 0.025337104, a: 0.2}
+  m_IndirectSpecularColor: {r: 0.009097342, g: 0.0047442517, b: 0.021468768, a: 0.2}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5681,11 +5681,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312283137}
   m_Mesh: {fileID: 4300000, guid: 4578924f6ad96474fa87f670025340b6, type: 3}
---- !u!4 &319930137 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7800724997754548459, guid: f071557079b914181adcebdbbdd5112e, type: 3}
-  m_PrefabInstance: {fileID: 7800724997503897586}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &321272409
 GameObject:
   m_ObjectHideFlags: 0
@@ -13619,11 +13614,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2111584469134497173, guid: 281ac554f43e29f4286cc650968d34b0, type: 3}
   m_PrefabInstance: {fileID: 983213398}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &983213402 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2111584469166514216, guid: 281ac554f43e29f4286cc650968d34b0, type: 3}
-  m_PrefabInstance: {fileID: 983213398}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &983213403 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2111584470244480884, guid: 281ac554f43e29f4286cc650968d34b0, type: 3}
@@ -20682,7 +20672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ed1ef961b49412da003d1cc2982426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gabbia: {fileID: 319930137}
+  gabbia: {fileID: 0}
   rig: {fileID: 296743390}
 --- !u!114 &1452000224
 MonoBehaviour:
@@ -28629,7 +28619,7 @@ PrefabInstance:
     - target: {fileID: 582692704464316671, guid: 1b3ad9075c2df6e4da86891df8df0ef4, type: 3}
       propertyPath: background
       value: 
-      objectReference: {fileID: 983213402}
+      objectReference: {fileID: 0}
     - target: {fileID: 582692704464316671, guid: 1b3ad9075c2df6e4da86891df8df0ef4, type: 3}
       propertyPath: pauseMenuUI
       value: 
@@ -29003,7 +28993,7 @@ Transform:
   - {fileID: 4935781014516230159}
   - {fileID: 2637044815300662283}
   - {fileID: 1154770819281989557}
-  - {fileID: 319930137}
+  - {fileID: 7800724997337072702}
   m_Father: {fileID: 3521781919499230490}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -31652,6 +31642,63 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &7211234588700314869
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 879544715113248288}
+    m_Modifications:
+    - target: {fileID: 599767825249683658, guid: dbce61416c3fa4a87a038b9f060c3176, type: 3}
+      propertyPath: m_Name
+      value: Gabbia
+      objectReference: {fileID: 0}
+    - target: {fileID: 599767825249683659, guid: dbce61416c3fa4a87a038b9f060c3176, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 599767825249683659, guid: dbce61416c3fa4a87a038b9f060c3176, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.020404547
+      objectReference: {fileID: 0}
+    - target: {fileID: 599767825249683659, guid: dbce61416c3fa4a87a038b9f060c3176, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9167828
+      objectReference: {fileID: 0}
+    - target: {fileID: 599767825249683659, guid: dbce61416c3fa4a87a038b9f060c3176, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.049691275
+      objectReference: {fileID: 0}
+    - target: {fileID: 599767825249683659, guid: dbce61416c3fa4a87a038b9f060c3176, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.03860859
+      objectReference: {fileID: 0}
+    - target: {fileID: 599767825249683659, guid: dbce61416c3fa4a87a038b9f060c3176, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.70331687
+      objectReference: {fileID: 0}
+    - target: {fileID: 599767825249683659, guid: dbce61416c3fa4a87a038b9f060c3176, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.0918048
+      objectReference: {fileID: 0}
+    - target: {fileID: 599767825249683659, guid: dbce61416c3fa4a87a038b9f060c3176, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.7038655
+      objectReference: {fileID: 0}
+    - target: {fileID: 599767825249683659, guid: dbce61416c3fa4a87a038b9f060c3176, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 599767825249683659, guid: dbce61416c3fa4a87a038b9f060c3176, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 599767825249683659, guid: dbce61416c3fa4a87a038b9f060c3176, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 85.485
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dbce61416c3fa4a87a038b9f060c3176, type: 3}
 --- !u!1 &7215173949869494762
 GameObject:
   m_ObjectHideFlags: 0
@@ -31925,63 +31972,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1001 &7800724997503897586
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 879544715113248288}
-    m_Modifications:
-    - target: {fileID: 7800724997754548458, guid: f071557079b914181adcebdbbdd5112e, type: 3}
-      propertyPath: m_Name
-      value: Gabbia
-      objectReference: {fileID: 0}
-    - target: {fileID: 7800724997754548459, guid: f071557079b914181adcebdbbdd5112e, type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7800724997754548459, guid: f071557079b914181adcebdbbdd5112e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.020404756
-      objectReference: {fileID: 0}
-    - target: {fileID: 7800724997754548459, guid: f071557079b914181adcebdbbdd5112e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.916783
-      objectReference: {fileID: 0}
-    - target: {fileID: 7800724997754548459, guid: f071557079b914181adcebdbbdd5112e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.049690563
-      objectReference: {fileID: 0}
-    - target: {fileID: 7800724997754548459, guid: f071557079b914181adcebdbbdd5112e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.03860869
-      objectReference: {fileID: 0}
-    - target: {fileID: 7800724997754548459, guid: f071557079b914181adcebdbbdd5112e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.70331687
-      objectReference: {fileID: 0}
-    - target: {fileID: 7800724997754548459, guid: f071557079b914181adcebdbbdd5112e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.09180469
-      objectReference: {fileID: 0}
-    - target: {fileID: 7800724997754548459, guid: f071557079b914181adcebdbbdd5112e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.7038656
-      objectReference: {fileID: 0}
-    - target: {fileID: 7800724997754548459, guid: f071557079b914181adcebdbbdd5112e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7800724997754548459, guid: f071557079b914181adcebdbbdd5112e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90.001
-      objectReference: {fileID: 0}
-    - target: {fileID: 7800724997754548459, guid: f071557079b914181adcebdbbdd5112e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 85.485
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f071557079b914181adcebdbbdd5112e, type: 3}
+--- !u!4 &7800724997337072702 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 599767825249683659, guid: dbce61416c3fa4a87a038b9f060c3176, type: 3}
+  m_PrefabInstance: {fileID: 7211234588700314869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7824256540092658943
 Transform:
   m_ObjectHideFlags: 0
