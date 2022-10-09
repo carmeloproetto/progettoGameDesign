@@ -36,13 +36,13 @@ Non possono essere liberati qui! Le conseguenze potrebbero essere drammatiche! #
 
 === final1 ===
 No. #speaker:Ragazzo
--> DONE
+-> END
 
 === final2 ===
 ... #speaker:Ragazzo
 E va bene. #speaker:Ragazzo
 Avete vinto voi. #speaker:Ragazzo
--> DONE
+-> END
 
 === secondChoice ===
 Accidenti! Non riesco più a correre! #speaker:Ragazzo
@@ -58,12 +58,12 @@ Non possono essere liberati! Le conseguenze potrebbero essere drammatiche! #spea
 
 === fine1 ===
 Va bene. Non posso non fidarmi di lei. #speaker:Papà
--> DONE
+-> END
 
 
 === fine2 ===
 Mi dispiace. #speaker:Papà
--> DONE
+-> END
 
 === function changeFeeling(newFeeling) ===
 ~feeling = newFeeling

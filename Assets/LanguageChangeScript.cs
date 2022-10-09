@@ -75,7 +75,7 @@ public class LanguageChangeScript : MonoBehaviour
 
             tutorialText.text = "Sei pronto per fare la differenza? \r\n" +
                                "Usa A+D per muovere il tuo personaggio a sinistra e destra.\r\n" +
-                               "Usa SPAZIO per completare più velocemente le frasi nei dialoghi.\r\n" +
+                               "Usa SPAZIO per completare piï¿½ velocemente le frasi nei dialoghi.\r\n" +
                                "Usa INVIO per rispondere alle domande durante i dialoghi.\r\n" +
                                "Usa E per completare un task speciale.\r\n\n" +
                                "Scopri il tuo impatto!";

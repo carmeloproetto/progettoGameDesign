@@ -184,12 +184,15 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
+            Debug.Log("conversazione finita");
             tutorialCorsa.SetActive(true);
             dad.GetComponent<DialogueTriggerCap3_1>().closeConv();
             startCorsa = true;
         }
         //cose da fare quando termina il secondo dialogo
         else if(countDialogue == 2){
+            dad.GetComponent<DialogueTriggerCap3_1>().enabled = false;
+            Debug.Log("conversazione finita");
             if(helpLad == 0){
                 //non lo stiamo aiutando
                 if(feeling < 0.5 && !auxFinal)

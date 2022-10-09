@@ -17,6 +17,8 @@ public class stopMiniGame : MonoBehaviour
             //professore.GetComponent<ProfessoreController>().enabled = false;
             dad.GetComponent<DialogueTriggerCap3_1>().ink = dad.GetComponent<DialogueTriggerCap3_1>().inkJSON2;
             dad.GetComponent<DialogueTriggerCap3_1>().startConvByOtherScript();
+            dad.GetComponent<Animator>().SetFloat("Speed", 0f);
+            dad.GetComponent<PadreStudenteController>().enabled = false;
         }
     }
 }
