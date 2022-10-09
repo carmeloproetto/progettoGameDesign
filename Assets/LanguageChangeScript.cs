@@ -41,13 +41,16 @@ public class LanguageChangeScript : MonoBehaviour
     {
         thisScene = SceneManager.GetActiveScene();
 
+        Debug.Log("SCENE " + thisScene.name);
+        Debug.Log("OBJECT " + this.name);
+
         if (isEng)
         {
             if(thisScene.name == "Menu")
             {
                 newGameBtnText.text = "I N I Z I A";
             }
-            else if(thisScene.name == "PauseMenuV2")
+            else if(this.name == "PauseMenuCanvas")
             {
                 newGameBtnText.text = "R I P R E N D I";
             }
@@ -90,7 +93,7 @@ public class LanguageChangeScript : MonoBehaviour
             {
                 newGameBtnText.text = "N E W  G A M E";
             }
-            else if (thisScene.name == "PauseMenuV2")
+            else if (this.name == "PauseMenuCanvas")
             {
                 newGameBtnText.text = "R E S U M E ";
             }

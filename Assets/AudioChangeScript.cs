@@ -10,12 +10,42 @@ public class AudioChangeScript : MonoBehaviour
 
     private bool isOn = true;
 
-    public AudioSource audioSource;
+    private AudioSource[] allAudioSources;
 
     // Start is called before the first frame update
     void Start()
     {
+        Awake();
 
+        if (PlayerPrefs.GetString("audio") == "yes")
+        {
+            if (langChange.isEng)
+            {
+                buttonText.text = "< O N >";
+            }
+            else
+            {
+                buttonText.text = "< S I >";
+            }
+
+            isOn = true;
+            StartAllAudio();
+
+        }
+        else
+        {
+            if (langChange.isEng)
+            {
+                buttonText.text = "< O F F >";
+            }
+            else
+            {
+                buttonText.text = "< N O >";
+            }
+
+            isOn = false;
+            StopAllAudio();
+        }
     }
 
     // Update is called once per frame
@@ -26,6 +56,8 @@ public class AudioChangeScript : MonoBehaviour
 
     public void ButtonClicked()
     {
+        Awake();
+
         if (isOn)
         {
             if(langChange.isEng)
@@ -39,7 +71,10 @@ public class AudioChangeScript : MonoBehaviour
            
 
             isOn = false;
-            audioSource.mute = true;
+            StopAllAudio();
+
+            PlayerPrefs.SetString("audio", "no");
+            PlayerPrefs.Save();
         }
         else
         {
@@ -54,7 +89,38 @@ public class AudioChangeScript : MonoBehaviour
             }
 
             isOn = true;
-            audioSource.mute = false;
+            StartAllAudio();
+
+            PlayerPrefs.SetString("audio", "yes");
+            PlayerPrefs.Save();
+        }
+    }
+
+    public void Awake()
+    {
+        //allAudioSources = FindObjectsOfType(AudioSource) as AudioSource[];
+        allAudioSources = FindObjectsOfType<AudioSource>();
+
+        Debug.Log("AUDIO SOURCES" + allAudioSources);
+    }
+
+    public void StopAllAudio()
+    {
+
+        // for (var audioS : AudioSource in allAudioSources)
+        foreach (AudioSource audioSource in allAudioSources)
+        {
+            Debug.Log("AUDIO SOURCES" + allAudioSources);
+            audioSource.Stop();
+        }
+    }
+
+    public void StartAllAudio()
+    {
+        //for (var audioS : AudioSource in allAudioSources)
+        foreach (AudioSource audioSource in allAudioSources)
+        {
+            audioSource.Play();
         }
     }
 }
