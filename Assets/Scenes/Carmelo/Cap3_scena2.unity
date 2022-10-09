@@ -18580,7 +18580,6 @@ GameObject:
   m_Component:
   - component: {fileID: 696828704}
   - component: {fileID: 696828703}
-  - component: {fileID: 696828702}
   - component: {fileID: 696828701}
   m_Layer: 0
   m_Name: finalDestinationProfessor
@@ -18602,21 +18601,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   professore: {fileID: 803822778}
---- !u!114 &696828702
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 696828700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7499fb3b0362504487c7fad0fa47a70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dad: {fileID: 2028047217}
-  professore: {fileID: 803822778}
-  ragazzo: {fileID: 263496991}
 --- !u!65 &696828703
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18638,7 +18622,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696828700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 54.21, y: 2.5, z: -2.216}
+  m_LocalPosition: {x: 56.8, y: 2.5, z: -2.216}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18714,6 +18698,10 @@ PrefabInstance:
     - target: {fileID: 6541980128749512806, guid: 64ffd6090b8924cc1b8ce6594fe2069b, type: 3}
       propertyPath: m_Name
       value: Professore
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541980128749512806, guid: 64ffd6090b8924cc1b8ce6594fe2069b, type: 3}
+      propertyPath: m_TagString
+      value: Professor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64ffd6090b8924cc1b8ce6594fe2069b, type: 3}
@@ -46232,7 +46220,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771430206}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.99, y: 2.5, z: -2.216}
+  m_LocalPosition: {x: 59.06, y: 2.5, z: -2.216}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
