@@ -189,15 +189,24 @@ public class DialogueManagerAzienda : MonoBehaviour
             string tagValue = splitTag[1].Trim();
             switch(tagKey){
                 case SPEAKER_TAG:
-                    displayNameText.text = tagValue;
+                    //displayNameText.text = tagValue;
                     if(tagValue == "Mom" || tagValue == "Mamma"){          
                         imageOfSpeaker.sprite = momImage;
+                        displayNameText.text = tagValue;
                     }
                     else if(tagValue == "employee 1" || tagValue == "dipendente 1"){          
                         imageOfSpeaker.sprite = employee1Image;
+                        if(tagValue == "employee 1")
+                            displayNameText.text = "employee";
+                        else
+                            displayNameText.text = "dipendente";
                     }
                     else if(tagValue == "employee 2" || tagValue == "dipendente 2"){          
                         imageOfSpeaker.sprite = employee2Image;
+                        if(tagValue == "employee 2")
+                            displayNameText.text = "employee";
+                        else
+                            displayNameText.text = "dipendente";
                     }
                   
                     break;
