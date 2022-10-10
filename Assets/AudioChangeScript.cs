@@ -29,7 +29,7 @@ public class AudioChangeScript : MonoBehaviour
             }
 
             isOn = true;
-            StartAllAudio();
+            //StartAllAudio();
 
         }
         else
@@ -44,7 +44,7 @@ public class AudioChangeScript : MonoBehaviour
             }
 
             isOn = false;
-            StopAllAudio();
+            //StopAllAudio();
         }
     }
 
@@ -71,7 +71,7 @@ public class AudioChangeScript : MonoBehaviour
            
 
             isOn = false;
-            StopAllAudio();
+            //StopAllAudio();
 
             PlayerPrefs.SetString("audio", "no");
             PlayerPrefs.Save();
@@ -89,7 +89,7 @@ public class AudioChangeScript : MonoBehaviour
             }
 
             isOn = true;
-            StartAllAudio();
+            //StartAllAudio();
 
             PlayerPrefs.SetString("audio", "yes");
             PlayerPrefs.Save();
@@ -99,28 +99,10 @@ public class AudioChangeScript : MonoBehaviour
     public void Awake()
     {
         //allAudioSources = FindObjectsOfType(AudioSource) as AudioSource[];
-        allAudioSources = FindObjectsOfType<AudioSource>();
+        //allAudioSources = FindObjectsOfType<AudioSource>();
 
         Debug.Log("AUDIO SOURCES" + allAudioSources);
     }
 
-    public void StopAllAudio()
-    {
-
-        // for (var audioS : AudioSource in allAudioSources)
-        foreach (AudioSource audioSource in allAudioSources)
-        {
-            Debug.Log("AUDIO SOURCES" + allAudioSources);
-            audioSource.Stop();
-        }
-    }
-
-    public void StartAllAudio()
-    {
-        //for (var audioS : AudioSource in allAudioSources)
-        foreach (AudioSource audioSource in allAudioSources)
-        {
-            audioSource.Play();
-        }
-    }
+    
 }

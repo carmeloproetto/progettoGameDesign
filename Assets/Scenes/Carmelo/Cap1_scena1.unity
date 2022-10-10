@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 467117973}
-  m_IndirectSpecularColor: {r: 0.12493278, g: 0.3679657, b: 0.8813925, a: 1}
+  m_IndirectSpecularColor: {r: 0.1285102, g: 0.39423317, b: 0.874984, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -662,6 +662,107 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4737365782299246, guid: adb55fed5a5012b458c398a0b618390c, type: 3}
   m_PrefabInstance: {fileID: 28234310}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &28718451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 582692704464316670, guid: 1b3ad9075c2df6e4da86891df8df0ef4, type: 3}
+  m_PrefabInstance: {fileID: 1011719538}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &28718455
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28718451}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 1a816231403256b4594b5c0a7896c387, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &34486694
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3527,7 +3628,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 582692704464316671, guid: 1b3ad9075c2df6e4da86891df8df0ef4, type: 3}
   m_PrefabInstance: {fileID: 1011719538}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 28718451}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbec2579f9a79d44fa87fee7ea0909b5, type: 3}
@@ -21647,7 +21748,7 @@ PrefabInstance:
     - target: {fileID: 582692704464316671, guid: 1b3ad9075c2df6e4da86891df8df0ef4, type: 3}
       propertyPath: background
       value: 
-      objectReference: {fileID: 1469462401}
+      objectReference: {fileID: 0}
     - target: {fileID: 582692704464316671, guid: 1b3ad9075c2df6e4da86891df8df0ef4, type: 3}
       propertyPath: pauseMenuUI
       value: 
@@ -26104,6 +26205,10 @@ PrefabInstance:
       propertyPath: pauseMenuScript
       value: 
       objectReference: {fileID: 157971216}
+    - target: {fileID: 2111584470648103825, guid: 281ac554f43e29f4286cc650968d34b0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2111584470648103829, guid: 281ac554f43e29f4286cc650968d34b0, type: 3}
       propertyPath: m_Name
       value: PauseMenuCanvas
@@ -31190,11 +31295,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4278621369827266, guid: f48ca42bbf7370343a33a9e87b1d9fdb, type: 3}
   m_PrefabInstance: {fileID: 1468882484}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1469462401 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2111584469166514216, guid: 281ac554f43e29f4286cc650968d34b0, type: 3}
-  m_PrefabInstance: {fileID: 1216928073}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1472575048
 PrefabInstance:

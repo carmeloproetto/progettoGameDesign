@@ -2460,7 +2460,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2111584470648103829}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1a816231403256b4594b5c0a7896c387, type: 3}
@@ -2563,7 +2563,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 2111584469587003269}
   langChange: {fileID: 2111584470648103831}
-  audioSource: {fileID: 2111584470648103825}
 --- !u!114 &2111584470648103831
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -31,11 +31,14 @@ public class DialogueTriggerCap2 : MonoBehaviour
         language = 1;
        // visualCue.SetActive(false);
         startConv = false;
-        if(language == 1)
-            ink = inkJSON;
-        else if(language == 0)
-            ink = inkJSON_Eng;
-
+       
+        if(language == 1){
+            inkJSON = inkJSON_Eng;
+            inkJSON2 = inkJSON2_Eng;
+            inkJSON3 = inkJSON3_Eng;
+        }
+        
+        ink = inkJSON;
         count = 0;
     }
 

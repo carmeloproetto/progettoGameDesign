@@ -115,10 +115,10 @@ public class DialogueManagerCap2 : MonoBehaviour
                 line++;
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
 
-                if(line == 11 && countDialogue == 1){
+                /*if(line == 11 && countDialogue == 1){
                     mom.GetComponent<Animator>().SetBool("Angry", true);
-                }
-
+                    //ContinueStory();
+                }*/
                 if(line == 15 && countDialogue == 1){
                     noAnimation = true;
                     sindaco.GetComponent<Animator>().SetBool("Talk2", false);
@@ -126,22 +126,23 @@ public class DialogueManagerCap2 : MonoBehaviour
                     disableSpace = true;
                     StartCoroutine(phoneRings());
                 }
-
-                if(line == 10 && countDialogue == 1){
+                else if(line == 10 && countDialogue == 1){
                     noAnimation = true;
                     sindaco.GetComponent<Animator>().SetBool("AngryDad", true);
+                    ContinueStory();
                 }
-                if(line == 11 && countDialogue == 1){
+                else if(line == 11 && countDialogue == 1){
                     noAnimation = false;
+                    mom.GetComponent<Animator>().SetBool("Angry", true);
                     sindaco.GetComponent<Animator>().SetBool("AngryDad", false);
+                    ContinueStory();
                 }
-
-                if(line == 1 && countDialogue == 2){
+                else if(line == 1 && countDialogue == 2){
                    StartCoroutine( Rotate( new Vector3(0, -180, 0), 0.3f));
+                   ContinueStory();
                 }
-
-
-                ContinueStory();
+                else
+                    ContinueStory();
             }
         }
     }
@@ -165,16 +166,21 @@ public class DialogueManagerCap2 : MonoBehaviour
 
 
     private IEnumerator disableSpaceFunction(){
-        yield return new WaitForSeconds(1f);
-        disableSpace = false;
+        if(line == 15 && countDialogue == 1){
+            Debug.Log("lo spazio deve rimanere disabilitato");
+        }
+        else{
+            yield return new WaitForSeconds(0.4f);
+            disableSpace = false;
+        }
      }
 
     private IEnumerator phoneRings(){
-        //SI DEVE FAR SQUILLARE IL TELEFONO QUI
         FindObjectOfType<AudioManager>().Play("phoneRing");
         dialoguePanel.SetActive(false);
         yield return new WaitForSeconds(3f);
         sindaco.GetComponent<Animator>().SetBool("HeadAround", false);
+        ContinueStory();
         dialoguePanel.SetActive(true);
         disableSpace = false;
     }

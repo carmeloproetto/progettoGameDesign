@@ -239,11 +239,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2111584469134497173, guid: 281ac554f43e29f4286cc650968d34b0, type: 3}
   m_PrefabInstance: {fileID: 281807}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &281811 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2111584469166514216, guid: 281ac554f43e29f4286cc650968d34b0, type: 3}
-  m_PrefabInstance: {fileID: 281807}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &281812 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2111584470244480884, guid: 281ac554f43e29f4286cc650968d34b0, type: 3}
@@ -1710,9 +1705,37 @@ PrefabInstance:
       value: AudioManager (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
-      propertyPath: sounds.Array.data[1].source
+      propertyPath: sounds.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 579789c30e1a7f0469d7994567358d68, type: 3}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[0].name
+      value: rainSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0a0cf7209087ac642892a16e1a6152f9, type: 3}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: phoneRing
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[0].source
       value: 
       objectReference: {fileID: 1671701577}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0.484
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[1].source
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
 --- !u!1 &611818782 stripped
@@ -2315,7 +2338,7 @@ PrefabInstance:
     - target: {fileID: 582692704464316671, guid: 1b3ad9075c2df6e4da86891df8df0ef4, type: 3}
       propertyPath: background
       value: 
-      objectReference: {fileID: 281811}
+      objectReference: {fileID: 0}
     - target: {fileID: 582692704464316671, guid: 1b3ad9075c2df6e4da86891df8df0ef4, type: 3}
       propertyPath: pauseMenuUI
       value: 
