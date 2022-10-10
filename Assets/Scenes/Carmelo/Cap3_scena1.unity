@@ -20672,7 +20672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03ed1ef961b49412da003d1cc2982426, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gabbia: {fileID: 0}
+  gabbia: {fileID: 7800724997337072702}
   rig: {fileID: 296743390}
 --- !u!114 &1452000224
 MonoBehaviour:
