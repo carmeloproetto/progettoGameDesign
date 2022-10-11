@@ -47,6 +47,11 @@ public class PadreController_RetroAzienda : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(PauseMenu.GameIsPaused){
+            return;
+        }
+
         _isGrounded = _controller.isGrounded;
         _animator.SetBool("Grounded", _isGrounded);
 

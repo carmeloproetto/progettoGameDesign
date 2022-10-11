@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.2
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 26739539}
-  m_IndirectSpecularColor: {r: 0.009097342, g: 0.0047442517, b: 0.021468768, a: 0.2}
+  m_IndirectSpecularColor: {r: 0.009096811, g: 0.0047437027, b: 0.021468183, a: 0.2}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3496,6 +3496,8 @@ MonoBehaviour:
   textmeshPro2: {fileID: 223988609}
   btn: {fileID: 223988610}
   btn2: {fileID: 223988612}
+  choice0: {fileID: 223988606}
+  choice1: {fileID: 223988605}
 --- !u!1 &117953057
 GameObject:
   m_ObjectHideFlags: 0

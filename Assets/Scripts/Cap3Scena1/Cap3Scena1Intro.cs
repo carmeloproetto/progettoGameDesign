@@ -31,6 +31,10 @@ public class Cap3Scena1Intro : MonoBehaviour
 
     void Update()
     {
+        if(PauseMenu.GameIsPaused){
+            return;
+        }
+        
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             if (bottomBar.IsCompleted())

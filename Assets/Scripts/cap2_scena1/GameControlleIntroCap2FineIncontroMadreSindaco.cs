@@ -26,6 +26,11 @@ public class GameControlleIntroCap2FineIncontroMadreSindaco : MonoBehaviour
 
     void Update()
     {
+        if(PauseMenu.GameIsPaused){
+        
+            return;
+        }
+
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             if (bottomBar.IsCompleted())

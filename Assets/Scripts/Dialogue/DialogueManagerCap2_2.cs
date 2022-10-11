@@ -109,6 +109,11 @@ public class DialogueManagerCap2_2 : MonoBehaviour
 
     private void Update(){
 
+        if(PauseMenu.GameIsPaused){
+            setFirstActiveBtnSx = true;
+            return;
+        }
+
         setFirstActiveButton();
 
         if(!dialogueIsPlaying){
@@ -303,6 +308,10 @@ public class DialogueManagerCap2_2 : MonoBehaviour
     }
 
     public void MakeChoice(int choiceIndex){
+
+        if(PauseMenu.GameIsPaused)
+            return;
+
         Debug.Log("numero della scleta:" + choiceIndex + " " + line + " " + countDialogue);
         /* inserie cose da fare in base alle scelte*/
         if(choiceIndex == 0){

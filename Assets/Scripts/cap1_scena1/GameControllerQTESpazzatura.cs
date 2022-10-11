@@ -51,6 +51,11 @@ public class GameControllerQTESpazzatura : MonoBehaviour
 
     void Update(){
         
+        if(PauseMenu.GameIsPaused){
+        
+            return;
+        }
+        
         if(!aux){
             if(countDialogueQte == 1){
                 currentScene_aux = currentScene2;

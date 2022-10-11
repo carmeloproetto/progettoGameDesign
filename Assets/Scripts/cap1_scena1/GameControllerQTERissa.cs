@@ -29,6 +29,12 @@ public class GameControllerQTERissa : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if(PauseMenu.GameIsPaused){
+        
+            return;
+        }
+        
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             if (bottomBar.IsCompleted())

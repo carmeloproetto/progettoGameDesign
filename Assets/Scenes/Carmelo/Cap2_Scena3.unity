@@ -320,7 +320,7 @@ PrefabInstance:
     - target: {fileID: 582692704464316671, guid: 1b3ad9075c2df6e4da86891df8df0ef4, type: 3}
       propertyPath: background
       value: 
-      objectReference: {fileID: 1559482155}
+      objectReference: {fileID: 0}
     - target: {fileID: 582692704464316671, guid: 1b3ad9075c2df6e4da86891df8df0ef4, type: 3}
       propertyPath: pauseMenuUI
       value: 
@@ -814,6 +814,8 @@ MonoBehaviour:
   textmeshPro2: {fileID: 1053166350}
   btn: {fileID: 1053166351}
   btn2: {fileID: 1053166353}
+  choice0: {fileID: 1053166347}
+  choice1: {fileID: 1053166346}
 --- !u!114 &155432210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3718,11 +3720,6 @@ GameObject:
 --- !u!1 &1559482154 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2111584469134497173, guid: 281ac554f43e29f4286cc650968d34b0, type: 3}
-  m_PrefabInstance: {fileID: 1559482151}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1559482155 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2111584469166514216, guid: 281ac554f43e29f4286cc650968d34b0, type: 3}
   m_PrefabInstance: {fileID: 1559482151}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1559482156 stripped

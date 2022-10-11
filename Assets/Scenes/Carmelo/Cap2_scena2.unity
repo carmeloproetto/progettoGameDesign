@@ -16394,6 +16394,8 @@ MonoBehaviour:
   textmeshPro2: {fileID: 4276218020251365883}
   btn: {fileID: 4276218020251365882}
   btn2: {fileID: 4276218020251365881}
+  choice0: {fileID: 119686348}
+  choice1: {fileID: 1135430026}
 --- !u!1001 &853128980
 PrefabInstance:
   m_ObjectHideFlags: 0

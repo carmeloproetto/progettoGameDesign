@@ -814,6 +814,8 @@ MonoBehaviour:
   textmeshPro2: {fileID: 1053166350}
   btn: {fileID: 1053166354}
   btn2: {fileID: 1053166352}
+  choice0: {fileID: 1053166347}
+  choice1: {fileID: 1053166346}
 --- !u!114 &155432210
 MonoBehaviour:
   m_ObjectHideFlags: 0
