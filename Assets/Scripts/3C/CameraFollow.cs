@@ -52,7 +52,7 @@ public class CameraFollow : MonoBehaviour
 
     void Follow(){
         Vector3 targetPosition = target_aux.position + offset;
-        Vector3 smoothPosition = Vector3.Lerp(transform.position, targetPosition, smoothFactor*Time.fixedDeltaTime);
+        //Vector3 smoothPosition = Vector3.Lerp(transform.position, targetPosition, smoothFactor*Time.deltaTime);
         transform.position = targetPosition;
     } 
 }

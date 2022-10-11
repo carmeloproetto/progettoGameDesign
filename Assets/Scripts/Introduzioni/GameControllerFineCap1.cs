@@ -32,6 +32,9 @@ public class GameControllerFineCap1 : MonoBehaviour
     void Update()
     {
 
+        if(PauseMenu.GameIsPaused)
+            return;
+
          if(aux){
             StartCoroutine(StartFade(audioSource, 4, 0f));
             aux = false;

@@ -58,9 +58,17 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(false);
         canvas.SetActive(false);
         Time.timeScale = 1f;
-        GameIsPaused = false;
-     
+        StartCoroutine(resumeFunc());
+        //GameIsPaused = false;
     }
+
+
+    private IEnumerator resumeFunc(){
+        yield return new WaitForSeconds(0.1f);
+        GameIsPaused = false;
+    }
+
+
 
     public void Pause()
     {

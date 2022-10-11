@@ -95,6 +95,16 @@ MonoBehaviour:
   tutorialMenuUI: {fileID: 0}
   optionsMenuUI: {fileID: 0}
   audioSourceMenu: {fileID: 0}
+  buttonText: {fileID: 0}
+  newGameBtnText: {fileID: 0}
+  optionsBtnText: {fileID: 0}
+  tutorialBtnText: {fileID: 0}
+  quitBtnText: {fileID: 0}
+  audioOptionText: {fileID: 0}
+  langLabelText: {fileID: 0}
+  backBtnText: {fileID: 0}
+  backBtn2Text: {fileID: 0}
+  tutorialText: {fileID: 0}
 --- !u!82 &3946013495239649635
 AudioSource:
   m_ObjectHideFlags: 0

@@ -40,11 +40,16 @@ public class PlayerController : MonoBehaviour
         _controller = GetComponent<CharacterController>();
         curTarDirection = transform.forward;
         _animator = this.GetComponent<Animator>();
+         _jumpEnabled = false; 
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if(PauseMenu.GameIsPaused)
+            return;
 
         //blocco il movimento se sto conversando
         if(DialogueManager.GetInstance().dialogueIsPlaying || DialogueManagerCap2_2.GetInstance().dialogueIsPlaying){
