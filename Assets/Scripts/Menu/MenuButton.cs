@@ -22,13 +22,27 @@ public class MenuButton : MonoBehaviour
 	public GameObject newGameButton;
 
 
+	private bool aux;
+
+	void Start(){
+		aux = true;
+	}
+
+
     // Update is called once per frame
     void Update()
     {
+
+		/*if(aux){
+			StartCoroutine(enableFunc());
+			return;
+		}*/
+
 		if(menuButtonController.index == thisIndex)
 		{
 			animator.SetBool ("selected", true);
-			if (Input.GetAxis ("Submit") == 1){
+			if(Input.GetKeyDown(KeyCode.Space)){
+			//if (Input.GetAxis ("Submit") == 1){
 				animator.SetBool ("pressed", true);
 			}else if (animator.GetBool ("pressed")){
 				animator.SetBool ("pressed", false);
@@ -63,4 +77,9 @@ public class MenuButton : MonoBehaviour
 			animator.SetBool ("selected", false);
 		}
     }
+
+	private IEnumerator enableFunc(){
+        yield return new WaitForSeconds(0.2f);
+        aux = false;
+     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OptionsMenuBtn : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class OptionsMenuBtn : MonoBehaviour
 				{
 					audioChange.ButtonClicked();
 				}
-				else if (thisIndex == 1)
+				else if (thisIndex == 1 && SceneManager.GetActiveScene().name == "Menu")
 				{
 					langChange.ButtonClicked();
 				}
