@@ -19,6 +19,8 @@ public class MenuButton : MonoBehaviour
 	public GameObject levelLoader;
 	public GameObject canvas;
 
+	public GameObject newGameButton;
+
 
     // Update is called once per frame
     void Update()

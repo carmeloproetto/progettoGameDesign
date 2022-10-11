@@ -15,6 +15,8 @@ public class OptionsMenuBtn : MonoBehaviour
 	public GameObject mainMenu;
 	public GameObject optionsMenu;
 
+	public GameObject newGameButton;
+
 	// Start is called before the first frame update
 	void Start()
 	{

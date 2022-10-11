@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9b29a18df96b14d937c761c4672b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuButtonController: {fileID: 2111584470648103824}
+  menuButtonController: {fileID: 4792844740464281777}
   animator: {fileID: 2111584469012147907}
   animatorFunctions: {fileID: 2111584469012147904}
   thisIndex: 0
@@ -417,6 +417,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2111584469134497172}
+  - component: {fileID: 341024775707234878}
   m_Layer: 5
   m_Name: OptionsMenu
   m_TagString: Untagged
@@ -448,6 +449,22 @@ RectTransform:
   m_AnchoredPosition: {x: -159, y: 276}
   m_SizeDelta: {x: 89, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &341024775707234878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111584469134497173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cabdb1715d544fa0b4a11655e5bb9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  keyDown: 0
+  maxIndex: 2
+  audioSource: {fileID: 0}
 --- !u!1 &2111584469140168752
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,7 +634,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3425c92c4f1044543b76e9906ebdab06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuButtonController: {fileID: 2111584470648103824}
+  menuButtonController: {fileID: 341024775707234878}
   animator: {fileID: 2111584469230245054}
   animatorFunctions: {fileID: 2111584469230245055}
   audioChange: {fileID: 2111584470648103830}
@@ -625,6 +642,7 @@ MonoBehaviour:
   thisIndex: 2
   mainMenu: {fileID: 2111584469769072088}
   optionsMenu: {fileID: 2111584469134497173}
+  newGameButton: {fileID: 0}
 --- !u!1 &2111584469248503557
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,7 +1049,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd2164ab6438fd47af57ab55d4b77bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuButtonController: {fileID: 2111584470648103824}
+  menuButtonController: {fileID: 4637118691408004861}
   animator: {fileID: 2111584469399659485}
   animatorFunctions: {fileID: 2111584469399659474}
   pauseMenuScript: {fileID: 0}
@@ -1374,7 +1392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd2164ab6438fd47af57ab55d4b77bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuButtonController: {fileID: 2111584470648103824}
+  menuButtonController: {fileID: 4637118691408004861}
   animator: {fileID: 2111584469620941325}
   animatorFunctions: {fileID: 2111584469620941314}
   pauseMenuScript: {fileID: 0}
@@ -1392,6 +1410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2111584469769072091}
+  - component: {fileID: 4637118691408004861}
   m_Layer: 5
   m_Name: PauseMenu
   m_TagString: Untagged
@@ -1422,6 +1441,22 @@ RectTransform:
   m_AnchoredPosition: {x: 18, y: 494}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4637118691408004861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111584469769072088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cabdb1715d544fa0b4a11655e5bb9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  keyDown: 0
+  maxIndex: 3
+  audioSource: {fileID: 0}
 --- !u!1 &2111584469952557485
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,7 +1626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3425c92c4f1044543b76e9906ebdab06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuButtonController: {fileID: 2111584470648103824}
+  menuButtonController: {fileID: 341024775707234878}
   animator: {fileID: 2111584470038916954}
   animatorFunctions: {fileID: 2111584470038916955}
   audioChange: {fileID: 2111584470648103830}
@@ -1599,6 +1634,7 @@ MonoBehaviour:
   thisIndex: 1
   mainMenu: {fileID: 2111584469769072088}
   optionsMenu: {fileID: 2111584469134497173}
+  newGameButton: {fileID: 0}
 --- !u!1 &2111584470226077416
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,6 +1719,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2111584470244480887}
+  - component: {fileID: 4792844740464281777}
   m_Layer: 5
   m_Name: TutorialMenu
   m_TagString: Untagged
@@ -1711,6 +1748,22 @@ RectTransform:
   m_AnchoredPosition: {x: -269, y: 423}
   m_SizeDelta: {x: 89, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4792844740464281777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111584470244480884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cabdb1715d544fa0b4a11655e5bb9d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  keyDown: 0
+  maxIndex: 0
+  audioSource: {fileID: 0}
 --- !u!1 &2111584470244921227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,7 +1858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd2164ab6438fd47af57ab55d4b77bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuButtonController: {fileID: 2111584470648103824}
+  menuButtonController: {fileID: 4637118691408004861}
   animator: {fileID: 2111584470244921239}
   animatorFunctions: {fileID: 2111584470244921236}
   pauseMenuScript: {fileID: 0}
@@ -2064,7 +2117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bd2164ab6438fd47af57ab55d4b77bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuButtonController: {fileID: 2111584470648103824}
+  menuButtonController: {fileID: 4637118691408004861}
   animator: {fileID: 2111584470471532499}
   animatorFunctions: {fileID: 2111584470471532496}
   pauseMenuScript: {fileID: 0}
@@ -2167,7 +2220,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3425c92c4f1044543b76e9906ebdab06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuButtonController: {fileID: 2111584470648103824}
+  menuButtonController: {fileID: 341024775707234878}
   animator: {fileID: 2111584470517496866}
   animatorFunctions: {fileID: 2111584470517496867}
   audioChange: {fileID: 2111584470648103830}
@@ -2175,6 +2228,7 @@ MonoBehaviour:
   thisIndex: 0
   mainMenu: {fileID: 2111584469769072088}
   optionsMenu: {fileID: 2111584469134497173}
+  newGameButton: {fileID: 0}
 --- !u!1 &2111584470519755783
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,10 +17,10 @@ public class MenuButtonController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//if(Input.GetAxis ("Vertical") != 0){
-		if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)){
+		if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown("down") || Input.GetKeyDown("up")){
 			if(!keyDown){
 				//if(Input.GetAxis ("Vertical") < 0){
-				if (Input.GetKeyDown(KeyCode.S)) {
+				if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown("down") ) {
 					Debug.Log("Premo giù");
 					if(index < maxIndex){
 						index++;
@@ -29,7 +29,7 @@ public class MenuButtonController : MonoBehaviour {
 					}
 				} 
 				//else if(Input.GetAxis ("Vertical") > 0){
-				else if(Input.GetKeyDown(KeyCode.W)){
+				else if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown("up")){
 					Debug.Log("Premo su");
 					if(index > 0){
 						index --; 
