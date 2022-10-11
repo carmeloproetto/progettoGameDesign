@@ -21,6 +21,8 @@ public class GameControllerIntroCap1 : MonoBehaviour
 
     private int language;
 
+    public GameObject canvasSkip;
+
     void Start()
     {
         language = LanguageChangeScript.language;
@@ -61,6 +63,7 @@ public class GameControllerIntroCap1 : MonoBehaviour
                 }
                 else if(countScene == 4){
                     this.GetComponent<Canvas>().enabled = false;
+                    canvasSkip.SetActive(false);
                     levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
 
