@@ -1398,7 +1398,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2111584469769072091
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2347,6 +2347,7 @@ GameObject:
   - component: {fileID: 2111584470648103831}
   - component: {fileID: 7111755633915988284}
   - component: {fileID: 6392434120205635963}
+  - component: {fileID: 2965408802056767854}
   m_Layer: 5
   m_Name: PauseMenuCanvas
   m_TagString: Untagged
@@ -2624,6 +2625,28 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2965408802056767854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111584470648103829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e265304fb68c1944bbc86601abb178b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonText: {fileID: 2111584469435435980}
+  newGameBtnText: {fileID: 2111584470526574511}
+  optionsBtnText: {fileID: 2111584468903583661}
+  tutorialBtnText: {fileID: 2111584470465430357}
+  quitBtnText: {fileID: 2111584470680638569}
+  audioOptionText: {fileID: 2111584469587003269}
+  langLabelText: {fileID: 2111584468843997931}
+  backBtnText: {fileID: 2111584469380174962}
+  backBtn2Text: {fileID: 2111584469267765522}
+  tutorialText: {fileID: 2111584469494342851}
 --- !u!1 &2111584470680638575
 GameObject:
   m_ObjectHideFlags: 0
