@@ -8,9 +8,11 @@ public class AudioChangeScript : MonoBehaviour
     public Text buttonText;
     [SerializeField] LanguageChangeScript langChange;
 
-    private bool isOn = true;
+    public static bool isOn = true;
 
     private AudioSource[] allAudioSources;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -75,6 +77,12 @@ public class AudioChangeScript : MonoBehaviour
 
             PlayerPrefs.SetString("audio", "no");
             PlayerPrefs.Save();
+
+            allAudioSources = FindObjectsOfType<AudioSource>();
+            foreach (AudioSource audioSource in allAudioSources)
+            {
+                audioSource.volume = 0;
+            }
         }
         else
         {
@@ -93,6 +101,12 @@ public class AudioChangeScript : MonoBehaviour
 
             PlayerPrefs.SetString("audio", "yes");
             PlayerPrefs.Save();
+
+            allAudioSources = FindObjectsOfType<AudioSource>();
+            foreach (AudioSource audioSource in allAudioSources)
+            {
+                audioSource.volume = 1;
+            }
         }
     }
 
@@ -102,6 +116,7 @@ public class AudioChangeScript : MonoBehaviour
         //allAudioSources = FindObjectsOfType<AudioSource>();
 
         Debug.Log("AUDIO SOURCES" + allAudioSources);
+        
     }
 
     
