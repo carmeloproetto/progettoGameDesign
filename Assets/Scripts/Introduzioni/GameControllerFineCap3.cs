@@ -25,7 +25,7 @@ public class GameControllerFineCap3 : MonoBehaviour
     public GameObject canvas2;
     public GameObject levelLoader;
     
-    
+    public GameObject canvasSkip;
 
     void Start()
     {
@@ -79,6 +79,7 @@ public class GameControllerFineCap3 : MonoBehaviour
                         //bisogna caricare la scena corretta
                         FindObjectOfType<AudioManager>().Stop("audioIntro");
                         this.GetComponent<Canvas>().enabled = false;
+                        canvasSkip.SetActive(false);
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     
                     }
@@ -109,6 +110,7 @@ public class GameControllerFineCap3 : MonoBehaviour
                         //bisogna caricare la scena corretta
                         FindObjectOfType<AudioManager>().Stop("audioIntro");
                         this.GetComponent<Canvas>().enabled = false;
+                        canvasSkip.SetActive(false);
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     
                     }
@@ -139,6 +141,7 @@ public class GameControllerFineCap3 : MonoBehaviour
                         //bisogna caricare la scena corretta
                         FindObjectOfType<AudioManager>().Stop("audioIntro");
                         this.GetComponent<Canvas>().enabled = false;
+                        canvasSkip.SetActive(false);
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     
                     }
@@ -169,6 +172,7 @@ public class GameControllerFineCap3 : MonoBehaviour
                         //bisogna caricare la scena corretta
                         FindObjectOfType<AudioManager>().Stop("audioIntro");
                         this.GetComponent<Canvas>().enabled = false;
+                        canvasSkip.SetActive(false);
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     }
                 }
@@ -198,6 +202,7 @@ public class GameControllerFineCap3 : MonoBehaviour
                         //bisogna caricare la scena corretta
                         FindObjectOfType<AudioManager>().Stop("audioIntro");
                         this.GetComponent<Canvas>().enabled = false;
+                        canvasSkip.SetActive(false);
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     
                     }
@@ -207,6 +212,12 @@ public class GameControllerFineCap3 : MonoBehaviour
                     bottomBar.EndCurrentSentence();
                 }
             }
+        }
+        else if(Input.GetKeyDown(KeyCode.E)){
+            FindObjectOfType<AudioManager>().Stop("audioIntro");
+            this.GetComponent<Canvas>().enabled = false;
+            canvasSkip.SetActive(false);
+            levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
         }
     }
 

@@ -17,6 +17,8 @@ public class GameControllerIntroCap3 : MonoBehaviour
 
     public GameObject canvas;
 
+    public GameObject canvasSkip;
+
     void Start()
     {
         countText = 1;
@@ -54,6 +56,7 @@ public class GameControllerIntroCap3 : MonoBehaviour
                 else if(countScene == 1){
                     //bisogna caricare la scena corretta
                     canvas.SetActive(false);
+                    canvasSkip.SetActive(false);
                     levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
             }
@@ -66,6 +69,11 @@ public class GameControllerIntroCap3 : MonoBehaviour
             if (countText == 3){
                 StartCoroutine(StartFade(audioSource, 10, 0f));
             }
+        }
+        else if(Input.GetKeyDown(KeyCode.E)){
+            canvas.SetActive(false);
+            canvasSkip.SetActive(false);
+            levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
         }
         
     }

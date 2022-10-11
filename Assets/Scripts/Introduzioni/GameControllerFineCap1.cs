@@ -16,6 +16,8 @@ public class GameControllerFineCap1 : MonoBehaviour
 
     public AudioSource audioSource;
 
+    public GameObject canvasSkip;
+
     void Start()
     {
         if(LanguageChangeScript.language == 0)
@@ -54,6 +56,7 @@ public class GameControllerFineCap1 : MonoBehaviour
                 else if(countScene == 0){
                     //bisogna caricare la scena corretta
                     this.GetComponent<Canvas>().enabled = false;
+                    canvasSkip.SetActive(false);
                     levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     //SceneManager.LoadScene("Cap2_Scena1_");
                 }
@@ -63,6 +66,11 @@ public class GameControllerFineCap1 : MonoBehaviour
                 bottomBar.EndCurrentSentence();
             }
         }
+         else if(Input.GetKeyDown(KeyCode.E)){
+            this.GetComponent<Canvas>().enabled = false;
+            canvasSkip.SetActive(false);
+            levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+         }
     }
 
     public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)

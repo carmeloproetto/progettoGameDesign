@@ -76,6 +76,11 @@ public class GameControllerIntroCap1 : MonoBehaviour
                 StartCoroutine(StartFade(audioSource, 2, 0f));
             }
         }
+        else if(Input.GetKeyDown(KeyCode.E)){
+            this.GetComponent<Canvas>().enabled = false;
+            canvasSkip.SetActive(false);
+            levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+        }
     }
 
 

@@ -463,6 +463,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bac2b5675bbf57c4eaebf0dcb26761a0, type: 3}
+--- !u!1 &661902628 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5803906310355302878, guid: 9867c211cb2f3634c858a110732c2f1a, type: 3}
+  m_PrefabInstance: {fileID: 1808658223}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &665798618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -720,6 +725,7 @@ MonoBehaviour:
   backgroundController: {fileID: 1356436400}
   levelLoader: {fileID: 317522774}
   audioSource: {fileID: 760574632}
+  canvasSkip: {fileID: 661902628}
 --- !u!1001 &815343736
 PrefabInstance:
   m_ObjectHideFlags: 0

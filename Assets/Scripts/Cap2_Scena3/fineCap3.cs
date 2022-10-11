@@ -23,6 +23,8 @@ public class fineCap3 : MonoBehaviour
 
     public GameObject levelLoader;
 
+    public GameObject canvasSkip;
+
     //public GameObject canvas2;
 
     // Start is called before the first frame update
@@ -70,6 +72,7 @@ public class fineCap3 : MonoBehaviour
                         //disattiviamo il canvas e riabilitiamo il movimento del player
                         //canvas2.SetActive(false);
                         //DObbiamo caricare la nuova scena qui
+                        canvasSkip.SetActive(false);
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     }
 
@@ -96,6 +99,7 @@ public class fineCap3 : MonoBehaviour
                     }
                     else if(countScene == 3){
                         //bisogna caricare la scena corretta
+                        canvasSkip.SetActive(false);
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     }
                     if(countAux == 4){
@@ -115,6 +119,7 @@ public class fineCap3 : MonoBehaviour
                     }
                     else if(countScene == 4){
                         //bisogna caricare la scena corretta
+                        canvasSkip.SetActive(false);
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     }
                     if(countAux == 5){
@@ -123,6 +128,12 @@ public class fineCap3 : MonoBehaviour
                 }
             }
         }
+        else if(Input.GetKeyDown(KeyCode.E)){
+            canvasSkip.SetActive(false);
+            levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+        }
+
+
     }
 
     public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
