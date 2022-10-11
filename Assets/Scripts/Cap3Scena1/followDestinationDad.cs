@@ -59,9 +59,6 @@ public class followDestinationDad : MonoBehaviour
             }
           //dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = false; 
           this.GetComponent<followDestinationDad>().enabled = false;
-           
-           
-            
         }
     }
 

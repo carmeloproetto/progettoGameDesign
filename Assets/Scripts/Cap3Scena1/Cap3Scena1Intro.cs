@@ -46,7 +46,8 @@ public class Cap3Scena1Intro : MonoBehaviour
                 else{
                     //GESTIONE SCENA 2 del CAP 3
                     //BISOGNA FAR ANDARE BENE IL PADRE NELL'ALTRA STANZA
-                    audioManager.GetComponent<AudioManager>().Play("walkDirt");
+                    //audioManager.GetComponent<AudioManager>().Play("walkDirt");
+                    dad.GetComponent<Animator>().SetTrigger("StandUp");
                     StartCoroutine(DadWalk());
                 }
 
@@ -60,10 +61,10 @@ public class Cap3Scena1Intro : MonoBehaviour
 
     private IEnumerator DadWalk(){
         yield return new WaitForSeconds(2f);
-        dad.GetComponent<followDestinationDad>().enabled = true;
-        camera.GetComponent<CameraMovmentCap3>().enabled = true;
+        //dad.GetComponent<followDestinationDad>().enabled = true;
+        //camera.GetComponent<CameraMovmentCap3>().enabled = true;
          yield return new WaitForSeconds(2f);
-         audioManager.GetComponent<AudioManager>().Stop("walkDirt");
+         //audioManager.GetComponent<AudioManager>().Stop("walkDirt");
         canvas2.SetActive(false);
     }
 
