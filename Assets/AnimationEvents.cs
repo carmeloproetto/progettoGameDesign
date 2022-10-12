@@ -11,6 +11,7 @@ public class AnimationEvents : MonoBehaviour
     public Transform porticinaGabbia;
     public Transform gabbiaFloor;
     public Transform gabbiaFloorDoor;
+    public Transform paper;
     public Rig rig; 
 
     public void LiberaGabbia()
@@ -62,5 +63,15 @@ public class AnimationEvents : MonoBehaviour
         gabbiaFloor.gameObject.SetActive(true);
         gabbiaFloorDoor.gameObject.GetComponent<Rigidbody>().isKinematic = false;
         gabbiaFloor.SetParent(null);
+    }
+
+    public void PaperOn()
+    {
+        paper.gameObject.SetActive(true);
+    }
+
+    public void PaperOff()
+    {
+        paper.gameObject.SetActive(false);
     }
 }

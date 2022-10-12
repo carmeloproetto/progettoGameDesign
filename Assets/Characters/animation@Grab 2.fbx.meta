@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: bcd1b7a70633dd54595a97aa283e7e87
+guid: a03de890595e046cd927f7d0a4ec2527
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Grab Rifle And Put Back
+    second: Grab
   externalObjects: {}
   materials:
     materialImportMode: 2
@@ -35,18 +35,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Grab Rifle And Put Back
+      name: Grab
       takeName: mixamo.com
       internalID: 0
-      firstFrame: 0
-      lastFrame: 177
+      firstFrame: 182
+      lastFrame: 340
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -59,8 +59,8 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.32608697
-        functionName: PaperOn
+      - time: 0.34782606
+        functionName: PaperOff
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

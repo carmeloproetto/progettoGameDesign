@@ -41,7 +41,7 @@ public class BariliTrigger : InteractableObject
 
     protected override void Update()
     {
-        if (_interacted && _agent.remainingDistance <= 0.1f && !_arrived )
+        if (_agent.enabled && _interacted && _agent.remainingDistance <= 0.1f && !_arrived )
         {
             _arrived = true; 
             _agent.transform.DORotate(new Vector3(0f, 270f, 0f), 2f);
