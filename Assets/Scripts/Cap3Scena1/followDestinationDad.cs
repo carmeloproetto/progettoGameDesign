@@ -43,22 +43,25 @@ public class followDestinationDad : MonoBehaviour
 
         //abbiamo raggiunto la destinazione
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
+            Debug.Log("Destinazione raggiunta!");
           
-          scene = SceneManager.GetActiveScene();
+            scene = SceneManager.GetActiveScene();
             if(scene.name == "Cap3_scena2"){
-               _animator.SetFloat("Speed", 0f);
+                Debug.Log(scene.name);
+                _animator.SetFloat("Speed", 0f);
                 transform.LookAt(ragazzino);
-              this.GetComponent<DialogueTriggerCap3_1>().startConvByOtherScript();
-              camera.GetComponent<CameraFollow>().enabled = true;
-              camera.GetComponent<CameraMovmentCap3>().enabled = false;
-              //ragazzo.GetComponent<Animator>().SetFloat("Speed", 0f);
+                this.GetComponent<DialogueTriggerCap3_1>().startConvByOtherScript();
+                _animator.SetBool("Speak", true);
+                camera.GetComponent<CameraFollow>().enabled = true;
+                camera.GetComponent<CameraMovmentCap3>().enabled = false;
+                //ragazzo.GetComponent<Animator>().SetFloat("Speed", 0f);
             }
             else{
                 //BISOGNA FAR PARTIRE IL MINI GIOCO DELLA SCENA 1 CAPITOLO 3 QUI
 
             }
-          //dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = false; 
-          this.GetComponent<followDestinationDad>().enabled = false;
+            //dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = false; 
+            this.GetComponent<followDestinationDad>().enabled = false;
         }
     }
 

@@ -52,7 +52,8 @@ public class Cap3Scena1Intro : MonoBehaviour
                     //BISOGNA FAR ANDARE BENE IL PADRE NELL'ALTRA STANZA
                     //audioManager.GetComponent<AudioManager>().Play("walkDirt");
                     dad.GetComponent<Animator>().SetTrigger("StandUp");
-                    StartCoroutine(DadWalk());
+                    //StartCoroutine(DadWalk());
+                    canvas2.SetActive(false);
                 }
 
             }

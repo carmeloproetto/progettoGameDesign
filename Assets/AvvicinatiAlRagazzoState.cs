@@ -39,7 +39,8 @@ public class AvvicinatiAlRagazzoState : StateMachineBehaviour
                     _agent.speed = 0f;
                     _agent.updateRotation = false;
                     animator.SetTrigger("arrivato");
-                    _agent.ResetPath();
+                    _target = GameObject.FindGameObjectWithTag("Destination_4").transform;
+                    _agent.SetDestination(_target.position);
                     _agent.enabled = false;
                 }
                 

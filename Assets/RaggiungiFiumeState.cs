@@ -33,6 +33,7 @@ public class RaggiungiFiumeState : StateMachineBehaviour
             _agent.updateRotation = false;
             animator.SetTrigger("arrivato");
             _agent.enabled = false;
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().SetTrigger("SpingiRagazzo");
             //animator.GetComponent<CharacterController>().enabled = true;
         }
     }

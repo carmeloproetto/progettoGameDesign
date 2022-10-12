@@ -18,8 +18,10 @@ public class RaggiungiRagazzoState : StateMachineBehaviour
     {
         _target = GameObject.FindGameObjectWithTag("Ragazzino").transform;
         _agent = animator.GetComponent<NavMeshAgent>();
+        animator.gameObject.GetComponent<CharacterController>().enabled = false;
         _agent.enabled = true; 
         _agent.speed = 2f;
+        _agent.stoppingDistance = 0.8f;
         _agent.updatePosition = true;
         _agent.updateRotation = true;
         _agent.SetDestination(_target.position);
@@ -36,8 +38,8 @@ public class RaggiungiRagazzoState : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //_dad.LookAt(_target.position);
-        if( _agent.remainingDistance <= (_agent.stoppingDistance - 0.1f))
+        animator.transform.LookAt(_target.position);
+        if( _agent.enabled && _agent.remainingDistance <= (_agent.stoppingDistance - 0.1f))
         {
             _agent.speed = 0f;
             _agent.updateRotation = false;

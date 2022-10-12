@@ -19,6 +19,9 @@ public class StandUpState : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        
+        //il padre raggiunge il punto di destinazione
+        animator.gameObject.GetComponent<followDestinationDad>().enabled = true;
+        //abilito il movimento della camera
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraMovmentCap3>().enabled = true;
     }
 }

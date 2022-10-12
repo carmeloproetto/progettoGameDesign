@@ -68,6 +68,11 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
     private bool setFirstActiveBtnSx;
     public TextMeshProUGUI textmeshPro;
     public TextMeshProUGUI textmeshPro2;
+
+    private Animator padreAnimator;
+    private Animator ragazzoAnimator;
+    private Animator profAnimator;
+
    
 
     private void Awake(){
@@ -86,6 +91,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
 
         startCorsa = false;
         auxFinal = false;
+
     }
 
     public static DialogueManagerCap3_2 GetInstance(){
@@ -107,6 +113,9 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         m_EventSystem = EventSystem.current;
         setFirstActiveBtnSx = true;
 
+        padreAnimator = dad.GetComponent<Animator>();
+        ragazzoAnimator = ragazzo.GetComponent<Animator>();
+        profAnimator = professore.GetComponent<Animator>();
     }
 
     private void Update(){
@@ -129,9 +138,74 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                 line++;
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
                 
-                if(line == 5 && countDialogue == 1){
-
+                if(line == 1 && countDialogue == 1){
+                    ragazzoAnimator.SetBool("Speak", true);
+                    padreAnimator.SetBool("Speak", false);
                 }
+                else if(line == 2 && countDialogue ==1)
+                {
+                    ragazzoAnimator.SetBool("Speak", false);
+                }
+                else if (line == 3 && countDialogue == 1)
+                {
+                    ragazzoAnimator.SetBool("Speak", true);
+                }
+                else if (line == 4 && countDialogue == 1)
+                {
+                    ragazzoAnimator.SetBool("Speak", false);
+                    padreAnimator.SetBool("Speak", true);
+                }
+                else if (line == 5 && countDialogue == 1)
+                {
+                    ragazzoAnimator.SetBool("Speak", true);
+                    padreAnimator.SetBool("Speak", false);
+                }
+                else if (line == 6 && countDialogue == 1)
+                {
+                    ragazzoAnimator.SetBool("Speak", true);
+                    padreAnimator.SetBool("Speak", false);
+                }
+                else if (line == 6 && countDialogue == 1)
+                {
+                    ragazzoAnimator.SetBool("Speak", true);
+                    padreAnimator.SetBool("Speak", false);
+                }
+                else if (line == 8 && countDialogue == 1)
+                {
+                    ragazzoAnimator.SetBool("Speak", true);
+                    padreAnimator.SetBool("Speak", false);
+                }
+                else if (line == 9 && countDialogue == 1)
+                {
+                    ragazzoAnimator.SetBool("Speak", false);
+                    padreAnimator.SetBool("Speak", false);
+                }
+                else if (line == 10 && countDialogue == 1)
+                {
+                    ragazzoAnimator.SetBool("Speak", true);
+                    padreAnimator.SetBool("Speak", false);
+                }
+                else if (line == 12 && countDialogue == 1)
+                {
+                    ragazzoAnimator.SetBool("Speak", true);
+                    padreAnimator.SetBool("Speak", false);
+                }
+
+                else if (line == 1 && countDialogue == 2)
+                {
+                    padreAnimator.SetBool("isArguing", true);
+                }
+                else if (line == 2 && countDialogue == 2)
+                {
+                    padreAnimator.SetBool("isArguing", false);
+                }
+                else if (line == 3 && countDialogue == 2)
+                {
+                    padreAnimator.SetBool("isArguing", false);
+                    profAnimator.SetBool("isArguing", true);
+                    ragazzoAnimator.SetTrigger("Continue"); //il ragazzo si alza
+                }
+
                 ContinueStory();
             }
         }
@@ -190,6 +264,8 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
             Debug.Log("conversazione finita");
+            ragazzoAnimator.SetBool("Speak", false);
+            padreAnimator.SetBool("Speak", false);
             tutorialCorsa.SetActive(true);
             dad.GetComponent<DialogueTriggerCap3_1>().closeConv();
             startCorsa = true;
@@ -200,12 +276,25 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
             Debug.Log("conversazione finita");
             if(helpLad == 0){
                 //non lo stiamo aiutando
-                if(feeling < 0.5 && !auxFinal)
+                if (feeling < 0.5 && !auxFinal)
+                {
+                    //il ragazzo libera gli scoiattoli
+                    ragazzoAnimator.SetTrigger("LiberaScoiattoli");
                     finale = 1;
-                else if(feeling >= 0.5 && !auxFinal)
+
+                }
+                else if (feeling >= 0.5 && !auxFinal)
+                {
+                    //il ragazzo dà la gabbia al padre
                     finale = 2;
-                else if(auxFinal)
+                }
+                else if (auxFinal)
+                {
+                    //il padre spinge il ragazzo nel fiume
+                    ragazzoAnimator.SetTrigger("Continue");
                     finale = 3;
+                }
+                    
             }
             else{
                 //lo stiamo aiutando
@@ -317,15 +406,46 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
             Debug.Log("nuovo feeling: " + feeling);
             currentStory.EvaluateFunction("changeFeeling", feeling);
         }
-        if(choiceIndex == 0 && line == 7 && countDialogue == 1 && feeling < 0.5f){
+        if( line == 5 && countDialogue == 1)
+        {
+            ragazzoAnimator.SetBool("Speak", false);
+            padreAnimator.SetBool("Speak", true);
+        }
+        if (line == 7 && countDialogue == 1)
+        {
+            ragazzoAnimator.SetBool("Speak", false);
+            padreAnimator.SetBool("Speak", true);
+        }
+        if (choiceIndex == 0 && line == 7 && countDialogue == 1 && feeling < 0.5f){
             feeling -= 0.25f;
             Debug.Log("nuovo feeling: " + feeling);
             currentStory.EvaluateFunction("changeFeeling", feeling);
         }
-        if(choiceIndex == 0 && line == 7 && countDialogue == 1 && feeling >= 0.5f)
+        if (choiceIndex == 0 && line == 7 && countDialogue == 1 && feeling >= 0.5f)
+        {
             helpLad = 1;
+        }
+        if (line == 11 && countDialogue == 1)
+        {
+            ragazzoAnimator.SetBool("Speak", false);
+            padreAnimator.SetBool("Speak", true);
+        }
 
-        if(helpLad == 0 && choiceIndex == 1 && line == 4 && countDialogue == 2)
+        //Converasazione due
+        if (choiceIndex == 0 && line == 2 && countDialogue == 2)
+        {
+            Debug.Log("Dammi la gabbia");
+        }
+        if (choiceIndex == 1 && line == 2 && countDialogue == 2)
+        {
+            Debug.Log("Avvicinati");
+        }
+
+        if ( line == 4 && countDialogue == 2)
+        {
+            padreAnimator.SetBool("Speak", true);
+        }
+        if (helpLad == 0 && choiceIndex == 1 && line == 4 && countDialogue == 2)
             auxFinal = true;
         
         if(helpLad == 1 && choiceIndex == 0 && line == 5 && countDialogue == 2)
