@@ -8,7 +8,9 @@ public class AnimationEvents : MonoBehaviour
 {
     public Transform gabbiaEmpty;
     public Transform gabbia;
-    public Transform porticinaGabbia; 
+    public Transform porticinaGabbia;
+    public Transform gabbiaFloor;
+    public Transform gabbiaFloorDoor;
     public Rig rig; 
 
     public void LiberaGabbia()
@@ -51,5 +53,14 @@ public class AnimationEvents : MonoBehaviour
             rig.weight -= Time.deltaTime * 1.5f;
             yield return null;
         }
+    }
+
+    public void PlaceCageOnTheFloor()
+    {
+        LiberaGabbia();
+        gabbiaEmpty.gameObject.SetActive(false);
+        gabbiaFloor.gameObject.SetActive(true);
+        gabbiaFloorDoor.gameObject.GetComponent<Rigidbody>().isKinematic = false;
+        gabbiaFloor.SetParent(null);
     }
 }
