@@ -20,6 +20,7 @@ TagManager:
   - Canvas
   - Canvas2
   - Professor
+  - LevelLoader
   layers:
   - Default
   - TransparentFX

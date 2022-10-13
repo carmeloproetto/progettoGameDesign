@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class FollowDestinationPadreStudenteState : StateMachineBehaviour
 {
     private Transform _destination;
     private NavMeshAgent _agent; 
+    private GameObject levelLoader;
     
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _destination = GameObject.FindGameObjectWithTag("Destination_1").transform;
+        levelLoader = GameObject.FindGameObjectWithTag("LevelLoader");
         _agent = animator.gameObject.GetComponent<NavMeshAgent>();
         _agent.speed = 2f;
         _agent.SetDestination(_destination.position);
@@ -26,7 +29,9 @@ public class FollowDestinationPadreStudenteState : StateMachineBehaviour
             Debug.Log("Arrivato a destinazione");
             animator.SetBool("IsWalking", false);
             _agent.speed = 0f;
-            _agent.updateRotation = false; 
+            _agent.updateRotation = false;
+            levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+
         }
         
     }

@@ -31,7 +31,7 @@ public class followDestinationProfessor2 : MonoBehaviour
         Vector3 a = transform.position;
         transform.position = Vector3.MoveTowards(a, b, speed);
         animator.SetFloat("Speed", velocity);
-        velocity -= aux * Time.deltaTime;
+        //velocity -= aux * Time.deltaTime;
         transform.LookAt(target);
         dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = true;
 
@@ -39,6 +39,7 @@ public class followDestinationProfessor2 : MonoBehaviour
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
             this.GetComponent<followDestinationProfessor>().enabled = false;
             dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = false;
+            this.gameObject.SetActive(false);
         }
     }
 
