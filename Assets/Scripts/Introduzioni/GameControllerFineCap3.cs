@@ -29,6 +29,7 @@ public class GameControllerFineCap3 : MonoBehaviour
 
     void Start()
     {
+        StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioIntro", 4, 1));
         countScene = 0;
 
         if(LanguageChangeScript.language == 0){

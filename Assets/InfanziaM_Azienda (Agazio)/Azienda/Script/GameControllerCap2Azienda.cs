@@ -46,6 +46,9 @@ public class GameControllerCap2Azienda : MonoBehaviour
                 else if(countScene == 1){
                    
                     this.GetComponent<Canvas>().enabled = false;
+                    FindObjectOfType<AudioManager>().Stop("crowd");
+                    
+                    FindObjectOfType<AudioManager>().Stop("birds");
                     levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
             }

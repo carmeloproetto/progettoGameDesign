@@ -70,7 +70,7 @@ public class GameControllerIntroCap2 : MonoBehaviour
             }
 
             if (countText == 3){
-                StartCoroutine(StartFade(audioSource, 4, 0f));
+                //StartCoroutine(StartFade(audioSource, 4, 0f));
             }
         }
         else if(Input.GetKeyDown(KeyCode.E)){
@@ -82,7 +82,7 @@ public class GameControllerIntroCap2 : MonoBehaviour
 
     }
 
-    public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
+    /*public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
     {
         float currentTime = 0;
         float start = audioSource.volume;
@@ -93,5 +93,5 @@ public class GameControllerIntroCap2 : MonoBehaviour
             yield return null;
         }
         yield break;
-    }
+    }*/
 }

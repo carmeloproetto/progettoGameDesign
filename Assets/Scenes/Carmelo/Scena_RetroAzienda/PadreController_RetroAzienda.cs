@@ -38,6 +38,9 @@ public class PadreController_RetroAzienda : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("crowd", 1, 0.04f));
+
         _controller = GetComponent<CharacterController>();
         curTarDirection = transform.forward;
         _animator = this.GetComponent<Animator>();

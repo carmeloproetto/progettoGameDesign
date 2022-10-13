@@ -23,6 +23,7 @@ public class DialogueTriggerCap2_3 : MonoBehaviour
 
 
     private void Awake(){
+        FindObjectOfType<AudioManager>().Play("rainSound");
 
         if(LanguageChangeScript.language == 0){
             inkJSON = inkJSON_eng;

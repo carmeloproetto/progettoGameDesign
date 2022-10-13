@@ -31,6 +31,8 @@ public class followDestinationCap2_1 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+    
       cam.GetComponent<CameraFollow>().enabled = true;
       _animator = GetComponent<Animator>();
       _animator.SetBool("Angry", false);
@@ -66,6 +68,7 @@ public class followDestinationCap2_1 : MonoBehaviour
                 _animator.SetFloat("Speed", 0f);
                 _animator.SetBool("Cry", true);
                 canvas2.SetActive(true);
+                StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioIntro", 6, 0.5f));
                 GetComponent<followDestinationCap2_1>().enabled = false;
 
             }

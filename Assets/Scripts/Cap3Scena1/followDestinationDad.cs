@@ -44,6 +44,7 @@ public class followDestinationDad : MonoBehaviour
         //abbiamo raggiunto la destinazione
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
             Debug.Log("Destinazione raggiunta!");
+            FindObjectOfType<AudioManager>().Stop("walkDirt");
           
             scene = SceneManager.GetActiveScene();
             if(scene.name == "Cap3_scena2"){

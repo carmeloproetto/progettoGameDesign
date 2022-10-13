@@ -214,7 +214,8 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         
         //MINI GIOCO CORSA
         if(startCorsa){
-            if(Input.GetKeyDown("space")){   
+            if(Input.GetKeyDown("space")){  
+                StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("QteCorsa", 2, 1)); 
                 startCorsa = false;
                 professore.GetComponent<ProfessoreController>().enabled = true;
                 ragazzo.transform.eulerAngles = new Vector3(0f, 90f, 0f);

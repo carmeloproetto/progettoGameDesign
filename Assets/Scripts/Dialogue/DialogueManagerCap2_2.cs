@@ -92,6 +92,11 @@ public class DialogueManagerCap2_2 : MonoBehaviour
     }
 
     private void Start(){
+
+        StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioIntro", 3, 0));
+        FindObjectOfType<AudioManager>().Play("birds");
+        FindObjectOfType<AudioManager>().Play("crowd");
+
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
 

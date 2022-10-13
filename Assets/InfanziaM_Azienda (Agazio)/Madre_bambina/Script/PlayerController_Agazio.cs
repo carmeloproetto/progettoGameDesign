@@ -36,6 +36,7 @@ public class PlayerController_Agazio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("birds", 1, 0.3f));
         _controller = GetComponent<CharacterController>();
         curTarDirection = transform.forward;
 

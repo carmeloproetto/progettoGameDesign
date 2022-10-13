@@ -144,22 +144,52 @@ MonoBehaviour:
   sounds:
   - name: audioIntro
     clip: {fileID: 8300000, guid: 152a739fb7b3bb4428174caca9e32368, type: 3}
-    volume: 1
-    pitch: 2.394
+    volume: 0
+    pitch: 1
     loop: 1
-    source: {fileID: 0}
+    source: {fileID: 7195858161761497104}
   - name: rainSound
     clip: {fileID: 8300000, guid: 579789c30e1a7f0469d7994567358d68, type: 3}
-    volume: 0.484
-    pitch: 2.394
+    volume: 0.395
+    pitch: 1.983
     loop: 1
-    source: {fileID: 0}
+    source: {fileID: 7195858161761497104}
   - name: phoneRing
     clip: {fileID: 8300000, guid: 0a0cf7209087ac642892a16e1a6152f9, type: 3}
     volume: 0.484
     pitch: 2.394
     loop: 1
-    source: {fileID: 0}
+    source: {fileID: 7195858161761497104}
+  - name: birds
+    clip: {fileID: 8300000, guid: ae6b70bc48f04144ca44079b280db497, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 7195858161761497104}
+  - name: crowd
+    clip: {fileID: 8300000, guid: 4ef050d11e3b5a242a7101814eb78b2d, type: 3}
+    volume: 0.092
+    pitch: 1
+    loop: 1
+    source: {fileID: 7195858161761497104}
+  - name: coffee
+    clip: {fileID: 8300000, guid: edd7a4efdae705548b32301d60227ef9, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 1
+    source: {fileID: 7195858161761497104}
+  - name: walkDirt
+    clip: {fileID: 8300000, guid: 6ba35c0d6a9196f42acee556a7b87b2b, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 7195858161761497104}
+  - name: QteCorsa
+    clip: {fileID: 8300000, guid: 1a816231403256b4594b5c0a7896c387, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 7195858161761497104}
 --- !u!114 &4245507734439653657
 MonoBehaviour:
   m_ObjectHideFlags: 0

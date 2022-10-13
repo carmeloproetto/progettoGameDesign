@@ -71,6 +71,7 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
         disableSpace = false;
 
         QteScoiattoliEnd = false;
+
       
     }
 

@@ -35,6 +35,10 @@ public class GameControllerIntroCap1 : MonoBehaviour
         backgroundController.SetImage(currentScene.background);
         countText = 1;
         firstSpacePressed = false;
+
+        StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioIntro", 5, 1));
+        //StartCoroutine(FindObjectOfType<AudioManager>().StartFade("audioIntro", 4, 1));
+        //FindObjectOfType<AudioManager>().Play("audioIntro"));
     }
 
     void Update()
@@ -78,16 +82,19 @@ public class GameControllerIntroCap1 : MonoBehaviour
             }
 
             if(countText == 7){
-                StartCoroutine(StartFade(audioSource, 2, 0f));
+                //StartCoroutine(StartFade(audioSource, 2, 0f));
+                //StartCoroutine(FindObjectOfType<AudioManager>().StopFade("audioIntro", 10, 0));
+                //StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioIntro", 5));
+
             }
         }
         else if(Input.GetKeyDown(KeyCode.E)){
             this.GetComponent<Canvas>().enabled = false;
             canvasSkip.SetActive(false);
+            
             levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
         }
     }
-
 
  
     public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)

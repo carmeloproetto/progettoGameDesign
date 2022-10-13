@@ -11,6 +11,8 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager instance;
 
+    private AudioSource[] allAudioSources;
+
     void Awake()
     {
 
@@ -22,7 +24,7 @@ public class AudioManager : MonoBehaviour
         } 
 
 
-       // DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
 
         foreach(Sound s in sounds){
             s.source = gameObject.AddComponent<AudioSource>();
@@ -46,6 +48,15 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
+
+        if(!AudioChangeScript.isOn){
+            s.source.volume = 0;
+        }
+        else{
+            s.source.volume = s.volume;
+        }
+
+
         s.source.Play();
     }
 
@@ -55,38 +66,82 @@ public class AudioManager : MonoBehaviour
             Debug.LogWarning("Sound: " + name + " not found!");
             return;
         }
+
         s.source.Stop();
     }
 
 
-    public IEnumerator FadeOut(string name, float FadeTime) {
-		Sound audioSource = Array.Find(sounds, sound => sound.name == name);
-        float startVolume = audioSource.volume;
-		while (audioSource.volume > 0) {
-			audioSource.volume -= startVolume * Time.deltaTime / FadeTime;
-			yield return null;
-		}
-		Stop(name);
-	}
-
-	public IEnumerator FadeIn(string name, float FadeTime) {
-			Sound audioSource = Array.Find(sounds, sound => sound.name == name);
-            Play(name);
-			audioSource.source.volume = 0f;
-			while (audioSource.source.volume < 1) {
-				audioSource.source.volume += Time.deltaTime / FadeTime;
-				yield return null;
-		}
-	}
-    //StartCoroutine(FindObjectOfType<AudioManager>().FadeIn(soudtrackAudioSource, fadeTime));
-    //StartCoroutine(FindObjectOfType<AudioManager>().FadeOut(soudtrackAudioSource, fadeTime));
-
-
-    // Update is called once per frame
-    void Update()
-    {
+    public IEnumerator FadeIn(string sound, float duration, float targetVolume){
+        Sound s = Array.Find(sounds, item => item.name == sound);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");
+            
+        }
+        else{
+            Debug.Log("sound trovato: " + sound);
         
+            s.source.Play();
+            float currentTime = 0;
+            float start = s.source.volume;
+
+            while (currentTime < duration)
+            {
+                if(!AudioChangeScript.isOn){
+                    s.source.volume = 0;
+                    yield return null;
+                }
+                else{
+                    //Debug.Log("aumento o diminusico il volume...");
+                    currentTime += Time.deltaTime;
+                    s.source.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+                    yield return null;
+                }
+            }
+        }
+
     }
 
-   // FindObjectOfType<AudioManager>().Play("");
+
+
+
+
+    public IEnumerator FadeOut(string sound, float duration, float targetVolume){
+        Sound s = Array.Find(sounds, item => item.name == sound);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound: " + name + " not found!");     
+        }
+        else{
+            Debug.Log("sound trovato: " + sound);
+        
+        
+            float currentTime = 0;
+            float start = s.source.volume;
+
+            while (currentTime < duration)
+            {   
+                if(!AudioChangeScript.isOn){
+                    s.source.volume = 0;
+                    yield return null;
+                }
+                else{
+                    //Debug.Log("aumento o diminusico il volume...");
+                    currentTime += Time.deltaTime;
+                    s.source.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+                    yield return null;
+                }
+            }
+        }
+
+    }
+
+
+    /*public void MuteAllSounds(){
+       foreach(Sound s in sounds){
+            s.source.volume = 0;   
+        }
+    }*/
+
+
 }

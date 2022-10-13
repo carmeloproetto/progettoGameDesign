@@ -30,6 +30,9 @@ public class followDestination : MonoBehaviour
       firstTime = true;
       script_dialogueTrigger = madreBambina.GetComponent<DialogueTrigger>();
       dad.transform.eulerAngles = new Vector3(0f, 90f, 0f);
+
+      //FindObjectOfType<AudioManager>().StopPlaying("audioIntro");
+      StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioIntro", 5, 0));
     }
 
     // Update is called once per frame

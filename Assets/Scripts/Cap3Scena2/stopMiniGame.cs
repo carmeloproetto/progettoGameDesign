@@ -19,6 +19,7 @@ public class stopMiniGame : MonoBehaviour
             dad.GetComponent<DialogueTriggerCap3_1>().startConvByOtherScript();
             dad.GetComponent<Animator>().SetFloat("Speed", 0f);
             dad.GetComponent<PadreStudenteController>().enabled = false;
+            StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("QteCorsa", 3, 0.05f));
         }
     }
 }

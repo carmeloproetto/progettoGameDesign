@@ -30,6 +30,9 @@ public class fineCap3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<AudioManager>().Stop("rainSound");
+        StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioIntro", 5, 1));
+
         if(LanguageChangeScript.language == 0){
             currentScene1 = currentScene1_eng;
             currentScene2 = currentScene2_eng;

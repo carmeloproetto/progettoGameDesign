@@ -23,6 +23,7 @@ public class controlAudioVolume : MonoBehaviour
             {
                 audioSource.volume = 0;
             }
+
         }
 
     }

@@ -23,8 +23,8 @@ public class PilastroInteraction : MonoBehaviour
         {
             playerAnimator.SetBool("isNearTheWall", true);
             enemyAnimator.SetTrigger("canWalk");
-            //FindObjectOfType<AudioManager>().Stop("angryCrowd"); 
-            StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("angryCrowd", 3f));
+            FindObjectOfType<AudioManager>().Stop("angryCrowd"); 
+            //StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("angryCrowd", 3f));
         }
     }
 

@@ -26,6 +26,8 @@ public class GameControllerFineCap1 : MonoBehaviour
         countScene = 0;
         bottomBar.PlayScene(currentScene);
         backgroundController.SetImage(currentScene.background);
+
+        StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioIntro", 5, 1));
         aux = true;
     }
 
@@ -35,10 +37,10 @@ public class GameControllerFineCap1 : MonoBehaviour
         if(PauseMenu.GameIsPaused)
             return;
 
-         if(aux){
+         /*if(aux){
             StartCoroutine(StartFade(audioSource, 4, 0f));
             aux = false;
-            }
+            }*/
 
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
@@ -60,6 +62,7 @@ public class GameControllerFineCap1 : MonoBehaviour
                     //bisogna caricare la scena corretta
                     this.GetComponent<Canvas>().enabled = false;
                     canvasSkip.SetActive(false);
+                    //StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioIntro", 5, 1));
                     levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     //SceneManager.LoadScene("Cap2_Scena1_");
                 }
@@ -76,7 +79,7 @@ public class GameControllerFineCap1 : MonoBehaviour
          }
     }
 
-    public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
+   /* public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
     {
         yield return new WaitForSeconds(6);
         float currentTime = 0;
@@ -88,6 +91,6 @@ public class GameControllerFineCap1 : MonoBehaviour
             yield return null;
         }
         yield break;
-    }
+    }*/
 
 }

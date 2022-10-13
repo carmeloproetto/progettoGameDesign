@@ -22,6 +22,17 @@ public class Cap3Scena1Intro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        scene = SceneManager.GetActiveScene();
+        if(scene.name == "Cap3_scena1"){
+            StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioIntro", 2, 0));
+            StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("coffee", 4, 0.01f));
+        }
+        else{
+            StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("walkDirt", 3, 1));
+        }
+
+
+
         if(LanguageChangeScript.language == 0)
             currentScene1 = currentScene1_eng;
 
@@ -66,10 +77,7 @@ public class Cap3Scena1Intro : MonoBehaviour
 
     private IEnumerator DadWalk(){
         yield return new WaitForSeconds(2f);
-        //dad.GetComponent<followDestinationDad>().enabled = true;
-        //camera.GetComponent<CameraMovmentCap3>().enabled = true;
          yield return new WaitForSeconds(2f);
-         //audioManager.GetComponent<AudioManager>().Stop("walkDirt");
         canvas2.SetActive(false);
     }
 
