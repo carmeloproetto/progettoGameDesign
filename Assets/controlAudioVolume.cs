@@ -17,14 +17,14 @@ public class controlAudioVolume : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!AudioChangeScript.isOn){
+       /* if(!AudioChangeScript.isOn){
             allAudioSources = FindObjectsOfType<AudioSource>();
             foreach (AudioSource audioSource in allAudioSources)
             {
                 audioSource.volume = 0;
             }
 
-        }
+        }*/
 
     }
 }

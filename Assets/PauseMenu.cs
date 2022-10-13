@@ -11,13 +11,12 @@ public class PauseMenu : MonoBehaviour
    // public GameObject background;
     public GameObject tutorialMenuUI;
     public GameObject optionsMenuUI;
-    public AudioSource audioSourceMenu;
+    //public AudioSource audioSourceMenu;
 
     private AudioSource[] allAudioSources;
 
     void Start () {
-		audioSourceMenu = GetComponent<AudioSource>();
-        
+		//audioSourceMenu = GetComponent<AudioSource>();
 	}
 
 
@@ -47,10 +46,11 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        audioSourceMenu.enabled = false;
+        //audioSourceMenu.enabled = false;
         allAudioSources = FindObjectsOfType<AudioSource>();
         StartAllAudio();
-        audioSourceMenu.Stop();
+        FindObjectOfType<AudioManager>().Stop("audioMenu");
+        //audioSourceMenu.Stop();
         Debug.Log("RESUME");
         tutorialMenuUI.SetActive(false);
         optionsMenuUI.SetActive(false);
@@ -72,10 +72,11 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
-        audioSourceMenu.enabled = true;
+        //audioSourceMenu.enabled = true;
         allAudioSources = FindObjectsOfType<AudioSource>();
         StopAllAudio();
-        audioSourceMenu.Play();
+        FindObjectOfType<AudioManager>().Play("audioMenu");
+        //audioSourceMenu.Play();
         Debug.Log("PAUSE");
        // background.SetActive(true);
         pauseMenuUI.SetActive(true);

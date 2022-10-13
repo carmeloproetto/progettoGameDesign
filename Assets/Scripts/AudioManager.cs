@@ -49,12 +49,9 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        if(!AudioChangeScript.isOn){
-            s.source.volume = 0;
-        }
-        else{
-            s.source.volume = s.volume;
-        }
+        
+        s.source.volume = s.volume;
+        
 
 
         s.source.Play();
@@ -87,16 +84,11 @@ public class AudioManager : MonoBehaviour
 
             while (currentTime < duration)
             {
-                if(!AudioChangeScript.isOn){
-                    s.source.volume = 0;
-                    yield return null;
-                }
-                else{
-                    //Debug.Log("aumento o diminusico il volume...");
-                    currentTime += Time.deltaTime;
-                    s.source.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
-                    yield return null;
-                }
+                //Debug.Log("aumento o diminusico il volume...");
+                currentTime += Time.deltaTime;
+                s.source.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+                yield return null;
+                
             }
         }
 
@@ -121,16 +113,11 @@ public class AudioManager : MonoBehaviour
 
             while (currentTime < duration)
             {   
-                if(!AudioChangeScript.isOn){
-                    s.source.volume = 0;
-                    yield return null;
-                }
-                else{
-                    //Debug.Log("aumento o diminusico il volume...");
-                    currentTime += Time.deltaTime;
-                    s.source.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
-                    yield return null;
-                }
+                //Debug.Log("aumento o diminusico il volume...");
+                currentTime += Time.deltaTime;
+                s.source.volume = Mathf.Lerp(start, targetVolume, currentTime / duration);
+                yield return null;
+            
             }
         }
 

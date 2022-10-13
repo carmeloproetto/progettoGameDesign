@@ -33,6 +33,7 @@ public class followDestination : MonoBehaviour
 
       //FindObjectOfType<AudioManager>().StopPlaying("audioIntro");
       StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioIntro", 5, 0));
+      FindObjectOfType<AudioManager>().Play("birds");
     }
 
     // Update is called once per frame

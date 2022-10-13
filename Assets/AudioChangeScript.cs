@@ -8,7 +8,7 @@ public class AudioChangeScript : MonoBehaviour
     public Text buttonText;
     [SerializeField] LanguageChangeScript langChange;
 
-    public static bool isOn = true;
+    public  bool isOn = true;
 
     private AudioSource[] allAudioSources;
 
@@ -78,11 +78,13 @@ public class AudioChangeScript : MonoBehaviour
             PlayerPrefs.SetString("audio", "no");
             PlayerPrefs.Save();
 
-            allAudioSources = FindObjectsOfType<AudioSource>();
+            AudioListener.volume = 0;
+
+            /*allAudioSources = FindObjectsOfType<AudioSource>();
             foreach (AudioSource audioSource in allAudioSources)
             {
                 audioSource.volume = 0;
-            }
+            }*/
         }
         else
         {
@@ -102,11 +104,13 @@ public class AudioChangeScript : MonoBehaviour
             PlayerPrefs.SetString("audio", "yes");
             PlayerPrefs.Save();
 
-            allAudioSources = FindObjectsOfType<AudioSource>();
+            AudioListener.volume = 1;
+
+            /*allAudioSources = FindObjectsOfType<AudioSource>();
             foreach (AudioSource audioSource in allAudioSources)
             {
                 audioSource.volume = 1;
-            }
+            }*/
         }
     }
 
