@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameControllerCap2Azienda : MonoBehaviour
 {
  public StoryScene currentScene;
+ public StoryScene currentScene_eng;
     public BottomBarController bottomBar;
     
     private int countScene;
@@ -15,6 +16,9 @@ public class GameControllerCap2Azienda : MonoBehaviour
     void Start()
     {
         countScene = 0;
+        if(LanguageChangeScript.language == 0)
+            currentScene = currentScene_eng;
+
         bottomBar.PlayScene(currentScene);
     }
 

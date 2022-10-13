@@ -10936,6 +10936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: {fileID: 11400000, guid: 9358c85b8d11d074283a181ffdb53029, type: 2}
+  currentScene_eng: {fileID: 11400000, guid: 7d2b54969c02aac40b6219c2e53fbb5f, type: 2}
   bottomBar: {fileID: 809982848}
   levelLoader: {fileID: 1056963004}
 --- !u!114 &1987875315
