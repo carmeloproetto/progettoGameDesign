@@ -5,6 +5,7 @@ using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class DialogueManagerCap3_2 : MonoBehaviour{
@@ -19,6 +20,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
     public Sprite thiefImage;
     public Sprite professorImage;
 
+    public GameObject levelLoader;
 
     [Header("Choices UI")]
     [SerializeField] private GameObject[] choices;
@@ -82,15 +84,18 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         instance = this;
 
         viewChoice = false;
-        countDialogue = 1;
+        countDialogue = 2;
         disableSpace = false;
 
         QteScoiattoliEnd = false;
-        feeling = DialogueManager.feeling;
-        helpLad = 0;
+        //DA DECOMMENTARE
+        //feeling = DialogueManager.feeling;
+        feeling = 0;
+        helpLad = 1;
 
         startCorsa = false;
         auxFinal = false;
+        
 
     }
 
@@ -197,6 +202,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                 }
                 else if (line == 2 && countDialogue == 2)
                 {
+                    ragazzoAnimator.SetTrigger("Continue");
                     padreAnimator.SetBool("isArguing", false);
                 }
                 else if (line == 3 && countDialogue == 2)
@@ -280,31 +286,50 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                 if (feeling < 0.5 && !auxFinal)
                 {
                     //il ragazzo libera gli scoiattoli
+                    Debug.Log("Libera gli scoiattoli");
                     ragazzoAnimator.SetTrigger("LiberaScoiattoli");
                     finale = 1;
+                    levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
 
                 }
                 else if (feeling >= 0.5 && !auxFinal)
                 {
                     //il ragazzo dà la gabbia al padre
+                    Debug.Log("Ragazzo dà la gabbia al padre");
                     finale = 2;
+                    levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
                 else if (auxFinal)
                 {
                     //il padre spinge il ragazzo nel fiume
+                    Debug.Log("Spinge il ragazzo nel fiume");
                     ragazzoAnimator.SetTrigger("Continue");
                     finale = 3;
+                    levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
                     
             }
             else{
                 //lo stiamo aiutando
-                if(!auxFinal)
+                if (!auxFinal)
+                {
                     finale = 5;
+                    levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+                }
+                    
+
                 else if(feeling >= 0.5 && auxFinal)
+                {
                     finale = 1;
+                    levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+                }
+                    
                 else if(feeling < 0.5 && auxFinal)
+                {
                     finale = 4;
+                    levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+                }
+                    
             }
         }
 
@@ -349,9 +374,13 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                         imageOfSpeaker.sprite = dadImage;
                     }
                     else if(tagValue == "Lad" || tagValue == "Ragazzo"){
+                        padreAnimator.SetBool("Speak", false);
+                        padreAnimator.SetBool("isArguing", false);
                         imageOfSpeaker.sprite = thiefImage;
                     }
                     else if(tagValue == "Professor" || tagValue == "Professore"){
+                        padreAnimator.SetBool("Speak", false);
+                        padreAnimator.SetBool("isArguing", false);
                         imageOfSpeaker.sprite = professorImage;
                     }
                     break;
@@ -395,10 +424,10 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
     }
 
     public void MakeChoice(int choiceIndex){
-
         if(PauseMenu.GameIsPaused){
             return;
         }
+
         
         Debug.Log("numero della scleta:" + choiceIndex + " " + line + " " + countDialogue);
         
@@ -439,10 +468,12 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         }
         if (choiceIndex == 1 && line == 2 && countDialogue == 2)
         {
+            feeling -= 0.25f;
+            currentStory.EvaluateFunction("changeFeeling", feeling);
             Debug.Log("Avvicinati");
         }
 
-        if ( line == 4 && countDialogue == 2)
+        if ( choiceIndex == 0 && line == 4 && countDialogue == 2)
         {
             padreAnimator.SetBool("Speak", true);
         }
