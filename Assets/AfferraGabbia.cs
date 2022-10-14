@@ -63,10 +63,10 @@ public class AfferraGabbia : MonoBehaviour
         this.transform.parent = car;
         Vector3 finalPosition = new Vector3(carDestination.position.x, car.position.y, carDestination.position.z);
         car.DOMove(finalPosition, 30f);
-        for( int i=0; i < car.childCount; i++) {
+        /*for( int i=0; i < car.childCount; i++) {
             Transform wheel = car.GetChild(i);
             wheel.DORotate(new Vector3(0f, 0f, 360f), 50f, RotateMode.LocalAxisAdd);
-        }
+        }*/
     }
 
     public void PlaceCageOnTheFloor()

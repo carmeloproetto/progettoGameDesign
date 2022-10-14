@@ -90,7 +90,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         QteScoiattoliEnd = false;
         //DA DECOMMENTARE
         //feeling = DialogueManager.feeling;
-        feeling = 0;
+        feeling = 12;
         helpLad = 1;
 
         startCorsa = false;
@@ -196,20 +196,50 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                     padreAnimator.SetBool("Speak", false);
                 }
 
-                else if (line == 1 && countDialogue == 2)
+                //il padre non sta aiutando il ragazzo
+                if( helpLad == 0) 
                 {
-                    padreAnimator.SetBool("isArguing", true);
+                    if (line == 1 && countDialogue == 2)
+                    {
+                        padreAnimator.SetBool("isArguing", true);
+                    }
+                    else if (line == 2 && countDialogue == 2)
+                    {
+                        ragazzoAnimator.SetTrigger("Continue");
+                        padreAnimator.SetBool("isArguing", false);
+                    }
+                    else if (line == 3 && countDialogue == 2)
+                    {
+                        padreAnimator.SetBool("isArguing", false);
+                        profAnimator.SetBool("isArguing", true);
+                        ragazzoAnimator.SetTrigger("Continue"); //il ragazzo si alza
+                    }
                 }
-                else if (line == 2 && countDialogue == 2)
+                //il padre sta aiutando il ragazzo
+                else if( helpLad == 1)
                 {
-                    ragazzoAnimator.SetTrigger("Continue");
-                    padreAnimator.SetBool("isArguing", false);
-                }
-                else if (line == 3 && countDialogue == 2)
-                {
-                    padreAnimator.SetBool("isArguing", false);
-                    profAnimator.SetBool("isArguing", true);
-                    ragazzoAnimator.SetTrigger("Continue"); //il ragazzo si alza
+                    //il padre si avvicina al ragazzo che è a terra
+                    if (line == 1 && countDialogue == 2)
+                    {
+                        //la camera segue il padre
+                        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>().enabled = true;
+                        padreAnimator.SetTrigger("Avvicinati");
+                    }
+                    else if (line == 2 && countDialogue == 2)
+                    {
+                        padreAnimator.SetBool("Speak", true);
+                    }
+                    else if(line == 3 && countDialogue == 2)
+                    {
+                        //il ragazzo risponde al padre
+                        
+                    }
+                    else if (line == 4 && countDialogue == 2)
+                    {
+                        //il padre afferra la gabbia
+                        padreAnimator.SetTrigger("Continue");
+                    }
+
                 }
 
                 ContinueStory();
@@ -289,7 +319,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                     Debug.Log("Libera gli scoiattoli");
                     ragazzoAnimator.SetTrigger("LiberaScoiattoli");
                     finale = 1;
-                    levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+                    //levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
 
                 }
                 else if (feeling >= 0.5 && !auxFinal)
@@ -304,8 +334,9 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                     //il padre spinge il ragazzo nel fiume
                     Debug.Log("Spinge il ragazzo nel fiume");
                     ragazzoAnimator.SetTrigger("Continue");
+                    GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>().enabled = true;
                     finale = 3;
-                    levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+                    //levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
                     
             }
@@ -314,20 +345,20 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                 if (!auxFinal)
                 {
                     finale = 5;
-                    levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+                    //levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
                     
 
                 else if(feeling >= 0.5 && auxFinal)
                 {
                     finale = 1;
-                    levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+                    //levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
                     
                 else if(feeling < 0.5 && auxFinal)
                 {
                     finale = 4;
-                    levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+                    //levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
                     
             }
@@ -479,9 +510,21 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         }
         if (helpLad == 0 && choiceIndex == 1 && line == 4 && countDialogue == 2)
             auxFinal = true;
-        
+
+        //il padre sale sulla macchina
         if(helpLad == 1 && choiceIndex == 0 && line == 5 && countDialogue == 2)
+        {
+            padreAnimator.SetTrigger("EntraInMacchina");
             auxFinal = true;
+        }
+        //il padre non sale sulla macchina
+        if (helpLad == 1 && choiceIndex == 1 && line == 5 && countDialogue == 2)
+        {
+            padreAnimator.SetTrigger("Fermati");
+            auxFinal = true;
+        }
+
+
 
 
         currentStory.ChooseChoiceIndex(choiceIndex);
