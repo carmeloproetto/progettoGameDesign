@@ -90,7 +90,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         QteScoiattoliEnd = false;
         //DA DECOMMENTARE
         //feeling = DialogueManager.feeling;
-        feeling = 12;
+        feeling = 1;
         helpLad = 1;
 
         startCorsa = false;
@@ -501,6 +501,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         {
             feeling -= 0.25f;
             currentStory.EvaluateFunction("changeFeeling", feeling);
+            padreAnimator.SetBool("Move", true);
             Debug.Log("Avvicinati");
         }
 
