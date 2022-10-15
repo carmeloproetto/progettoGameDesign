@@ -57,12 +57,12 @@ Non possono essere liberati! Le conseguenze potrebbero essere drammatiche! #spea
 
 
 === fine1 ===
-Va bene. Non posso non fidarmi di lei. #speaker:Papà
+Mi dispiace. #speaker:Papà
 -> END
 
 
 === fine2 ===
-Mi dispiace. #speaker:Papà
+Va bene. Non posso non fidarmi di lei. #speaker:Papà
 -> END
 
 === function changeFeeling(newFeeling) ===

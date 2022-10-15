@@ -90,7 +90,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         QteScoiattoliEnd = false;
         //DA DECOMMENTARE
         //feeling = DialogueManager.feeling;
-        feeling = 1;
+        feeling = 0;
         helpLad = 1;
 
         startCorsa = false;
@@ -522,7 +522,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         if (helpLad == 1 && choiceIndex == 1 && line == 5 && countDialogue == 2)
         {
             padreAnimator.SetTrigger("Fermati");
-            auxFinal = true;
+            auxFinal = false;
         }
 
 

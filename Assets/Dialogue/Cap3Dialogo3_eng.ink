@@ -57,12 +57,12 @@ They cannot be released here! The consequences could be dramatic! #speaker:Profe
 
 
 === fine1 ===
-All right. I can’t not trust you. #speaker:Dad
+I'm sorry. #speaker:Dad
 -> DONE
 
 
 === fine2 ===
-I'm sorry. #speaker:Dad
+All right. I can’t not trust you. #speaker:Dad
 -> DONE
 
 === function changeFeeling(newFeeling) ===
