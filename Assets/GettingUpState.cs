@@ -22,7 +22,8 @@ public class GettingUpState : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //Transform padre = GameObject.FindGameObjectWithTag("Player").transform;
-        //animator.transform.DOLookAt(padre.position, 1f);  
+        //animator.transform.DOLookAt(padre.position, 1f);
+        GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManagerCap3_2>().disableSpace = false; 
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

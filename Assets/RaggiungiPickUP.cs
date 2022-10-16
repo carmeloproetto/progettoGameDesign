@@ -46,4 +46,9 @@ public class RaggiungiPickUP : StateMachineBehaviour
 
         }
     }
+
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManagerCap3_2>().disableSpace = false;
+    }
 }

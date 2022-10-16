@@ -84,19 +84,15 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         instance = this;
 
         viewChoice = false;
-        countDialogue = 2;
+        countDialogue = 1;
         disableSpace = false;
 
         QteScoiattoliEnd = false;
-        //DA DECOMMENTARE
-        //feeling = DialogueManager.feeling;
-        feeling = 0;
-        helpLad = 1;
+        feeling = DialogueManager.feeling;
+        helpLad = 0;
 
         startCorsa = false;
         auxFinal = false;
-        
-
     }
 
     public static DialogueManagerCap3_2 GetInstance(){
@@ -213,6 +209,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                         padreAnimator.SetBool("isArguing", false);
                         profAnimator.SetBool("isArguing", true);
                         ragazzoAnimator.SetTrigger("Continue"); //il ragazzo si alza
+                        disableSpace = true; 
                     }
                 }
                 //il padre sta aiutando il ragazzo
@@ -224,6 +221,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                         //la camera segue il padre
                         GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>().enabled = true;
                         padreAnimator.SetTrigger("Avvicinati");
+                        disableSpace = true;
                     }
                     else if (line == 2 && countDialogue == 2)
                     {
@@ -238,16 +236,13 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                     {
                         //il padre afferra la gabbia
                         padreAnimator.SetTrigger("Continue");
+                        disableSpace = true; 
                     }
-
                 }
-
                 ContinueStory();
             }
         }
 
-
-        
         //MINI GIOCO CORSA
         if(startCorsa){
             if(Input.GetKeyDown("space")){  
@@ -277,8 +272,6 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
             currentStory.EvaluateFunction("changeHelp", helpLad);
             currentStory.EvaluateFunction("changeFeeling", feeling);
         }
-
-
         ContinueStory();
     }
 
@@ -319,8 +312,6 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                     Debug.Log("Libera gli scoiattoli");
                     ragazzoAnimator.SetTrigger("LiberaScoiattoli");
                     finale = 1;
-                    //levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
-
                 }
                 else if (feeling >= 0.5 && !auxFinal)
                 {
@@ -336,7 +327,6 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                     ragazzoAnimator.SetTrigger("Continue");
                     GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraFollow>().enabled = true;
                     finale = 3;
-                    //levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
                     
             }
@@ -345,35 +335,27 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
                 if (!auxFinal)
                 {
                     finale = 5;
-                    //levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
                     
 
                 else if(feeling >= 0.5 && auxFinal)
                 {
                     finale = 1;
-                    //levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
                     
                 else if(feeling < 0.5 && auxFinal)
                 {
                     finale = 4;
-                    //levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
-                }
-                    
+                }    
             }
         }
-
         line = 0;
         countDialogue++;
     }
 
-
-
     private void getTextStory(string text){
         Debug.Log(text);
     }
-
 
     private void ContinueStory(){
          if(currentStory.canContinue){
@@ -524,9 +506,6 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
             padreAnimator.SetTrigger("Fermati");
             auxFinal = false;
         }
-
-
-
 
         currentStory.ChooseChoiceIndex(choiceIndex);
         ContinueStory();

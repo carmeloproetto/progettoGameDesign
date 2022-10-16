@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.2
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 26739539}
-  m_IndirectSpecularColor: {r: 0.009096811, g: 0.0047437027, b: 0.021468183, a: 0.2}
+  m_IndirectSpecularColor: {r: 0.009097342, g: 0.0047442517, b: 0.021468768, a: 0.2}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3582,6 +3582,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueManager (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4464072075888836310, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
+      propertyPath: m_TagString
+      value: DialogueManager
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
@@ -3639,6 +3643,7 @@ MonoBehaviour:
   dadImage: {fileID: 21300000, guid: 09d15112d6682724aba417e37c601149, type: 3}
   thiefImage: {fileID: 21300000, guid: 59b2ce3c27bba364cb5bffbd65d90c90, type: 3}
   professorImage: {fileID: 21300000, guid: 88d08ac2213bdff429d048cee76a1422, type: 3}
+  levelLoader: {fileID: 0}
   choices:
   - {fileID: 223988606}
   - {fileID: 223988605}
@@ -6744,6 +6749,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4379673244704792, guid: 1be61187b5d765449be824463642cb0f, type: 3}
   m_PrefabInstance: {fileID: 226482938}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &229030849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 229030850}
+  m_Layer: 0
+  m_Name: AvvicinatiTarget_1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &229030850
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229030849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 65.55, y: 2.44, z: -0.44}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 27
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &230255340
 GameObject:
   m_ObjectHideFlags: 0
@@ -24650,6 +24685,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b6eba5dea9e77a4abd8f45df1ffffb6, type: 3}
+--- !u!114 &947040358 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5465307289774952139, guid: bac2b5675bbf57c4eaebf0dcb26761a0, type: 3}
+  m_PrefabInstance: {fileID: 870995172}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 148dc68081f3bf441ada7c081527f782, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &949082828
 GameObject:
   m_ObjectHideFlags: 0
@@ -41816,6 +41862,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4526791939225540, guid: c23a5db78ca1a5b4f921e0109f33128c, type: 3}
   m_PrefabInstance: {fileID: 794015214}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1545443130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1545443131}
+  m_Layer: 0
+  m_Name: AvvicinatiTarget_2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1545443131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545443130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 68.42, y: 2.44, z: -0.44}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 28
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1546241025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45697,7 +45773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1601693967802005805, guid: b1b6a4a4712a0364bbffc21e45491ba2, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2333152634366561086, guid: b1b6a4a4712a0364bbffc21e45491ba2, type: 3}
       propertyPath: m_RootOrder
@@ -62767,6 +62843,7 @@ GameObject:
   - component: {fileID: 263497000}
   - component: {fileID: 7070624949944490517}
   - component: {fileID: 7070624949944490518}
+  - component: {fileID: 7070624949944490519}
   m_Layer: 0
   m_Name: Ragazzino
   m_TagString: Ragazzino
@@ -62815,6 +62892,19 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &7070624949944490519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7070624949944490516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440149205e8f04358943b89bb272edba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelLoader: {fileID: 947040358}
 --- !u!4 &7081150934174167167
 Transform:
   m_ObjectHideFlags: 0
@@ -64082,6 +64172,8 @@ GameObject:
   - component: {fileID: 8906441485109108342}
   - component: {fileID: 8906441485109108343}
   - component: {fileID: 8906441485109108344}
+  - component: {fileID: 8906441485109108346}
+  - component: {fileID: 8906441485109108345}
   m_Layer: 0
   m_Name: Padre studente
   m_TagString: Player
@@ -64139,8 +64231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c95d5a9733e61430ba4c80d92e2cd5e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gabbiaRagazzinoMani: {fileID: 0}
-  gabbiaRagazzinoTerra: {fileID: 0}
+  gabbiaRagazzinoMani: {fileID: 683252031}
+  gabbiaRagazzinoTerra: {fileID: 1484465163}
   gabbiaPadre: {fileID: 1202801959}
   rig: {fileID: 930941491}
   luciMateriale: {fileID: 2100000, guid: 2495a7e75efcd184eba75fee16e04d42, type: 2}
@@ -64148,6 +64240,35 @@ MonoBehaviour:
   carDestination: {fileID: 51421357}
   carLight_dx: {fileID: 2122253040}
   carLight_sx: {fileID: 386529710}
+--- !u!114 &8906441485109108345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906441485109108341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c95e949c95a184476ab34668320be547, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ragazzo: {fileID: 7589752031783731374}
+  target_1: {fileID: 229030850}
+  target_2: {fileID: 1545443131}
+  targetCount: 0
+--- !u!114 &8906441485109108346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906441485109108341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 440149205e8f04358943b89bb272edba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelLoader: {fileID: 947040358}
 --- !u!1 &8924106431711898887
 GameObject:
   m_ObjectHideFlags: 0

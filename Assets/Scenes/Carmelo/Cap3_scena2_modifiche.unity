@@ -3598,6 +3598,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueManager (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4464072075888836310, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
+      propertyPath: m_TagString
+      value: DialogueManager
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
