@@ -53,6 +53,7 @@ public class RagazzoController : MonoBehaviour
     private Vector3 startingPosition;
 
     public GameObject stone;
+    public GameObject tutorial;
 
     public bool stumble;
 
@@ -111,6 +112,8 @@ public class RagazzoController : MonoBehaviour
 
         if (qteStart)
         {
+            Debug.Log("obstacles passed: " + passedObstacles);
+
             targetDirection = Vector3.right;
             if (padreAlreadyStarted)
             {
@@ -119,14 +122,13 @@ public class RagazzoController : MonoBehaviour
             }
 
             //_controller.Move(targetDirection * qteVelocity * Time.deltaTime);
-            if (qteVelocity < 5f)
-                qteVelocity += 0.05f;
+            if (qteVelocity < 4.7f)
+                qteVelocity += 0.08f;
             else
-                qteVelocity = 5f;
+                qteVelocity = 4.7f;
 
             if (passedObstacles == numObstacles && transform.position.x >= stone.transform.position.x)
             {
-
                 qteVelocity = 0;
                 qteStart = false;
                 stumble = true;
@@ -239,7 +241,7 @@ public class RagazzoController : MonoBehaviour
 
     public void JumpRoutine()
     {
-        if (currentPositionX > obstaclesCoo[passedObstacles] - 2f && alreadyJumped)
+        if (currentPositionX > obstaclesCoo[passedObstacles] - 1.5f && alreadyJumped)
         {
             _playerVelocity.y += Mathf.Sqrt(_jumpHeight * -3.0f * _gravityValue);
             _animator.SetTrigger("Jump");
@@ -251,7 +253,6 @@ public class RagazzoController : MonoBehaviour
 
     public void Restart()
     {
-        Debug.Log("starting position ragazzo " + startingPosition);
         _controller.enabled = false;
         this.transform.position = startingPosition;
         _controller.enabled = true;
@@ -260,6 +261,8 @@ public class RagazzoController : MonoBehaviour
         _isGrounded = true;
         _profController.profStartRun = false;
         profAlreadyStarted = true;
+        _animator.SetFloat("Speed", 0);
+        gameObject.GetComponent<RagazzoController>().enabled = false;
     }
 
     public void SetTargetDirection(Vector3 targetDirection)

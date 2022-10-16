@@ -258,7 +258,7 @@ public class PadreStudenteController : MonoBehaviour
     public void JumpRoutine()
     {
         //if (currentPositionX > obstaclesCoo[passedObstacles] - 2f && currentPositionX < obstaclesCoo[passedObstacles] - 1.8f)
-        if (currentPositionX > obstaclesCoo[passedObstacles] - 2f && alreadyJumped)
+        if (currentPositionX > obstaclesCoo[passedObstacles] - 1.5f && alreadyJumped)
         {
           //  Debug.Log("salta mbare1 + ground: " + _isGrounded + " + jumpEnabled: " + _jumpEnabled);
 
@@ -348,6 +348,11 @@ public class PadreStudenteController : MonoBehaviour
 
         ragazzoController.restart = true;
         professoreController.Restart();
+
+        _animator.SetFloat("Speed", 0);
+        gameObject.GetComponent<PadreStudenteController>().enabled = false;
+
+        tutorialCorsa.active = true;
 
         //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
