@@ -21,11 +21,16 @@ public class GameControlleIntroCap1FineIncontroPadreMadre : MonoBehaviour
 
     private int language;
 
+    private bool disableSpace;
+
     void Start()
     {
         countScene = 0;
         
         language = LanguageChangeScript.language;
+
+        disableSpace = true;
+        
 
         if(language == 0){
             currentScene1 = currentScene1_eng;
@@ -46,11 +51,16 @@ public class GameControlleIntroCap1FineIncontroPadreMadre : MonoBehaviour
             return;
         }
         
+        
+        if(bottomBar.IsCompleted()){
+            StartCoroutine(ActiveSpace());
+        }
+
         if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
-            if (bottomBar.IsCompleted())
-            {
-                Debug.Log("GamecontrolleCap1Intro countScene= " + countScene);
+            if (bottomBar.IsCompleted() && !disableSpace)
+            {        
+                /*Debug.Log("GamecontrolleCap1Intro countScene= " + countScene);
                 if (bottomBar.IsLastSentence() && countScene == 0)
                 {
                     currentScene_aux = currentScene_aux.nextScene;
@@ -64,17 +74,23 @@ public class GameControlleIntroCap1FineIncontroPadreMadre : MonoBehaviour
                     countScene++;
                     bottomBar.PlayNextSentence();
                 }
-                else if(countScene == 1){
+                else if(countScene == 1){*/
                     //disattiviamo il canvas e riabilitiamo il movimento del player
-                    canvas2.SetActive(false);
+                    //canvas2.SetActive(false);
+                    canvas2.GetComponent<Canvas>().enabled = false;
                     setterPart2.SetActive(true);
-                }
+                //}
             }
             else if(!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
             {
                 bottomBar.EndCurrentSentence();
             }
         }
+    }
+
+     IEnumerator ActiveSpace(){
+        yield return new WaitForSeconds(2f);
+        disableSpace = false;
     }
 
   

@@ -1768,6 +1768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonText: {fileID: 1854675812}
   langChange: {fileID: 1496611412}
+  isOn: 1
 --- !u!1 &1529960419
 GameObject:
   m_ObjectHideFlags: 0
@@ -1879,6 +1880,10 @@ PrefabInstance:
       propertyPath: menuButtonController
       value: 
       objectReference: {fileID: 1496611411}
+    - target: {fileID: 2297363275234723706, guid: 6c0012a773262f44c8942c0f6f20199e, type: 3}
+      propertyPath: m_Text
+      value: N E W G A M E
+      objectReference: {fileID: 0}
     - target: {fileID: 4369065082735945914, guid: 6c0012a773262f44c8942c0f6f20199e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

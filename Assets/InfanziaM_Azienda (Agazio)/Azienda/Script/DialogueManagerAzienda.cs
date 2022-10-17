@@ -82,11 +82,11 @@ public class DialogueManagerAzienda : MonoBehaviour
             return;
         }
 
-        if(Input.GetKeyDown("space") && viewChoice == false){
+        /*if(Input.GetKeyDown("space") && viewChoice == false){
             //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
             if(disableSpace == false){
-                disableSpace = true;
-                StartCoroutine(disableSpaceFunction());
+                //disableSpace = true;
+                //StartCoroutine(disableSpaceFunction());
                 line++;
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
 
@@ -96,14 +96,14 @@ public class DialogueManagerAzienda : MonoBehaviour
                 else
                     ContinueStory();
             }
-        }
+        }*/
     }
 
 
-    private IEnumerator disableSpaceFunction(){
+    /*private IEnumerator disableSpaceFunction(){
         yield return new WaitForSeconds(1f);
         disableSpace = false;
-     }
+     }*/
 
 
     public void EnterDialogueMode(TextAsset inkJSON){
