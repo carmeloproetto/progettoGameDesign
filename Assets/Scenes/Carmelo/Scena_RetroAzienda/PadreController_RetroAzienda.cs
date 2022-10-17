@@ -111,7 +111,9 @@ public class PadreController_RetroAzienda : MonoBehaviour
             _playerVelocity.y += _gravityValue * Time.deltaTime;
             _controller.Move(_playerVelocity * Time.deltaTime);
         }
-            
+
+        if(this.transform.position.y < 11)
+            this.transform.position = new Vector3(-124.06f, this.transform.position.y, this.transform.position.z);    
 
     }
 
