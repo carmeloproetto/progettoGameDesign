@@ -8,7 +8,8 @@ public class SosBlinkingLight : InteractableObject
     public Light myLight;
     public bool isOn = false;
     private AudioSource audioSource;
-    public GameObject _enemy;
+    public GameObject _direttore;
+    public GameObject dipendente;
     public GameObject trigger; 
 
     public IEnumerator Blink()
@@ -41,7 +42,9 @@ public class SosBlinkingLight : InteractableObject
             myLight.enabled = true; //abilito la luce
             audioSource.Play();
 
-            _enemy.GetComponent<Animator>().SetBool("isLooking", false);
+            _direttore.GetComponent<Animator>().SetBool("isLooking", false);
+            dipendente.GetComponent<Animator>().SetTrigger("SosAlarmOn");
+            dipendente.GetComponent<FieldOfView>().DisableFOV();
 
             isOn = true;
             StartCoroutine(Blink());

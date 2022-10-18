@@ -22,7 +22,8 @@ public class MoveToDestinationTrigger : MonoBehaviour
     void Update()
     {
         float distance = (player.transform.position - destination.transform.position).magnitude;
-        if( distance < .1f && !destinationReached )
+    
+        if( distance < .5f && !destinationReached )
         {
             destinationReached = true; 
             _pController.IsMoving(false);
@@ -39,15 +40,19 @@ public class MoveToDestinationTrigger : MonoBehaviour
     {
         if( other.gameObject.name == "PlayerArmature" )
         {
+            Vector3 direction = destination.transform.position - player.transform.position;
+            direction.y = 0;
+            direction.Normalize();
+
             //disable enemy's field of view
-            enemy.GetComponent<FieldOfView>().DisableFOV();
+            //enemy.GetComponent<FieldOfView>().DisableFOV();
             Transform playerTransform = other.GetComponent<Transform>();
 
             //ruota direzione forward verso lo schermo
             _pController.DisableInput();
             _pController.DisableJump();
-            playerTransform.DORotate(new Vector3(0, 180f, 0), 1f);
-            _pController.SetTargetDirection(Vector3.back);
+            playerTransform.DOLookAt(destination.transform.position, 1f);
+            _pController.SetTargetDirection(direction);
 
             //muovi in avanti
             _pController.IsMoving(true);

@@ -31,7 +31,8 @@ public class WalkingState2 : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         agent.SetDestination(agent.transform.position);
-        agent.speed = 0f;
+        //agent.speed = 0f;
         animator.SetBool("isWalking", false);
+        animator.ResetTrigger("atDestination");
     }
 }

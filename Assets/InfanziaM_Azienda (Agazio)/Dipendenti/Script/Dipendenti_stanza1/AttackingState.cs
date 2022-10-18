@@ -12,6 +12,8 @@ public class AttackingState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>();
+        _player.GetComponent<PlayerController_Agazio>().DisableJump();
+        _player.GetComponent<PlayerController_Agazio>().DisableInput();
         _agent = animator.GetComponent<NavMeshAgent>();
         _agent.speed = 0;   
     }

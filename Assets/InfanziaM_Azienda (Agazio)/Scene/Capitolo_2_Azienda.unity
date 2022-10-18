@@ -698,7 +698,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 128
-  visibleTargets: []
+  visibleTarget: {fileID: 0}
 --- !u!114 &182757684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2852,7 +2852,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 128
-  visibleTargets: []
+  visibleTarget: {fileID: 0}
 --- !u!82 &565931925
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4083,7 +4083,8 @@ MonoBehaviour:
   maxIntensity: 1
   myLight: {fileID: 2000493325}
   isOn: 0
-  _enemy: {fileID: 15991586004679031}
+  _direttore: {fileID: 15991586004679031}
+  dipendente: {fileID: 1589494459064905456}
   trigger: {fileID: 825750740}
 --- !u!65 &753764455
 BoxCollider:
@@ -5461,7 +5462,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913467433}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.58, y: 2.501, z: -5.08}
+  m_LocalPosition: {x: 0.96, y: 2.501, z: -5.08}
   m_LocalScale: {x: 0.04598, y: 0.04598, z: 0.04598}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8106,6 +8107,8 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: a48c205d27b9d4c9ab97d3f274d0bc6c, type: 3}
   italian_text: PER INTERAGIRE CON LA PIANTA
   english_text: TO INTERACT WITH THE PLANT
+  dipendente_1: {fileID: 823345522115442647}
+  dipendente_2: {fileID: 3912541479411051152}
   plant: {fileID: 264457734}
 --- !u!1001 &1605923624
 PrefabInstance:
@@ -8805,7 +8808,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 128
-  visibleTargets: []
+  visibleTarget: {fileID: 0}
 --- !u!82 &1710617162
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8954,7 +8957,7 @@ MeshCollider:
   m_GameObject: {fileID: 1712845136}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -10189,7 +10192,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 128
-  visibleTargets: []
+  visibleTarget: {fileID: 0}
 --- !u!82 &1851912839
 AudioSource:
   m_ObjectHideFlags: 0
@@ -12279,7 +12282,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 128
-  visibleTargets: []
+  visibleTarget: {fileID: 0}
 --- !u!82 &823345522115442645
 AudioSource:
   m_ObjectHideFlags: 0
@@ -13071,15 +13074,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91391ed2097784c6c85edb5fc138a689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 8
-  viewAngle: 168
+  viewRadius: 5.78
+  viewAngle: 154
   targetMask:
     serializedVersion: 2
     m_Bits: 64
   obstacleMask:
     serializedVersion: 2
     m_Bits: 128
-  visibleTargets: []
+  visibleTarget: {fileID: 0}
 --- !u!82 &1589494459064905459
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15151,7 +15154,7 @@ MonoBehaviour:
   obstacleMask:
     serializedVersion: 2
     m_Bits: 128
-  visibleTargets: []
+  visibleTarget: {fileID: 0}
 --- !u!82 &3912541479411051150
 AudioSource:
   m_ObjectHideFlags: 0

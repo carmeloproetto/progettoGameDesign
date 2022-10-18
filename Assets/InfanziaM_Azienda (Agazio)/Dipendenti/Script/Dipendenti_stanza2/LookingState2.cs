@@ -26,6 +26,7 @@ public class LookingState2 : StateMachineBehaviour
 
         if(_player.GetComponent<PlayerController_Agazio>().velocity > 1.9f && _player.GetComponent<PlayerController_Agazio>()._isBehindChest)
         {
+            animator.gameObject.GetComponent<FieldOfView>().SetVisibleTarget(_player.transform);
             animator.SetBool("isChasing", true);
             //_player.GetComponent<PlayerController>().DisableJump();
             //_player.GetComponent<PlayerController>().DisableInput();

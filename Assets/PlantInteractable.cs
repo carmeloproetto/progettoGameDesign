@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlantInteractable : InteractableObject
 {
+    public Animator dipendente_1;
+    public Animator dipendente_2;
     public Transform plant; 
     private new Rigidbody rigidbody;
     private Vector3 forceVector;
@@ -13,10 +15,17 @@ public class PlantInteractable : InteractableObject
 
     public override bool Interact()
     {
-        rigidbody.AddForce(forceVector * forceValue);
-        //tutorial.SetActive(false);
-        this.GetComponent<BoxCollider>().enabled = false; 
-        return true;
+        if (!GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().GetBool("isDying") &&
+            (!dipendente_1.GetBool("isChasing") && !dipendente_1.GetBool("isAtDestination")) && (!dipendente_2.GetBool("isChasing") && !dipendente_2.GetBool("isAtDestination")))
+        {
+            rigidbody.AddForce(forceVector * forceValue);
+            //tutorial.SetActive(false);
+            this.GetComponent<BoxCollider>().enabled = false;
+            dipendente_1.GetComponent<FieldOfView>().DisableFOV();
+            dipendente_2.GetComponent<FieldOfView>().DisableFOV();
+            return true;
+        }
+        return false;
     }
 
     protected override void Start()

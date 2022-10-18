@@ -12,24 +12,22 @@ public class FieldOfView : MonoBehaviour
     public LayerMask targetMask;
     public LayerMask obstacleMask;
 
-    public List<Transform> visibleTargets = new List<Transform>();
+    public Transform visibleTarget = null;
 
     private Animator _animator;
-    private PlayerController_Agazio _pController; 
 
-    private bool _isEnabled = true; 
+    private bool _isEnabled = true;
 
     // Start is called before the first frame update
     void Start()
     {
         _animator = GetComponent<Animator>();
-        _pController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController_Agazio>(); 
         StartCoroutine("FindTargetsWithDelay", .2f);
     }
 
     IEnumerator FindTargetsWithDelay(float delay)
     {
-        while (true && _isEnabled )
+        while ( _isEnabled && visibleTarget == null )
         {
             yield return new WaitForSeconds(delay);
             FindVisibleTargets(); 
@@ -51,7 +49,7 @@ public class FieldOfView : MonoBehaviour
 
                 if(!Physics.Raycast(transform.position, dirToTarget, distToTarget, obstacleMask))
                 {
-                    visibleTargets.Add(target);
+                    visibleTarget = target;
                     if (_animator.GetBool("isLooking") || _animator.GetBool("isWalking"))
                     {
                         _animator.SetBool("isChasing", true);
@@ -75,8 +73,12 @@ public class FieldOfView : MonoBehaviour
 
     public void Attack()
     {
-        Transform target = visibleTargets[0];
-        target.GetComponent<Animator>().SetBool("isDying", true); 
+        visibleTarget.GetComponent<Animator>().SetBool("isDying", true); 
+    }
+
+    public void SetVisibleTarget(Transform target)
+    {
+        this.visibleTarget = target;
     }
 
     public void TurningCorutine(float duration, Quaternion targetRotation)

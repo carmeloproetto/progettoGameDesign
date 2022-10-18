@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class TextingState : StateMachineBehaviour
 {
@@ -11,6 +12,7 @@ public class TextingState : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.GetComponent<NavMeshAgent>().speed = 0f;
         _timer = 0f;
         _textingTime = Random.Range(4f, 7f);
     }
