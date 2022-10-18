@@ -50,7 +50,7 @@ public class DialogueManagerCap2 : MonoBehaviour
     public GameObject mom;
     public GameObject sindaco;
     public GameObject canvas2;
-    
+    public GameObject canvas;
 
     private bool noAnimation;
 
@@ -245,6 +245,7 @@ public class DialogueManagerCap2 : MonoBehaviour
         yield return new WaitForSeconds(1f);
         canvas2.GetComponent<fineCap2Scena1>().enabled = true;
         canvas2.GetComponent<Canvas>().enabled = true;
+        canvas.GetComponent<Canvas>().enabled = false;
      }
 
 

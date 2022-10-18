@@ -75,7 +75,7 @@ public class GameControllerFineCap1 : MonoBehaviour
          else if(Input.GetKeyDown(KeyCode.E)){
             this.GetComponent<Canvas>().enabled = false;
             canvasSkip.SetActive(false);
-            levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+            levelLoader.GetComponent<LevelLoaderScript>().skip2Scene = true;
          }
     }
 

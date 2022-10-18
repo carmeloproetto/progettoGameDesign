@@ -14,6 +14,8 @@ public class AnimationEvents : MonoBehaviour
     public Transform paper;
     public Rig rig; 
 
+    public GameObject mom;
+
     public void LiberaGabbia()
     {
         //_startTransition = true;
@@ -67,11 +69,20 @@ public class AnimationEvents : MonoBehaviour
 
     public void PaperOn()
     {
+        Debug.Log("Estraggo il foglio");
         paper.gameObject.SetActive(true);
     }
 
     public void PaperOff()
     {
+         Debug.Log("Conservo il foglio");
         paper.gameObject.SetActive(false);
+    }
+
+
+    public void StartCorsa(){
+        Debug.Log("Attivo lo script");
+        
+        mom.GetComponent<followDestinationCap2_3_2>().followDestinationEnabled = true;
     }
 }

@@ -7,6 +7,7 @@ public class LevelLoaderScript : MonoBehaviour
 {
 
     public bool loadScene;
+    public bool skip2Scene;
 
     public Animator transition;
 
@@ -14,6 +15,7 @@ public class LevelLoaderScript : MonoBehaviour
 
     void Start(){
         loadScene = false;
+        skip2Scene = false;
     }
 
     // Update is called once per frame
@@ -21,12 +23,19 @@ public class LevelLoaderScript : MonoBehaviour
     {
         if(loadScene){
             LoadNextLevel();
-        }       
+        }
+        else if(skip2Scene)
+            Skip2Scene();
     }
 
     public void LoadNextLevel(){
         loadScene = false;
         StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
+    }
+
+    public void Skip2Scene(){
+        skip2Scene = false;
+        StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 2));
     }
 
     IEnumerator LoadLevel(int levelIndex){

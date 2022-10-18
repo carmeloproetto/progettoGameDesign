@@ -757,6 +757,7 @@ MonoBehaviour:
   mom: {fileID: 6829654055629861434}
   sindaco: {fileID: 698159548}
   canvas2: {fileID: 0}
+  canvas: {fileID: 0}
   btn_choice_sx: {fileID: 0}
   btn_choice_dx: {fileID: 0}
   textmeshPro: {fileID: 0}
@@ -2166,7 +2167,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813012456}
   m_LocalRotation: {x: 0.055785153, y: 0.23408732, z: -0.0048516146, w: 0.9706017}
-  m_LocalPosition: {x: -5.77, y: 3.64, z: -6.11}
+  m_LocalPosition: {x: -5.01, y: 4.03, z: -4.61}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3003,7 +3004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1360542373}
-  speed: 0.05
+  speed: 0.06
   dad: {fileID: 698159548}
   curTarDirection: {x: 0, y: 0, z: 0}
   followDestinationEnabled: 0
@@ -5108,7 +5109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1286206492841796131
 GameObject:
   m_ObjectHideFlags: 0
@@ -6211,6 +6212,7 @@ MonoBehaviour:
   gabbiaFloorDoor: {fileID: 0}
   paper: {fileID: 543450652971349806}
   rig: {fileID: 0}
+  mom: {fileID: 6829654055629861434}
 --- !u!1 &6930885976806538594
 GameObject:
   m_ObjectHideFlags: 0

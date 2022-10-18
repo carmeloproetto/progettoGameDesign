@@ -34,8 +34,8 @@ public class followDestinationCap2_3_2 : MonoBehaviour
     {
 
         if(followDestinationEnabled){
-            this.GetComponent<followDestinationCap2_3>().enabled = false;
-        
+            //this.GetComponent<followDestinationCap2_3>().enabled = false;
+            Debug.Log("scappo");
             Vector3 a = transform.position;
             transform.position = Vector3.MoveTowards(a, b, speed);
             _animator.SetFloat("Speed", velocity);
@@ -45,7 +45,7 @@ public class followDestinationCap2_3_2 : MonoBehaviour
             //abbiamo raggiunto la destinazione
             if(transform.position.x == target.position.x && transform.position.z == target.position.z){
                 DialogueManagerCap2_3.finale = 3;
-
+                Debug.Log("siamo arrivati a destinazione, possiamo caricare la scena successiva");
                 StartCoroutine(LoadScene());
             }
         }

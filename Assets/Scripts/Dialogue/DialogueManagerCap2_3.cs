@@ -192,6 +192,7 @@ public class DialogueManagerCap2_3 : MonoBehaviour
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1 && no){
+            Debug.Log("ho scelto NO");
             mom.GetComponent<Animator>().SetBool("PutBack", false);
             mom.GetComponent<Animator>().SetBool("Talk", false);
             mom.GetComponent<DialogueTriggerCap2_3>().enabled = false;

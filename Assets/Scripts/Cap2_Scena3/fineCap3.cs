@@ -133,6 +133,11 @@ public class fineCap3 : MonoBehaviour
                     }
                 }
             }
+            else if (!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            {
+                bottomBar.EndCurrentSentence();
+            }
+
         }
         else if(Input.GetKeyDown(KeyCode.E)){
             canvasSkip.SetActive(false);

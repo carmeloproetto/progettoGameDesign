@@ -842,6 +842,7 @@ MonoBehaviour:
   mom: {fileID: 1200755669}
   sindaco: {fileID: 698159548}
   canvas2: {fileID: 1151394172}
+  canvas: {fileID: 990727349}
   btn_choice_sx: {fileID: 1053166347}
   btn_choice_dx: {fileID: 1053166346}
   textmeshPro: {fileID: 1272346093}
@@ -2962,6 +2963,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &990727349 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4276218020633457544, guid: b4d2ab11bad8bb74fb3182dd0988ce64, type: 3}
+  m_PrefabInstance: {fileID: 1053166343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1010478063
 GameObject:
   m_ObjectHideFlags: 0
