@@ -51,9 +51,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Carmelo/Cap3_scena2.unity
     guid: abb36367ca9ba7041bf2a986ee760192
   - enabled: 1
-    path: Assets/Scenes/Carmelo/Cap3_scena2_modifiche.unity
-    guid: ca7f6d71caf0f4216a62149a71c6a752
-  - enabled: 1
     path: Assets/Scenes/Carmelo/Cap3_fine.unity
     guid: c97b735205e462448be821785eec03bf
   m_configObjects:
