@@ -13,6 +13,7 @@ public class AnimationEventManager : MonoBehaviour
     public Rig rig;
     public Transform acorn;
     public Transform squirrel;
+    public Transform fountainWater; 
 
 
     public void PunchReact()
@@ -132,6 +133,14 @@ public class AnimationEventManager : MonoBehaviour
 
     public void CloseFountain()
     {
-        Debug.Log("Fountain closed!");
+        ParticleSystem pSystem = fountainWater.gameObject.GetComponent<ParticleSystem>();
+        if( pSystem.isPlaying )
+        {
+            pSystem.Stop();
+        }
+        else if ( pSystem.isStopped )
+        {
+            pSystem.Play();
+        }
     }
 }
