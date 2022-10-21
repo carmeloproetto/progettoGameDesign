@@ -10,7 +10,9 @@ public class AnimationEventManager : MonoBehaviour
     public Animator dad;
     public Transform rightHandIK;
     public Transform rightHandBone; 
-    public Rig rig; 
+    public Rig rig;
+    public Transform acorn;
+    public Transform squirrel;
 
 
     public void PunchReact()
@@ -113,4 +115,23 @@ public class AnimationEventManager : MonoBehaviour
         }
     }
 
+    public void AcornOn()
+    {
+        this.acorn.gameObject.SetActive(true);
+    }
+
+    public void AcornOff()
+    {
+        this.acorn.gameObject.SetActive(false);
+    }
+
+    public void SquirrelJump()
+    {
+        squirrel.gameObject.GetComponent<Animator>().SetTrigger("Jump");
+    }
+
+    public void CloseFountain()
+    {
+        Debug.Log("Fountain closed!");
+    }
 }
