@@ -9,11 +9,11 @@ public class QTEButton : MonoBehaviour
     public Image _ringImage;
     private bool keyPressed = false;
     private bool buttonDisplayed = true;
-    private bool _active = false; 
+    private bool _active = false;
 
     public Animator bulloAnim;
     public Animator padre;
-    public float _currTime = 0f; 
+    [SerializeField] public float _currTime = 0f; 
 
     // Start is called before the first frame update
     void Start()
