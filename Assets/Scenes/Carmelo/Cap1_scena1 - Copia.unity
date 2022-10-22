@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 467117973}
-  m_IndirectSpecularColor: {r: 0.1412368, g: 0.33631372, b: 0.63772166, a: 1}
+  m_IndirectSpecularColor: {r: 0.1285102, g: 0.39423317, b: 0.874984, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -21950,7 +21950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7f5cea1d1be284d8e7ceb792e82008, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 7433081326350089807}
+  target: {fileID: 7433081328015062387}
   target2: {fileID: 7433081328015062387}
   target3: {fileID: 3456737716106869955}
   target_aux: {fileID: 0}
@@ -26533,13 +26533,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.16458568, g: 0.25231987, b: 0.329285, a: 1}
-  deepColor: {r: 0.4171032, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.16458505, g: 0.25231922, b: 0.32928434, a: 1}
+  deepColor: {r: 0.41710255, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.38
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 3.5
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30159283, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30159217, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
@@ -26552,7 +26552,7 @@ MonoBehaviour:
   surfaceFoamCutoff: 0.43
   surfaceFoamDistortion: 1.24
   surfaceFoamBlend: 0.68
-  surfaceFoamColor1: {r: 0.023540407, g: 0.15288106, b: 0.21681109, a: 0.19215687}
+  surfaceFoamColor1: {r: 0.023540407, g: 0.15288043, b: 0.21681044, a: 0.19215687}
   surfaceFoamColor2: {r: 1, g: 1, b: 1, a: 0.35686275}
   surfaceFoamMovement: {x: 0.28, y: 0.03, z: 0.24, w: 0.01}
   surfaceFoamDirection1: 0.28
@@ -40922,7 +40922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1728221635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60106,7 +60106,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7812703812985909193}
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 102.33, y: 10.13683, z: -21.5}
+  m_LocalPosition: {x: -39.92, y: 10.13683, z: -21.5}
   m_LocalScale: {x: 0.6344314, y: 0.6344314, z: 0.6344314}
   m_Children:
   - {fileID: 2493401605318678165}
@@ -60670,7 +60670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!82 &7812703811320931574
 AudioSource:
   m_ObjectHideFlags: 0
