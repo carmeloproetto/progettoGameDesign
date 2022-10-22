@@ -67,17 +67,20 @@ public class AnimationEventManager : MonoBehaviour
 
     public void ParentLattina_1()
     {
-        GameObject.FindGameObjectWithTag("Spazzatura_1").GetComponent<Rigidbody>().isKinematic = true; 
+        GameObject.FindGameObjectWithTag("Spazzatura_1").GetComponent<Rigidbody>().isKinematic = true;
+        GameObject.FindGameObjectWithTag("Spazzatura_1").transform.position = rightHandBone.position;
         GameObject.FindGameObjectWithTag("Spazzatura_1").transform.SetParent(rightHandBone);
     }
     public void ParentLattina_2()
     {
         GameObject.FindGameObjectWithTag("Spazzatura_2").GetComponent<Rigidbody>().isKinematic = true;
+        GameObject.FindGameObjectWithTag("Spazzatura_2").transform.position = rightHandBone.position;
         GameObject.FindGameObjectWithTag("Spazzatura_2").transform.SetParent(rightHandBone);
     }
     public void ParentLattina_3()
     {
         GameObject.FindGameObjectWithTag("Spazzatura_3").GetComponent<Rigidbody>().isKinematic = true;
+        GameObject.FindGameObjectWithTag("Spazzatura_3").transform.position = rightHandBone.position;
         GameObject.FindGameObjectWithTag("Spazzatura_3").transform.SetParent(rightHandBone);
     }
 

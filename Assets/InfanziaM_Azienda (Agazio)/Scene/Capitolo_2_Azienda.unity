@@ -11410,6 +11410,18 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3635316266544917610, guid: 153abaa15ffdd4668a90d13cb0879049, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635316266544917610, guid: 153abaa15ffdd4668a90d13cb0879049, type: 3}
+      propertyPath: m_FillCenter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635316266544917610, guid: 153abaa15ffdd4668a90d13cb0879049, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3635316267117459335, guid: 153abaa15ffdd4668a90d13cb0879049, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0

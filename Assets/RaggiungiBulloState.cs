@@ -17,7 +17,7 @@ public class RaggiungiBulloState : StateMachineBehaviour
         _agent.speed = 1.5f;
         _agent.updatePosition = true;
         _agent.updateRotation = true; 
-        _agent.stoppingDistance = 0.6f;
+        _agent.stoppingDistance = 0.4f;
         _agent.SetDestination(_bullo.position);
     }
 

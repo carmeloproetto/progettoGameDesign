@@ -1670,6 +1670,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3635316266544917610, guid: 153abaa15ffdd4668a90d13cb0879049, type: 3}
+      propertyPath: m_PixelsPerUnitMultiplier
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3635316267117459335, guid: 153abaa15ffdd4668a90d13cb0879049, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2466,7 +2470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: febfaef910f8042c58f7f68f89635639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fillingTime: 0.5
+  _fillingTime: 2
   _ringImage: {fileID: 2098094073}
   bulloAnim: {fileID: 8771319006750343724}
   padre: {fileID: 3587029973003726601}
@@ -16353,7 +16357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: febfaef910f8042c58f7f68f89635639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fillingTime: 2
+  _fillingTime: 1
   _ringImage: {fileID: 955969334}
   bulloAnim: {fileID: 8771319006750343724}
   padre: {fileID: 3587029973003726601}
@@ -26533,13 +26537,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.16458097, g: 0.2523149, b: 0.32928002, a: 1}
-  deepColor: {r: 0.41709825, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.16458064, g: 0.25231457, b: 0.32927966, a: 1}
+  deepColor: {r: 0.4170979, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.38
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 3.5
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30158788, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30158752, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
@@ -26552,7 +26556,7 @@ MonoBehaviour:
   surfaceFoamCutoff: 0.43
   surfaceFoamDistortion: 1.24
   surfaceFoamBlend: 0.68
-  surfaceFoamColor1: {r: 0.023540407, g: 0.15287635, b: 0.21680611, a: 0.19215687}
+  surfaceFoamColor1: {r: 0.023540407, g: 0.15287602, b: 0.21680579, a: 0.19215687}
   surfaceFoamColor2: {r: 1, g: 1, b: 1, a: 0.35686275}
   surfaceFoamMovement: {x: 0.28, y: 0.03, z: 0.24, w: 0.01}
   surfaceFoamDirection1: 0.28
@@ -31609,7 +31613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: febfaef910f8042c58f7f68f89635639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fillingTime: 2
+  _fillingTime: 1
   _ringImage: {fileID: 360270858}
   bulloAnim: {fileID: 8771319006750343724}
   padre: {fileID: 3587029973003726601}
@@ -39918,7 +39922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: febfaef910f8042c58f7f68f89635639, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fillingTime: 2
+  _fillingTime: 1
   _ringImage: {fileID: 424377385}
   bulloAnim: {fileID: 8771319006750343724}
   padre: {fileID: 3587029973003726601}
@@ -51677,7 +51681,7 @@ Animator:
   m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -61014,7 +61018,7 @@ MonoBehaviour:
   ragazzino: {fileID: 2644488261116814968}
   dad: {fileID: 3587029973003726601}
   rightHandIK: {fileID: 1947606725}
-  rightHandBone: {fileID: 6605117864558938449}
+  rightHandBone: {fileID: 3691512261838729279}
   rig: {fileID: 1915916281}
   acorn: {fileID: 675357233}
   squirrel: {fileID: 1250131010}
