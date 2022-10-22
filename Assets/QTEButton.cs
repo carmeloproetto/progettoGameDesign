@@ -40,6 +40,7 @@ public class QTEButton : MonoBehaviour
 
                     //QTE Success
                     Debug.Log("Success");
+                    _ringImage.CrossFadeColor(Color.green, 2f, true, true);
                     bulloAnim.SetTrigger("QTEsuccess");
                     padre.SetTrigger("QTEsuccess");
                     _active = false; 
@@ -52,7 +53,8 @@ public class QTEButton : MonoBehaviour
 
                 //transizione in uscita button
                 buttonDisplayed = false;
-                _active = false; 
+                _active = false;
+                _ringImage.CrossFadeColor(Color.red, 2f, true, true);
                 LeanTween.scale(transform.gameObject, new Vector3(0f, 0f, 0f), 1f).setDelay(.3f).setEase(LeanTweenType.easeInOutElastic);
                 Debug.Log("Failed: timeout!");
                 bulloAnim.SetTrigger("QTEfail");
