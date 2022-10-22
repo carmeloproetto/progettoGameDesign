@@ -119,13 +119,7 @@ public class PadreStudenteController : MonoBehaviour
             DisableInput();
             DisableJump();
 
-
-            /*if (Vector3.Distance(ragazzo.transform.position, transform.position) >= 7f){
-                Restart();
-                return;
-            }*/
-
-            if(ragazzo.transform.position.x - transform.position.x >= 7f)
+            if(ragazzo.transform.position.x - transform.position.x >= 9f) //se sono troppo distanti
             {
                 Restart();
                 return;
@@ -152,14 +146,13 @@ public class PadreStudenteController : MonoBehaviour
 
             //}
 
-
             if (jumpQTE)
                 JumpRoutine();
             else
             {
                 alreadyJumped = true;
                 _auxCount++;
-                if (_auxCount >= 10)
+                if (_auxCount >= 15)
                 {
                     qteVelocity -= 0.2f;
                     if (qteVelocity <= 0) qteVelocity = 0;
@@ -170,9 +163,9 @@ public class PadreStudenteController : MonoBehaviour
                 {
                     qteVelocity += 1f;
                     if (qteVelocity > 5f) qteVelocity = 5f;
-                    //Debug.Log("qteVelocity : " + qteVelocity);
                 }
             }
+
             velocityComponents = targetDirection * qteVelocity * Time.deltaTime;
             velocityComponents.y = _playerVelocity.y * Time.deltaTime;
             //Debug.Log("velocity comp1 " + velocityComponents);
@@ -340,6 +333,7 @@ public class PadreStudenteController : MonoBehaviour
         _isGrounded = true;
         _animator.SetBool("FreeFall", false);
         passedObstacles = 0;
+        jumpQTE = false;
 
         foreach (Transform t in obstacles.transform)
             t.GetChild(0).gameObject.SetActive(false);
@@ -347,7 +341,7 @@ public class PadreStudenteController : MonoBehaviour
         //ragazzo.transform.position = new Vector3(-12.5240002f, 2.49099994f, -2.21600008f);
 
         ragazzoController.restart = true;
-        professoreController.Restart();
+        professoreController.restart = true;
 
         _animator.SetFloat("Speed", 0);
         gameObject.GetComponent<PadreStudenteController>().enabled = false;

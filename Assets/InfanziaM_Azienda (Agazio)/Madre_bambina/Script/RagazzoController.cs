@@ -97,7 +97,7 @@ public class RagazzoController : MonoBehaviour
             return;
         }
 
-        if(currentPositionX >= 13.75f)
+        if(transform.position.x >= 13.75f)
             if (profAlreadyStarted)
             {
                 _profController.profStartRun = true;
@@ -112,7 +112,7 @@ public class RagazzoController : MonoBehaviour
 
         if (qteStart)
         {
-            Debug.Log("obstacles passed: " + passedObstacles);
+            //Debug.Log("obstacles passed: " + passedObstacles);
 
             targetDirection = Vector3.right;
             if (padreAlreadyStarted)
@@ -122,10 +122,10 @@ public class RagazzoController : MonoBehaviour
             }
 
             //_controller.Move(targetDirection * qteVelocity * Time.deltaTime);
-            if (qteVelocity < 4.7f)
-                qteVelocity += 0.08f;
+            if (qteVelocity < 5f)
+                qteVelocity += 0.03f;
             else
-                qteVelocity = 4.7f;
+                qteVelocity = 5f;
 
             if (passedObstacles == numObstacles && transform.position.x >= stone.transform.position.x)
             {
@@ -258,10 +258,12 @@ public class RagazzoController : MonoBehaviour
         _controller.enabled = true;
         qteVelocity = 0;
         passedObstacles = 0;
-        _isGrounded = true;
         _profController.profStartRun = false;
         profAlreadyStarted = true;
         _animator.SetFloat("Speed", 0);
+        _animator.SetBool("FreeFall", false);
+        _animator.SetBool("Jump", false);
+        _animator.SetBool("Grounded", true);
         gameObject.GetComponent<RagazzoController>().enabled = false;
     }
 
