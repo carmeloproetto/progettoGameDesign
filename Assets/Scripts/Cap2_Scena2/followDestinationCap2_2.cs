@@ -44,7 +44,7 @@ public class followDestinationCap2_2 : MonoBehaviour
 
         //abbiamo raggiunto la destinazione
         if(transform.position.x == target.position.x && transform.position.z == target.position.z){
-           // transform.LookAt(barrel);
+            // transform.LookAt(barrel);
             _animator.SetFloat("Speed", 0f);
             this.GetComponent<followDestinationCap2_2>().enabled = false;
             if(this.name == "Manifestante01")

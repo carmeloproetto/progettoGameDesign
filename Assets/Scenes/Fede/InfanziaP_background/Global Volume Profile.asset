@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 8.5
+    m_Value: 20.05
     min: 0
   gaussianEnd:
     m_OverrideState: 0
@@ -27,7 +27,7 @@ MonoBehaviour:
     min: 0
   gaussianMaxRadius:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 1.104
     min: 0.5
     max: 1.5
   highQualitySampling:
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b2db86121404754db890f4c8dfe81b2, type: 3}
   m_Name: Bloom
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   threshold:
     m_OverrideState: 0
@@ -82,11 +82,11 @@ MonoBehaviour:
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.65
+    m_Value: 0.21
     min: 0
   scatter:
     m_OverrideState: 1
-    m_Value: 0.166
+    m_Value: 0.723
     min: 0
     max: 1
   clamp:
@@ -109,7 +109,7 @@ MonoBehaviour:
     max: 16
   dirtTexture:
     m_OverrideState: 0
-    m_Value: {fileID: 0}
+    m_Value: {fileID: 2800000, guid: f2c40b951cee11943a1f6d5ec1b42f2c, type: 3}
   dirtIntensity:
     m_OverrideState: 0
     m_Value: 0
@@ -184,7 +184,7 @@ MonoBehaviour:
     m_Value: 0
   contrast:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 4
     min: -100
     max: 100
   colorFilter:
@@ -195,12 +195,12 @@ MonoBehaviour:
     showEyeDropper: 1
   hueShift:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: -6
     min: -180
     max: 180
   saturation:
     m_OverrideState: 1
-    m_Value: 7
+    m_Value: 9
     min: -100
     max: 100
 --- !u!114 &4461827328336649716
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   type:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   intensity:
     m_OverrideState: 1
     m_Value: 0.255
@@ -245,11 +245,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899c54efeace73346a0a16faa3afe726, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0.5463984, b: 1, a: 1}
+    m_Value: {r: 0.46226418, g: 0.21361993, b: 0.006541462, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -258,12 +258,12 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0.356
     min: 0
     max: 1
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.823
+    m_Value: 0.092
     min: 0.01
     max: 1
   rounded:
