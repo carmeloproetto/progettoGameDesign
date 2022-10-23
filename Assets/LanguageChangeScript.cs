@@ -21,7 +21,7 @@ public class LanguageChangeScript : MonoBehaviour
 
     public bool isEng = true;
 
-    public static int language = 1;
+    public static int language = 0;
 
     private Scene thisScene;
 
