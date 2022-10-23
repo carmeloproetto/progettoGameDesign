@@ -47,22 +47,22 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
 
         if(playerInRange && !DialogueManagerCap2_2.GetInstance().dialogueIsPlaying){
             if(Input.GetKeyDown("e") || startConv){
-                visualCue.SetActive(false);
+                //visualCue.SetActive(false);
                 if(this.name == "triggerDialogueZoneGuardia"){
                     mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "Guardia";
                     guardia.GetComponent<Animator>().SetBool("No", true);
                 }
                 else if(this.name == "TriggerDialogueZoneDx"){
                     mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "ManifestanteDx";
-                    mom.transform.eulerAngles = new Vector3(0f, 0f, 0f);
+                    //mom.transform.eulerAngles = new Vector3(0f, 0f, 0f);
                     manifestanteDx.GetComponent<Animator>().SetBool("Speak", true);
                 }
                 else if(this.name == "TriggerDialogueZoneSx"){
                     mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "ManifestanteSx";
-                    mom.transform.eulerAngles = new Vector3(0f, 0f, 0f);
+                    //mom.transform.eulerAngles = new Vector3(0f, 0f, 0f);
                 }
                 else if(this.name == "TriggerDialogueZoneCentro"){
-                    mom.transform.eulerAngles = new Vector3(0f, 0f, 0f);
+                    //mom.transform.eulerAngles = new Vector3(0f, 0f, 0f);
                     manifestanteCen.GetComponent<Animator>().SetBool("Talk", true);
                     if(mom.GetComponent<DialogueManagerCap2_2>().talkedToGuard){
                         if(language == 1)
@@ -87,7 +87,7 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
         
         if(collider.CompareTag("Player")){
             playerInRange = true;
-            visualCue.SetActive(true);
+            //visualCue.SetActive(true);
 
             
         }
@@ -96,7 +96,7 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
     private void OnTriggerExit(Collider collider){
         if(collider.CompareTag("Player")){
             playerInRange = false;
-            visualCue.SetActive(false);
+            //visualCue.SetActive(false);
         }
     }
 

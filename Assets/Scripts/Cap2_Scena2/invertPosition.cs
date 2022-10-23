@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class invertPosition : MonoBehaviour
@@ -19,6 +20,7 @@ public class invertPosition : MonoBehaviour
         if(rotateEnabled == true){
            
             icon.transform.parent = null;
+            //this.transform.DOLookAt(-this.transform.forward, 1f);
             this.transform.eulerAngles = new Vector3(0f, x, 0f);
             icon.transform.parent = this.transform;
             rotateEnabled = false;
