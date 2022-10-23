@@ -69,7 +69,8 @@ public class QTEButton : MonoBehaviour
         _active = true;
         buttonDisplayed = true;
         keyPressed = false;
-        _currTime = 0f; 
+        _currTime = 0f;
+        _ringImage.CrossFadeColor(Color.white, 0f, true, true);
         LeanTween.scale(transform.gameObject, new Vector3(1f, 1f, 1f), 1f).setEase(LeanTweenType.easeInOutCirc);
     }
 }

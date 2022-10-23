@@ -13,7 +13,12 @@ public class AnimationEventManager : MonoBehaviour
     public Rig rig;
     public Transform acorn;
     public Transform squirrel;
-    public Transform fountainWater; 
+    public Transform fountainWater;
+    public ParticleSystem pSystem_1_dad;
+    public ParticleSystem pSystem_2_dad;
+    public ParticleSystem pSystem_1_ragazzino;
+    public ParticleSystem pSystem_2_ragazzino;
+    public ParticleSystem pSystem_fountain;
 
 
     public void PunchReact()
@@ -139,11 +144,29 @@ public class AnimationEventManager : MonoBehaviour
         ParticleSystem pSystem = fountainWater.gameObject.GetComponent<ParticleSystem>();
         if( pSystem.isPlaying )
         {
+            pSystem_fountain.Stop();
             pSystem.Stop();
         }
         else if ( pSystem.isStopped )
         {
             pSystem.Play();
+            pSystem_fountain.Play();
         }
+    }
+
+    public void PlayParticleSystemDad()
+    {
+        pSystem_1_dad.gameObject.SetActive(true);
+        pSystem_2_dad.gameObject.SetActive(true);
+        pSystem_2_dad.Play();
+        pSystem_1_dad.Play();
+    }
+
+    public void PlayParticleSystemRagazzino()
+    {
+        pSystem_1_ragazzino.gameObject.SetActive(true);
+        pSystem_2_ragazzino.gameObject.SetActive(true);
+        pSystem_2_ragazzino.Play();
+        pSystem_1_ragazzino.Play();
     }
 }
