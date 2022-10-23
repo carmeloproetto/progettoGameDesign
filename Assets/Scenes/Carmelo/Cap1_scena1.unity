@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 467117973}
-  m_IndirectSpecularColor: {r: 0.1412368, g: 0.33631372, b: 0.63772166, a: 1}
+  m_IndirectSpecularColor: {r: 0.1285102, g: 0.39423317, b: 0.874984, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -23868,6 +23868,11 @@ MonoBehaviour:
   acorn: {fileID: 0}
   squirrel: {fileID: 0}
   fountainWater: {fileID: 0}
+  pSystem_1_dad: {fileID: 0}
+  pSystem_2_dad: {fileID: 0}
+  pSystem_1_ragazzino: {fileID: 0}
+  pSystem_2_ragazzino: {fileID: 0}
+  pSystem_fountain: {fileID: 0}
 --- !u!195 &1043801933
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -26533,13 +26538,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.16458568, g: 0.25231987, b: 0.329285, a: 1}
-  deepColor: {r: 0.4171032, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.1645773, g: 0.25231105, b: 0.32927614, a: 1}
+  deepColor: {r: 0.41709438, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.38
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 3.5
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30159283, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.301584, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
@@ -26552,7 +26557,7 @@ MonoBehaviour:
   surfaceFoamCutoff: 0.43
   surfaceFoamDistortion: 1.24
   surfaceFoamBlend: 0.68
-  surfaceFoamColor1: {r: 0.023540407, g: 0.15288106, b: 0.21681109, a: 0.19215687}
+  surfaceFoamColor1: {r: 0.023540407, g: 0.15287268, b: 0.21680227, a: 0.19215687}
   surfaceFoamColor2: {r: 1, g: 1, b: 1, a: 0.35686275}
   surfaceFoamMovement: {x: 0.28, y: 0.03, z: 0.24, w: 0.01}
   surfaceFoamDirection1: 0.28
@@ -27516,6 +27521,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4040386314876686, guid: 12ba3d1ec135f1b4e9caddc7e211dd72, type: 3}
   m_PrefabInstance: {fileID: 1193768455}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1196079091 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5632190137119578882, guid: 6f4b6ed3dc9674c009ddacb2412fd412, type: 3}
+  m_PrefabInstance: {fileID: 1869737263}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1198656994
 PrefabInstance:
@@ -32299,6 +32309,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4141207164023176, guid: 0a804f15ce1f1d34eabed72f25b3d732, type: 3}
   m_PrefabInstance: {fileID: 1414535468}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1418577345 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7749824807433848580, guid: 6f4b6ed3dc9674c009ddacb2412fd412, type: 3}
+  m_PrefabInstance: {fileID: 1869737263}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1419216230
 PrefabInstance:
@@ -42879,6 +42894,11 @@ MonoBehaviour:
   acorn: {fileID: 0}
   squirrel: {fileID: 0}
   fountainWater: {fileID: 0}
+  pSystem_1_dad: {fileID: 0}
+  pSystem_2_dad: {fileID: 0}
+  pSystem_1_ragazzino: {fileID: 0}
+  pSystem_2_ragazzino: {fileID: 0}
+  pSystem_fountain: {fileID: 0}
 --- !u!195 &1840659762
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -43460,6 +43480,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7749824807433848580, guid: 6f4b6ed3dc9674c009ddacb2412fd412, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6f4b6ed3dc9674c009ddacb2412fd412, type: 3}
       propertyPath: m_Name
       value: Board
@@ -43518,6 +43542,20 @@ MonoBehaviour:
   english_text: 
   player: {fileID: 0}
   board: {fileID: 0}
+--- !u!114 &1869737272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869737267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67b63c593523e1544a9a4c1574226a1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ita: {fileID: 1196079091}
+  eng: {fileID: 1418577345}
 --- !u!1001 &1874311029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61019,6 +61057,11 @@ MonoBehaviour:
   acorn: {fileID: 675357233}
   squirrel: {fileID: 1250131010}
   fountainWater: {fileID: 879420277}
+  pSystem_1_dad: {fileID: 0}
+  pSystem_2_dad: {fileID: 0}
+  pSystem_1_ragazzino: {fileID: 0}
+  pSystem_2_ragazzino: {fileID: 0}
+  pSystem_fountain: {fileID: 0}
 --- !u!114 &7812703812985909198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62278,6 +62321,7 @@ MonoBehaviour:
   bidone: {fileID: 4265163937639084}
   forceDirectionBidone: {fileID: 638169310}
   forceDirectionScatola: {fileID: 1557940332}
+  pSystem: {fileID: 0}
   forceScatola: 100
   forceBidone: 200
 --- !u!114 &8771319006750343728

@@ -88,7 +88,7 @@ public class DialogueManager : MonoBehaviour
         instance = this;
 
         viewChoice = false;
-        countDialogue = 4;
+        countDialogue = 1;
         disableSpace = false;
         //audioManager.GetComponent<AudioManager>().Play("birdsAudio");
     }

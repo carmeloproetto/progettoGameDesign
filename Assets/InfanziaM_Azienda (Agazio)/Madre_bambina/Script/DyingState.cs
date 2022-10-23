@@ -10,6 +10,7 @@ public class DyingState : StateMachineBehaviour
     {
         //animator.GetComponent<PlayerController_Agazio>().DisableJump();
         //animator.GetComponent<PlayerController_Agazio>().DisableInput();
+        GameObject.FindGameObjectWithTag("Canvas").GetComponent<Canvas>().enabled = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

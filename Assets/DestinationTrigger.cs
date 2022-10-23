@@ -27,6 +27,7 @@ public class DestinationTrigger : MonoBehaviour
 
             //barile.parent = null;
             barile.GetComponent<Rigidbody>().isKinematic = false;
+            Destroy(barile.GetComponent<Rigidbody>());
             player.GetComponent<NavMeshAgent>().speed = 0f;
             //player.GetComponent<NavMeshAgent>().updatePosition = false;
             //player.GetComponent<NavMeshAgent>().updateRotation = false; 
