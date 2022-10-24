@@ -16629,7 +16629,7 @@ GameObject:
   - component: {fileID: 718258802}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: Canvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19326,6 +19326,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4759366375745648, guid: 107e21d49b4ce0043a91771c91ae6c8c, type: 3}
   m_PrefabInstance: {fileID: 855866764}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &856180853 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5743779106082836354, guid: 9931b51d33f5e4e248242d38479f27c9, type: 3}
+  m_PrefabInstance: {fileID: 316897676}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &866296073
 PrefabInstance:
@@ -26538,13 +26543,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.16457641, g: 0.2523101, b: 0.32927522, a: 1}
-  deepColor: {r: 0.41709343, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.16457161, g: 0.25230503, b: 0.32927015, a: 1}
+  deepColor: {r: 0.4170884, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.38
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 3.5
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30158305, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.301578, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
@@ -26557,7 +26562,7 @@ MonoBehaviour:
   surfaceFoamCutoff: 0.43
   surfaceFoamDistortion: 1.24
   surfaceFoamBlend: 0.68
-  surfaceFoamColor1: {r: 0.023540407, g: 0.15287179, b: 0.21680132, a: 0.19215687}
+  surfaceFoamColor1: {r: 0.023540407, g: 0.15286699, b: 0.21679625, a: 0.19215687}
   surfaceFoamColor2: {r: 1, g: 1, b: 1, a: 0.35686275}
   surfaceFoamMovement: {x: 0.28, y: 0.03, z: 0.24, w: 0.01}
   surfaceFoamDirection1: 0.28
@@ -29945,6 +29950,22 @@ PrefabInstance:
       propertyPath: m_Shadows.m_Type
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1161259962828613669, guid: 2538dd18425044f8c889136378c4a267, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: 4.3059012e+21
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161259962828613669, guid: 2538dd18425044f8c889136378c4a267, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 1.3555956e-19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161259962828613669, guid: 2538dd18425044f8c889136378c4a267, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.3563156e-19
+      objectReference: {fileID: 0}
+    - target: {fileID: 1161259962828613669, guid: 2538dd18425044f8c889136378c4a267, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 3.0439522e+32
+      objectReference: {fileID: 0}
     - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_Lightmapping
       value: 1
@@ -29956,6 +29977,22 @@ PrefabInstance:
     - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_Shadows.m_Strength
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -9.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: -0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 8.8
       objectReference: {fileID: 0}
     - target: {fileID: 8673963428031208832, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_RootOrder
@@ -31385,6 +31422,9 @@ MonoBehaviour:
   ink: {fileID: 4900000, guid: 608a77279b3f4b54b85bf6c3db9b61e0, type: 3}
   startConv: 0
   language: 0
+  canvas: {fileID: 0}
+  dlgMgn: {fileID: 0}
+  board: {fileID: 0}
 --- !u!65 &1383914462
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33745,6 +33785,9 @@ MonoBehaviour:
   ink: {fileID: 0}
   startConv: 0
   language: 0
+  canvas: {fileID: 0}
+  dlgMgn: {fileID: 0}
+  board: {fileID: 0}
 --- !u!1001 &1481714565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37088,6 +37131,8 @@ MonoBehaviour:
   english_text: TO READ THE BOARD
   player: {fileID: 7433081328015062387}
   board: {fileID: 1869737264}
+  canvas: {fileID: 0}
+  startDialogue: 0
 --- !u!65 &1598454814
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43483,7 +43528,33 @@ MonoBehaviour:
   italian_text: 
   english_text: 
   player: {fileID: 0}
-  board: {fileID: 0}
+  board: {fileID: 1869737264}
+  canvas: {fileID: 868195706}
+  startDialogue: 0
+--- !u!114 &1869737270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869737267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9721ea304587d41ba8e15c6e90a171, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: ce4ca464b7afe73409a42d0503c45730, type: 3}
+  inkJSON2: {fileID: 0}
+  inkJSON3: {fileID: 0}
+  inkJSON_Eng: {fileID: 4900000, guid: 571ef6c225956ce4c91c0e05708b0183, type: 3}
+  inkJSON2_Eng: {fileID: 0}
+  inkJSON3_Eng: {fileID: 0}
+  ink: {fileID: 0}
+  startConv: 0
+  language: 0
+  canvas: {fileID: 868195706}
+  dlgMgn: {fileID: 851898191}
+  board: {fileID: 1869737267}
 --- !u!114 &1869737272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56099,6 +56170,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7812703811320931573}
     - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
+      propertyPath: board
+      value: 
+      objectReference: {fileID: 1869737267}
+    - target: {fileID: 4464072075888836297, guid: 9476e87dee974d241a8dc228b61f5589, type: 3}
       propertyPath: bullo
       value: 
       objectReference: {fileID: 8771319006750343725}
@@ -61004,7 +61079,7 @@ MonoBehaviour:
   pSystem_2_dad: {fileID: 0}
   pSystem_1_ragazzino: {fileID: 0}
   pSystem_2_ragazzino: {fileID: 0}
-  pSystem_fountain: {fileID: 0}
+  pSystem_fountain: {fileID: 856180853}
 --- !u!114 &7812703812985909198
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -56,6 +56,8 @@ public class DialogueManager : MonoBehaviour
     public GameObject dlgMgn;
     public GameObject triggerDialogueBulloRagazzinoZone;
 
+    public bool cartellone;
+
     //conto il numero di frasi alla quale siamo arrivati nella conversazione
     private int line;
 
@@ -79,7 +81,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI textmeshPro;
     public TextMeshProUGUI textmeshPro2;
 
-
+    public GameObject board;
 
     private void Awake(){
         if(instance != null){
@@ -88,7 +90,7 @@ public class DialogueManager : MonoBehaviour
         instance = this;
 
         viewChoice = false;
-        countDialogue = 4;
+        countDialogue = 1;
         disableSpace = false;
         //audioManager.GetComponent<AudioManager>().Play("birdsAudio");
     }
@@ -102,6 +104,8 @@ public class DialogueManager : MonoBehaviour
     private void Start(){
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
+
+        cartellone = false;
 
         choicesText = new TextMeshProUGUI[choices.Length];
         int index = 0;
@@ -140,7 +144,7 @@ public class DialogueManager : MonoBehaviour
                 line++;
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
                 //serve per far partire la camminata nella scena cap1 quando siamo davanti al parco
-                if(line == 1 && countDialogue == 3){
+                if(line == 1 && countDialogue == 3 && !cartellone){
                     Debug.Log("Siamo nella terza conversazione alla fine della prima frase frase!");
                     disableSpace = true;
                     dad.GetComponent<PlayerController>().enabled = false;
@@ -187,6 +191,10 @@ public class DialogueManager : MonoBehaviour
                     StartCoroutine(disableSpaceFunction());
                     ContinueStory();
                 }
+
+
+
+
             }
         }
     }
@@ -248,9 +256,16 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("conversazione 2 finita");
         }
         //cose da fare quando termina il terzo dialogo
-        else if(countDialogue == 3){
+        else if(countDialogue == 3 && !cartellone){
             triggerZone.SetActive(false);
             mom.GetComponent<followDestination5>().enabled = true;
+        }
+        else if(countDialogue == 3 && cartellone){
+            cartellone = false;
+            countDialogue--;
+            dad.GetComponent<PlayerController>().enabled = true;
+            board.GetComponent<BoardInteractable>().startDialogue = false;
+            board.GetComponent<DialogueTrigger>().enabled = false;
         }
         //cose da fare quando termina il quarto dialogo
         else if(countDialogue == 4){

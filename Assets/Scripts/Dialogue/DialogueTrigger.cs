@@ -28,6 +28,11 @@ public class DialogueTrigger : MonoBehaviour
 
     public int language;
 
+
+    public GameObject canvas;
+    public GameObject dlgMgn; 
+    public GameObject board;
+
     private void Awake(){
         language = LanguageChangeScript.language;
        // visualCue.SetActive(false);
@@ -52,6 +57,16 @@ public class DialogueTrigger : MonoBehaviour
         else{
             //visualCue.SetActive(false);
         }
+
+        /*if(this.name == "Board"){
+            if(board.GetComponent<BoardInteractable>().startDialogue){
+                Debug.Log("qui2");
+                canvas.SetActive(true);
+                Debug.Log("qui3");
+                board.GetComponent<DialogueTrigger>().startConvByOtherScript();
+                board.GetComponent<BoardInteractable>().startDialogue = false;
+            }
+        }*/
     }
 
 
@@ -75,6 +90,7 @@ public class DialogueTrigger : MonoBehaviour
     }
 
     public void startConvByOtherScript(){
+        Debug.Log("iniziamo il dialogo");
         startConv = true;
         playerInRange = true;
     }

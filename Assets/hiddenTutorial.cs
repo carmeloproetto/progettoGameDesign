@@ -21,7 +21,6 @@ public class hiddenTutorial : MonoBehaviour
 
     private IEnumerator setTutorialPannel(){
         if(Input.GetAxisRaw("Horizontal") == 1f || Input.GetAxisRaw("Horizontal") == -1f){
-            Debug.Log("premuto");
             yield return new WaitForSeconds(2f);
             tutorial.SetActive(false);
         }
