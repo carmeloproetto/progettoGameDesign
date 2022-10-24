@@ -14,7 +14,9 @@ public class isChasing : StateMachineBehaviour
     {
         _agent = animator.GetComponent<NavMeshAgent>();
         _player = GameObject.FindGameObjectWithTag("Player");
+        _agent.SetDestination(_player.transform.position);
         _agent.speed = 3.5f;
+        Debug.Log("entrata stato di chasing");
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

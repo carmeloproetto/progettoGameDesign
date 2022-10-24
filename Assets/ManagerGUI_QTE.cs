@@ -26,7 +26,7 @@ public class ManagerGUI_QTE : MonoBehaviour
         _collider.GetComponent<BoxCollider>().enabled = false;
         barileTrigger.GetComponent<BoxCollider>().enabled = true;
         Transform forceOrigin = barile.transform.Find("ForceOrigin");
-        barile.GetComponent<Rigidbody>().AddForceAtPosition(forceOrigin.forward * 100f, forceOrigin.position);
+        barile.GetComponent<Rigidbody>().AddForceAtPosition(forceOrigin.forward * 2000f, forceOrigin.position);
         LeanTween.scale(button, new Vector3(0f, 0f, 0f), 1.5f).setDelay(.3f).setEase(LeanTweenType.easeInOutBack);
     }
 }

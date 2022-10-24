@@ -11,6 +11,7 @@ public class WalkingStateDestinationTwoEnemy3 : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.SetBool("isWalking", true);
         agent = animator.GetComponent<NavMeshAgent>();
         agent.speed = 1.5f;
         destination = GameObject.FindGameObjectWithTag("Destination_4").transform;
@@ -31,5 +32,6 @@ public class WalkingStateDestinationTwoEnemy3 : StateMachineBehaviour
     {
         agent.SetDestination(agent.transform.position);
         agent.speed = 0f;
+        animator.SetBool("isWalking", false);
     }
 }

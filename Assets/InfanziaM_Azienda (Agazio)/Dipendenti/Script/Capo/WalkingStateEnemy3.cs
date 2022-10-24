@@ -11,9 +11,11 @@ public class WalkingStateEnemy3 : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.SetBool("isWalking", true);
         agent = animator.GetComponent<NavMeshAgent>();
         agent.speed = 1.5f;
         destination = GameObject.FindGameObjectWithTag("Destination_3").transform;
+        agent.ResetPath();
         agent.SetDestination(destination.transform.position);
     }
 
@@ -23,13 +25,15 @@ public class WalkingStateEnemy3 : StateMachineBehaviour
         if (agent.remainingDistance <= agent.stoppingDistance)
         {
             animator.SetBool("isLooking", true);
+            agent.SetDestination(agent.transform.position);
+            agent.speed = 0f;
+            animator.SetBool("isWalking", false);
         }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        agent.SetDestination(agent.transform.position);
-        agent.speed = 0f;
+        Debug.Log("uscita stato di walking");
     }
 }

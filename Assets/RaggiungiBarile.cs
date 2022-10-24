@@ -33,7 +33,8 @@ public class RaggiungiBarile : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.GetComponent<PadreController_RetroAzienda>().enabled = true;
-        _agent.updateRotation = false; 
+        _agent.updateRotation = false;
+        GameObject.FindGameObjectWithTag("Barile").GetComponent<Rigidbody>().isKinematic = true;
         //_agent.transform.DORotate(new Vector3(0f, -90f, 0f), 2f);
     }
 }
