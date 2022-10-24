@@ -306,7 +306,7 @@ public class DialogueManager : MonoBehaviour
 
     
     IEnumerator triggerDadControl(){    
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3f);
         tutorialPanel.SetActive(true);
         dad.GetComponent<PlayerController>().enabled = true;
         dad.GetComponent<limitZone>().enabled = true;
