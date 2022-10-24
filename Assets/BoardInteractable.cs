@@ -42,6 +42,7 @@ public class BoardInteractable : InteractableObject
             GameObject.FindGameObjectWithTag("DialogueManager").GetComponent<DialogueManager>().cartellone = true;
             board.GetComponent<DialogueTrigger>().enabled = true;
             board.GetComponent<DialogueTrigger>().startConvByOtherScript();
+            startDialogue = false;
        }
     }
 }

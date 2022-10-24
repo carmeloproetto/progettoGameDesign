@@ -264,7 +264,7 @@ public class DialogueManager : MonoBehaviour
             cartellone = false;
             countDialogue--;
             dad.GetComponent<PlayerController>().enabled = true;
-            board.GetComponent<BoardInteractable>().startDialogue = false;
+            board.GetComponent<BoardInteractable>().enabled = false;
             board.GetComponent<DialogueTrigger>().enabled = false;
         }
         //cose da fare quando termina il quarto dialogo
