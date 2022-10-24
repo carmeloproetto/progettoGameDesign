@@ -19,6 +19,8 @@ public class AudioChangeScript : MonoBehaviour
     {
         Awake();
 
+        Debug.Log("PLAYERPREFS " + PlayerPrefs.GetString("audio"));
+
         if (PlayerPrefs.GetString("audio") == "yes")
         {
             if (langChange.isEng)
@@ -31,10 +33,11 @@ public class AudioChangeScript : MonoBehaviour
             }
 
             isOn = true;
+            AudioListener.volume = 1;
             //StartAllAudio();
 
         }
-        else
+        else if(PlayerPrefs.GetString("audio") == "no")
         {
             if (langChange.isEng)
             {
@@ -46,7 +49,22 @@ public class AudioChangeScript : MonoBehaviour
             }
 
             isOn = false;
+            AudioListener.volume = 0;
             //StopAllAudio();
+        }
+        else
+        {
+            if (langChange.isEng)
+            {
+                buttonText.text = "< O N >";
+            }
+            else
+            {
+                buttonText.text = "< S I >";
+            }
+
+            isOn = true;
+            AudioListener.volume = 1;
         }
     }
 

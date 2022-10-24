@@ -566,11 +566,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4369065082735945914, guid: 6c0012a773262f44c8942c0f6f20199e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -600
+      value: -602
       objectReference: {fileID: 0}
     - target: {fileID: 4369065082735945914, guid: 6c0012a773262f44c8942c0f6f20199e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -914
+      value: -879
       objectReference: {fileID: 0}
     - target: {fileID: 4369065082735945914, guid: 6c0012a773262f44c8942c0f6f20199e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_Text: "Are you ready to make a difference? \n\nUse A+D to move the character
     on the left or on the right.\nUse SPACE to complete faster the sentence during
     a dialogue.\nUse ENTER to answer questions during dialogues.\nUse E to complete
-    a special task. \n\nDiscover your impact!"
+    a special task. \nUse ESC to enter in the pause menu.\n\nDiscover your impact!"
 --- !u!222 &739115704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1633,11 +1633,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1a816231403256b4594b5c0a7896c387, type: 3}
+  m_audioClip: {fileID: 8300000, guid: ecf4a041f3ae7cd46a354cf565912dae, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

@@ -81,6 +81,7 @@ public class LanguageChangeScript : MonoBehaviour
                                "Usa SPAZIO per completare più velocemente le frasi nei dialoghi.\r\n" +
                                "Usa INVIO per rispondere alle domande durante i dialoghi.\r\n" +
                                "Usa E per completare un task speciale.\r\n\n" +
+                               "Usa ESC per aprire il menu di pausa.\r\n\n" + 
                                "Scopri il tuo impatto!";
 
             language = 1;
@@ -120,6 +121,7 @@ public class LanguageChangeScript : MonoBehaviour
                                 "Use SPACE to complete faster the sentence during a dialogue.\r\n" +
                                 "Use ENTER to answer questions during dialogues.\r\n" +
                                 "Use E to complete a special task.\r\n\n" +
+                                "Use ESC to open the pause menu.\r\n\n" +
                                 "Discover your impact!";
 
 

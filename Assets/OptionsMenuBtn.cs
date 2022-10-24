@@ -17,17 +17,21 @@ public class OptionsMenuBtn : MonoBehaviour
 	public GameObject optionsMenu;
 
 	public GameObject newGameButton;
+	private Scene thisScene;
 
 	// Start is called before the first frame update
 	void Start()
 	{
 		menuButtonController.index = 0;
+		thisScene = SceneManager.GetActiveScene();
 	}
 
 
 	// Update is called once per frame
 	void Update()
 	{
+		thisScene = SceneManager.GetActiveScene();
+
 		if (menuButtonController.index == thisIndex)
 		{
 
@@ -40,20 +44,36 @@ public class OptionsMenuBtn : MonoBehaviour
 			}
 			else if (animator.GetBool("pressed"))
 			{
+				if (thisScene.name == "Menu")
+				{
 
-				if (thisIndex == 0)
-				{
-					audioChange.ButtonClicked();
+					if (thisIndex == 0)
+					{
+						audioChange.ButtonClicked();
+					}
+					else if (thisIndex == 1 && SceneManager.GetActiveScene().name == "Menu")
+					{
+						langChange.ButtonClicked();
+					}
+					else if (thisIndex == 2)
+					{
+						optionsMenu.SetActive(false);
+						mainMenu.SetActive(true);
+						menuButtonController.index = 0;
+					}
 				}
-				else if (thisIndex == 1 && SceneManager.GetActiveScene().name == "Menu")
-				{
-					langChange.ButtonClicked();
-				}
-				else if (thisIndex == 2)
-				{
-					optionsMenu.SetActive(false);
-					mainMenu.SetActive(true);
-					menuButtonController.index = 0;
+				else
+                {
+					if (thisIndex == 0)
+					{
+						audioChange.ButtonClicked();
+					}
+					else if (thisIndex == 1)
+					{
+						optionsMenu.SetActive(false);
+						mainMenu.SetActive(true);
+						menuButtonController.index = 0;
+					}
 				}
 
 				animator.SetBool("pressed", false);
