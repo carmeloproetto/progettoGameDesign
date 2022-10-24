@@ -21,6 +21,7 @@ public class WalkAwayState : StateMachineBehaviour
         _agent.updatePosition = true; 
         _agent.SetDestination(_destination.position);
         GameObject.FindGameObjectWithTag("Ragazzino").GetComponent<Animator>().SetTrigger("alzati");
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

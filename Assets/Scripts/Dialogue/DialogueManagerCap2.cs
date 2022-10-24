@@ -56,7 +56,7 @@ public class DialogueManagerCap2 : MonoBehaviour
 
 
 
-    public static float feeling = 0;
+    public static float feeling = 1;
 
     EventSystem m_EventSystem;
     public GameObject btn_choice_sx;
