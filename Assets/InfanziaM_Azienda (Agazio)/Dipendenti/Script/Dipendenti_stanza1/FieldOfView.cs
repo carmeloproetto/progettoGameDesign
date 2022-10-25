@@ -49,6 +49,7 @@ public class FieldOfView : MonoBehaviour
 
                 if(!Physics.Raycast(transform.position, dirToTarget, distToTarget, obstacleMask))
                 {
+                    Debug.Log("Bambina avvistata!!");
                     visibleTarget = target;
                     if (_animator.GetBool("isLooking") || _animator.GetBool("isWalking"))
                     {
