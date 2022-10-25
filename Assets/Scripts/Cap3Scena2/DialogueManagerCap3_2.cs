@@ -303,7 +303,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         //cose da fare quando termina il secondo dialogo
         else if(countDialogue == 2){
             dad.GetComponent<DialogueTriggerCap3_1>().enabled = false;
-            Debug.Log("conversazione finita");
+            Debug.Log("conversazione finita dialogo 2");
             if(helpLad == 0){
                 //non lo stiamo aiutando
                 if (feeling < 0.5 && !auxFinal)

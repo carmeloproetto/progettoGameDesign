@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 public class DialogueTriggerCap3_1 : MonoBehaviour
 {
     [Header("Ink JSON")]
-    [SerializeField] private TextAsset inkJSON;
+    [SerializeField] public TextAsset inkJSON;
     [SerializeField] public TextAsset inkJSON2;
     [SerializeField] public TextAsset inkJSON3;
-    [SerializeField] private TextAsset inkJSON_eng;
+    [SerializeField] public TextAsset inkJSON_eng;
     [SerializeField] public TextAsset inkJSON2_eng;
     [SerializeField] public TextAsset inkJSON3_eng;
 

@@ -154,14 +154,14 @@ public class PadreStudenteController : MonoBehaviour
                 _auxCount++;
                 if (_auxCount >= 15)
                 {
-                    qteVelocity -= 0.2f;
+                    qteVelocity -= 0.8f;
                     if (qteVelocity <= 0) qteVelocity = 0;
                     _auxCount = 0;
                 }
 
                 if (Input.GetKeyDown("space"))
                 {
-                    qteVelocity += 1f;
+                    qteVelocity += 1.02f;
                     if (qteVelocity > 5f) qteVelocity = 5f;
                 }
             }

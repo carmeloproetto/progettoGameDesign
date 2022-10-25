@@ -36,7 +36,7 @@ public class RagazzoController : MonoBehaviour
 
     public bool qteStart = false;
 
-    private int passedObstacles = 0; //indice array ostacoli
+    public int passedObstacles = 0; //indice array ostacoli
     private int numObstacles;
     private int _auxCount = 0;
 
@@ -123,7 +123,7 @@ public class RagazzoController : MonoBehaviour
 
             //_controller.Move(targetDirection * qteVelocity * Time.deltaTime);
             if (qteVelocity < 5f)
-                qteVelocity += 0.03f;
+                qteVelocity += 0.1f;
             else
                 qteVelocity = 5f;
 
@@ -224,7 +224,7 @@ public class RagazzoController : MonoBehaviour
 
         //Debug.Log("Ragazzo passedObstacles : " + passedObstacles);
 
-        if (jumpQTE && currentPositionX >= obstaclesCoo[passedObstacles] + 2f)
+        if (jumpQTE && currentPositionX >= obstaclesCoo[passedObstacles] + 0.1f)
         {
             passedObstacles++;
             jumpQTE = false;
@@ -260,11 +260,14 @@ public class RagazzoController : MonoBehaviour
         passedObstacles = 0;
         _profController.profStartRun = false;
         profAlreadyStarted = true;
+        gameObject.GetComponent<RagazzoController>().enabled = false;
+        _animator.SetTrigger("Restart");
+        _animator.SetBool("Restart", false);
         _animator.SetFloat("Speed", 0);
         _animator.SetBool("FreeFall", false);
         _animator.SetBool("Jump", false);
         _animator.SetBool("Grounded", true);
-        gameObject.GetComponent<RagazzoController>().enabled = false;
+       
     }
 
     public void SetTargetDirection(Vector3 targetDirection)

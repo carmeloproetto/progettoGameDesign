@@ -6709,7 +6709,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229030849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 65.55, y: 2.44, z: -0.44}
+  m_LocalPosition: {x: 68.64, y: 2.44, z: -1.81}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -19443,7 +19443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696828700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.8, y: 2.5, z: -2.216}
+  m_LocalPosition: {x: 58.24, y: 2.5, z: -2.216}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -32901,6 +32901,26 @@ MonoBehaviour:
   dad: {fileID: 980734611}
   dlgMng: {fileID: 117690219}
   animator: {fileID: 0}
+--- !u!114 &1233645608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233645603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f57d08877e7314c47ae6374403251370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: f4c8e6395b5b2f54a8be46eff16098ea, type: 3}
+  inkJSON2: {fileID: 0}
+  inkJSON3: {fileID: 0}
+  inkJSON_eng: {fileID: 4900000, guid: 7edf073ab3f7d7d4fbd26529d5024ac9, type: 3}
+  inkJSON2_eng: {fileID: 0}
+  inkJSON3_eng: {fileID: 0}
+  ink: {fileID: 0}
+  startConv: 0
 --- !u!1 &1236304167
 GameObject:
   m_ObjectHideFlags: 0
@@ -41633,7 +41653,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1545443130}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.42, y: 2.44, z: -0.44}
+  m_LocalPosition: {x: 71.83, y: 2.44, z: -2.29}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -61971,6 +61991,7 @@ GameObject:
   - component: {fileID: 803822779}
   - component: {fileID: 803822780}
   - component: {fileID: 803822782}
+  - component: {fileID: 6541980128322547402}
   m_Layer: 0
   m_Name: Professore
   m_TagString: Professor
@@ -61978,6 +61999,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6541980128322547402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6541980128322547401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f57d08877e7314c47ae6374403251370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inkJSON: {fileID: 4900000, guid: f4c8e6395b5b2f54a8be46eff16098ea, type: 3}
+  inkJSON2: {fileID: 0}
+  inkJSON3: {fileID: 0}
+  inkJSON_eng: {fileID: 4900000, guid: 7edf073ab3f7d7d4fbd26529d5024ac9, type: 3}
+  inkJSON2_eng: {fileID: 0}
+  inkJSON3_eng: {fileID: 0}
+  ink: {fileID: 0}
+  startConv: 0
 --- !u!4 &6574845393821375038
 Transform:
   m_ObjectHideFlags: 0
