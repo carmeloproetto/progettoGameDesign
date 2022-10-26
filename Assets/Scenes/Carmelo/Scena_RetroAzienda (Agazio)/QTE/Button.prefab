@@ -243,6 +243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fillAmount: 0
+  force: 0
   timeThreshold: 0
   manager: {fileID: 0}
 --- !u!1 &4589929833575506856

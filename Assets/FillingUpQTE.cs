@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class FillingUpQTE : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class FillingUpQTE : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         manager = GameObject.FindObjectOfType<ManagerGUI_QTE>();
         _player = GameObject.FindObjectOfType<PadreController_RetroAzienda>();
     }
@@ -25,10 +27,10 @@ public class FillingUpQTE : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && !ringFilled )
         {
             Debug.Log("Pressed E button");
-            fillAmount += .05f; 
+            fillAmount += .1f; 
         }
 
-        if( !ringFilled)
+        if( !ringFilled )
         {
             timeThreshold += Time.deltaTime;
 
@@ -45,6 +47,7 @@ public class FillingUpQTE : MonoBehaviour
                 ringFilled = true;
                 _player.GetComponent<Animator>().SetBool("isPushing", false);
                 manager.EaseOutButton();
+                GetComponent<Image>().CrossFadeColor(Color.green, 2f, true, true);
                 Debug.Log("Success!");
             }
             else if( fillAmount < 0f)

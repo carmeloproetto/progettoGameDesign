@@ -28,7 +28,7 @@ public class PadreController_RetroAzienda : MonoBehaviour
 
     public bool _isBehindChest = false;
 
-    private Vector3 curTarDirection;
+    public Vector3 curTarDirection;
 
     private bool _inputEnabled = true;
     private bool _jumpEnabled = true;
