@@ -25,17 +25,17 @@ public class CameraFollow : MonoBehaviour
         destinationReached = false;
     }
 
-    private void FixedUpdate(){
+    private void Update(){
         if(target_aux == target2 && !destinationReached){
            Vector3 a = transform.position;
            b.Set(91.78f, 11.89683f, -29.005f);
-           transform.position = Vector3.MoveTowards(a, b, 0.04f);
+           transform.position = Vector3.MoveTowards(a, b, 0.02f);
         }
 
          if(target_aux == target3 && !destinationReached){
            Vector3 a = transform.position;
            b.Set(-33.703f, 11.874f, -29.005f);
-           transform.position = Vector3.MoveTowards(a, b, 0.04f);
+           transform.position = Vector3.MoveTowards(a, b, 0.02f);
         }
 
         if(transform.position.x == 91.78f && transform.position.y == 11.89683f && transform.position.z == -29.005f){

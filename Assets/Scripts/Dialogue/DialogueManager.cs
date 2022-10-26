@@ -215,6 +215,10 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(activePanelAfterOneSecond());
         ContinueStory();
 
+        if(countDialogue == 3 && !cartellone)       
+            imageOfSpeaker.sprite = momImage;
+
+
         if (countDialogue == 4)
         {
             bullo.GetComponent<Animator>().SetBool("isArguing", true);
