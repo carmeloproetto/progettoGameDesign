@@ -29,7 +29,7 @@ public class InteractionManager : MonoBehaviour
             //interactionUI.SetActive(true);
             LeanTween.scale(interactionUI, new Vector3(0.4779364f, 0.4779364f, 0.4779364f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => { uiDisplayed = true; });
             interactionText.text = ob.GetText(languageSetting);
-            if( languageSetting == 0)
+            if( languageSetting == 1 )
             {
                 pressText.text = "PREMI";
             }
@@ -75,5 +75,6 @@ public class InteractionManager : MonoBehaviour
     private void Start()
     {
         interactionUI.transform.localScale = new Vector3(0f, 0f, 0f);
+        languageSetting = LanguageChangeScript.language;
     }
 }

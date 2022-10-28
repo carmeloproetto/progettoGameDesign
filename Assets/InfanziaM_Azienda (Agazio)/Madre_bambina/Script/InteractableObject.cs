@@ -19,7 +19,7 @@ public abstract class InteractableObject : MonoBehaviour
 
     public virtual string GetText(int languageSetting)
     {
-        if(LanguageChangeScript.language == 1)
+        if( languageSetting == 1)
         {
             return italian_text; 
         }

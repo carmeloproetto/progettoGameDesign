@@ -24,7 +24,7 @@ public class ClimbingState : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
 
-       _controller.Move((pos.position-animator.transform.position)*0.8f*Time.deltaTime);  
+       _controller.Move((pos.position-animator.transform.position)*1.2f*Time.deltaTime);  
 
     }
 

@@ -21,6 +21,7 @@ TagManager:
   - Canvas2
   - Professor
   - LevelLoader
+  - QTEbutton
   layers:
   - Default
   - TransparentFX

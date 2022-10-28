@@ -9,12 +9,13 @@ public class PushingUIManager : MonoBehaviour
     public GameObject interationUI; 
     public TextMeshProUGUI pressText;
     public TextMeshProUGUI interactionText;
-    public bool isEnglish = true;
+    public int languageSetting; 
 
     // Start is called before the first frame update
     void Start()
     {
-        if( isEnglish)
+        languageSetting = LanguageChangeScript.language;
+        if( languageSetting == 0 )
         {
             pressText.text = "PRESS";
             interactionText.text = "TO PUSH THE BARREL";
