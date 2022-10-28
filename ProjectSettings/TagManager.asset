@@ -22,6 +22,8 @@ TagManager:
   - Professor
   - LevelLoader
   - QTEbutton
+  - Lago_bello
+  - Lago_brutto
   layers:
   - Default
   - TransparentFX
