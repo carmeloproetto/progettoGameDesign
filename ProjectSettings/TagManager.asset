@@ -24,6 +24,10 @@ TagManager:
   - QTEbutton
   - Lago_bello
   - Lago_brutto
+  - Bostrico_no
+  - Bostrico_si
+  - Estinzione_no
+  - Estinzione_si
   layers:
   - Default
   - TransparentFX
