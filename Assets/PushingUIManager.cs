@@ -9,7 +9,8 @@ public class PushingUIManager : MonoBehaviour
     public GameObject interationUI; 
     public TextMeshProUGUI pressText;
     public TextMeshProUGUI interactionText;
-    public int languageSetting; 
+    public int languageSetting;
+    public AudioManager audioManager; 
 
     // Start is called before the first frame update
     void Start()
@@ -30,11 +31,13 @@ public class PushingUIManager : MonoBehaviour
 
     public void UiOn()
     {
+        //audioManager.Play("ding_ui");
         LeanTween.scale(interationUI, new Vector3(0.4779364f, 0.4779364f, 0.4779364f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine);
     }
 
     public void UiOff()
     {
+        //audioManager.Play("ding_ui");
         LeanTween.scale(interationUI, new Vector3(0, 0, 0), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine);
     }
 

@@ -19,16 +19,20 @@ public class AnimationEventManager : MonoBehaviour
     public ParticleSystem pSystem_1_ragazzino;
     public ParticleSystem pSystem_2_ragazzino;
     public ParticleSystem pSystem_fountain;
+    public AudioManager audioMgr;
+    public Transform fountain;
 
 
     public void PunchReact()
     {
         _bullo.SetTrigger("PunchReacting");
+        audioMgr.Play("punch_1");
     }
 
     public void Punch()
     {
         ragazzino.GetComponent<Animator>().SetTrigger("Cadi");
+        audioMgr.Play("punch_1");
     }
 
 
@@ -50,6 +54,7 @@ public class AnimationEventManager : MonoBehaviour
     public void SpingiBullo()
     {
         _bullo.SetTrigger("cadi");
+        audioMgr.Play("punch_1");
     }
 
     public void RaccogliLattina(Transform lattina)
@@ -137,18 +142,24 @@ public class AnimationEventManager : MonoBehaviour
     public void SquirrelJump()
     {
         squirrel.gameObject.GetComponent<Animator>().SetTrigger("Jump");
+        audioMgr.Play("squirrel_1");
     }
 
     public void CloseFountain()
     {
+        AudioSource audioSrc = fountain.GetComponent<AudioSource>();
         ParticleSystem pSystem = fountainWater.gameObject.GetComponent<ParticleSystem>();
         if( pSystem.isPlaying )
         {
+            audioMgr.Play("chiudi_fontana");
+            audioSrc.Stop();
             pSystem_fountain.Stop();
             pSystem.Stop();
         }
         else if ( pSystem.isStopped )
         {
+            audioMgr.Play("chiudi_fontana");
+            audioSrc.Play();
             pSystem.Play();
             pSystem_fountain.Play();
         }
@@ -156,6 +167,7 @@ public class AnimationEventManager : MonoBehaviour
 
     public void PlayParticleSystemDad()
     {
+        audioMgr.Play("punch_2");
         pSystem_1_dad.gameObject.SetActive(true);
         pSystem_2_dad.gameObject.SetActive(true);
         pSystem_2_dad.Play();
@@ -164,9 +176,40 @@ public class AnimationEventManager : MonoBehaviour
 
     public void PlayParticleSystemRagazzino()
     {
+        audioMgr.Play("punch_1");
         pSystem_1_ragazzino.gameObject.SetActive(true);
         pSystem_2_ragazzino.gameObject.SetActive(true);
         pSystem_2_ragazzino.Play();
         pSystem_1_ragazzino.Play();
+    }
+
+    public void PunchSoundOne()
+    {
+        audioMgr.Play("punch_1");
+    }
+
+    public void PunchSoundTwo()
+    {
+        audioMgr.Play("punch_2");
+    }
+
+    public void PunchSoundThree()
+    {
+        audioMgr.Play("punch_3");
+    }
+
+    public void SchivataSound()
+    {
+        //audioMgr.Play();
+    }
+
+    public void StartCombattimento()
+    {
+        audioMgr.FadeIn("combattimento", 5f, 0.5f);
+    }
+
+    public void EndCombattimento()
+    {
+        audioMgr.FadeOut("combattimento", 5f, 0f);
     }
 }

@@ -17,7 +17,9 @@ public class InteractionManager : MonoBehaviour
     public int languageSetting; //0= Italian, 1= English
 
     public bool uiEnabledOntriggerStay = false;
-    public bool uiDisplayed = true; 
+    public bool uiDisplayed = true;
+
+    public AudioManager audioMgr;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,6 +29,8 @@ public class InteractionManager : MonoBehaviour
             canInteract = true;
             interactableObject = ob;
             //interactionUI.SetActive(true);
+
+            //audioMgr.Play("ding_ui");
             LeanTween.scale(interactionUI, new Vector3(0.4779364f, 0.4779364f, 0.4779364f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => { uiDisplayed = true; });
             interactionText.text = ob.GetText(languageSetting);
             if( languageSetting == 1 )
@@ -46,6 +50,7 @@ public class InteractionManager : MonoBehaviour
     {
         if( uiEnabledOntriggerStay && !uiDisplayed)
         {
+            //audioMgr.Play("ding_ui");
             LeanTween.scale(interactionUI, new Vector3(0.4779364f, 0.4779364f, 0.4779364f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => { uiDisplayed = true; }); 
         }
     }
@@ -58,6 +63,7 @@ public class InteractionManager : MonoBehaviour
             canInteract = false;
             interactableObject = null;
             //interactionUI.SetActive(false);
+            //audioMgr.Play("ding_ui");
             LeanTween.scale(interactionUI, new Vector3(0f, 0f, 0f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => { uiDisplayed = false; });
         }
     }
@@ -67,8 +73,8 @@ public class InteractionManager : MonoBehaviour
         if( canInteract && Input.GetKeyDown(KeyCode.E) )
         {
             interactableObject.Interact();
+            audioMgr.Play("ding_ui");
             LeanTween.scale(interactionUI, new Vector3(0f, 0f, 0f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => { uiDisplayed = false; });
-            //interactionUI.SetActive(false); 
         }
     }
 

@@ -11,6 +11,7 @@ public class FineCombattimentoState : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.gameObject.GetComponent<AnimationEventManager>().EndCombattimento();
         timer = 0f;
         _ragazzino = GameObject.FindGameObjectWithTag("Ragazzino").GetComponent<Animator>();
     }

@@ -7,6 +7,7 @@ public class FountainInteraction : InteractableObject
 {
     public Transform player;
     public Transform fountain;
+    public AudioManager audioMgr; 
 
     public override bool Interact()
     {
