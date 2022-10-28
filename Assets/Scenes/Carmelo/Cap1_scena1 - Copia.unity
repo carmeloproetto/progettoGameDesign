@@ -26060,7 +26060,7 @@ MonoBehaviour:
   pSystem_1_ragazzino: {fileID: 0}
   pSystem_2_ragazzino: {fileID: 0}
   pSystem_fountain: {fileID: 0}
-  audioMgr: {fileID: 0}
+  audioMgr: {fileID: 336222589}
   fountain: {fileID: 0}
 --- !u!195 &1043801933
 NavMeshAgent:
@@ -29085,13 +29085,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.16456315, g: 0.2522961, b: 0.3292612, a: 1}
-  deepColor: {r: 0.41707945, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.1645627, g: 0.25229564, b: 0.32926074, a: 1}
+  deepColor: {r: 0.41707897, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.38
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 3.5
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30156907, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.3015686, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
@@ -29104,7 +29104,7 @@ MonoBehaviour:
   surfaceFoamCutoff: 0.43
   surfaceFoamDistortion: 1.24
   surfaceFoamBlend: 0.68
-  surfaceFoamColor1: {r: 0.023540407, g: 0.15285853, b: 0.21678734, a: 0.19215687}
+  surfaceFoamColor1: {r: 0.023540407, g: 0.15285808, b: 0.21678686, a: 0.19215687}
   surfaceFoamColor2: {r: 1, g: 1, b: 1, a: 0.35686275}
   surfaceFoamMovement: {x: 0.28, y: 0.03, z: 0.24, w: 0.01}
   surfaceFoamDirection1: 0.28
@@ -47225,7 +47225,7 @@ MonoBehaviour:
   pSystem_1_ragazzino: {fileID: 92736922}
   pSystem_2_ragazzino: {fileID: 316562530}
   pSystem_fountain: {fileID: 0}
-  audioMgr: {fileID: 0}
+  audioMgr: {fileID: 336222589}
   fountain: {fileID: 0}
 --- !u!195 &1840659762
 NavMeshAgent:
@@ -52737,7 +52737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: sounds.Array.size
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: sounds.Array.data[9].clip
@@ -52804,6 +52804,18 @@ PrefabInstance:
       value: combattimento
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[16].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 792f1304a96254c26a04c3c571960fd4, type: 3}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[16].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[16].name
+      value: caduta_bidone
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: sounds.Array.data[9].pitch
       value: 0.8
       objectReference: {fileID: 0}
@@ -52832,6 +52844,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[16].pitch
+      value: 0.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: sounds.Array.data[9].source
       value: 
       objectReference: {fileID: 0}
@@ -52841,15 +52857,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: sounds.Array.data[10].volume
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: sounds.Array.data[11].volume
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: sounds.Array.data[12].volume
-      value: 0.2
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: sounds.Array.data[13].volume
@@ -52861,7 +52877,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: sounds.Array.data[15].volume
-      value: 1
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[16].volume
+      value: 0.4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
@@ -71321,6 +71341,7 @@ MonoBehaviour:
   pSystem: {fileID: 1537975285}
   forceScatola: 100
   forceBidone: 200
+  audioMgr: {fileID: 336222589}
 --- !u!114 &8771319006750343728
 MonoBehaviour:
   m_ObjectHideFlags: 0

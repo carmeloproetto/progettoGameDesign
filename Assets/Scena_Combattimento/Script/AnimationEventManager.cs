@@ -26,13 +26,13 @@ public class AnimationEventManager : MonoBehaviour
     public void PunchReact()
     {
         _bullo.SetTrigger("PunchReacting");
-        audioMgr.Play("punch_1");
+        //audioMgr.Play("punch_1");
     }
 
     public void Punch()
     {
         ragazzino.GetComponent<Animator>().SetTrigger("Cadi");
-        audioMgr.Play("punch_1");
+        //audioMgr.Play("punch_1");
     }
 
 
@@ -205,11 +205,16 @@ public class AnimationEventManager : MonoBehaviour
 
     public void StartCombattimento()
     {
-        audioMgr.FadeIn("combattimento", 5f, 0.5f);
+        audioMgr.Play("combattimento");
     }
 
     public void EndCombattimento()
     {
         audioMgr.FadeOut("combattimento", 5f, 0f);
+    }
+
+    public void RagazzinoReaction()
+    {
+        audioMgr.Play("punch_2");
     }
 }
