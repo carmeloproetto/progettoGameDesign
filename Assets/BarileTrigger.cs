@@ -21,6 +21,12 @@ public class BarileTrigger : InteractableObject
     public override bool Interact()
     {
         if (!_player.GetComponent<PadreController_RetroAzienda>()._isRightForward) {
+
+            //disabilito lo spostamento all'indietro e salto del player
+            _player.GetComponent<PadreController_RetroAzienda>().DisableBackward();
+            _player.GetComponent<PadreController_RetroAzienda>().DisableJump();
+            _player.GetComponent<PadreController_RetroAzienda>().maxVelocity = 1f;
+
             Sequence mySequence = DOTween.Sequence()
                 .Append(_player.DOLookAt(barile.transform.position, 0.8f, AxisConstraint.Y, Vector3.up).OnComplete(()=>
                 {
@@ -33,12 +39,6 @@ public class BarileTrigger : InteractableObject
                     rightArmIK.transform.position = rightArmPin.transform.position;
                     leftArmIK.transform.position = leftArmPin.transform.position;
                     barile.transform.parent = _player;
-
-                    //disabilito lo spostamento all'indietro e salto del player
-                    _player.GetComponent<PadreController_RetroAzienda>().DisableBackward();
-                    _player.GetComponent<PadreController_RetroAzienda>().DisableJump();
-                    _player.GetComponent<PadreController_RetroAzienda>().maxVelocity = 1f;
-
 
                     //disabilito la rotazione del barile
                     barile.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionX;

@@ -12,11 +12,15 @@ public class DestinationTrigger : MonoBehaviour
     public float transitionSpeed = 1f;
     public Transform barile;
     public Transform destinazionePorta;
+    public GameObject barileTrigger; 
 
     public void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.tag == "Player")
         {
+            //disabilito il trigger del barile
+            barileTrigger.SetActive(false);
+
             player.GetComponent<Animator>().SetBool("isPushing", false);
             player.GetComponent<PadreController_RetroAzienda>().DisableInput();
             enableTransition = true;

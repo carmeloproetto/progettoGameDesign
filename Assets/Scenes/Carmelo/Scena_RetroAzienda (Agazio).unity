@@ -34320,6 +34320,7 @@ MonoBehaviour:
   transitionSpeed: 1
   barile: {fileID: 4271694271442186}
   destinazionePorta: {fileID: 249824145}
+  barileTrigger: {fileID: 1949965751}
 --- !u!65 &1541464882
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -50209,7 +50210,7 @@ MonoBehaviour:
   interationUI: {fileID: 6758412038996870454}
   pressText: {fileID: 3925170279340978957}
   interactionText: {fileID: 6758412040572116694}
-  isEnglish: 1
+  languageSetting: 0
 --- !u!4 &1074268634249775909
 Transform:
   m_ObjectHideFlags: 0
@@ -54296,13 +54297,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.032529376, g: 0.09941416, b: 0.16029209, a: 1}
-  deepColor: {r: 0.4169875, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.032529376, g: 0.09941361, b: 0.16029152, a: 1}
+  deepColor: {r: 0.4169869, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.35
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 2.6
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30147713, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30147654, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
