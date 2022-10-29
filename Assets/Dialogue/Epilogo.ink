@@ -30,3 +30,6 @@ Nel mio team c’è ancora posto per un altro membro. Anche se non hai terminato
 === Continue ===
 Mi stai forse proponendo di seguirti in Antartide a recuperare colonne di ghiaccio da osservare al microscopio tutto il giorno? Perchè credo che non avrei potuto chiedere un’occasione migliore per dare il mio contributo. #speaker:Papà
 ->DONE
+
+=== function changeEspulsione(newEspulsione) ===
+~espulsione = newEspulsione

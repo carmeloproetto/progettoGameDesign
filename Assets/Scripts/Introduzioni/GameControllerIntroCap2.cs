@@ -42,6 +42,7 @@ public class GameControllerIntroCap2 : MonoBehaviour
         {
             if (bottomBar.IsCompleted())
             {
+                Debug.Log("siamo qui: " + countScene); 
                 if (bottomBar.IsLastSentence() && countScene < 0)
                 {
                     countText++;
@@ -57,7 +58,8 @@ public class GameControllerIntroCap2 : MonoBehaviour
                     bottomBar.PlayNextSentence();
                 }
                 else if(countScene == 0){
-                    //bisogna caricare la scena corretta   
+                    //bisogna caricare la scena corretta  
+                    Debug.Log("siamo qui"); 
                     this.GetComponent<Canvas>().enabled = false;
                     canvasSkip.SetActive(false);
                     levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
