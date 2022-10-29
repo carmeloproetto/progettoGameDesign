@@ -1,4 +1,4 @@
-﻿VAR espulsione = 1
+﻿VAR espulsione = 0
 
 -> main
 
