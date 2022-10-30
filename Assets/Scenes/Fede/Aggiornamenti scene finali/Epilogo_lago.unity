@@ -22965,13 +22965,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.032529376, g: 0.099389665, b: 0.16026652, a: 1}
-  deepColor: {r: 0.32774237, g: 0.48916286, b: 0.5849056, a: 1}
+  shallowColor: {r: 0.032529376, g: 0.09938941, b: 0.16026628, a: 1}
+  deepColor: {r: 0.32774213, g: 0.48916286, b: 0.5849056, a: 1}
   colorDepth: 0.35
   horizonColor: {r: 0.53314346, g: 0.9056604, b: 0.61401105, a: 1}
   horizonDistance: 2.6
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30145016, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.3014499, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
@@ -22984,7 +22984,7 @@ MonoBehaviour:
   surfaceFoamCutoff: 0.37
   surfaceFoamDistortion: 0
   surfaceFoamBlend: 0.31
-  surfaceFoamColor1: {r: 0.4339545, g: 0.42740417, b: 0.42740417, a: 0.19215687}
+  surfaceFoamColor1: {r: 0.43395427, g: 0.4274039, b: 0.4274039, a: 0.19215687}
   surfaceFoamColor2: {r: 0, g: 0, b: 0, a: 0.35686275}
   surfaceFoamMovement: {x: 0.28, y: 0.01, z: 0.135, w: 0.01}
   surfaceFoamDirection1: 0.28
@@ -24219,7 +24219,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1423773430
 Transform:
   m_ObjectHideFlags: 0
@@ -24311,13 +24311,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.032529376, g: 0.09941269, b: 0.16029054, a: 1}
-  deepColor: {r: 0.41698587, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.032529376, g: 0.09941106, b: 0.16028887, a: 1}
+  deepColor: {r: 0.4169841, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.35
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 2.6
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.3014755, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30147374, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0

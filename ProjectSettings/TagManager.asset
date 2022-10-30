@@ -29,6 +29,7 @@ TagManager:
   - Estinzione_no
   - Estinzione_si
   - AudioManager
+  - Spazzatura_fail
   layers:
   - Default
   - TransparentFX
