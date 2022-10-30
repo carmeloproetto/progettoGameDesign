@@ -37,6 +37,8 @@ public class SosBlinkingLight : InteractableObject
         {
             Debug.Log("Interacting with SOS button");
             trigger.SetActive(false);
+
+            this.interactable = false;
             this.GetComponent<BoxCollider>().enabled = false; 
             //interactable = false; //non potrò interagire di nuovo
             myLight.enabled = true; //abilito la luce

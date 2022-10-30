@@ -39402,6 +39402,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 5f5228fc3f5194ea688e9c1f0bf05658, type: 3}
     - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[10].loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: sounds.Array.data[10].name
       value: qte_success
       objectReference: {fileID: 0}
@@ -39409,6 +39413,10 @@ PrefabInstance:
       propertyPath: sounds.Array.data[11].clip
       value: 
       objectReference: {fileID: 8300000, guid: dd270d3f6e83948429ad1a5b156307cf, type: 3}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[11].loop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: sounds.Array.data[11].name
       value: qte_fail
@@ -53128,7 +53136,6 @@ MonoBehaviour:
   languageSetting: 0
   uiEnabledOntriggerStay: 0
   uiDisplayed: 1
-  audioMgr: {fileID: 1549842770}
 --- !u!1 &6649826657114724421
 GameObject:
   m_ObjectHideFlags: 0
@@ -54489,13 +54496,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.032529376, g: 0.09941154, b: 0.16028935, a: 1}
-  deepColor: {r: 0.41698462, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.032529376, g: 0.099411406, b: 0.16028923, a: 1}
+  deepColor: {r: 0.4169845, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.35
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 2.6
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30147424, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30147412, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0

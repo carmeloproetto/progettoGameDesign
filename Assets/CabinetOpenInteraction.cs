@@ -9,6 +9,7 @@ public class CabinetOpenInteraction : InteractableObject
     public override bool Interact()
     {
         _cabinet.OpenDoors();
+        this.interactable = false;
         this.GetComponent<BoxCollider>().enabled = false;
         GameObject.FindGameObjectWithTag("Player").GetComponent<InteractionManager>().uiEnabledOntriggerStay = false;
         return true; 

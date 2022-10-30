@@ -20,6 +20,8 @@ public class PlantInteractable : InteractableObject
         {
             rigidbody.AddForce(forceVector * forceValue);
             //tutorial.SetActive(false);
+
+            this.interactable = false; 
             this.GetComponent<BoxCollider>().enabled = false;
             dipendente_1.GetComponent<FieldOfView>().DisableFOV();
             dipendente_2.GetComponent<FieldOfView>().DisableFOV();

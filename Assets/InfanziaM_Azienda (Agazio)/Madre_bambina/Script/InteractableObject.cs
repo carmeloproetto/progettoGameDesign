@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public abstract class InteractableObject : MonoBehaviour
 {
-    [SerializeField] protected bool interactable = true;
+    [SerializeField] public bool interactable = true;
     [SerializeField] protected Sprite icon;
     [SerializeField] protected string italian_text;
     [SerializeField] protected string english_text;

@@ -22,7 +22,7 @@ public class InteractionManager : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         InteractableObject ob = other.gameObject.GetComponent<InteractableObject>(); 
-        if(ob != null)
+        if(ob != null && ob.interactable )
         {
             canInteract = true;
             interactableObject = ob;
@@ -46,7 +46,7 @@ public class InteractionManager : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if( uiEnabledOntriggerStay && !uiDisplayed)
+        if( uiEnabledOntriggerStay && !uiDisplayed && interactableObject.interactable )
         {
             //audioMgr.Play("ding_ui");
             LeanTween.scale(interactionUI, new Vector3(0.4779364f, 0.4779364f, 0.4779364f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => { uiDisplayed = true; }); 
@@ -56,7 +56,7 @@ public class InteractionManager : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         InteractableObject ob = other.gameObject.GetComponent<InteractableObject>();
-        if (ob != null)
+        if (ob != null && ob.interactable)
         {
             canInteract = false;
             interactableObject = null;
@@ -68,7 +68,7 @@ public class InteractionManager : MonoBehaviour
 
     private void Update()
     {
-        if( canInteract && Input.GetKeyDown(KeyCode.E) )
+        if( interactableObject != null && interactableObject.interactable && Input.GetKeyDown(KeyCode.E) )
         {
             interactableObject.Interact();
             GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("ding_ui");
