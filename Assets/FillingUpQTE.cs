@@ -48,6 +48,7 @@ public class FillingUpQTE : MonoBehaviour
                 _player.GetComponent<Animator>().SetBool("isPushing", false);
                 manager.EaseOutButton();
                 GetComponent<Image>().CrossFadeColor(Color.green, 2f, true, true);
+                GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("qte_success");
                 Debug.Log("Success!");
             }
             else if( fillAmount < 0f)

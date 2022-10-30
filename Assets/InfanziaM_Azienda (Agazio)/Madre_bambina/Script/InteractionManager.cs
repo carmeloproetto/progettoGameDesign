@@ -19,8 +19,6 @@ public class InteractionManager : MonoBehaviour
     public bool uiEnabledOntriggerStay = false;
     public bool uiDisplayed = true;
 
-    public AudioManager audioMgr;
-
     private void OnTriggerEnter(Collider other)
     {
         InteractableObject ob = other.gameObject.GetComponent<InteractableObject>(); 
@@ -73,7 +71,7 @@ public class InteractionManager : MonoBehaviour
         if( canInteract && Input.GetKeyDown(KeyCode.E) )
         {
             interactableObject.Interact();
-            audioMgr.Play("ding_ui");
+            GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("ding_ui");
             LeanTween.scale(interactionUI, new Vector3(0f, 0f, 0f), 0.5f).setDelay(.1f).setEase(LeanTweenType.easeInOutSine).setOnComplete(() => { uiDisplayed = false; });
         }
     }

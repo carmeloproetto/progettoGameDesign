@@ -1978,19 +1978,19 @@ AnimatorStateMachine:
     m_Position: {x: -30, y: 1850, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -848912399828790626}
-    m_Position: {x: 280, y: 540, z: 0}
+    m_Position: {x: 210, y: 540, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1633718302884268749}
-    m_Position: {x: 280, y: 650, z: 0}
+    m_Position: {x: 210, y: 650, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -9093743247047357385}
-    m_Position: {x: 280, y: 750, z: 0}
+    m_Position: {x: 210, y: 750, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7056586127696991609}
-    m_Position: {x: 280, y: 850, z: 0}
+    m_Position: {x: 210, y: 850, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4649952770380731163}
-    m_Position: {x: 280, y: 950, z: 0}
+    m_Position: {x: 210, y: 950, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

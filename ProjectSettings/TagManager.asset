@@ -28,6 +28,7 @@ TagManager:
   - Bostrico_si
   - Estinzione_no
   - Estinzione_si
+  - AudioManager
   layers:
   - Default
   - TransparentFX

@@ -210,7 +210,7 @@ public class AnimationEventManager : MonoBehaviour
 
     public void EndCombattimento()
     {
-        audioMgr.FadeOut("combattimento", 5f, 0f);
+        audioMgr.Stop("combattimento");
     }
 
     public void RagazzinoReaction()

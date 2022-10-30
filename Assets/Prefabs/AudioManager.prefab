@@ -196,6 +196,66 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 7195858161761497104}
+  - name: ding_ui
+    clip: {fileID: 8300000, guid: 54c38ffd565fd460196215cb3a11ccd3, type: 3}
+    volume: 0.2
+    pitch: 0.8
+    loop: 0
+    source: {fileID: 0}
+  - name: punch_1
+    clip: {fileID: 8300000, guid: 2ef8805f8c0f647b9bb9789638968b98, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 1
+    source: {fileID: 7195858161761497104}
+  - name: punch_2
+    clip: {fileID: 8300000, guid: 43b1c05a909f144ceac7b95e48228bbe, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 1
+    source: {fileID: 7195858161761497104}
+  - name: punch_3
+    clip: {fileID: 8300000, guid: f68683803fd2148d99cf02b9b5194e4d, type: 3}
+    volume: 0.4
+    pitch: 1
+    loop: 1
+    source: {fileID: 7195858161761497104}
+  - name: squirrel_1
+    clip: {fileID: 8300000, guid: d4c4d4acdfbaf43f181156ed4a852982, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 7195858161761497104}
+  - name: chiudi_fontana
+    clip: {fileID: 8300000, guid: 068f35af4fb2d4c7fb46cf05232c5e1d, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 7195858161761497104}
+  - name: combattimento
+    clip: {fileID: 8300000, guid: 16365a66a8d064a6e990db22722d3d5d, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 1
+    source: {fileID: 7195858161761497104}
+  - name: caduta_bidone
+    clip: {fileID: 8300000, guid: 792f1304a96254c26a04c3c571960fd4, type: 3}
+    volume: 0.4
+    pitch: 0.62
+    loop: 0
+    source: {fileID: 7195858161761497104}
+  - name: qte_success
+    clip: {fileID: 8300000, guid: 5f5228fc3f5194ea688e9c1f0bf05658, type: 3}
+    volume: 0.2
+    pitch: 0.8
+    loop: 1
+    source: {fileID: 7195858161761497104}
+  - name: qte_fail
+    clip: {fileID: 8300000, guid: dd270d3f6e83948429ad1a5b156307cf, type: 3}
+    volume: 0.2
+    pitch: 0.8
+    loop: 1
+    source: {fileID: 7195858161761497104}
 --- !u!114 &4245507734439653657
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -173,6 +173,7 @@ public class DialogueManager : MonoBehaviour
                 }
                 else if(line == 3 && countDialogue == 5 && feeling == 1){
                     //il bullo fa rissa con il padre
+                    dad.GetComponent<AnimationEventManager>().StartCombattimento();
                     dad.GetComponent<Animator>().SetBool("Speak", false);
                     bullo.GetComponent<Animator>().SetTrigger("sceltaDue");
                     dad.GetComponent<Animator>().SetTrigger("inizioCombattimento");
@@ -181,6 +182,7 @@ public class DialogueManager : MonoBehaviour
                 }
                 else if(line == 4 && countDialogue == 5 && feeling == 1){
                     disableSpace = true;
+                    dad.GetComponent<AnimationEventManager>().EndCombattimento();
                     StartCoroutine(disableSpaceFunction());
                     bullo.GetComponent<Animator>().SetTrigger("esciDiScena");
                     ragazzino.GetComponent<Animator>().SetBool("isTalking", true);

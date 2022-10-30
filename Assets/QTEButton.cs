@@ -37,6 +37,7 @@ public class QTEButton : MonoBehaviour
 
                     //transizione in uscita button
                     LeanTween.scale(transform.gameObject, new Vector3(0f, 0f, 0f), 1f).setDelay(.3f).setEase(LeanTweenType.easeInOutElastic);
+                    GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("qte_success");
 
                     //QTE Success
                     Debug.Log("Success");
@@ -56,6 +57,7 @@ public class QTEButton : MonoBehaviour
                 _active = false;
                 _ringImage.CrossFadeColor(Color.red, 2f, true, true);
                 LeanTween.scale(transform.gameObject, new Vector3(0f, 0f, 0f), 1f).setDelay(.3f).setEase(LeanTweenType.easeInOutElastic);
+                GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("qte_fail");
                 Debug.Log("Failed: timeout!");
                 bulloAnim.SetTrigger("QTEfail");
                 padre.SetTrigger("QTEfail");

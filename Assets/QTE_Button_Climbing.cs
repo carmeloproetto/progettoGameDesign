@@ -43,6 +43,7 @@ public class QTE_Button_Climbing : MonoBehaviour
                     animator.SetTrigger("QteSuccess");
                     animator.SetBool("FreeFall", false); 
                     _ringImage.CrossFadeColor(Color.green, 2f, true, true);
+                    GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("qte_success");
                     _active = false;
 
                 }
@@ -61,6 +62,7 @@ public class QTE_Button_Climbing : MonoBehaviour
                 _active = false;
                 _ringImage.CrossFadeColor(Color.red, 2f, true, true);
                 LeanTween.scale(transform.gameObject, new Vector3(0f, 0f, 0f), 1f).setDelay(.3f).setEase(LeanTweenType.easeInOutElastic);
+                GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("qte_fail");
                 Debug.Log("Failed: timeout!");
             }
         }

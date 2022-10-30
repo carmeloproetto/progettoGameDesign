@@ -8,7 +8,7 @@ public class InizioCombattimentoState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //animator.applyRootMotion = true;
-        animator.gameObject.GetComponent<AnimationEventManager>().StartCombattimento();
+        //animator.gameObject.GetComponent<AnimationEventManager>().StartCombattimento();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
