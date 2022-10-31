@@ -124,10 +124,20 @@ public class DialogueManagerEpilogo : MonoBehaviour
                 line++;
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
                 //serve per far partire la camminata nella scena cap1 quando siamo davanti al parco
-                
-                disableSpace = true;
-                StartCoroutine(disableSpaceFunction());
-                ContinueStory();
+
+                if (line == 12 && countDialogue == 1)
+                {
+                    disableSpace = true;
+                    dad.GetComponent<Animator>().SetTrigger("victory");
+                    StartCoroutine(disableSpaceFunction());
+                    ContinueStory();
+                }
+                else
+                {
+                    disableSpace = true;
+                    StartCoroutine(disableSpaceFunction());
+                    ContinueStory();
+                }
 
             }
         }
@@ -175,7 +185,9 @@ public class DialogueManagerEpilogo : MonoBehaviour
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
-            levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
+            dad.GetComponent<Animator>().SetTrigger("kiss");
+            mom.GetComponent<Animator>().SetTrigger("kiss");
+            //levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
         }
         
         line = 0;
