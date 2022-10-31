@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 467117973}
-  m_IndirectSpecularColor: {r: 0.1285102, g: 0.39423317, b: 0.874984, a: 1}
+  m_IndirectSpecularColor: {r: 0.1412368, g: 0.33631372, b: 0.63772166, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -26552,7 +26552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4759262865471542, guid: 6825a3fe8a1605f42a0d0589e582ac40, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.52607
+      value: -22.17
       objectReference: {fileID: 0}
     - target: {fileID: 4759262865471542, guid: 6825a3fe8a1605f42a0d0589e582ac40, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27611,7 +27611,7 @@ MonoBehaviour:
   english_text: TO INTERACT WITH THE FOUNTAIN
   player: {fileID: 7433081328015062387}
   fountain: {fileID: 1448178498}
-  audioMgr: {fileID: 0}
+  audioMgr: {fileID: 336222589}
 --- !u!65 &1093203675
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29085,13 +29085,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.1645568, g: 0.2522894, b: 0.3292545, a: 1}
-  deepColor: {r: 0.41707274, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.16455537, g: 0.2522879, b: 0.32925302, a: 1}
+  deepColor: {r: 0.41707125, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.38
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 3.5
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30156237, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30156085, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
@@ -29104,7 +29104,7 @@ MonoBehaviour:
   surfaceFoamCutoff: 0.43
   surfaceFoamDistortion: 1.24
   surfaceFoamBlend: 0.68
-  surfaceFoamColor1: {r: 0.023540407, g: 0.15285218, b: 0.21678063, a: 0.19215687}
+  surfaceFoamColor1: {r: 0.023540407, g: 0.15285075, b: 0.21677911, a: 0.19215687}
   surfaceFoamColor2: {r: 1, g: 1, b: 1, a: 0.35686275}
   surfaceFoamMovement: {x: 0.28, y: 0.03, z: 0.24, w: 0.01}
   surfaceFoamDirection1: 0.28
@@ -36507,7 +36507,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5d3f86874ef0949079f50c1cabf4f5ad, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.2
+  m_Volume: 0.404
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -41008,8 +41008,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1598454812}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.2525, y: 10.63, z: -21.4919}
-  m_LocalScale: {x: 1.2711, y: 1, z: 1.8039}
+  m_LocalPosition: {x: -2.8508, y: 10.63, z: -21.4919}
+  m_LocalScale: {x: 2.0744352, y: 1, z: 1.8039}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 56
@@ -52676,6 +52676,14 @@ PrefabInstance:
       propertyPath: sounds.Array.data[18].loop
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[13].volume
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195858161761497134, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: sounds.Array.data[14].volume
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
 --- !u!1001 &2051298108
@@ -56147,7 +56155,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1015145739283832373, guid: eccc844c7ee3e46d488b5b386dc935bb, type: 3}
+  - {fileID: 2100000, guid: 69bf7be14a3d44d48ba9315e729e468b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -59145,18 +59153,18 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1345229057265617457, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: 8134318300526665692, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: 712339524503649899, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: -6132646146761872286, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: 4080752822657195067, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: 7997412301262645656, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: -2851525064566731012, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: 3986981971960121851, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: -2002355119542075800, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: -7062171317558354296, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: -1849012029823283369, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: -5151675229436186914, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
+  - {fileID: 2100000, guid: 0bb81c34c63aa40ed85d9c1eed318bec, type: 2}
+  - {fileID: 2100000, guid: 8a1f20e6a32344ded93479043b52f727, type: 2}
+  - {fileID: 2100000, guid: 6216d0f6e751c4aaa89c2bb42a601e8e, type: 2}
+  - {fileID: 2100000, guid: 9cf1e56cb5cce4bc4b500695f020400c, type: 2}
+  - {fileID: 2100000, guid: fbaaecbcdbbf6444ca2989a69c3b3dac, type: 2}
+  - {fileID: 2100000, guid: 262b8cad816ae464688851652ed0d91a, type: 2}
+  - {fileID: 2100000, guid: 1fb40858cde20406482fa2c2d88e8dca, type: 2}
+  - {fileID: 2100000, guid: 12a7840b4dcea4b89b87fb702c0c2532, type: 2}
+  - {fileID: 2100000, guid: 4a6f55cbc87ac4c38b9afd6a1eda4dff, type: 2}
+  - {fileID: 2100000, guid: fea7314e3f3df4204a600101ca75baed, type: 2}
+  - {fileID: 2100000, guid: 9e1b290e72f074ef7ac526fe8a1f64ec, type: 2}
+  - {fileID: 2100000, guid: 7b937fc6dd9274e0e86b4858804d3985, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -60319,16 +60327,16 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8804775307976388801, guid: eccc844c7ee3e46d488b5b386dc935bb, type: 3}
-  - {fileID: -2984115171204068453, guid: eccc844c7ee3e46d488b5b386dc935bb, type: 3}
-  - {fileID: -876546973899608171, guid: eccc844c7ee3e46d488b5b386dc935bb, type: 3}
-  - {fileID: 7997412301262645656, guid: eccc844c7ee3e46d488b5b386dc935bb, type: 3}
-  - {fileID: -2851525064566731012, guid: eccc844c7ee3e46d488b5b386dc935bb, type: 3}
-  - {fileID: -4360755552993304029, guid: eccc844c7ee3e46d488b5b386dc935bb, type: 3}
-  - {fileID: -5608763247158175653, guid: eccc844c7ee3e46d488b5b386dc935bb, type: 3}
+  - {fileID: 2100000, guid: fbf4679ce98144731bbbc08fd4f3994e, type: 2}
+  - {fileID: 2100000, guid: 7f7a25b4b7584423e8775228a49425bc, type: 2}
+  - {fileID: 2100000, guid: 3cd5f0e6f7005411492ad7bc285f1618, type: 2}
+  - {fileID: 2100000, guid: 3cd78f7db8a7a48ea80cb882025e4e02, type: 2}
+  - {fileID: 2100000, guid: 0fb541535aeb7460b8e9ccf16c2bc8e3, type: 2}
+  - {fileID: 2100000, guid: 79ec065c5622c47c2a766f72e8b4782d, type: 2}
+  - {fileID: 2100000, guid: b6bde79bf911e47ccbe71ac5f8924060, type: 2}
   - {fileID: -6132646146761872286, guid: eccc844c7ee3e46d488b5b386dc935bb, type: 3}
-  - {fileID: 3730310639403263305, guid: eccc844c7ee3e46d488b5b386dc935bb, type: 3}
-  - {fileID: 8754126835882949224, guid: eccc844c7ee3e46d488b5b386dc935bb, type: 3}
+  - {fileID: 2100000, guid: a2af353e3464e45f5ad5441fad85939f, type: 2}
+  - {fileID: 2100000, guid: 692aa5cb0f4874d3cadabd9e5ba8c207, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -63347,7 +63355,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1015145739283832373, guid: eccc844c7ee3e46d488b5b386dc935bb, type: 3}
+  - {fileID: 2100000, guid: 69bf7be14a3d44d48ba9315e729e468b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -26,6 +26,9 @@ public class BoardInteractable : InteractableObject
             startDialogue = true;
             Debug.Log("qui: " + startDialogue);
         });
+
+        this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        this.interactable = false; 
         return true; 
     }
 

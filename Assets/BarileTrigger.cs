@@ -82,8 +82,8 @@ public class BarileTrigger : InteractableObject
             barile.GetComponent<PushingRotation>().isPushing = true;
             destinationTrigger.GetComponent<BoxCollider>().enabled = true;
         }
-        
 
+        this.interactable = false;
         return true;
     }
 

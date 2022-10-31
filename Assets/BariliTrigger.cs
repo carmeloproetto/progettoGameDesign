@@ -29,6 +29,7 @@ public class BariliTrigger : InteractableObject
         _agent.SetDestination(destination.transform.position);
         _agent.updateRotation = true;
         _interacted = true;
+        this.interactable = false;
         return true; 
     }
 

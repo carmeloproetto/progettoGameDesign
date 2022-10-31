@@ -16,6 +16,9 @@ public class SquirrelInteraction : InteractableObject
         //ruoto il bambino verso lo scoiattolo
         player.DOLookAt(squirrel.position, 1f).OnComplete(() => player.GetComponent<Animator>().SetTrigger("SquirrelInteraction"));
 
+        //disabilito interazione
+        this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        this.interactable = false;
         return true; 
     }
 

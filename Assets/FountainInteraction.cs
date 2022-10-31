@@ -18,6 +18,8 @@ public class FountainInteraction : InteractableObject
         player.DOLookAt(fountain.position, 1f, AxisConstraint.Y, Vector3.up).OnComplete(() => player.GetComponent<Animator>().SetTrigger("FountainInteraction"));
         //DISATTIVARE PARTICLE SYSTEM FONTANA da animationEvents
 
+        this.gameObject.GetComponent<BoxCollider>().enabled = false;
+        this.interactable = false;
         return true;
     }
 
