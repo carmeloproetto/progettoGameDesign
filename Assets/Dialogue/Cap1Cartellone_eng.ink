@@ -1,5 +1,5 @@
 ﻿-> main
 
 === main ===
-This city should be in the campaign period. #speaker:Papà
+This city should be in the campaign period. #speaker:Dad
 -> END

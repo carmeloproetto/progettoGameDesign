@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Carmelo/Cap1_intro.unity
     guid: 6e756c0e8efd0b9498cb227a9a344fe3
   - enabled: 1
-    path: Assets/Scenes/Carmelo/Cap1_scena1.unity
-    guid: 963f64741ab1c624e93ff0b1ae9eaf94
+    path: Assets/Scenes/Carmelo/Cap1_scena1 - Copia.unity
+    guid: 1d98d7c157e200949b420ddd76ca2ba5
   - enabled: 1
     path: Assets/Scenes/Carmelo/Cap1_fine.unity
     guid: a3ff6156fee3e8340aaa2966f419e60e

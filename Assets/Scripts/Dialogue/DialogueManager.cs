@@ -90,7 +90,7 @@ public class DialogueManager : MonoBehaviour
         instance = this;
 
         viewChoice = false;
-        countDialogue = 4;
+        countDialogue = 1;
         disableSpace = false;
         //audioManager.GetComponent<AudioManager>().Play("birdsAudio");
     }
@@ -301,6 +301,7 @@ public class DialogueManager : MonoBehaviour
             canvas.GetComponent<Canvas>().enabled = false;
             disableSpace = true;
             canvas2.SetActive(true);
+            canvas2.GetComponent<Canvas>().enabled = true;
             canvas2.GetComponent<GameControllerQTERissa>().enabled = true;
         }
        
