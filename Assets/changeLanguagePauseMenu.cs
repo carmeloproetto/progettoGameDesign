@@ -48,7 +48,8 @@ public class changeLanguagePauseMenu : MonoBehaviour
                                "Usa A+D per muovere il tuo personaggio a sinistra e destra.\r\n" +
                                "Usa SPAZIO per completare più velocemente le frasi nei dialoghi.\r\n" +
                                "Usa INVIO per rispondere alle domande durante i dialoghi.\r\n" +
-                               "Usa E per completare un task speciale.\r\n\n" +
+                               "Usa E per completare un task speciale.\r\n" +
+                               "Usa R per ricaricare la scena corrente.\r\n\n" +
                                "Scopri il tuo impatto!";
         }
     }

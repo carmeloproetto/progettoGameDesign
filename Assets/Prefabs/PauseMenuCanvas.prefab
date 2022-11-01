@@ -271,7 +271,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -750, y: -1000}
+  m_AnchoredPosition: {x: -750, y: -1100}
   m_SizeDelta: {x: 200, y: 134.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2111584469012147906
@@ -1064,7 +1064,7 @@ MonoBehaviour:
   m_Text: "Are you ready to make a difference? \n\nUse A+D to move the character
     on the left or on the right.\nUse SPACE to complete faster the sentence during
     a dialogue.\nUse ENTER to answer questions during dialogues.\nUse E to complete
-    a special task. \n\nDiscover your impact!"
+    a special task. \nUse R to reload the current scene.\n\nDiscover your impact!"
 --- !u!1 &2111584469587001467
 GameObject:
   m_ObjectHideFlags: 0

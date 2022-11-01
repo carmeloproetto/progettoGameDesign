@@ -18,10 +18,12 @@ MonoBehaviour:
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   - text: "I don\u2019t know how much their commitment has made a difference, I can
       only imagine how things could have gone differently.  "
-    speaker: {fileID: 0}
-  - text: 
-    speaker: {fileID: 0}
-  - text: 
-    speaker: {fileID: 0}
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: "But I\u2019m sure they never wanted to leave me and my brother with the
+      burden of such an uncertain future."
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: It was precisely this that pushed them, even before we were born, to give
+      more and more to the Earth to ensure a healthier environment.
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   background: {fileID: 0}
   nextScene: {fileID: 0}

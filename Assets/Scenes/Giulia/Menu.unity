@@ -847,7 +847,8 @@ MonoBehaviour:
   m_Text: "Are you ready to make a difference? \n\nUse A+D to move the character
     on the left or on the right.\nUse SPACE to complete faster the sentence during
     a dialogue.\nUse ENTER to answer questions during dialogues.\nUse E to complete
-    a special task. \nUse ESC to enter in the pause menu.\n\nDiscover your impact!"
+    a special task. \nUse ESC to enter in the pause menu.\nUse R to reload the current
+    scene.\n\nDiscover your impact!"
 --- !u!222 &739115704
 CanvasRenderer:
   m_ObjectHideFlags: 0

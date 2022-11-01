@@ -25,7 +25,7 @@ public class PauseMenuButton : MonoBehaviour
 			//Debug.Log("INDEX " + thisIndex);
 
 			animator.SetBool("selected", true);
-			if(Input.GetKeyDown(KeyCode.Space))
+			if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
 			//if (Input.GetAxis("Submit") == 1)
 			{
 				animator.SetBool("pressed", true);

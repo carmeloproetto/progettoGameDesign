@@ -12,6 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ed64f743d504b4cbd69dd1ebec8c88, type: 3}
   m_Name: Epilogo_2_eng
   m_EditorClassIdentifier: 
-  sentences: []
+  sentences:
+  - text: Over the years their missions have become more and more frequent, especially
+      now that I have grown and the environmental situation has become alarming,
+      so much so that restrictions on staying outdoors are necessary.
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: "But now there\u2019s something different. It\u2019s been several weeks
+      since they left, and I haven\u2019t heard from them in days."
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
+  - text: "I don\u2019t know what\u2019s going on, but my job now is to wait for
+      them to come back. I have to stay and take care of my brother, my home and
+      my Earth. "
+    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   background: {fileID: 0}
   nextScene: {fileID: 0}
