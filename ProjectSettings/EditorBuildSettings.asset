@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Giulia/Menu.unity
     guid: 7b2fce0e916fdc742bfbb90bb2b30027
+  - enabled: 1
+    path: Assets/Scenes/Fede/Aggiornamenti scene finali/Menu_scene.unity
+    guid: e5b544611aed04ed2bcc50ebc049ac6e
   - enabled: 1
     path: Assets/Scenes/Carmelo/Cap1_intro.unity
     guid: 6e756c0e8efd0b9498cb227a9a344fe3

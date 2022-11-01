@@ -48,33 +48,33 @@ public class LanguageChangeScript : MonoBehaviour
         {
             if(thisScene.name == "Menu")
             {
-                newGameBtnText.text = "I N I Z I A";
+                newGameBtnText.text = "INIZIA";
             }
             else if(this.name == "PauseMenuCanvas")
             {
-                newGameBtnText.text = "R I P R E N D I";
+                newGameBtnText.text = "RIPRENDI";
             }
             //comuni
-            buttonText.text = "< I T A L I A N O >";
-            optionsBtnText.text = "I M P O S T A Z I O N I";
-            tutorialBtnText.text = "I S T R U Z I O N I";
-            quitBtnText.text = "E S C I";
+            buttonText.text = "< ITALIANO >";
+            optionsBtnText.text = "IMPOSTAZIONI";
+            tutorialBtnText.text = "ISTRUZIONI";
+            quitBtnText.text = "ESCI";
 
-            if (audioOptionText.text == "< O N >")
+            if (audioOptionText.text == "< ON >")
             {
                 Debug.Log("HERE");
 
 
-                audioOptionText.text = "< S I >";
+                audioOptionText.text = "< SI >";
             }
             else
             {
-                audioOptionText.text = "< N O >";
+                audioOptionText.text = "< NO >";
             }
 
-            langLabelText.text = "L I N G U A";
-            backBtnText.text = "I N D I E T R O";
-            backBtn2Text.text = "I N D I E T R O";
+            langLabelText.text = "LINGUA";
+            backBtnText.text = "INDIETRO";
+            backBtn2Text.text = "INDIETRO";
 
             tutorialText.text = "Sei pronto per fare la differenza? \r\n" +
                                "Usa A+D per muovere il tuo personaggio a sinistra e destra.\r\n" +
@@ -93,30 +93,30 @@ public class LanguageChangeScript : MonoBehaviour
         {
             if (thisScene.name == "Menu")
             {
-                newGameBtnText.text = "N E W  G A M E";
+                newGameBtnText.text = "NEW  GAME";
             }
             else if (this.name == "PauseMenuCanvas")
             {
-                newGameBtnText.text = "R E S U M E ";
+                newGameBtnText.text = "RESUME ";
             }
             //comuni
-            buttonText.text = "< E N G L I S H >";
-            optionsBtnText.text = "O P T I O N S";
-            tutorialBtnText.text = "T U T O R I A L";
-            quitBtnText.text = "Q U I T";
+            buttonText.text = "< ENGLISH >";
+            optionsBtnText.text = "OPTIONS";
+            tutorialBtnText.text = "TUTORIAL";
+            quitBtnText.text = "QUIT";
 
-            if (audioOptionText.text == "< S I >")
+            if (audioOptionText.text == "< SI >")
             {
-                audioOptionText.text = "< O N >";
+                audioOptionText.text = "< ON >";
             }
             else
             {
-                audioOptionText.text = "< O F F >";
+                audioOptionText.text = "< OFF >";
             }
 
-            langLabelText.text = "L A N G U A G E";
-            backBtnText.text = "B A C K";
-            backBtn2Text.text = "B A C K";
+            langLabelText.text = "LANGUAGE";
+            backBtnText.text = "BACK";
+            backBtn2Text.text = "BACK";
             tutorialText.text = "Are you ready to make a difference? \r\n" +
                                 "Use A+D to move the character on the left or on the right.\r\n" +
                                 "Use SPACE to complete faster the sentence during a dialogue.\r\n" +

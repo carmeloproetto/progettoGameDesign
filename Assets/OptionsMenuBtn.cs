@@ -44,14 +44,14 @@ public class OptionsMenuBtn : MonoBehaviour
 			}
 			else if (animator.GetBool("pressed"))
 			{
-				if (thisScene.name == "Menu")
+				if (thisScene.name == "Menu_scene")
 				{
 
 					if (thisIndex == 0)
 					{
 						audioChange.ButtonClicked();
 					}
-					else if (thisIndex == 1 && SceneManager.GetActiveScene().name == "Menu")
+					else if (thisIndex == 1 && SceneManager.GetActiveScene().name == "Menu_scene")
 					{
 						langChange.ButtonClicked();
 					}

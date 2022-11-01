@@ -88,15 +88,15 @@ MonoBehaviour:
     m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 20.05
+    m_Value: 1.8
     min: 0
   gaussianEnd:
     m_OverrideState: 0
-    m_Value: 61.57
+    m_Value: 41.1
     min: 0
   gaussianMaxRadius:
     m_OverrideState: 1
-    m_Value: 1.104
+    m_Value: 1.5
     min: 0.5
     max: 1.5
   highQualitySampling:
@@ -151,11 +151,11 @@ MonoBehaviour:
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.21
+    m_Value: 1.62
     min: 0
   scatter:
     m_OverrideState: 1
-    m_Value: 0.723
+    m_Value: 0.88
     min: 0
     max: 1
   clamp:
@@ -181,8 +181,45 @@ MonoBehaviour:
     m_Value: {fileID: 2800000, guid: f2c40b951cee11943a1f6d5ec1b42f2c, type: 3}
   dirtIntensity:
     m_OverrideState: 0
-    m_Value: 0
+    m_Value: 5.2
     min: 0
+--- !u!114 &-2900674766977869697
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e1dc532bcb41949b58bc4f2abfbb7e, type: 3}
+  m_Name: LensDistortion
+  m_EditorClassIdentifier: 
+  active: 1
+  m_AdvancedMode: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: -0.2
+    min: -1
+    max: 1
+  xMultiplier:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 1
+  yMultiplier:
+    m_OverrideState: 0
+    m_Value: 1
+    min: 0
+    max: 1
+  center:
+    m_OverrideState: 0
+    m_Value: {x: 0.5, y: 0.5}
+  scale:
+    m_OverrideState: 1
+    m_Value: 1
+    min: 0.01
+    max: 5
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,6 +240,7 @@ MonoBehaviour:
   - {fileID: -5358529394715129034}
   - {fileID: 6420869800614918406}
   - {fileID: -5515555889570576789}
+  - {fileID: -2900674766977869697}
 --- !u!114 &3092934090653942226
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -219,7 +257,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   color:
     m_OverrideState: 1
-    m_Value: {r: 0, g: 0.17300239, b: 0.4528302, a: 1}
+    m_Value: {r: 0.1792453, g: 0.066473104, b: 0.02959238, a: 1}
     hdr: 0
     showAlpha: 0
     showEyeDropper: 1
@@ -228,7 +266,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.21
+    m_Value: 0.26
     min: 0
     max: 1
   smoothness:

@@ -25,11 +25,11 @@ public class AudioChangeScript : MonoBehaviour
         {
             if (langChange.isEng)
             {
-                buttonText.text = "< O N >";
+                buttonText.text = "< ON >";
             }
             else
             {
-                buttonText.text = "< S I >";
+                buttonText.text = "< SI >";
             }
 
             isOn = true;
@@ -41,11 +41,11 @@ public class AudioChangeScript : MonoBehaviour
         {
             if (langChange.isEng)
             {
-                buttonText.text = "< O F F >";
+                buttonText.text = "< OFF >";
             }
             else
             {
-                buttonText.text = "< N O >";
+                buttonText.text = "< NO >";
             }
 
             isOn = false;
@@ -56,11 +56,11 @@ public class AudioChangeScript : MonoBehaviour
         {
             if (langChange.isEng)
             {
-                buttonText.text = "< O N >";
+                buttonText.text = "< ON >";
             }
             else
             {
-                buttonText.text = "< S I >";
+                buttonText.text = "< SI >";
             }
 
             isOn = true;
@@ -82,11 +82,11 @@ public class AudioChangeScript : MonoBehaviour
         {
             if(langChange.isEng)
             {
-                buttonText.text = "< O F F >";
+                buttonText.text = "< OFF >";
             }
             else
             {
-                buttonText.text = "< N O >";
+                buttonText.text = "< NO >";
             }
            
 
@@ -109,11 +109,11 @@ public class AudioChangeScript : MonoBehaviour
 
             if (langChange.isEng)
             {
-                buttonText.text = "< O N >";
+                buttonText.text = "< ON >";
             }
             else
             {
-                buttonText.text = "< S I >";
+                buttonText.text = "< SI >";
             }
 
             isOn = true;
