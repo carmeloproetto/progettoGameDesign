@@ -19,7 +19,7 @@ public class AnimationEventManager : MonoBehaviour
     public ParticleSystem pSystem_1_ragazzino;
     public ParticleSystem pSystem_2_ragazzino;
     public ParticleSystem pSystem_fountain;
-    public AudioManager audioMgr;
+    //public AudioManager audioMgr;
     public Transform fountain;
 
 
@@ -54,7 +54,7 @@ public class AnimationEventManager : MonoBehaviour
     public void SpingiBullo()
     {
         _bullo.SetTrigger("cadi");
-        audioMgr.Play("punch_1");
+        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("punch_1");
     }
 
     public void RaccogliLattina(Transform lattina)
@@ -142,7 +142,7 @@ public class AnimationEventManager : MonoBehaviour
     public void SquirrelJump()
     {
         squirrel.gameObject.GetComponent<Animator>().SetTrigger("Jump");
-        audioMgr.Play("squirrel_1");
+        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("squirrel_1");
     }
 
     public void CloseFountain()
@@ -151,14 +151,14 @@ public class AnimationEventManager : MonoBehaviour
         ParticleSystem pSystem = fountainWater.gameObject.GetComponent<ParticleSystem>();
         if( pSystem.isPlaying )
         {
-            audioMgr.Play("chiudi_fontana");
+            GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("chiudi_fontana");
             audioSrc.Stop();
             pSystem_fountain.Stop();
             pSystem.Stop();
         }
         else if ( pSystem.isStopped )
         {
-            audioMgr.Play("chiudi_fontana");
+            GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("chiudi_fontana");
             audioSrc.Play();
             pSystem.Play();
             pSystem_fountain.Play();
@@ -167,7 +167,7 @@ public class AnimationEventManager : MonoBehaviour
 
     public void PlayParticleSystemDad()
     {
-        audioMgr.Play("punch_2");
+        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("punch_2");
         pSystem_1_dad.gameObject.SetActive(true);
         pSystem_2_dad.gameObject.SetActive(true);
         pSystem_2_dad.Play();
@@ -176,7 +176,7 @@ public class AnimationEventManager : MonoBehaviour
 
     public void PlayParticleSystemRagazzino()
     {
-        audioMgr.Play("punch_1");
+        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("punch_1");
         pSystem_1_ragazzino.gameObject.SetActive(true);
         pSystem_2_ragazzino.gameObject.SetActive(true);
         pSystem_2_ragazzino.Play();
@@ -185,17 +185,17 @@ public class AnimationEventManager : MonoBehaviour
 
     public void PunchSoundOne()
     {
-        audioMgr.Play("punch_1");
+        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("punch_1");
     }
 
     public void PunchSoundTwo()
     {
-        audioMgr.Play("punch_2");
+        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("punch_2");
     }
 
     public void PunchSoundThree()
     {
-        audioMgr.Play("punch_3");
+        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("punch_3");
     }
 
     public void SchivataSound()
@@ -205,16 +205,16 @@ public class AnimationEventManager : MonoBehaviour
 
     public void StartCombattimento()
     {
-        audioMgr.Play("combattimento");
+        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("combattimento");
     }
 
     public void EndCombattimento()
     {
-        audioMgr.Stop("combattimento");
+        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Stop("combattimento");
     }
 
     public void RagazzinoReaction()
     {
-        audioMgr.Play("punch_2");
+        GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("punch_2");
     }
 }

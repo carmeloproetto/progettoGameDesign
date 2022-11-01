@@ -39406,6 +39406,10 @@ PrefabInstance:
       value: AudioManager
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497107, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7195858161761497107, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: m_TagString
       value: AudioManager
       objectReference: {fileID: 0}
@@ -54540,13 +54544,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.032529376, g: 0.09941112, b: 0.16028893, a: 1}
-  deepColor: {r: 0.41698417, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.032529376, g: 0.09941105, b: 0.16028884, a: 1}
+  deepColor: {r: 0.41698408, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.35
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 2.6
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.3014738, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.3014737, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
