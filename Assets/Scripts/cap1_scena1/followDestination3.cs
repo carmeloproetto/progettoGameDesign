@@ -12,7 +12,7 @@ public class followDestination3 : MonoBehaviour
 
     Vector3 b;
 
-    private float velocity = 2f;
+    private float velocity = 4f;
 
     public GameObject triggerDialogueSpace;
 

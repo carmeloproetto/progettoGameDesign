@@ -40,8 +40,6 @@ public class PlayerController : MonoBehaviour
         _controller = GetComponent<CharacterController>();
         curTarDirection = transform.forward;
         _animator = this.GetComponent<Animator>();
-         _jumpEnabled = false; 
-        
     }
 
     // Update is called once per frame
@@ -61,7 +59,7 @@ public class PlayerController : MonoBehaviour
         _isGrounded = _controller.isGrounded;
         _animator.SetBool("Grounded", _isGrounded);
 
-        if( _isGrounded && _playerVelocity.y < 0)
+        if( _isGrounded && _playerVelocity.y < 0 )
         {
             _playerVelocity.y = 0f;
             _animator.SetBool("FreeFall", false);
@@ -72,6 +70,14 @@ public class PlayerController : MonoBehaviour
         if( _isMoving || (horizontal == 1f && _inputEnabled ) || (horizontal == -1f && _backwardEnabled && _inputEnabled ) )
         {
             currAcceleration = acceleration;
+            if( Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) )
+            {
+                maxVelocity = 4f;
+            }
+            else
+            {
+                maxVelocity = 2f; 
+            }
 
              if ( horizontal == 1f && !_isRightForward && _inputEnabled )
             {
@@ -101,6 +107,7 @@ public class PlayerController : MonoBehaviour
         float jump = Input.GetAxisRaw("Jump");
         if( jump != 0f && _isGrounded && _jumpEnabled )
         {
+            this.GetComponent<Animator>().applyRootMotion = false;
             _playerVelocity.y += Mathf.Sqrt(_jumpHeight * -3.0f * _gravityValue);
             _animator.SetTrigger("Jump");
         }
@@ -110,7 +117,12 @@ public class PlayerController : MonoBehaviour
         }
         _playerVelocity.y += _gravityValue * Time.deltaTime;
         _controller.Move(_playerVelocity * Time.deltaTime);
-        
+
+        if (jump == 0 && _isGrounded)
+        {
+            this.GetComponent<Animator>().applyRootMotion = true;
+        }
+
     }
 
     public void SetTargetDirection(Vector3 targetDirection)

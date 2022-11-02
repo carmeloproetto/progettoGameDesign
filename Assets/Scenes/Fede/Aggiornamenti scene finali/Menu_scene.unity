@@ -301,7 +301,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 44404024}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.162138, y: 6, z: 310}
+  m_LocalPosition: {x: 11.1, y: 5.4, z: 78.3}
   m_LocalScale: {x: 2, y: 3.3, z: 1}
   m_Children: []
   m_Father: {fileID: 231821786}
@@ -1886,7 +1886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413276802}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 18.162138, y: 9.5, z: 191}
+  m_LocalPosition: {x: 18.162138, y: 12.2, z: 64.2}
   m_LocalScale: {x: 1, y: 0.78, z: 1}
   m_Children: []
   m_Father: {fileID: 231821786}
@@ -2932,7 +2932,7 @@ GameObject:
   - component: {fileID: 919964747}
   - component: {fileID: 919964746}
   m_Layer: 0
-  m_Name: Sun
+  m_Name: Moon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2970,7 +2970,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 94a257b608a2e49138ccda544a4446a1, type: 2}
+  - {fileID: 2100000, guid: d671cd644fad8402daf852c9b845dbdf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3008,8 +3008,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919964745}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -27.5, y: 16.7, z: 382}
-  m_LocalScale: {x: 29.431252, y: 29.431252, z: 29.431252}
+  m_LocalPosition: {x: -12.8, y: 43.5, z: 97}
+  m_LocalScale: {x: 7.6477404, y: 7.6477404, z: 7.6477404}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 24
@@ -34588,7 +34588,7 @@ MonoBehaviour:
   priority: 0
   blendDistance: 0
   weight: 1
-  sharedProfile: {fileID: 11400000, guid: 7717b165c1a3d214bad512412a0d478c, type: 2}
+  sharedProfile: {fileID: 11400000, guid: bfd2be7fc04ad45d5a01a846a4f486ae, type: 2}
 --- !u!4 &545972060461200630
 Transform:
   m_ObjectHideFlags: 0
@@ -50232,7 +50232,7 @@ MonoBehaviour:
   audioClip: {fileID: 8300000, guid: da1b160ba7e6b4bf0a40defe83b864d4, type: 3}
   levelLoader: {fileID: 471742405}
   canvas: {fileID: 4746331875591382293}
-  newGameButton: {fileID: 0}
+  newGameButton: {fileID: 9042192564326699514}
 --- !u!95 &4746331876964981546
 Animator:
   serializedVersion: 3
@@ -50977,8 +50977,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4914072125592313877}
   m_LocalRotation: {x: -0, y: -0.33359146, z: -0, w: 0.9427178}
-  m_LocalPosition: {x: 0.66928864, y: 0.0169, z: -0.3248787}
-  m_LocalScale: {x: 1, y: 3.9264, z: 1}
+  m_LocalPosition: {x: 0.66928864, y: 0.0079, z: -0.3248787}
+  m_LocalScale: {x: 1, y: 2.3703675, z: 1}
   m_Children: []
   m_Father: {fileID: 4914072123643964832}
   m_RootOrder: 4

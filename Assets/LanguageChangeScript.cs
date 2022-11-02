@@ -46,7 +46,7 @@ public class LanguageChangeScript : MonoBehaviour
 
         if (isEng)
         {
-            if(thisScene.name == "Menu")
+            if(thisScene.name == "Menu_scene")
             {
                 newGameBtnText.text = "INIZIA";
             }
@@ -91,7 +91,7 @@ public class LanguageChangeScript : MonoBehaviour
         }
         else
         {
-            if (thisScene.name == "Menu")
+            if (thisScene.name == "Menu_scene")
             {
                 newGameBtnText.text = "NEW  GAME";
             }
