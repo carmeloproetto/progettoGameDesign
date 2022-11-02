@@ -116,6 +116,7 @@ public class DialogueManagerCap3_1 : MonoBehaviour{
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
                 
                 if(line == 5 && countDialogue == 1){
+                    disableSpace = true;
                     director.Play();
                 }
                 if(line == 14 && countDialogue == 1){

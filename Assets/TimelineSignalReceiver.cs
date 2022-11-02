@@ -8,6 +8,7 @@ public class TimelineSignalReceiver : MonoBehaviour
     public Transform gabbia;
     private bool startTransition = false;
     public Rig rig; 
+    public GameObject dlgMng;
 
     public void Free()
     {
@@ -15,6 +16,7 @@ public class TimelineSignalReceiver : MonoBehaviour
         gabbia.GetComponentInChildren<Rigidbody>().isKinematic = false;
         startTransition = true; 
         Debug.Log("Gabbia Liberata");
+        dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = false;
     }
 
     public void Update()

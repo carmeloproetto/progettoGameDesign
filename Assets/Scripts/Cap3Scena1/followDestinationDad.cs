@@ -14,7 +14,7 @@ public class followDestinationDad : MonoBehaviour
     Vector3 b;
 
     private float velocity = 4f;
-    private float aux = 0.8f;
+    private float aux = 0.78f;
 
     private Scene scene;
 
