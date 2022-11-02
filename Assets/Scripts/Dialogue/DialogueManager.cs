@@ -50,7 +50,6 @@ public class DialogueManager : MonoBehaviour
     public GameObject ragazzino;
     public GameObject bullo;
 
-    public GameObject tutorialPanel;
     public GameObject canvas2;
     public GameObject canvas; 
     public GameObject dlgMgn;
@@ -82,6 +81,9 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI textmeshPro2;
 
     public GameObject board;
+
+    public TutorialUI tutorial_1;
+    public TutorialUI tutorial_2; 
 
     private void Awake(){
         if(instance != null){
@@ -269,8 +271,11 @@ public class DialogueManager : MonoBehaviour
         else if(countDialogue == 3 && cartellone){
             cartellone = false;
             countDialogue--;
-            dad.GetComponent<PlayerController>().enabled = true;
+            dad.GetComponent<PlayerController>().EnableInput();
+            dad.GetComponent<PlayerController>().EnableJump();
+            dad.GetComponent<PlayerController>().EnableRotation();
             board.GetComponent<BoardInteractable>().enabled = false;
+            board.GetComponent<BoardInteractable>().interactable = false;
             board.GetComponent<DialogueTrigger>().enabled = false;
         }
         //cose da fare quando termina il quarto dialogo
@@ -314,7 +319,8 @@ public class DialogueManager : MonoBehaviour
     
     IEnumerator triggerDadControl(){    
         yield return new WaitForSeconds(3f);
-        tutorialPanel.SetActive(true);
+        tutorial_1.On();
+        tutorial_2.On();
         dad.GetComponent<PlayerController>().enabled = true;
         dad.GetComponent<limitZone>().enabled = true;
         yield return new WaitForSeconds(1f);

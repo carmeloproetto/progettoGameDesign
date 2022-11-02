@@ -5,14 +5,15 @@ using UnityEngine;
 public class disableTutorialPanel : MonoBehaviour
 {
 
-    public GameObject tutorialPanel;
+    public TutorialUI tutorial_1;
+    public TutorialUI tutorial_2; 
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player") && other.name == "PadreBambino" )
         {
-            Debug.Log("Enter");
-            tutorialPanel.SetActive(false);
+            tutorial_1.Off();
+            tutorial_2.Off();
         }
     }
 }

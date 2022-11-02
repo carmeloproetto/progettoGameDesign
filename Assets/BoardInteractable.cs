@@ -16,7 +16,9 @@ public class BoardInteractable : InteractableObject
     {
 
         //disabilito input player
-        player.GetComponent<PlayerController>().enabled = false;
+        player.GetComponent<PlayerController>().DisableInput();
+        player.GetComponent<PlayerController>().DisableJump();
+        player.GetComponent<PlayerController>().DisableRotation();
 
         //ruoto il bambino verso la board
         player.DOLookAt(board.position, 1f, AxisConstraint.Y, Vector3.up).OnComplete(() => { 

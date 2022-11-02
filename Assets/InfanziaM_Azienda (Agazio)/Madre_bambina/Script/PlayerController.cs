@@ -30,7 +30,8 @@ public class PlayerController : MonoBehaviour
     private Vector3 curTarDirection;
 
     private bool _inputEnabled = true;
-    private bool _jumpEnabled = true; 
+    private bool _jumpEnabled = true;
+    private bool _rotationEnabled = true; 
     private bool _backwardEnabled = true; 
 
     
@@ -99,9 +100,12 @@ public class PlayerController : MonoBehaviour
         velocity = Mathf.Clamp(velocity, 0f, maxVelocity);
         _animator.SetFloat("Speed", velocity);
 
-        Quaternion targetRotation = Quaternion.LookRotation(curTarDirection, Vector3.up);
-        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed);
-
+        if( _rotationEnabled)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(curTarDirection, Vector3.up);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed);
+        }
+        
         _controller.Move(curTarDirection * velocity * Time.deltaTime);
 
         float jump = Input.GetAxisRaw("Jump");
@@ -163,6 +167,16 @@ public class PlayerController : MonoBehaviour
     public void EnableBackward()
     {
         _backwardEnabled = true;
+    }
+
+    public void DisableRotation()
+    {
+        _rotationEnabled = false;
+    }
+
+    public void EnableRotation()
+    {
+        _rotationEnabled = true;
     }
 
 }
