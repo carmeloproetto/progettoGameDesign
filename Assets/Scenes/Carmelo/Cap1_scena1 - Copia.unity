@@ -10083,6 +10083,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CFXR3 Hit Misc F Smoke
       objectReference: {fileID: 0}
+    - target: {fileID: 141433446842962269, guid: 9fe8f8b3288e45a44af36ff8aa04486e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 141433446842962273, guid: 9fe8f8b3288e45a44af36ff8aa04486e, type: 3}
       propertyPath: clearBehavior
       value: 1
@@ -16374,7 +16378,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1429954232896169629, guid: 83036083a4ebcd34f98131bd3cf6f4d2, type: 3}
       propertyPath: clearBehavior
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1429954232896169629, guid: 83036083a4ebcd34f98131bd3cf6f4d2, type: 3}
       propertyPath: cameraShake.shakeSpace
@@ -26999,7 +27003,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1429954232896169629, guid: 83036083a4ebcd34f98131bd3cf6f4d2, type: 3}
       propertyPath: clearBehavior
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1429954232896169629, guid: 83036083a4ebcd34f98131bd3cf6f4d2, type: 3}
       propertyPath: cameraShake.useMainCamera
@@ -29917,13 +29921,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.16455337, g: 0.25228578, b: 0.3292509, a: 1}
-  deepColor: {r: 0.41706914, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.16455176, g: 0.25228408, b: 0.3292492, a: 1}
+  deepColor: {r: 0.41706744, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.38
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 3.5
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30155876, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30155706, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
@@ -29936,7 +29940,7 @@ MonoBehaviour:
   surfaceFoamCutoff: 0.43
   surfaceFoamDistortion: 1.24
   surfaceFoamBlend: 0.68
-  surfaceFoamColor1: {r: 0.023540407, g: 0.15284875, b: 0.21677703, a: 0.19215687}
+  surfaceFoamColor1: {r: 0.023540407, g: 0.15284714, b: 0.21677533, a: 0.19215687}
   surfaceFoamColor2: {r: 1, g: 1, b: 1, a: 0.35686275}
   surfaceFoamMovement: {x: 0.28, y: 0.03, z: 0.24, w: 0.01}
   surfaceFoamDirection1: 0.28
@@ -53868,7 +53872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497107, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497107, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: m_TagString

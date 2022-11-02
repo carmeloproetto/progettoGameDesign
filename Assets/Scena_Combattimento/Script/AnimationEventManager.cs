@@ -168,19 +168,19 @@ public class AnimationEventManager : MonoBehaviour
     public void PlayParticleSystemDad()
     {
         GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("punch_2");
-        pSystem_1_dad.gameObject.SetActive(true);
-        pSystem_2_dad.gameObject.SetActive(true);
+        //pSystem_1_dad.gameObject.SetActive(true);
+        //pSystem_2_dad.gameObject.SetActive(true);
         pSystem_2_dad.Play();
-        pSystem_1_dad.Play();
+        //pSystem_1_dad.Play();
     }
 
     public void PlayParticleSystemRagazzino()
     {
         GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("punch_1");
-        pSystem_1_ragazzino.gameObject.SetActive(true);
-        pSystem_2_ragazzino.gameObject.SetActive(true);
+        //pSystem_1_ragazzino.gameObject.SetActive(true);
+        //pSystem_2_ragazzino.gameObject.SetActive(true);
         pSystem_2_ragazzino.Play();
-        pSystem_1_ragazzino.Play();
+        //pSystem_1_ragazzino.Play();
     }
 
     public void PunchSoundOne()
