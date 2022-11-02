@@ -76,10 +76,10 @@ public class Cap3Scena1Intro : MonoBehaviour
     }
 
     private IEnumerator DadWalk(){
+        Debug.Log("siamo dentro DadWalk");
         yield return new WaitForSeconds(2f);
          yield return new WaitForSeconds(2f);
         canvas2.SetActive(false);
     }
-
  
 }

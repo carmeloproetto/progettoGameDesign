@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.2
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 26739539}
-  m_IndirectSpecularColor: {r: 0.009096811, g: 0.0047437027, b: 0.021468183, a: 0.2}
+  m_IndirectSpecularColor: {r: 0.009179308, g: 0.0047567827, b: 0.021763502, a: 0.2}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5617,6 +5617,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181986340}
   m_Mesh: {fileID: 4300000, guid: 2ac56e37ab0b8c84d8aa8020fb2082b2, type: 3}
+--- !u!1 &185608276
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 185608277}
+  m_Layer: 0
+  m_Name: posizioneRagazzino
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &185608277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185608276}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.524, y: 2.491, z: -2.216}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &192641340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4945391837379990, guid: 9b6eba5dea9e77a4abd8f45df1ffffb6, type: 3}
@@ -7663,6 +7693,7 @@ MonoBehaviour:
   _jumpHeight: 1
   _isBehindChest: 0
   qteStart: 0
+  passedObstacles: 0
   stone: {fileID: 1044805064}
   tutorial: {fileID: 0}
   stumble: 0
@@ -53771,6 +53802,36 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1996118776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1996118777}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1996118777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1996118776}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.85, y: -3.3808327, z: 7.97}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1998978794
 GameObject:
   m_ObjectHideFlags: 0
@@ -62496,6 +62557,7 @@ GameObject:
   - component: {fileID: 7070624949944490517}
   - component: {fileID: 7070624949944490518}
   - component: {fileID: 7070624949944490519}
+  - component: {fileID: 7070624949944490520}
   m_Layer: 0
   m_Name: Ragazzino
   m_TagString: Ragazzino
@@ -62558,6 +62620,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 947040358}
+--- !u!114 &7070624949944490520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7070624949944490516}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b071150643711d9409507e1261d876e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 185608277}
+  speed: 0.02
+  dad: {fileID: 8129518475481400527}
 --- !u!4 &7081150934174167167
 Transform:
   m_ObjectHideFlags: 0
@@ -62936,7 +63013,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7070624949944490516}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -12.524, y: 2.491, z: -2.216}
+  m_LocalPosition: {x: -14.81, y: 2.491, z: -5.66}
   m_LocalScale: {x: 0.6344314, y: 0.6344314, z: 0.6344314}
   m_Children:
   - {fileID: 6526669050695681186}

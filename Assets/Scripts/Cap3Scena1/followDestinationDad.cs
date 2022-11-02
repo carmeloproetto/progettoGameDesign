@@ -28,6 +28,8 @@ public class followDestinationDad : MonoBehaviour
     {
       _animator = GetComponent<Animator>();
       b = target.position;
+      StartCoroutine(WalkRagazzo());
+
     }
 
 
@@ -64,6 +66,12 @@ public class followDestinationDad : MonoBehaviour
             //dlgMng.GetComponent<DialogueManagerCap3_1>().disableSpace = false; 
             this.GetComponent<followDestinationDad>().enabled = false;
         }
+    }
+
+     private IEnumerator WalkRagazzo(){
+        Debug.Log("siamo dentro WalkRagazzo");
+        yield return new WaitForSeconds(0.2f);
+        ragazzo.GetComponent<followDestinationRagazzinoIniziale>().enabled = true;
     }
 
 }
