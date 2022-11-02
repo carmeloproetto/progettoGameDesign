@@ -37,10 +37,26 @@ public class OptionsMenuBtn : MonoBehaviour
 
 			animator.SetBool("selected", true);
 
+			
 			if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return))
 			//if (Input.GetAxis("Submit") == 1)
 			{
-				animator.SetBool("pressed", true);
+				if(thisIndex == 2 && thisScene.name == "Menu_scene"){
+					animator.SetBool("pressed", true);
+				}
+				else if(thisIndex == 1 && thisScene.name != "Menu_scene"){
+					animator.SetBool("pressed", true);
+				}
+			}
+			else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.Return))
+			//if (Input.GetAxis("Submit") == 1)
+			{
+				if(thisIndex != 2 && thisScene.name == "Menu_scene"){
+					animator.SetBool("pressed", true);
+				}
+				else if(thisIndex != 1 && thisScene.name != "Menu_scene"){
+					animator.SetBool("pressed", true);
+				}
 			}
 			else if (animator.GetBool("pressed"))
 			{
