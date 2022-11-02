@@ -8,8 +8,9 @@ public class CameraFollow_Agazio : MonoBehaviour
     public Vector3 offset;
     [Range(1,10)]
     public float smoothFactor;
-    
-    private void FixedUpdate(){
+
+    private void Update()
+    {
         Follow();
     }
 
