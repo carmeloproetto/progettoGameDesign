@@ -307,18 +307,20 @@ public class DialogueManager : MonoBehaviour
             //il ragazzino si dirige verso il bullo e lo spinge
             ragazzino.GetComponent<Animator>().SetBool("isWalking", true);
         }
-        else if(countDialogue == 5 && feeling == 0){
-
-            
+        else if(countDialogue == 5 && feeling == 0){      
             Debug.Log("conversazione tra padre e ragazzino finita");
             ragazzino.GetComponent<Animator>().SetTrigger("corriVersoBullo");
             dlgMgn.GetComponent<DialogueManager>().enabled = false;
             dialoguePanel.SetActive(false);
             triggerDialogueBulloRagazzinoZone.SetActive(false);
             cam.GetComponent<CameraFollow>().enabled = false;
+            cam.GetComponent<cameraMovmentQte>().enabled = true;
+            //cam.GetComponent<CameraFollow>().target_aux = cam.GetComponent<CameraFollow>().target2;
             canvas2.SetActive(true);
             canvas2.GetComponent<Canvas>().enabled = false;
+            
             StartCoroutine(triggerDadQte());
+
 
         }
         else if(countDialogue == 5 && feeling == 1){
