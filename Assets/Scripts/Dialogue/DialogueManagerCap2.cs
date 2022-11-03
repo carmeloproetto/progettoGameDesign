@@ -128,7 +128,7 @@ public class DialogueManagerCap2 : MonoBehaviour
             return;
         }
 
-        if(Input.GetKeyDown("space") && viewChoice == false){
+        if((Input.GetKeyDown("space") || Input.GetKeyDown("return")) && viewChoice == false){
             //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
             if(disableSpace == false){
                 disableSpace = true;

@@ -128,14 +128,14 @@ public class DialogueManagerCap2_3 : MonoBehaviour
         else{
             canvasTutorialDialogo.GetComponent<Canvas>().enabled = true;
         }
-        
+
         setFirstActiveButton();
 
         if(!dialogueIsPlaying){
             return;
         }
 
-        if(Input.GetKeyDown("space") && viewChoice == false){
+        if((Input.GetKeyDown("space") || Input.GetKeyDown("return")) && viewChoice == false){
             //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
             if(disableSpace == false){
                 line++;
