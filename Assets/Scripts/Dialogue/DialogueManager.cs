@@ -141,6 +141,13 @@ public class DialogueManager : MonoBehaviour
                 return;
             }
 
+            if(disableSpace == true){
+                canvasTutorialDialogo.GetComponent<Canvas>().enabled = false;
+            }
+            else{
+                canvasTutorialDialogo.GetComponent<Canvas>().enabled = true;
+            }
+
         setFirstActiveButton();
         
 

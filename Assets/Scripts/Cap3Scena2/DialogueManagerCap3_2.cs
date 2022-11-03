@@ -75,6 +75,11 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
     private Animator ragazzoAnimator;
     private Animator profAnimator;
 
+    public GameObject canvasTutorialDialogo;
+    private GameObject child1;
+    private GameObject child2;
+    private GameObject child3;
+
    
 
     private void Awake(){
@@ -117,6 +122,10 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         padreAnimator = dad.GetComponent<Animator>();
         ragazzoAnimator = ragazzo.GetComponent<Animator>();
         profAnimator = professore.GetComponent<Animator>();
+
+        child1 = canvasTutorialDialogo.transform.GetChild(0).gameObject;
+        child2 = canvasTutorialDialogo.transform.GetChild(1).gameObject;
+        child3 = canvasTutorialDialogo.transform.GetChild(2).gameObject;
     }
 
     private void Update(){
@@ -124,6 +133,13 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         if(PauseMenu.GameIsPaused){
             setFirstActiveBtnSx = true;
             return;
+        }
+
+        if(disableSpace == true){
+            canvasTutorialDialogo.GetComponent<Canvas>().enabled = false;
+        }
+        else{
+            canvasTutorialDialogo.GetComponent<Canvas>().enabled = true;
         }
 
         setFirstActiveButton();
@@ -279,14 +295,15 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
      private IEnumerator activePanelAfterOneSecond(){
         yield return new WaitForSeconds(1f);
         dialoguePanel.SetActive(true);
-         yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.5f);
+        canvasTutorialDialogo.SetActive(true);
         disableSpace = false;
      }
 
 
     private IEnumerator ExitDialogueMode(){
         yield return new WaitForSeconds(0.2f);
-
+        canvasTutorialDialogo.SetActive(false);
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
@@ -416,6 +433,9 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         int index = 0;
         foreach(Choice choice in currentChoices){
             viewChoice = true;
+            child1.SetActive(false);
+            child2.SetActive(true);
+            child3.SetActive(true);
             choices[index].gameObject.SetActive(true);
             choicesText[index].text = choice.text;
             index++;
@@ -423,6 +443,9 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
 
         for(int i = index; i < choices.Length; i++){
             viewChoice = false;
+            child1.SetActive(true);
+            child2.SetActive(false);
+            child3.SetActive(false);
             choices[i].gameObject.SetActive(false);
         }
 
