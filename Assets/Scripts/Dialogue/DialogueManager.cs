@@ -236,7 +236,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = true;
         disableSpace = true;
         dad.GetComponent<Animator>().SetFloat("Speed", 0f);
-       
+        dad.GetComponent<Animator>().SetTrigger("Reset");
         StartCoroutine(activePanelAfterOneSecond());
         ContinueStory();
 
