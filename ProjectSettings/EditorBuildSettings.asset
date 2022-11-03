@@ -57,6 +57,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Carmelo/Cap3_fine.unity
     guid: c97b735205e462448be821785eec03bf
   - enabled: 1
+    path: Assets/Scenes/Fede/Aggiornamenti scene finali/Epilogo_lago.unity
+    guid: 755490b38d394db419e6e8c71c9f58ba
+  - enabled: 1
+    path: Assets/Scenes/Fede/Aggiornamenti scene finali/Epilogo_bosco.unity
+    guid: 894264f957ee19446bbd6c2f6669826b
+  - enabled: 1
     path: Assets/Scenes/Fede/Aggiornamenti scene finali/Epilogo_parco.unity
     guid: 0a455e60122036f4ab8830e1d3ad36b9
   - enabled: 1

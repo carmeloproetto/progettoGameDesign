@@ -16,14 +16,5 @@ MonoBehaviour:
   - text: "Gi\xE0 prima della mia nascita, la citt\xE0 risultava molto diversa rispetto
       a come i miei genitori la ricordano. "
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
-  - text: 'Non so quanto il loro impegno abbia fatto la differenza, posso solo immaginare
-      come sarebbero potute andare le cose agendo diversamente. '
-    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
-  - text: "Ma so per certo che non avrebbero mai voluto lasciare me e mio fratello
-      con il fardello di un futuro cos\xEC incerto."
-    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
-  - text: "Fu proprio questo a spingerli, ancora prima che nascessimo, a dare sempre
-      di pi\xF9 alla Terra per garantirci un ambiente pi\xF9 sano."
-    speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   background: {fileID: 0}
   nextScene: {fileID: 0}

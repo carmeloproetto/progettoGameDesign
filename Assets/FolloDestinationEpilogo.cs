@@ -16,6 +16,7 @@ public class FolloDestinationEpilogo : MonoBehaviour
     private float aux = 0.2f;
 
     public GameObject dad;
+    public GameObject canvas2;
 
     private bool firstTime;
 
@@ -25,7 +26,7 @@ public class FolloDestinationEpilogo : MonoBehaviour
         _animator = GetComponent<Animator>();
         b = target.position;
         firstTime = true;
-      
+        StartCoroutine(StartCanvas());
     }
 
     // Update is called once per frame
@@ -62,5 +63,10 @@ public class FolloDestinationEpilogo : MonoBehaviour
 
         this.gameObject.GetComponent<DialogueTriggerEpilogo>().startConvByOtherScript();
         //rotating = false;
+    }
+
+    IEnumerator StartCanvas(){
+        yield return new WaitForSeconds(1.5f);
+        canvas2.SetActive(true); 
     }
 }
