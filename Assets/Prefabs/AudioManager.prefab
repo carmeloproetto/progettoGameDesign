@@ -256,6 +256,12 @@ MonoBehaviour:
     pitch: 0.8
     loop: 0
     source: {fileID: 7195858161761497104}
+  - name: ui-text
+    clip: {fileID: 8300000, guid: fb5cf8725c1ffce4b8885ca9b281b018, type: 3}
+    volume: 0.2
+    pitch: 0.8
+    loop: 0
+    source: {fileID: 7195858161761497104}
 --- !u!114 &4245507734439653657
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -158,6 +158,7 @@ public class DialogueManager : MonoBehaviour
         if((Keyboard.current.spaceKey.isPressed || Keyboard.current.enterKey.isPressed) && viewChoice == false){
             //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
             if(disableSpace == false){
+                FindObjectOfType<AudioManager>().Play("ui-text");
                 //disableSpace = true;
                 //StartCoroutine(disableSpaceFunction());
                 line++;
