@@ -65,6 +65,11 @@ public class DialogueManagerCap2 : MonoBehaviour
     public TextMeshProUGUI textmeshPro;
     public TextMeshProUGUI textmeshPro2;
 
+    public GameObject canvasTutorialDialogo;
+    private GameObject child1;
+    private GameObject child2;
+    private GameObject child3;
+
 
     private void Awake(){
         if(instance != null){
@@ -96,6 +101,10 @@ public class DialogueManagerCap2 : MonoBehaviour
 
         m_EventSystem = EventSystem.current;
         setFirstActiveBtnSx = true;
+
+        child1 = canvasTutorialDialogo.transform.GetChild(0).gameObject;
+        child2 = canvasTutorialDialogo.transform.GetChild(1).gameObject;
+        child3 = canvasTutorialDialogo.transform.GetChild(2).gameObject;
     }
 
     private void Update(){
@@ -207,13 +216,14 @@ public class DialogueManagerCap2 : MonoBehaviour
         yield return new WaitForSeconds(1f);
         dialoguePanel.SetActive(true);
         yield return new WaitForSeconds(1f);
+        canvasTutorialDialogo.SetActive(true);
         disableSpace = false;
      }
 
 
     private IEnumerator ExitDialogueMode(){
         yield return new WaitForSeconds(0.2f);
-
+        canvasTutorialDialogo.SetActive(false);
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
@@ -322,12 +332,18 @@ public class DialogueManagerCap2 : MonoBehaviour
         foreach(Choice choice in currentChoices){
             viewChoice = true;
             choices[index].gameObject.SetActive(true);
+            child1.SetActive(false);
+            child2.SetActive(true);
+            child3.SetActive(true);
             choicesText[index].text = choice.text;
             index++;
         }
 
         for(int i = index; i < choices.Length; i++){
             viewChoice = false;
+            child1.SetActive(true);
+            child2.SetActive(false);
+            child3.SetActive(false);
             choices[i].gameObject.SetActive(false);
         }
 

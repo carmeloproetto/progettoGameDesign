@@ -57,6 +57,12 @@ public class DialogueManager : MonoBehaviour
 
     public bool cartellone;
 
+    public GameObject canvasTutorialDialogo;
+    private GameObject child1;
+    private GameObject child2;
+    private GameObject child3;
+    
+
     //conto il numero di frasi alla quale siamo arrivati nella conversazione
     private int line;
 
@@ -120,6 +126,10 @@ public class DialogueManager : MonoBehaviour
         /////////////////////////////SELEZIONE PRIMO PULSANTE NELLE SCELTE/////////////////////////////////
         m_EventSystem = EventSystem.current;
         setFirstActiveBtnSx = true;
+
+        child1 = canvasTutorialDialogo.transform.GetChild(0).gameObject;
+        child2 = canvasTutorialDialogo.transform.GetChild(1).gameObject;
+        child3 = canvasTutorialDialogo.transform.GetChild(2).gameObject;
         
     }
 
@@ -211,6 +221,7 @@ public class DialogueManager : MonoBehaviour
 
 
     public void EnterDialogueMode(TextAsset inkJSON){
+        
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         disableSpace = true;
@@ -234,13 +245,14 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         dialoguePanel.SetActive(true);
         yield return new WaitForSeconds(1f);
+        canvasTutorialDialogo.SetActive(true);
         disableSpace = false;
      }
 
 
     private IEnumerator ExitDialogueMode(){
         yield return new WaitForSeconds(0.2f);
-
+        canvasTutorialDialogo.SetActive(false);
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
@@ -407,6 +419,9 @@ public class DialogueManager : MonoBehaviour
 
 
     private void DisplayChoices(){
+        
+        
+
         List<Choice> currentChoices = currentStory.currentChoices;
 
         if(currentChoices.Count > choices.Length){
@@ -417,12 +432,18 @@ public class DialogueManager : MonoBehaviour
         foreach(Choice choice in currentChoices){
             viewChoice = true;
             choices[index].gameObject.SetActive(true);
+            child1.SetActive(false);
+            child2.SetActive(true);
+            child3.SetActive(true);
             choicesText[index].text = choice.text;
             index++;
         }
 
         for(int i = index; i < choices.Length; i++){
             viewChoice = false;
+            child1.SetActive(true);
+            child2.SetActive(false);
+            child3.SetActive(false);
             choices[i].gameObject.SetActive(false);
         }
 
