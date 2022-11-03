@@ -28,11 +28,10 @@ public class DialogueTriggerCap2 : MonoBehaviour
     private int count;
 
     private void Awake(){
-        language = 1;
        // visualCue.SetActive(false);
         startConv = false;
        
-        if(language == 0){
+        if(LanguageChangeScript.language == 0){
             inkJSON = inkJSON_Eng;
             inkJSON2 = inkJSON2_Eng;
             inkJSON3 = inkJSON3_Eng;
