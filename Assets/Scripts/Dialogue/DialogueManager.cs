@@ -193,6 +193,8 @@ public class DialogueManager : MonoBehaviour
                 }
                 else if(line == 3 && countDialogue == 5 && feeling == 1){
                     //il bullo fa rissa con il padre
+                    cam.GetComponent<CameraFollow>().enabled = false;
+                    cam.GetComponent<cameraMovmentQte>().enabled = true;
                     dad.GetComponent<AnimationEventManager>().StartCombattimento();
                     dad.GetComponent<Animator>().SetBool("Speak", false);
                     bullo.GetComponent<Animator>().SetTrigger("sceltaDue");
@@ -313,8 +315,6 @@ public class DialogueManager : MonoBehaviour
             dlgMgn.GetComponent<DialogueManager>().enabled = false;
             dialoguePanel.SetActive(false);
             triggerDialogueBulloRagazzinoZone.SetActive(false);
-            cam.GetComponent<CameraFollow>().enabled = false;
-            cam.GetComponent<cameraMovmentQte>().enabled = true;
             //cam.GetComponent<CameraFollow>().target_aux = cam.GetComponent<CameraFollow>().target2;
             canvas2.SetActive(true);
             canvas2.GetComponent<Canvas>().enabled = false;
@@ -327,16 +327,18 @@ public class DialogueManager : MonoBehaviour
             ragazzino.GetComponent<Animator>().SetBool("isTalking", false);
             canvas.GetComponent<Canvas>().enabled = false;
             disableSpace = true;
+            cam.GetComponent<CameraFollow>().enabled = false;
+            cam.GetComponent<cameraMovmentQteRissa>().enabled = true;
             canvas2.SetActive(true);
             canvas2.GetComponent<Canvas>().enabled = true;
             canvas2.GetComponent<GameControllerQTERissa>().enabled = true;
+            
         }
        
 
         line = 0;
         countDialogue++;
     }
-
 
     
     IEnumerator triggerDadControl(){    

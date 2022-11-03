@@ -28,7 +28,7 @@ public class CameraFollow : MonoBehaviour
     private void Update(){
         if(target_aux == target2 && !destinationReached){
            Vector3 a = transform.position;
-           b.Set(91.78f, 11.89683f, -29.005f);
+           b.Set(91.78f, 11.76f, -29.00f);
            transform.position = Vector3.MoveTowards(a, b, 0.02f);
         }
 
@@ -38,7 +38,7 @@ public class CameraFollow : MonoBehaviour
            transform.position = Vector3.MoveTowards(a, b, 0.02f);
         }
 
-        if(transform.position.x == 91.78f && transform.position.y == 11.89683f && transform.position.z == -29.005f){
+        if(transform.position.x == 91.78f && transform.position.y == 11.76f && transform.position.z == -29.00f){
             destinationReached = true;
         }
 
