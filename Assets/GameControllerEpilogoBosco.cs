@@ -15,6 +15,7 @@ public class GameControllerEpilogoBosco : MonoBehaviour
     public GameObject levelLoader;
 
     public GameObject canvasSkip;
+
     private bool aux;
 
     private bool wait;
