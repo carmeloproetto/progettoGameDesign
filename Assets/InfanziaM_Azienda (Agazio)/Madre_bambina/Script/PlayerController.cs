@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerController : MonoBehaviour
 {
@@ -71,13 +72,13 @@ public class PlayerController : MonoBehaviour
         if( _isMoving || (horizontal == 1f && _inputEnabled ) || (horizontal == -1f && _backwardEnabled && _inputEnabled ) )
         {
             currAcceleration = acceleration;
-            if( Input.GetKey(KeyCode.RightShift) || Input.GetKey(KeyCode.LeftShift) )
+            if( Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.LeftShift) )
             {
-                maxVelocity = 4f;
+                StartCoroutine(ChangeSpeed(maxVelocity, 4f, 0.4f));
             }
-            else
+            else if(Input.GetKeyUp(KeyCode.RightShift) || Input.GetKeyUp(KeyCode.LeftShift))
             {
-                maxVelocity = 2f; 
+                StartCoroutine(ChangeSpeed(maxVelocity, 2f, 0.4f));
             }
 
              if ( horizontal == 1f && !_isRightForward && _inputEnabled )
@@ -179,4 +180,15 @@ public class PlayerController : MonoBehaviour
         _rotationEnabled = true;
     }
 
+    IEnumerator ChangeSpeed(float v_start, float v_end, float duration)
+    {
+        float elapsed = 0.0f;
+        while (elapsed < duration)
+        {
+            maxVelocity = Mathf.Lerp(v_start, v_end, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        maxVelocity = v_end;
+    }
 }

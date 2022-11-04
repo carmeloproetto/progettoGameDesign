@@ -9,7 +9,7 @@ public class changeBoard : MonoBehaviour
     public GameObject eng;
 
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
         if(LanguageChangeScript.language == 0){
             ita.SetActive(false);

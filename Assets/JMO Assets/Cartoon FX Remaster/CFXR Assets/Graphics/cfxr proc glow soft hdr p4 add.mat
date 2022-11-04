@@ -40,7 +40,7 @@ Material:
     - _HdrBoost: 1
     - _HdrMultiply: 10
     - _InvertDissolveTex: 0
-    - _MaxValue: 2
+    - _MaxValue: 2.6
     - _RingTopOffset: 0.05
     - _ShadowStrength: 1
     - _SoftParticlesFadeDistanceFar: 1
@@ -53,3 +53,4 @@ Material:
     - _UseSP: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
