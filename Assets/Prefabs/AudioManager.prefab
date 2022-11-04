@@ -274,6 +274,12 @@ MonoBehaviour:
     pitch: 0.8
     loop: 0
     source: {fileID: 7195858161761497104}
+  - name: failureQteCorsa
+    clip: {fileID: 8300000, guid: 37bfc6958c79abd468ddb0c309f71d24, type: 3}
+    volume: 1
+    pitch: 0.8
+    loop: 0
+    source: {fileID: 7195858161761497104}
 --- !u!114 &4245507734439653657
 MonoBehaviour:
   m_ObjectHideFlags: 0

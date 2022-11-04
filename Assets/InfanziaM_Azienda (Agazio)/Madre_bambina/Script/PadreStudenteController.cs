@@ -326,7 +326,7 @@ public class PadreStudenteController : MonoBehaviour
     {
         //dlgMng.GetComponent<DialogueManagerCap3_2>().startCorsa = true;
         //tutorialCorsa.SetActive(true);
-
+        FindObjectOfType<AudioManager>().Play("failureQteCorsa");
         _auxCount = 0;
         _controller.enabled = false;
         this.transform.position = startingPosition;
