@@ -185,7 +185,7 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 7195858161761497104}
   - name: QteCorsa
-    clip: {fileID: 8300000, guid: 1a816231403256b4594b5c0a7896c387, type: 3}
+    clip: {fileID: 8300000, guid: 71d5a66c7cf52fb40ba7ae6073019cff, type: 3}
     volume: 1
     pitch: 1
     loop: 1
@@ -258,6 +258,18 @@ MonoBehaviour:
     source: {fileID: 7195858161761497104}
   - name: ui-text
     clip: {fileID: 8300000, guid: fb5cf8725c1ffce4b8885ca9b281b018, type: 3}
+    volume: 1
+    pitch: 0.8
+    loop: 0
+    source: {fileID: 7195858161761497104}
+  - name: button-selected
+    clip: {fileID: 8300000, guid: 2baf4738d2eb04bc99236a610b01dad4, type: 3}
+    volume: 1
+    pitch: 0.8
+    loop: 0
+    source: {fileID: 7195858161761497104}
+  - name: stealthAzienda
+    clip: {fileID: 8300000, guid: 5999b9e75c121f94cac95e5faa2c6b94, type: 3}
     volume: 1
     pitch: 0.8
     loop: 0

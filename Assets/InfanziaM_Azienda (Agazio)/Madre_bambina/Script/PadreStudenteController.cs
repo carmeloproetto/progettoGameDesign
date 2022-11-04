@@ -258,6 +258,8 @@ public class PadreStudenteController : MonoBehaviour
             _playerVelocity.y += Mathf.Sqrt(_jumpHeight * -3.0f * _gravityValue);
 
             _animator.SetTrigger("Jump");
+            Debug.Log("sto saltando");
+            FindObjectOfType<AudioManager>().Play("button-selected");
 
             alreadyJumped = false;
         }
