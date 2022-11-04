@@ -282,7 +282,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
             
         if(countDialogue == 1){
             currentStory.EvaluateFunction("changeFeeling", feeling);
-            ragazzo.transform.eulerAngles = new Vector3(0f, -90f, 0f);
+            //ragazzo.transform.eulerAngles = new Vector3(0f, -90f, 0f);
         }
 
         if(countDialogue == 2){
