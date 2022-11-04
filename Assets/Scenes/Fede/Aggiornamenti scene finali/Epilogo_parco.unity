@@ -21588,6 +21588,7 @@ GameObject:
   - component: {fileID: 1270436648}
   - component: {fileID: 1270436647}
   - component: {fileID: 1270436646}
+  - component: {fileID: 1270436650}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: Untagged
@@ -21711,6 +21712,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 9.225, y: 0.326, z: 0}
+--- !u!114 &1270436650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1270436644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae657e53b6e15c46bedd7a6dde61799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1273933931
 GameObject:
   m_ObjectHideFlags: 0
@@ -111722,8 +111735,8 @@ MonoBehaviour:
   dialogueText: {fileID: 1523262630}
   displayNameText: {fileID: 1950174309}
   imageOfSpeaker: {fileID: 731261713}
-  momImage: {fileID: 21300000, guid: 09d15112d6682724aba417e37c601149, type: 3}
-  dadImage: {fileID: 21300000, guid: 09d15112d6682724aba417e37c601149, type: 3}
+  momImage: {fileID: 21300000, guid: 975c32f3b11d46a4698b9d8e10a44979, type: 3}
+  dadImage: {fileID: 21300000, guid: 60024b9bee21df842923616a057abc14, type: 3}
   choices:
   - {fileID: 826506114}
   - {fileID: 258839419}

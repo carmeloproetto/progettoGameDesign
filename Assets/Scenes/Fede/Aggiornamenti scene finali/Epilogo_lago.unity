@@ -12938,7 +12938,6 @@ GameObject:
   - component: {fileID: 805903248}
   - component: {fileID: 805903247}
   - component: {fileID: 805903246}
-  - component: {fileID: 805903245}
   m_Layer: 0
   m_Name: Barile_3
   m_TagString: Lago_brutto
@@ -12963,19 +12962,6 @@ Transform:
   m_Father: {fileID: 179953248}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
---- !u!114 &805903245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 805903243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80d395b1616ec44aeb69092375a9cd54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isPushing: 0
 --- !u!54 &805903246
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17842,6 +17828,7 @@ GameObject:
   - component: {fileID: 1062363221}
   - component: {fileID: 1062363220}
   - component: {fileID: 1062363219}
+  - component: {fileID: 1062363223}
   m_Layer: 0
   m_Name: Camera_lago
   m_TagString: MainCamera
@@ -17959,6 +17946,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 58.653, z: 0}
+--- !u!114 &1062363223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062363217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eae657e53b6e15c46bedd7a6dde61799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1069156649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20749,7 +20748,6 @@ GameObject:
   - component: {fileID: 1248321958}
   - component: {fileID: 1248321957}
   - component: {fileID: 1248321956}
-  - component: {fileID: 1248321955}
   m_Layer: 0
   m_Name: BariliCollider
   m_TagString: Untagged
@@ -20771,25 +20769,6 @@ Transform:
   m_Father: {fileID: 179953248}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1248321955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248321953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcbc5e7957b3b4913b87029e0175e76e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactable: 1
-  icon: {fileID: 21300000, guid: a48c205d27b9d4c9ab97d3f274d0bc6c, type: 3}
-  italian_text: PER INTERAGIRE
-  english_text: TO INTERACT
-  destination: {fileID: 721892512}
-  barili: {fileID: 1248321953}
-  GUIManager: {fileID: 1586971808}
 --- !u!65 &1248321956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23020,13 +22999,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.032529376, g: 0.09938855, b: 0.16026536, a: 1}
-  deepColor: {r: 0.32774115, g: 0.48916286, b: 0.5849056, a: 1}
+  shallowColor: {r: 0.032529376, g: 0.099388175, b: 0.16026497, a: 1}
+  deepColor: {r: 0.32774073, g: 0.48916286, b: 0.5849056, a: 1}
   colorDepth: 0.35
   horizonColor: {r: 0.53314346, g: 0.9056604, b: 0.61401105, a: 1}
   horizonDistance: 2.6
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30144894, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30144852, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
@@ -23039,7 +23018,7 @@ MonoBehaviour:
   surfaceFoamCutoff: 0.37
   surfaceFoamDistortion: 0
   surfaceFoamBlend: 0.31
-  surfaceFoamColor1: {r: 0.4339533, g: 0.42740294, b: 0.42740294, a: 0.19215687}
+  surfaceFoamColor1: {r: 0.43395287, g: 0.42740253, b: 0.42740253, a: 0.19215687}
   surfaceFoamColor2: {r: 0, g: 0, b: 0, a: 0.35686275}
   surfaceFoamMovement: {x: 0.28, y: 0.01, z: 0.135, w: 0.01}
   surfaceFoamDirection1: 0.28
@@ -24502,13 +24481,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.032529376, g: 0.09940948, b: 0.16028723, a: 1}
-  deepColor: {r: 0.41698238, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.032529376, g: 0.099409096, b: 0.16028684, a: 1}
+  deepColor: {r: 0.41698197, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.35
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 2.6
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.301472, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.3014716, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
