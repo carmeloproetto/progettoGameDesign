@@ -80,6 +80,8 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
     private GameObject child2;
     private GameObject child3;
 
+    public GameObject canvas;
+
    
 
     private void Awake(){
@@ -152,6 +154,8 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         if((Input.GetKeyDown("space") || Input.GetKeyDown("return")) && viewChoice == false && !startCorsa){
             //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
             if(disableSpace == false){
+                disableSpace = true;
+                StartCoroutine(disableSpaceFunction());
                 FindObjectOfType<AudioManager>().Play("ui-text");
                 line++;
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
@@ -273,6 +277,12 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
               }
         }
     }   
+
+    private IEnumerator disableSpaceFunction(){
+        yield return new WaitForSeconds(0.3f);
+        disableSpace = false;
+     }
+
 
     public void EnterDialogueMode(TextAsset inkJSON){
         currentStory = new Story(inkJSON.text);
@@ -508,6 +518,9 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
             feeling -= 0.25f;
             currentStory.EvaluateFunction("changeFeeling", feeling);
             padreAnimator.SetBool("Move", true);
+            canvas.GetComponent<Canvas>().enabled = false;
+            disableSpace = true;
+            StartCoroutine(ShowCanvas());
             Debug.Log("Avvicinati");
         }
 
@@ -533,6 +546,13 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
 
         currentStory.ChooseChoiceIndex(choiceIndex);
         ContinueStory();
+    }
+
+
+    private IEnumerator ShowCanvas(){
+        yield return new WaitForSeconds(2f);
+        canvas.GetComponent<Canvas>().enabled = true;
+        disableSpace = false;
     }
 
 
