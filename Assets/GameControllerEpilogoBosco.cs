@@ -29,7 +29,6 @@ public class GameControllerEpilogoBosco : MonoBehaviour
         if(LanguageChangeScript.language == 0){
             currentScene = currentScene_eng;
         }
-
         bottomBar.PlayScene(currentScene);
     }
 

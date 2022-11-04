@@ -23,6 +23,10 @@ public class GameControllerIntroCap2 : MonoBehaviour
     {
         countScene = 0;
 
+        if(SceneManager.GetActiveScene().name == "EpilogoFine"){
+            StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioEpilogoFine", 0.1f, 0.5f));
+        }
+
         if(LanguageChangeScript.language == 0)
             currentScene = currentScene_eng;
 

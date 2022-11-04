@@ -17,10 +17,12 @@ public class CameraMovmentEpilogo : MonoBehaviour
      {
         startPosition = target = transform.position;
         if(SceneManager.GetActiveScene().name != "Epilogo_lago"){
+            
             destination.Set(115,12,-30);
             duration = 16;    
         }
         else{
+            StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioEpilogo", 0.1f, 1));
             destination.Set(-126.6f, 12.5f, 15.89f);
             duration = 10;    
         }

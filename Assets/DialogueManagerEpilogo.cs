@@ -203,6 +203,7 @@ public class DialogueManagerEpilogo : MonoBehaviour
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
+            StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioEpilogo", 1, 0));
             dad.GetComponent<Animator>().SetTrigger("kiss");
             mom.GetComponent<Animator>().SetTrigger("kiss");
             //levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;

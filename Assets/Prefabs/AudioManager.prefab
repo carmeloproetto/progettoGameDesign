@@ -280,6 +280,18 @@ MonoBehaviour:
     pitch: 0.8
     loop: 0
     source: {fileID: 7195858161761497104}
+  - name: audioEpilogo
+    clip: {fileID: 8300000, guid: 55e73acd191e55d4d8a233c5439d64be, type: 3}
+    volume: 0
+    pitch: 0.8
+    loop: 0
+    source: {fileID: 7195858161761497104}
+  - name: audioEpilogoFine
+    clip: {fileID: 8300000, guid: 5d298293ee485784e9e59c4005b1ee77, type: 3}
+    volume: 0
+    pitch: 0.8
+    loop: 0
+    source: {fileID: 7195858161761497104}
 --- !u!114 &4245507734439653657
 MonoBehaviour:
   m_ObjectHideFlags: 0
