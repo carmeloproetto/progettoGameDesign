@@ -44,7 +44,7 @@ public class RaggiungiFiumeState : StateMachineBehaviour
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Transform destination = GameObject.FindGameObjectWithTag("Destination_3").transform;
+        Transform destination = GameObject.FindGameObjectWithTag("Dest").transform;
         animator.gameObject.transform.DOLookAt(destination.position, 1.2f);
     }
 }

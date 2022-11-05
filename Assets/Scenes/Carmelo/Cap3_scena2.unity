@@ -24590,7 +24590,7 @@ GameObject:
   - component: {fileID: 951666948}
   m_Layer: 0
   m_Name: FiumeDestination_2
-  m_TagString: Destination_3
+  m_TagString: Dest
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
