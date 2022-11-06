@@ -18,6 +18,7 @@ public class changeLanguagePauseMenu : MonoBehaviour
     public Text langLabelText;
     public Text backBtnText;
     public Text backBtn2Text;
+    public Text backBtn3Text;
     public Text tutorialText;
 
 
@@ -26,6 +27,7 @@ public class changeLanguagePauseMenu : MonoBehaviour
     {
 
         if(LanguageChangeScript.language == 1){
+            Debug.Log("ITALIANO");
             newGameBtnText.text = "R I P R E N D I";
             buttonText.text = "< I T A L I A N O >";
             optionsBtnText.text = "I M P O S T A Z I O N I";
@@ -45,6 +47,7 @@ public class changeLanguagePauseMenu : MonoBehaviour
             langLabelText.text = "L I N G U A";
             backBtnText.text = "I N D I E T R O";
             backBtn2Text.text = "I N D I E T R O";
+            backBtn3Text.text = "I N D I E T R O";
 
             tutorialText.text = "Sei pronto per fare la differenza? \r\n" +
                                "Usa A+D per muovere il tuo personaggio a sinistra e destra.\r\n" +
