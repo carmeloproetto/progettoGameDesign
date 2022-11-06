@@ -316,6 +316,8 @@ public class DialogueManager : MonoBehaviour
             dialoguePanel.SetActive(false);
             triggerDialogueBulloRagazzinoZone.SetActive(false);
             //cam.GetComponent<CameraFollow>().target_aux = cam.GetComponent<CameraFollow>().target2;
+            cam.GetComponent<CameraFollow>().enabled = false;
+            cam.GetComponent<cameraMovmentQte>().enabled = true;
             canvas2.SetActive(true);
             canvas2.GetComponent<Canvas>().enabled = false;
             

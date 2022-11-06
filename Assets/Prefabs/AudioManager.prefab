@@ -234,7 +234,7 @@ MonoBehaviour:
     source: {fileID: 7195858161761497104}
   - name: combattimento
     clip: {fileID: 8300000, guid: 16365a66a8d064a6e990db22722d3d5d, type: 3}
-    volume: 0.2
+    volume: 0.15
     pitch: 1
     loop: 1
     source: {fileID: 7195858161761497104}

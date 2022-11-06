@@ -14,7 +14,6 @@ public class GameControllerFineCap1 : MonoBehaviour
     public GameObject levelLoader;
     private bool aux;
 
-    public AudioSource audioSource;
 
     public GameObject canvasSkip;
 
@@ -26,8 +25,8 @@ public class GameControllerFineCap1 : MonoBehaviour
         countScene = 0;
         bottomBar.PlayScene(currentScene);
         backgroundController.SetImage(currentScene.background);
-
-        StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioIntro", 5, 1));
+        StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("birds", 2, 0));
+        StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioIntro", 3, 1));
         aux = true;
     }
 
