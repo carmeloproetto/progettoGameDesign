@@ -18,6 +18,7 @@ public class LanguageChangeScript : MonoBehaviour
     public Text langLabelText;
     public Text backBtnText;
     public Text backBtn2Text;
+    public Text backBtn3Text;
     public Text tutorialText;
 
     public bool isEng = true;
@@ -77,6 +78,7 @@ public class LanguageChangeScript : MonoBehaviour
             langLabelText.text = "LINGUA";
             backBtnText.text = "INDIETRO";
             backBtn2Text.text = "INDIETRO";
+            backBtn3Text.text = "INDIETRO";
 
             tutorialText.text = "Sei pronto per fare la differenza? \r\n" +
                                "Usa A+D per muovere il tuo personaggio a sinistra e destra.\r\n" +
@@ -120,6 +122,8 @@ public class LanguageChangeScript : MonoBehaviour
             langLabelText.text = "LANGUAGE";
             backBtnText.text = "BACK";
             backBtn2Text.text = "BACK";
+            backBtn3Text.text = "BACK";
+
             tutorialText.text = "Are you ready to make a difference? \r\n" +
                                 "Use A+D to move the character on the left or on the right.\r\n" +
                                 "Use SPACE to complete faster the sentence during a dialogue.\r\n" +

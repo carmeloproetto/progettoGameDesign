@@ -2654,6 +2654,7 @@ MonoBehaviour:
   langLabelText: {fileID: 2111584468843997931}
   backBtnText: {fileID: 2111584469380174962}
   backBtn2Text: {fileID: 2111584469267765522}
+  backBtn3Text: {fileID: 2804974262646815362}
   tutorialText: {fileID: 2752438077683627392}
   isEng: 1
 --- !u!222 &7111755633915988284
