@@ -19,6 +19,7 @@ public class loadMenu : MonoBehaviour
     }
 
     void loadMainMenu(){
+        GameObject.Destroy(GameObject.Find("AudioManager"));
         SceneManager.LoadScene("Menu_scene");
     }   
 }

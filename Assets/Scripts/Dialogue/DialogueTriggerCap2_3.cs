@@ -23,7 +23,10 @@ public class DialogueTriggerCap2_3 : MonoBehaviour
 
 
     private void Awake(){
-        FindObjectOfType<AudioManager>().Play("rainSound");
+        FindObjectOfType<AudioManager>().Stop("birds");
+        FindObjectOfType<AudioManager>().Stop("crowd");
+        FindObjectOfType<AudioManager>().Stop("stealthAzienda");
+        FindObjectOfType<AudioManager>().Play("rain");
 
         if(LanguageChangeScript.language == 0){
             inkJSON = inkJSON_eng;

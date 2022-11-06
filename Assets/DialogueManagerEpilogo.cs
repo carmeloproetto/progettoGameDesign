@@ -133,7 +133,7 @@ public class DialogueManagerEpilogo : MonoBehaviour
             return;
         }
 
-        if(Keyboard.current.spaceKey.isPressed && viewChoice == false){
+        if((Keyboard.current.spaceKey.isPressed || Keyboard.current.enterKey.isPressed) && viewChoice == false){
             //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
             if(disableSpace == false){
                 //disableSpace = true;
@@ -146,7 +146,7 @@ public class DialogueManagerEpilogo : MonoBehaviour
                 {
                     disableSpace = true;
                     dad.GetComponent<Animator>().SetTrigger("victory");
-                    StartCoroutine(disableSpaceFunction());
+                    StartCoroutine(disableSpaceEnjoy());
                     ContinueStory();
                 }
                 else
@@ -163,6 +163,11 @@ public class DialogueManagerEpilogo : MonoBehaviour
 
     private IEnumerator disableSpaceFunction(){
         yield return new WaitForSeconds(0.3f);
+        disableSpace = false;
+     }
+
+     private IEnumerator disableSpaceEnjoy(){
+        yield return new WaitForSeconds(1.5f);
         disableSpace = false;
      }
 
@@ -203,7 +208,7 @@ public class DialogueManagerEpilogo : MonoBehaviour
 
         //cose da fare quando termina il primo dialogo
         if(countDialogue == 1){
-            StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioEpilogo", 1, 0));
+            //StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioEpilogo", 1, 0));
             dad.GetComponent<Animator>().SetTrigger("kiss");
             mom.GetComponent<Animator>().SetTrigger("kiss");
             //levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;

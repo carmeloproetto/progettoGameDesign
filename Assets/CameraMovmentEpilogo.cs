@@ -22,9 +22,10 @@ public class CameraMovmentEpilogo : MonoBehaviour
             duration = 16;    
         }
         else{
-            StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioEpilogo", 0.1f, 1));
+            StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioIntro", 1, 0));
+            StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioEpilogo", 2, 0.6f));
             destination.Set(-126.6f, 12.5f, 15.89f);
-            duration = 10;    
+            duration = 16;    
         }
         SetDestination();
         StartCoroutine(startCanvas());

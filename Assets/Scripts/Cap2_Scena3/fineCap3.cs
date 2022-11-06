@@ -19,7 +19,7 @@ public class fineCap3 : MonoBehaviour
 
     public BackgroundController backgroundController;
 
-    public AudioSource audioSource;
+    //public AudioSource audioSource;
 
     public GameObject levelLoader;
 
@@ -30,7 +30,7 @@ public class fineCap3 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        FindObjectOfType<AudioManager>().Stop("rainSound");
+        StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("rain", 2, 0));
         StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioIntro", 5, 1));
 
         if(LanguageChangeScript.language == 0){
@@ -83,7 +83,7 @@ public class fineCap3 : MonoBehaviour
                     }
 
                     if(countAux == 5){
-                        StartCoroutine(StartFade(audioSource, 9, 0f));
+                        //StartCoroutine(StartFade(audioSource, 9, 0f));
                     }
                 }
                 else if(DialogueManagerCap2_3.finale == 2){
@@ -109,7 +109,7 @@ public class fineCap3 : MonoBehaviour
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     }
                     if(countAux == 4){
-                        StartCoroutine(StartFade(audioSource, 9, 0f));
+                        //StartCoroutine(StartFade(audioSource, 9, 0f));
                     }
                 }
                 else if(DialogueManagerCap2_3.finale == 3){
@@ -129,7 +129,7 @@ public class fineCap3 : MonoBehaviour
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                     }
                     if(countAux == 5){
-                        StartCoroutine(StartFade(audioSource, 9, 0f));
+                        //StartCoroutine(StartFade(audioSource, 9, 0f));
                     }
                 }
             }
@@ -147,7 +147,7 @@ public class fineCap3 : MonoBehaviour
 
     }
 
-    public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
+    /*public static IEnumerator StartFade(AudioSource audioSource, float duration, float targetVolume)
     {
         float currentTime = 0;
         float start = audioSource.volume;
@@ -158,5 +158,5 @@ public class fineCap3 : MonoBehaviour
             yield return null;
         }
         yield break;
-    }
+    }*/
 }

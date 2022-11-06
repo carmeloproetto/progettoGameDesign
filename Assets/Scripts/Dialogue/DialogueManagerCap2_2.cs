@@ -96,6 +96,7 @@ public class DialogueManagerCap2_2 : MonoBehaviour
     private void Start(){
 
         StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioIntro", 3, 0));
+        StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("rain", 2, 0));
         FindObjectOfType<AudioManager>().Play("birds");
         FindObjectOfType<AudioManager>().Play("crowd");
 

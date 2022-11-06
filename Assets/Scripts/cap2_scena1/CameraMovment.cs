@@ -13,7 +13,7 @@ public class CameraMovment : MonoBehaviour
     void Start()
     {
         b.Set(-4.769f, 3.88f, -8.351f);
-        FindObjectOfType<AudioManager>().Play("rainSound");
+        FindObjectOfType<AudioManager>().Play("rain");
         mom.GetComponent<Animator>().SetBool("Talk", true);
         StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioIntro", 4, 0));
     }

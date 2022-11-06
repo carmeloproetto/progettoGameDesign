@@ -37,7 +37,7 @@ public class PlayerController_Agazio : MonoBehaviour
     void Start()
     {
         StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("birds", 1, 0.3f));
-        StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("stealthAzienda", 1, 0.02f));
+        StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("stealthAzienda", 4, 0.02f));
         _controller = GetComponent<CharacterController>();
         curTarDirection = transform.forward;
 

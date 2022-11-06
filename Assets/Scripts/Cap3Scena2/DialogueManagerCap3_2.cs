@@ -267,7 +267,8 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         //MINI GIOCO CORSA
         if(startCorsa){
             if(Input.GetKeyDown("space")){  
-                StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("QteCorsa", 2, 1)); 
+                FindObjectOfType<AudioManager>().Stop("coffee");
+                StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("QteCorsa", 3, 1)); 
                 startCorsa = false;
                 professore.GetComponent<ProfessoreController>().enabled = true;
                 ragazzo.transform.eulerAngles = new Vector3(0f, 90f, 0f);
@@ -292,6 +293,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
             
         if(countDialogue == 1){
             currentStory.EvaluateFunction("changeFeeling", feeling);
+            StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("coffee", 4, 0.002f));
             //ragazzo.transform.eulerAngles = new Vector3(0f, -90f, 0f);
         }
 

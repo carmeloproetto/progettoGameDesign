@@ -10,6 +10,7 @@ public class SpingiBarile : MonoBehaviour
     void Start()
     {
         _rigidBody = barile.GetComponent<Rigidbody>();
+        StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("crowd", 1, 0.02f));
     }
 
     // Update is called once per frame

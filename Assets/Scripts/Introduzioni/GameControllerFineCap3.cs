@@ -29,6 +29,7 @@ public class GameControllerFineCap3 : MonoBehaviour
 
     void Start()
     {
+        FindObjectOfType<AudioManager>().Stop("qteCorsa");
         StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("audioIntro", 4, 1));
         countScene = 0;
 
@@ -82,7 +83,7 @@ public class GameControllerFineCap3 : MonoBehaviour
                     }
                     else if(countScene == 5){
                         //bisogna caricare la scena corretta
-                        FindObjectOfType<AudioManager>().Stop("audioIntro");
+                        //FindObjectOfType<AudioManager>().Stop("audioIntro");
                         this.GetComponent<Canvas>().enabled = false;
                         canvasSkip.SetActive(false);
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
@@ -113,7 +114,7 @@ public class GameControllerFineCap3 : MonoBehaviour
                     }
                     else if(countScene == 4){
                         //bisogna caricare la scena corretta
-                        FindObjectOfType<AudioManager>().Stop("audioIntro");
+                        //FindObjectOfType<AudioManager>().Stop("audioIntro");
                         this.GetComponent<Canvas>().enabled = false;
                         canvasSkip.SetActive(false);
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
@@ -144,7 +145,7 @@ public class GameControllerFineCap3 : MonoBehaviour
                     }
                     else if(countScene == 2){
                         //bisogna caricare la scena corretta
-                        FindObjectOfType<AudioManager>().Stop("audioIntro");
+                        //FindObjectOfType<AudioManager>().Stop("audioIntro");
                         this.GetComponent<Canvas>().enabled = false;
                         canvasSkip.SetActive(false);
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
@@ -175,7 +176,7 @@ public class GameControllerFineCap3 : MonoBehaviour
                     }
                     else if(countScene == 5){
                         //bisogna caricare la scena corretta
-                        FindObjectOfType<AudioManager>().Stop("audioIntro");
+                        //FindObjectOfType<AudioManager>().Stop("audioIntro");
                         this.GetComponent<Canvas>().enabled = false;
                         canvasSkip.SetActive(false);
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
@@ -205,7 +206,7 @@ public class GameControllerFineCap3 : MonoBehaviour
                     }
                     else if(countScene == 1){
                         //bisogna caricare la scena corretta
-                        FindObjectOfType<AudioManager>().Stop("audioIntro");
+                        //FindObjectOfType<AudioManager>().Stop("audioIntro");
                         this.GetComponent<Canvas>().enabled = false;
                         canvasSkip.SetActive(false);
                         levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
@@ -219,7 +220,7 @@ public class GameControllerFineCap3 : MonoBehaviour
             }
         }
         else if(Input.GetKeyDown(KeyCode.E)){
-            FindObjectOfType<AudioManager>().Stop("audioIntro");
+            //FindObjectOfType<AudioManager>().Stop("audioIntro");
             this.GetComponent<Canvas>().enabled = false;
             canvasSkip.SetActive(false);
             levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
