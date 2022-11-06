@@ -2648,13 +2648,13 @@ MonoBehaviour:
   newGameBtnText: {fileID: 2111584470526574511}
   optionsBtnText: {fileID: 2111584468903583661}
   tutorialBtnText: {fileID: 2111584470465430357}
-  creditsBtnText: {fileID: 0}
+  creditsBtnText: {fileID: 3201942710634797785}
   quitBtnText: {fileID: 2111584470680638569}
   audioOptionText: {fileID: 2111584469587003269}
   langLabelText: {fileID: 2111584468843997931}
   backBtnText: {fileID: 2111584469380174962}
   backBtn2Text: {fileID: 2111584469267765522}
-  tutorialText: {fileID: 2111584469494342851}
+  tutorialText: {fileID: 2752438077683627392}
   isEng: 1
 --- !u!222 &7111755633915988284
 CanvasRenderer:
