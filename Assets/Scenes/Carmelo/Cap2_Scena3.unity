@@ -5633,18 +5633,18 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1345229057265617457, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: 8134318300526665692, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: 712339524503649899, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: -6132646146761872286, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: 4080752822657195067, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: 7997412301262645656, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: -2851525064566731012, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: 3986981971960121851, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: -2002355119542075800, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: -7062171317558354296, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: -1849012029823283369, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: -5151675229436186914, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
+  - {fileID: 2100000, guid: 0bb81c34c63aa40ed85d9c1eed318bec, type: 2}
+  - {fileID: 2100000, guid: 8a1f20e6a32344ded93479043b52f727, type: 2}
+  - {fileID: 2100000, guid: 6216d0f6e751c4aaa89c2bb42a601e8e, type: 2}
+  - {fileID: 2100000, guid: 9cf1e56cb5cce4bc4b500695f020400c, type: 2}
+  - {fileID: 2100000, guid: fbaaecbcdbbf6444ca2989a69c3b3dac, type: 2}
+  - {fileID: 2100000, guid: 262b8cad816ae464688851652ed0d91a, type: 2}
+  - {fileID: 2100000, guid: 1fb40858cde20406482fa2c2d88e8dca, type: 2}
+  - {fileID: 2100000, guid: 12a7840b4dcea4b89b87fb702c0c2532, type: 2}
+  - {fileID: 2100000, guid: 4a6f55cbc87ac4c38b9afd6a1eda4dff, type: 2}
+  - {fileID: 2100000, guid: fea7314e3f3df4204a600101ca75baed, type: 2}
+  - {fileID: 2100000, guid: 9e1b290e72f074ef7ac526fe8a1f64ec, type: 2}
+  - {fileID: 2100000, guid: 7b937fc6dd9274e0e86b4858804d3985, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5776,8 +5776,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5516131190474971753, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
-  - {fileID: 5609411765759492150, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
+  - {fileID: 2100000, guid: 79b55b912cab54af796bd67f6a119792, type: 2}
+  - {fileID: 2100000, guid: e0662944e8afa4ba399006f7ef225b2e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6537,6 +6537,8 @@ GameObject:
   - component: {fileID: 1200755674}
   - component: {fileID: 1200755675}
   - component: {fileID: 6829654055629861435}
+  - component: {fileID: 6829654055629861436}
+  - component: {fileID: 6829654055629861437}
   m_Layer: 0
   m_Name: Madre_bambina
   m_TagString: Untagged
@@ -6564,6 +6566,126 @@ MonoBehaviour:
   paper: {fileID: 543450652971349806}
   rig: {fileID: 0}
   mom: {fileID: 6829654055629861434}
+--- !u!114 &6829654055629861436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829654055629861434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68900311c46544a778e7b1169a4f0766, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClips:
+  - {fileID: 8300000, guid: 72f526a6a9890f643a88e85a61c86c8a, type: 3}
+  - {fileID: 8300000, guid: 85016e0f2b01da248b9663dd49a161b0, type: 3}
+  - {fileID: 8300000, guid: 186de84b3207156479abe98f4958fed0, type: 3}
+  - {fileID: 8300000, guid: 1a91fcd19acf1e54bba0945d9f390849, type: 3}
+  - {fileID: 8300000, guid: 14e8a8d2158bec840b56c54f5266e692, type: 3}
+  - {fileID: 8300000, guid: 29841e7d5bbfb5b419c9ad16ca8bc4c1, type: 3}
+  - {fileID: 8300000, guid: dd1af302b8902684d9381de1f2d3a5af, type: 3}
+  - {fileID: 8300000, guid: 67c8b33e424ccdc4486edf538ab91c5a, type: 3}
+  - {fileID: 8300000, guid: 274649b0e221539409070ebf6c18918b, type: 3}
+  - {fileID: 8300000, guid: a3194b8bbc96ef84fab1f98f4b7dae3e, type: 3}
+  landSound: {fileID: 8300000, guid: ff697d3070687ce4583faa0561a145a2, type: 3}
+--- !u!82 &6829654055629861437
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6829654055629861434}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.119
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 6
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6930885976806538594
 GameObject:
   m_ObjectHideFlags: 0
@@ -7014,7 +7136,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4191860948256432535, guid: 96d4f0bf6f2634f5292649bd51c9123d, type: 3}
+  - {fileID: 2100000, guid: 04e6d83c8d7894042b2347722b51852d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -54,6 +54,14 @@ public class PlayerController : MonoBehaviour
         //blocco il movimento se sto conversando
         if(DialogueManager.GetInstance().dialogueIsPlaying || DialogueManagerCap2_2.GetInstance().dialogueIsPlaying){
             _animator.SetFloat("Speed", 0);
+            if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                StartCoroutine(ChangeSpeed(maxVelocity, 4f, 0.4f));
+            }
+            else if (Input.GetKeyUp(KeyCode.RightShift) || Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                StartCoroutine(ChangeSpeed(maxVelocity, 2f, 0.4f));
+            }
             return;
         }
 
@@ -72,14 +80,6 @@ public class PlayerController : MonoBehaviour
         if( _isMoving || (horizontal == 1f && _inputEnabled ) || (horizontal == -1f && _backwardEnabled && _inputEnabled ) )
         {
             currAcceleration = acceleration;
-            if( Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.LeftShift) )
-            {
-                StartCoroutine(ChangeSpeed(maxVelocity, 4f, 0.4f));
-            }
-            else if(Input.GetKeyUp(KeyCode.RightShift) || Input.GetKeyUp(KeyCode.LeftShift))
-            {
-                StartCoroutine(ChangeSpeed(maxVelocity, 2f, 0.4f));
-            }
 
              if ( horizontal == 1f && !_isRightForward && _inputEnabled )
             {
@@ -95,6 +95,15 @@ public class PlayerController : MonoBehaviour
         else
         {
             currAcceleration = -acceleration; 
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartCoroutine(ChangeSpeed(maxVelocity, 4f, 0.4f));
+        }
+        else if (Input.GetKeyUp(KeyCode.RightShift) || Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            StartCoroutine(ChangeSpeed(maxVelocity, 2f, 0.4f));
         }
 
         velocity += currAcceleration * Time.deltaTime;
