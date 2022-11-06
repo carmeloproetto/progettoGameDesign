@@ -11,6 +11,7 @@ public class LanguageChangeScript : MonoBehaviour
     public Text newGameBtnText;
     public Text optionsBtnText;
     public Text tutorialBtnText;
+    public Text creditsBtnText;
     public Text quitBtnText;
 
     public Text audioOptionText;
@@ -58,6 +59,7 @@ public class LanguageChangeScript : MonoBehaviour
             buttonText.text = "< ITALIANO >";
             optionsBtnText.text = "IMPOSTAZIONI";
             tutorialBtnText.text = "ISTRUZIONI";
+            creditsBtnText.text = "CREDITI";
             quitBtnText.text = "ESCI";
 
             if (audioOptionText.text == "< ON >")
@@ -103,6 +105,7 @@ public class LanguageChangeScript : MonoBehaviour
             buttonText.text = "< ENGLISH >";
             optionsBtnText.text = "OPTIONS";
             tutorialBtnText.text = "TUTORIAL";
+            creditsBtnText.text = "CREDITS";
             quitBtnText.text = "QUIT";
 
             if (audioOptionText.text == "< SI >")

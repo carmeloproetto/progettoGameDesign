@@ -11,6 +11,7 @@ public class changeLanguagePauseMenu : MonoBehaviour
     public Text newGameBtnText;
     public Text optionsBtnText;
     public Text tutorialBtnText;
+    public Text creditsBtnText;
     public Text quitBtnText;
 
     public Text audioOptionText;
@@ -29,6 +30,7 @@ public class changeLanguagePauseMenu : MonoBehaviour
             buttonText.text = "< I T A L I A N O >";
             optionsBtnText.text = "I M P O S T A Z I O N I";
             tutorialBtnText.text = "I S T R U Z I O N I";
+            creditsBtnText.text = "C R E D I T I";
             quitBtnText.text = "E S C I";
 
              if (audioOptionText.text == "< O N >")

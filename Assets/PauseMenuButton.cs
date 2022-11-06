@@ -13,6 +13,7 @@ public class PauseMenuButton : MonoBehaviour
 	public GameObject optionsMenu;
 	public GameObject pauseMenu;
 	public GameObject tutorialMenu;
+	public GameObject creditsMenu;
 
 
 	public AudioClip audioClip;
@@ -54,7 +55,13 @@ public class PauseMenuButton : MonoBehaviour
 					pauseMenu.SetActive(false);
 					menuButtonController.index = 0;
 				}
-				else if (thisIndex == 3)
+				else if(thisIndex == 3)
+                {
+					creditsMenu.SetActive(true);
+					pauseMenu.SetActive(false);
+					menuButtonController.index = 0;
+				}
+				else if (thisIndex == 4)
 				{
 					Debug.Log("QUIT!");
 					Application.Quit();

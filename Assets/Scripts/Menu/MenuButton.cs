@@ -13,6 +13,7 @@ public class MenuButton : MonoBehaviour
 	public GameObject optionsMenu;
 	public GameObject mainMenu;
 	public GameObject tutorialMenu;
+	public GameObject creditsMenu;
 
 	public AudioClip audioClip;
 
@@ -67,7 +68,13 @@ public class MenuButton : MonoBehaviour
 					mainMenu.SetActive(false);
 					menuButtonController.index = 0;
 				}
-				else if (thisIndex == 3)
+				else if(thisIndex == 3)
+                {
+					creditsMenu.SetActive(true);
+					mainMenu.SetActive(false);
+					menuButtonController.index = 0;
+				}
+				else if (thisIndex == 4)
 				{
 					Debug.Log("Quit! This works only during buikd ");
 					Application.Quit();
