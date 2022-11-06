@@ -37661,6 +37661,7 @@ MonoBehaviour:
   optionsMenu: {fileID: 2111584470520797855}
   pauseMenu: {fileID: 2111584470085722834}
   tutorialMenu: {fileID: 2111584469390891134}
+  creditsMenu: {fileID: 0}
   audioClip: {fileID: 8300000, guid: da1b160ba7e6b4bf0a40defe83b864d4, type: 3}
 --- !u!224 &2111584469181665500
 RectTransform:
@@ -38253,6 +38254,7 @@ MonoBehaviour:
   optionsMenu: {fileID: 2111584470520797855}
   pauseMenu: {fileID: 2111584470085722834}
   tutorialMenu: {fileID: 2111584469390891134}
+  creditsMenu: {fileID: 0}
   audioClip: {fileID: 8300000, guid: da1b160ba7e6b4bf0a40defe83b864d4, type: 3}
 --- !u!222 &2111584469631712932
 CanvasRenderer:
@@ -38390,6 +38392,7 @@ MonoBehaviour:
   optionsMenu: {fileID: 2111584470520797855}
   pauseMenu: {fileID: 2111584470085722834}
   tutorialMenu: {fileID: 2111584469390891134}
+  creditsMenu: {fileID: 0}
   audioClip: {fileID: 8300000, guid: da1b160ba7e6b4bf0a40defe83b864d4, type: 3}
 --- !u!224 &2111584469966990602
 RectTransform:
@@ -38608,6 +38611,7 @@ MonoBehaviour:
   optionsMenu: {fileID: 2111584470520797855}
   pauseMenu: {fileID: 2111584470085722834}
   tutorialMenu: {fileID: 2111584469390891134}
+  creditsMenu: {fileID: 0}
   audioClip: {fileID: 8300000, guid: da1b160ba7e6b4bf0a40defe83b864d4, type: 3}
 --- !u!224 &2111584470253284570
 RectTransform:
@@ -39993,6 +39997,7 @@ MonoBehaviour:
   newGameBtnText: {fileID: 2111584469127688357}
   optionsBtnText: {fileID: 2111584470734409895}
   tutorialBtnText: {fileID: 2111584469171506271}
+  creditsBtnText: {fileID: 0}
   quitBtnText: {fileID: 2111584468887624547}
   audioOptionText: {fileID: 2111584470335670415}
   langLabelText: {fileID: 2111584470808946145}
@@ -52318,11 +52323,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4369065082735945914, guid: 6c0012a773262f44c8942c0f6f20199e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4369065082735945914, guid: 6c0012a773262f44c8942c0f6f20199e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -331
+      value: -475
       objectReference: {fileID: 0}
     - target: {fileID: 4369065082735945914, guid: 6c0012a773262f44c8942c0f6f20199e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
