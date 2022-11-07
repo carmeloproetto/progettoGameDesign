@@ -51,6 +51,16 @@ public class DialogueTriggerCap3_1 : MonoBehaviour
                 }
             }
         }
+        else if(scene.name == "Cap3_scenaGabbia"){
+            if(playerInRange && !DialogueManagerCap3Scoiattoli.GetInstance().dialogueIsPlaying){
+                //visualCue.SetActive(true);
+                if(/*Input.GetKeyDown("c") ||*/ startConv){
+                    Debug.Log(ink.text);
+                    DialogueManagerCap3Scoiattoli.GetInstance().EnterDialogueMode(ink);
+                    startConv = false;
+                }
+            }
+        }
         else{
             if(playerInRange && !DialogueManagerCap3_2.GetInstance().dialogueIsPlaying){
                 //visualCue.SetActive(true);
