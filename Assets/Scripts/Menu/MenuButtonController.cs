@@ -12,6 +12,11 @@ public class MenuButtonController : MonoBehaviour {
 
 	void Start () {
 		audioSource = GetComponent<AudioSource>();
+
+		//to lock in the centre of window
+		Cursor.lockState = CursorLockMode.Locked;
+		//to hide the curser
+		Cursor.visible = false;
 	}
 	
 	// Update is called once per frame
