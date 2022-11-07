@@ -86,6 +86,15 @@ public class PadreController_RetroAzienda : MonoBehaviour
             currAcceleration = -acceleration;
         }
 
+        if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartCoroutine(ChangeSpeed(maxVelocity, 4f, 0.4f));
+        }
+        else if (Input.GetKeyUp(KeyCode.RightShift) || Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            StartCoroutine(ChangeSpeed(maxVelocity, 2f, 0.4f));
+        }
+
         velocity += currAcceleration * Time.deltaTime;
         velocity = Mathf.Clamp(velocity, 0f, maxVelocity);
         _animator.SetFloat("Speed", velocity);
@@ -165,5 +174,17 @@ public class PadreController_RetroAzienda : MonoBehaviour
     public void EnableGravity()
     {
         _gravityValue = -9.81f;
+    }
+
+    IEnumerator ChangeSpeed(float v_start, float v_end, float duration)
+    {
+        float elapsed = 0.0f;
+        while (elapsed < duration)
+        {
+            maxVelocity = Mathf.Lerp(v_start, v_end, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        maxVelocity = v_end;
     }
 }
