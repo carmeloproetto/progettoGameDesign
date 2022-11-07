@@ -47,6 +47,9 @@ public class PlayerController_Agazio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(PauseMenu.GameIsPaused)
+            return;
+
         _isGrounded = _controller.isGrounded;
         _animator.SetBool("Grounded", _isGrounded);
 
@@ -76,6 +79,15 @@ public class PlayerController_Agazio : MonoBehaviour
         else
         {
             currAcceleration = -acceleration; 
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartCoroutine(ChangeSpeed(maxVelocity, 4f, 0.4f));
+        }
+        else if (Input.GetKeyUp(KeyCode.RightShift) || Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            StartCoroutine(ChangeSpeed(maxVelocity, 2f, 0.4f));
         }
 
         velocity += currAcceleration * Time.deltaTime;
@@ -140,5 +152,17 @@ public class PlayerController_Agazio : MonoBehaviour
     public void EnableBackward()
     {
         _backwardEnabled = true;
+    }
+
+    IEnumerator ChangeSpeed(float v_start, float v_end, float duration)
+    {
+        float elapsed = 0.0f;
+        while (elapsed < duration)
+        {
+            maxVelocity = Mathf.Lerp(v_start, v_end, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+        maxVelocity = v_end;
     }
 }
