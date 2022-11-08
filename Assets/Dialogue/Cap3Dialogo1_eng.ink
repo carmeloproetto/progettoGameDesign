@@ -6,7 +6,7 @@ Good evening, professor. Yes, I am in the middle of the conclusion of my thesis.
 Oh, no problem. I have a day full of meetings, you can also stay into my office if you prefer. It is the next door. #speaker:Professor
 I just have one favor to ask, it won’t take much.
 Thank you! Of course, no problem. What is it about? #speaker:Dad
-As you can see I have here with me two small colleagues. They’re transferred squirrels for a research I’m working on. #speaker:Professor
+As you can see I have here with me two small colleagues. They’re American gray squirrels transferred for a research I’m working on. #speaker:Professor
 As I told you, I have a full schedule today and I can’t deal with them, but they're not in a very good condition and would need to be monitored.
 What you should do is follow the notes I wrote on that book.
 Perfect, I understood. #speaker:Dad
