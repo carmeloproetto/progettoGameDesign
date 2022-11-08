@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Epilogo1_eng
   m_EditorClassIdentifier: 
   sentences:
-  - text: 'Since before I was born, the town was bery different from how my parents
+  - text: 'Since before I was born, the town was very different from how my parents
       remember it. '
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   background: {fileID: 0}
