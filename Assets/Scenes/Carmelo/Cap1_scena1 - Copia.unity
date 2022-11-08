@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 467117973}
-  m_IndirectSpecularColor: {r: 0.1285102, g: 0.39423317, b: 0.874984, a: 1}
+  m_IndirectSpecularColor: {r: 0.14122896, g: 0.33630568, b: 0.6380209, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8026,7 +8026,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'PER CORRERE E '
+  m_text: '(SHIFT) PER CORRERE E '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6db5b503472e2034f87e7ea13ce0b1ff, type: 2}
   m_sharedMaterial: {fileID: -1218994384073248546, guid: 6db5b503472e2034f87e7ea13ce0b1ff, type: 2}
@@ -8115,8 +8115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6da5324e9e1ca46d98671155da8e2892, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  englishText: to run and
-  italianText: per correre e
+  englishText: (SHIFT) to run and
+  italianText: (SHIFT) per correre e
 --- !u!1001 &281627496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29942,13 +29942,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.1645318, g: 0.25226304, b: 0.32922813, a: 1}
-  deepColor: {r: 0.41704637, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.16452524, g: 0.2522561, b: 0.32922122, a: 1}
+  deepColor: {r: 0.41703945, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.38
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 3.5
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.301536, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30152908, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
@@ -29961,7 +29961,7 @@ MonoBehaviour:
   surfaceFoamCutoff: 0.43
   surfaceFoamDistortion: 1.24
   surfaceFoamBlend: 0.68
-  surfaceFoamColor1: {r: 0.023540407, g: 0.15282717, b: 0.21675426, a: 0.19215687}
+  surfaceFoamColor1: {r: 0.023540407, g: 0.15282062, b: 0.21674734, a: 0.19215687}
   surfaceFoamColor2: {r: 1, g: 1, b: 1, a: 0.35686275}
   surfaceFoamMovement: {x: 0.28, y: 0.03, z: 0.24, w: 0.01}
   surfaceFoamDirection1: 0.28
@@ -34278,15 +34278,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1161259962828613669, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 1e-45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1161259962828613669, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 3.1845e-41
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1161259962828613669, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 0
+      value: 2.3510647e-38
       objectReference: {fileID: 0}
     - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_Lightmapping
@@ -34302,19 +34302,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 1
+      value: 8e-45
       objectReference: {fileID: 0}
     - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 0.00000017247075
+      value: 1.7642e-41
       objectReference: {fileID: 0}
     - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 0.000002730136
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_BoundingSphereOverride.z
-      value: 2.619356e+20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8673963428031208832, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_RootOrder

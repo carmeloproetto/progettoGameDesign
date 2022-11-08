@@ -70,7 +70,7 @@ I remember that time in the park and it’s none of your business what happens t
 		What would these studies consist of? #speaker:Lad
 -… #speaker:Dad
 As I thought. You have no idea what will happen to them in the future, but you know the end of lab animals. #speaker:Lad
-Well I’ll tell you what happens now. First of all, I’m gonna get them out of this prison before you dissect them. Then together with my friend who is out here we will free them in the nearest nature reserve, where they can live peacefully in their habitat. #speaker:Lad
+Well, I’ll tell you what happens now. First of all, I’m gonna get them out of this prison before you dissect them. Then, together with my friend who is out here, we will free them in the nearest nature reserve, where they can live peacefully in their habitat. #speaker:Lad
 	*[I would like to help you.]
 		You're right, I’ve seen their conditions too. I don’t want anything bad happen to them. #speaker:Dad
 		{feeling < 0.5: -> noFeeling2 | -> yesFeeling2}

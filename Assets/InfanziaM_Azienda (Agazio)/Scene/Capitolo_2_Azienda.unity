@@ -13661,7 +13661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewRadius: 5.78
-  viewAngle: 154
+  viewAngle: 62
   targetMask:
     serializedVersion: 2
     m_Bits: 64
