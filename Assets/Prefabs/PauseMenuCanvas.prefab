@@ -255,17 +255,17 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 7
     m_MaxSize: 80
-    m_Alignment: 1
+    m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.01
-  m_Text: "Are you ready to make a difference? \n\nUse A+D to move the character
-    on the left or on the right.\nUse SPACE to complete faster the sentence during
-    a dialogue.\nUse ENTER to answer questions during dialogues.\nUse E to complete
-    a special task. \nUse ESC to enter in the pause menu.\nUse R to reload the current
-    scene.\n\nDiscover your impact!"
+  m_Text: "Are you ready to make a difference? \r\n\r\nUse A/D or arrows to move
+    the character, SHIFT to run and SPACE to jump.\r\nUse SPACE to complete faster
+    the sentence during a dialogue.\r\nUse ENTER to answer questions during dialogues.\r\nUse
+    E to complete a special task. \r\nUse ESC to enter in the pause menu.\r\nUse
+    R to reload the current scene.\r\n\r\nDiscover your impact!"
 --- !u!1 &2111584468843997929
 GameObject:
   m_ObjectHideFlags: 0

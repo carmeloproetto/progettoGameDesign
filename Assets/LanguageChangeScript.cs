@@ -80,12 +80,12 @@ public class LanguageChangeScript : MonoBehaviour
             backBtn2Text.text = "INDIETRO";
             backBtn3Text.text = "INDIETRO";
 
-            tutorialText.text = "Sei pronto per fare la differenza? \r\n" +
-                               "Usa A+D per muovere il tuo personaggio a sinistra e destra.\r\n" +
+            tutorialText.text = "Sei pronto per fare la differenza? \r\n\n" +
+                               "Usa A+D o le frecce per muovere il tuo personaggio, SHIFT per correre e SPAZIO per saltare.\r\n" +
                                "Usa SPAZIO per completare più velocemente le frasi nei dialoghi.\r\n" +
                                "Usa INVIO per rispondere alle domande durante i dialoghi.\r\n" +
                                "Usa E per completare un task speciale.\r\n" +
-                               "Usa ESC per aprire il menu di pausa.\r\n" + 
+                               "Usa ESC per aprire il menu di pausa.\r\n" +
                                "Usa R per ricaricare la scena corrente.\r\n\n" +
                                "Scopri il tuo impatto!";
 
@@ -124,8 +124,8 @@ public class LanguageChangeScript : MonoBehaviour
             backBtn2Text.text = "BACK";
             backBtn3Text.text = "BACK";
 
-            tutorialText.text = "Are you ready to make a difference? \r\n" +
-                                "Use A+D to move the character on the left or on the right.\r\n" +
+            tutorialText.text = "Are you ready to make a difference? \r\n\n" +
+                                "Use A/D or arrows to move the character, SHIFT to run and SPACE to jump.\r\n" +
                                 "Use SPACE to complete faster the sentence during a dialogue.\r\n" +
                                 "Use ENTER to answer questions during dialogues.\r\n" +
                                 "Use E to complete a special task.\r\n" +
