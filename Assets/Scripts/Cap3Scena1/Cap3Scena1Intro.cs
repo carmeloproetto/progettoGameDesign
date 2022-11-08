@@ -24,7 +24,7 @@ public class Cap3Scena1Intro : MonoBehaviour
     {
         scene = SceneManager.GetActiveScene();
         if(scene.name == "Cap3_scena1"){
-            StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioIntro", 2, 0));
+            StartCoroutine(FindObjectOfType<AudioManager>().FadeOut("audioIntro", 1, 0));
             StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("coffee", 4, 0.007f));
         }
         else{
