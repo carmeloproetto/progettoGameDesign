@@ -16,7 +16,7 @@ We don't have enough money in the town to solve an already lost cause. Did you s
 	*[Don't you get it yet?]
 		The woods can still give us so much and it would be stupid not try to save them #speaker:Mom
 		You’re the one who doesn’t understand that it’s all for nothing. #speaker:Mayor
--With all these storms it has become impossible to monitor plant health and and that damn bug spreads like wildfire among the weakened trees. We’re surrounded by infested woods. #speaker:Mayor
+-With all these storms it has become impossible to monitor plant health and that damn bug spreads like wildfire among the weakened trees. We’re surrounded by infested woods. #speaker:Mayor
 The most important thing now is to quickly invest what is left in something that will make us big profits.
 This company that has come forward has already had excellent yields in fields of other regions in past years. They assured me that production will increase like never before and we will be able to sell twice as much.
 In this way the money lost with the sale of wood will be offset by those of the harvest. Citizens will be happy. #speaker:Mayor
