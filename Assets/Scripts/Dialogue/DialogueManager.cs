@@ -224,10 +224,7 @@ public class DialogueManager : MonoBehaviour
     }
 
 
-    private IEnumerator disableSpaceFunction(){
-        yield return new WaitForSeconds(1f);
-        disableSpace = false;
-     }
+    
 
 
     public void EnterDialogueMode(TextAsset inkJSON){
@@ -455,6 +452,8 @@ public class DialogueManager : MonoBehaviour
 
         for(int i = index; i < choices.Length; i++){
             viewChoice = false;
+            disableSpace = true;
+            StartCoroutine(disableSpaceFunction());
             child1.SetActive(true);
             child2.SetActive(false);
             child3.SetActive(false);
@@ -548,5 +547,10 @@ public class DialogueManager : MonoBehaviour
             textmeshPro2.color = new Color32(231, 231, 231, 50);
             setFirstActiveBtnSx = false;
         }
+    }
+
+    private IEnumerator disableSpaceFunction(){
+        yield return new WaitForSeconds(0.5f);
+        disableSpace = false;
     }
 }

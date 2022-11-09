@@ -279,10 +279,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
         }
     }   
 
-    private IEnumerator disableSpaceFunction(){
-        yield return new WaitForSeconds(0.3f);
-        disableSpace = false;
-     }
+    
 
 
     public void EnterDialogueMode(TextAsset inkJSON){
@@ -456,6 +453,8 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
 
         for(int i = index; i < choices.Length; i++){
             viewChoice = false;
+            disableSpace = true;
+            StartCoroutine(disableSpaceFunction());
             child1.SetActive(true);
             child2.SetActive(false);
             child3.SetActive(false);
@@ -573,6 +572,11 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
             setFirstActiveBtnSx = false;
         }
     }
+
+    private IEnumerator disableSpaceFunction(){
+        yield return new WaitForSeconds(0.5f);
+        disableSpace = false;
+     }
 
 }
 

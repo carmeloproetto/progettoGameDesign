@@ -138,6 +138,8 @@ public class DialogueManagerCap2_3 : MonoBehaviour
         if((Input.GetKeyDown("space") || Input.GetKeyDown("return")) && viewChoice == false){
             //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
             if(disableSpace == false){
+                disableSpace = true;
+                StartCoroutine(disableSpaceFunction());
                 FindObjectOfType<AudioManager>().Play("ui-text");
                 line++;
                 Debug.Log("line: " + line + " countDialogue: " + countDialogue);
@@ -323,6 +325,8 @@ public class DialogueManagerCap2_3 : MonoBehaviour
 
         for(int i = index; i < choices.Length; i++){
             viewChoice = false;
+            disableSpace = true;
+            StartCoroutine(disableSpaceFunction());
             child1.SetActive(true);
             child2.SetActive(false);
             child3.SetActive(false);
@@ -400,6 +404,11 @@ public class DialogueManagerCap2_3 : MonoBehaviour
             textmeshPro2.color = new Color32(231, 231, 231, 50);
             setFirstActiveBtnSx = false;
         }
+    }
+
+    private IEnumerator disableSpaceFunction(){
+        yield return new WaitForSeconds(0.5f);
+        disableSpace = false;
     }
 
 }
