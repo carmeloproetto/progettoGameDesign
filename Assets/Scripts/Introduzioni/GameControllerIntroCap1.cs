@@ -88,7 +88,7 @@ public class GameControllerIntroCap1 : MonoBehaviour
 
             }
         }
-        else if(Input.GetKeyDown(KeyCode.E)){
+        else if(Input.GetKeyDown(KeyCode.Z)){
             this.GetComponent<Canvas>().enabled = false;
             canvasSkip.SetActive(false);
             
