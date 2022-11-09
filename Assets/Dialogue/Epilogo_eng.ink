@@ -16,7 +16,7 @@ Do you remember those research calls for the extraction of samples from glaciers
 I think you’ve only mentioned it a few hundred times in the last few months, so I might have half an idea. #speaker:Dad
 Well I didn’t tell you one thing though. My team participated and we won! #speaker:Mom
 We’re gonna do some core drilling. I hope with all my heart I can get some relevant results, maybe we can get something moving high places... The issue of climate change needs to be brought to light. #speaker:Mom
-But that’s great! That’s an amazing new! #speaker:Dad
+But that’s great! That’s an amazing news! #speaker:Dad
 And there is more! #speaker:Mom
 {espulsione == 0: -> noEspulso | -> espulso}
 

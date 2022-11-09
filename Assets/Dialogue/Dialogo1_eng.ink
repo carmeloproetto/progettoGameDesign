@@ -14,7 +14,7 @@ Have you visited many places?
 		Maybe you don’t really want to talk.
 	* [Not much actually. ]
 
-		Originally my family was made up of nomadic fishermen who toured the entire archipelago, but when I was born my parents decided to settle on the island they considered safer.
+		Originally my family was made up of nomadic fishermen who toured the entire archipelago, but when I was born my parents decided to settle on the island they considered safer. #speaker:Dad
 	 	What do you mean with "safer"? #speaker:Mom
 
 	 	 Well... Sea nomads survive through fishing and trade. Years ago fishermen discovered a substance to numb the fish and increase the catch, but at the same time both the sea and people have changed. #speaker:Dad
