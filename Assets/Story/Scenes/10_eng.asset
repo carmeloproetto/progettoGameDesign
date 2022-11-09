@@ -16,9 +16,9 @@ MonoBehaviour:
   - text: They both decided to choose work areas that would allow them to contribute
       positively to the care of our planet and humanity.
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
-  - text: My mother attended the MSc in Biology to understand the man's impact on
-      nature, while my father in Earth Science to participate in interventions' programs
-      of risk areas.
+  - text: My mother attended the MSc in Biology to understand the human's impact
+      on nature, while my father in Earth Science to participate in interventions
+      programs of risk areas.
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   background: {fileID: 21300000, guid: 7709396bfc02492408f5ccb108144ef2, type: 3}
   nextScene: {fileID: 0}
