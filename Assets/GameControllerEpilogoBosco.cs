@@ -40,7 +40,7 @@ public class GameControllerEpilogoBosco : MonoBehaviour
         }
 
 
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             if (bottomBar.IsCompleted() && wait)
             {       

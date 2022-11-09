@@ -36,7 +36,7 @@ public class GameControllerIntroCap3 : MonoBehaviour
         if(PauseMenu.GameIsPaused)
             return;
             
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             if (bottomBar.IsCompleted())
             {
@@ -63,7 +63,7 @@ public class GameControllerIntroCap3 : MonoBehaviour
                     levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
             }
-            else if (!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            else if (!bottomBar.IsCompleted() && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)))
             {
                 bottomBar.EndCurrentSentence();
             }

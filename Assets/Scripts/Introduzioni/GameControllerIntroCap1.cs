@@ -48,7 +48,7 @@ public class GameControllerIntroCap1 : MonoBehaviour
             return;
         
         
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Space)  || Input.GetKeyDown(KeyCode.Return))
         {
             
                 
@@ -76,7 +76,7 @@ public class GameControllerIntroCap1 : MonoBehaviour
                     levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
                 }
 
-            }else if(!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            }else if(!bottomBar.IsCompleted() && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)))
             {
                 bottomBar.EndCurrentSentence();
             }

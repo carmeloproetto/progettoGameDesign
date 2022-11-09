@@ -62,7 +62,7 @@ public class GameControllerFineCap3 : MonoBehaviour
         if(PauseMenu.GameIsPaused)
             return;
             
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             if(DialogueManagerCap3_2.finale == 1){
                 if (bottomBar.IsCompleted())
@@ -90,7 +90,7 @@ public class GameControllerFineCap3 : MonoBehaviour
                     
                     }
                 }
-                else if (!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+                else if (!bottomBar.IsCompleted() && (Input.GetKeyDown(KeyCode.Space) && Input.GetKeyDown(KeyCode.Return)))
                 {
                     bottomBar.EndCurrentSentence();
                 }

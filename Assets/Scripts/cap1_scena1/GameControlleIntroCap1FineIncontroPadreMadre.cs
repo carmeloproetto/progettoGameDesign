@@ -56,7 +56,7 @@ public class GameControlleIntroCap1FineIncontroPadreMadre : MonoBehaviour
             StartCoroutine(ActiveSpace());
         }
 
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             if (bottomBar.IsCompleted() && !disableSpace)
             {        
@@ -81,7 +81,7 @@ public class GameControlleIntroCap1FineIncontroPadreMadre : MonoBehaviour
                     setterPart2.SetActive(true);
                 //}
             }
-            else if(!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            else if(!bottomBar.IsCompleted() && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)))
             {
                 bottomBar.EndCurrentSentence();
             }

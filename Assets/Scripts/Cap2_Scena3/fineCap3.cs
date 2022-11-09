@@ -60,7 +60,7 @@ public class fineCap3 : MonoBehaviour
         if(PauseMenu.GameIsPaused)
             return;
             
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             if (bottomBar.IsCompleted())
             {
@@ -133,7 +133,7 @@ public class fineCap3 : MonoBehaviour
                     }
                 }
             }
-            else if (!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            else if (!bottomBar.IsCompleted() && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)))
             {
                 bottomBar.EndCurrentSentence();
             }

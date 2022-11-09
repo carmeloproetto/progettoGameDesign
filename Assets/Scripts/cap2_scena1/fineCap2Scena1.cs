@@ -33,7 +33,7 @@ public class fineCap2Scena1 : MonoBehaviour
             return;
         }
         
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             if (bottomBar.IsCompleted())
             {
@@ -43,7 +43,7 @@ public class fineCap2Scena1 : MonoBehaviour
                 this.GetComponent<Canvas>().enabled = false;
                 levelLoader.GetComponent<LevelLoaderScript>().loadScene = true;
             }
-            else if(!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            else if(!bottomBar.IsCompleted() && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)))
             {
                 bottomBar.EndCurrentSentence();
             }

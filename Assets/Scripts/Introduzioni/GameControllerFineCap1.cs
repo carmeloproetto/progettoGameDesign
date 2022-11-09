@@ -41,7 +41,7 @@ public class GameControllerFineCap1 : MonoBehaviour
             aux = false;
             }*/
 
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
         {
             if (bottomBar.IsCompleted())
             {
@@ -66,7 +66,7 @@ public class GameControllerFineCap1 : MonoBehaviour
                     //SceneManager.LoadScene("Cap2_Scena1_");
                 }
             }
-            else if (!bottomBar.IsCompleted() && Input.GetKeyDown(KeyCode.Space))
+            else if (!bottomBar.IsCompleted() && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)))
             {
                 bottomBar.EndCurrentSentence();
             }
