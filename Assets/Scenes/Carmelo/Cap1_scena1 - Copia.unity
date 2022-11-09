@@ -5370,7 +5370,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 835.7001, y: -361}
+  m_AnchoredPosition: {x: -804.30005, y: -361}
   m_SizeDelta: {x: -192.4557, y: -265.087}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180094891
@@ -9996,7 +9996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -276, y: 142}
+  m_AnchoredPosition: {x: -53, y: 142}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &336143404
@@ -29942,13 +29942,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.16452524, g: 0.2522561, b: 0.32922122, a: 1}
-  deepColor: {r: 0.41703945, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.16452506, g: 0.25225592, b: 0.32922104, a: 1}
+  deepColor: {r: 0.41703928, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.38
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 3.5
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30152908, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30152887, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0
@@ -29961,7 +29961,7 @@ MonoBehaviour:
   surfaceFoamCutoff: 0.43
   surfaceFoamDistortion: 1.24
   surfaceFoamBlend: 0.68
-  surfaceFoamColor1: {r: 0.023540407, g: 0.15282062, b: 0.21674734, a: 0.19215687}
+  surfaceFoamColor1: {r: 0.023540407, g: 0.15282044, b: 0.21674713, a: 0.19215687}
   surfaceFoamColor2: {r: 1, g: 1, b: 1, a: 0.35686275}
   surfaceFoamMovement: {x: 0.28, y: 0.03, z: 0.24, w: 0.01}
   surfaceFoamDirection1: 0.28
@@ -34286,7 +34286,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1161259962828613669, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 2.3510647e-38
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_Lightmapping
@@ -34302,15 +34302,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_BoundingSphereOverride.w
-      value: 8e-45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_BoundingSphereOverride.x
-      value: 1.7642e-41
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_BoundingSphereOverride.y
-      value: 0
+      value: 2.3510647e-38
       objectReference: {fileID: 0}
     - target: {fileID: 2678372671056156346, guid: 2538dd18425044f8c889136378c4a267, type: 3}
       propertyPath: m_BoundingSphereOverride.z
@@ -36700,7 +36700,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -125, y: -4}
+  m_AnchoredPosition: {x: -1765, y: -4}
   m_SizeDelta: {x: 200, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1410373085

@@ -16835,7 +16835,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 835.7001, y: -361}
+  m_AnchoredPosition: {x: -796.30005, y: -361}
   m_SizeDelta: {x: -192.4557, y: -265.087}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &866334565
@@ -17293,7 +17293,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -125, y: -4}
+  m_AnchoredPosition: {x: -1757, y: -4}
   m_SizeDelta: {x: 200, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &901007059
@@ -25845,7 +25845,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -276, y: 142}
+  m_AnchoredPosition: {x: -38, y: 142}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1523472281
@@ -84734,7 +84734,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: -4.8504933e-10, z: 7.78e-43, w: -0.0000009930081}
+  m_BoundingSphereOverride: {x: 0, y: 1.7164054e-36, z: 1.7516733e-36, w: 1.704654e-36}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -91448,7 +91448,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.0000000026078173, y: -0.00000032269463, z: 7.78e-43, w: 1.28e-43}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 2.8e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
