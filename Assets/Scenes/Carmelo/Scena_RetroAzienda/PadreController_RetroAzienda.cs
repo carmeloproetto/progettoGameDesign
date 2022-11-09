@@ -33,6 +33,7 @@ public class PadreController_RetroAzienda : MonoBehaviour
     private bool _inputEnabled = true;
     private bool _jumpEnabled = true;
     private bool _backwardEnabled = true;
+    private bool _runEnabled = true; 
 
 
     // Start is called before the first frame update
@@ -86,11 +87,11 @@ public class PadreController_RetroAzienda : MonoBehaviour
             currAcceleration = -acceleration;
         }
 
-        if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.LeftShift))
+        if (_runEnabled && (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.LeftShift)))
         {
             StartCoroutine(ChangeSpeed(maxVelocity, 4f, 0.4f));
         }
-        else if (Input.GetKeyUp(KeyCode.RightShift) || Input.GetKeyUp(KeyCode.LeftShift))
+        else if ( maxVelocity != 2f && maxVelocity != 1f && (Input.GetKeyUp(KeyCode.RightShift) || Input.GetKeyUp(KeyCode.LeftShift)))
         {
             StartCoroutine(ChangeSpeed(maxVelocity, 2f, 0.4f));
         }
@@ -174,6 +175,15 @@ public class PadreController_RetroAzienda : MonoBehaviour
     public void EnableGravity()
     {
         _gravityValue = -9.81f;
+    }
+
+    public void EnableRun()
+    {
+        _runEnabled = true;
+    }
+    public void DisableRun()
+    {
+        _runEnabled = false; 
     }
 
     IEnumerator ChangeSpeed(float v_start, float v_end, float duration)

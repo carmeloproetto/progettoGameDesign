@@ -24,7 +24,7 @@ public class FillingUpQTE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && !ringFilled )
+        if (Input.GetKeyDown(KeyCode.Z) && !ringFilled )
         {
             Debug.Log("Pressed E button");
             fillAmount += .1f; 

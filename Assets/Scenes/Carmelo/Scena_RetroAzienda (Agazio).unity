@@ -629,7 +629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
-  icon: {fileID: 21300000, guid: a48c205d27b9d4c9ab97d3f274d0bc6c, type: 3}
+  icon: {fileID: 21300000, guid: 13f8475b201d04807a4cc3c9ea68521f, type: 3}
   italian_text: PER INTERAGIRE
   english_text: TO INTERACT
   destination: {fileID: 715831745}
@@ -39407,7 +39407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497107, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7195858161761497107, guid: ad9761a7d647da34eb386f0b633a9868, type: 3}
       propertyPath: m_TagString
@@ -44603,7 +44603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
-  icon: {fileID: 21300000, guid: a48c205d27b9d4c9ab97d3f274d0bc6c, type: 3}
+  icon: {fileID: 21300000, guid: 13f8475b201d04807a4cc3c9ea68521f, type: 3}
   italian_text: PER INTERAGIRE
   english_text: TO INTERACT
   rightArmPin: {fileID: 373012927}
@@ -51902,7 +51902,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: E
+  m_Text: Z
 --- !u!222 &4589929832309183097
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54544,13 +54544,13 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   colorGradientTexture: {fileID: 0}
-  shallowColor: {r: 0.032529376, g: 0.09941045, b: 0.16028821, a: 1}
-  deepColor: {r: 0.41698343, g: 0.6484578, b: 0.7830188, a: 1}
+  shallowColor: {r: 0.032529376, g: 0.099401616, b: 0.16027904, a: 1}
+  deepColor: {r: 0.41697374, g: 0.6484578, b: 0.7830188, a: 1}
   colorDepth: 0.35
   horizonColor: {r: 0.70554465, g: 0.7869793, b: 0.99056596, a: 1}
   horizonDistance: 2.6
   shoreFade: 0
-  shoreColor: {r: 0, g: 0.98039216, b: 0.30147305, a: 0}
+  shoreColor: {r: 0, g: 0.98039216, b: 0.30146337, a: 0}
   shoreStrength: 0
   shoreBlend: 0
   shoreDepth: 0

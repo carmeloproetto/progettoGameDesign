@@ -159,7 +159,7 @@ public class PadreStudenteController : MonoBehaviour
                     _auxCount = 0;
                 }
 
-                if (Input.GetKeyDown("space"))
+                if (Input.GetKeyDown(KeyCode.RightArrow))
                 {
                     qteVelocity += 1.02f;
                     if (qteVelocity > 5f) qteVelocity = 5f;
@@ -299,7 +299,7 @@ public class PadreStudenteController : MonoBehaviour
             }
 
             //binSprite.SetActive(true);
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.Z))
             {
                 //Debug.Log("Hai premuto E sei un pazzo");
                 jumpQTE = true;

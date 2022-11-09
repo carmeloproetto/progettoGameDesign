@@ -1713,7 +1713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
-  icon: {fileID: 21300000, guid: a48c205d27b9d4c9ab97d3f274d0bc6c, type: 3}
+  icon: {fileID: 21300000, guid: 13f8475b201d04807a4cc3c9ea68521f, type: 3}
   italian_text: PER APRIRE L'ARMADIO
   english_text: TO OPEN THE WARDROBE
 --- !u!1001 &348120104
@@ -3926,7 +3926,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
-  icon: {fileID: 21300000, guid: a48c205d27b9d4c9ab97d3f274d0bc6c, type: 3}
+  icon: {fileID: 21300000, guid: 13f8475b201d04807a4cc3c9ea68521f, type: 3}
   italian_text: PER INTERAGIRE CON IL PC
   english_text: TO INTERACT WITH PC
 --- !u!54 &643490241
@@ -4371,7 +4371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
-  icon: {fileID: 21300000, guid: a48c205d27b9d4c9ab97d3f274d0bc6c, type: 3}
+  icon: {fileID: 21300000, guid: 13f8475b201d04807a4cc3c9ea68521f, type: 3}
   italian_text: PER PREMERE IL PULSANTE SOS
   english_text: TO PUSH THE SOS BUTTON
   totalSeconds: 2
@@ -8585,7 +8585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
-  icon: {fileID: 21300000, guid: a48c205d27b9d4c9ab97d3f274d0bc6c, type: 3}
+  icon: {fileID: 21300000, guid: 13f8475b201d04807a4cc3c9ea68521f, type: 3}
   italian_text: PER INTERAGIRE CON LA PIANTA
   english_text: TO INTERACT WITH THE PLANT
   dipendente_1: {fileID: 823345522115442647}
@@ -10243,7 +10243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
-  icon: {fileID: 21300000, guid: a48c205d27b9d4c9ab97d3f274d0bc6c, type: 3}
+  icon: {fileID: 21300000, guid: 13f8475b201d04807a4cc3c9ea68521f, type: 3}
   italian_text: PER APRIRE LE ANTE
   english_text: TO OPEN THE DOORS
 --- !u!54 &1825355144
@@ -10446,7 +10446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
-  icon: {fileID: 21300000, guid: a48c205d27b9d4c9ab97d3f274d0bc6c, type: 3}
+  icon: {fileID: 21300000, guid: 13f8475b201d04807a4cc3c9ea68521f, type: 3}
   italian_text: PER CHIUDERE LE ANTE
   english_text: TO CLOSE THE DOORS
   openTrigger: {fileID: 1825355145}

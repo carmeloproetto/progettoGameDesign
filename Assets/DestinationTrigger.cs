@@ -23,6 +23,7 @@ public class DestinationTrigger : MonoBehaviour
 
             player.GetComponent<Animator>().SetBool("isPushing", false);
             player.GetComponent<PadreController_RetroAzienda>().DisableInput();
+            player.GetComponent<PadreController_RetroAzienda>().EnableRun();
             enableTransition = true;
 
             //player.GetComponent<PadreController_RetroAzienda>().EnableJump();

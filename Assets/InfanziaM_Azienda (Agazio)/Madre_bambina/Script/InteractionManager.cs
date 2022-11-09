@@ -68,7 +68,7 @@ public class InteractionManager : MonoBehaviour
 
     private void Update()
     {
-        if( interactableObject != null && interactableObject.interactable && Input.GetKeyDown(KeyCode.E) )
+        if( interactableObject != null && interactableObject.interactable && Input.GetKeyDown(KeyCode.Z) )
         {
             interactableObject.Interact();
             GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().Play("ding_ui");

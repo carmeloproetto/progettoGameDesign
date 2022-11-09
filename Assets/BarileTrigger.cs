@@ -25,6 +25,7 @@ public class BarileTrigger : InteractableObject
             //disabilito lo spostamento all'indietro e salto del player
             _player.GetComponent<PadreController_RetroAzienda>().DisableBackward();
             _player.GetComponent<PadreController_RetroAzienda>().DisableJump();
+            _player.GetComponent<PadreController_RetroAzienda>().DisableRun();
             _player.GetComponent<PadreController_RetroAzienda>().maxVelocity = 1f;
 
             Sequence mySequence = DOTween.Sequence()
@@ -65,6 +66,7 @@ public class BarileTrigger : InteractableObject
             //disabilito lo spostamento all'indietro e salto del player
             _player.GetComponent<PadreController_RetroAzienda>().DisableBackward();
             _player.GetComponent<PadreController_RetroAzienda>().DisableJump();
+            _player.GetComponent<PadreController_RetroAzienda>().DisableRun();
             _player.GetComponent<PadreController_RetroAzienda>().maxVelocity = 1f;
 
 

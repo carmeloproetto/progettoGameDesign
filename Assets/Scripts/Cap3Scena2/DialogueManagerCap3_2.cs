@@ -266,7 +266,7 @@ public class DialogueManagerCap3_2 : MonoBehaviour{
 
         //MINI GIOCO CORSA
         if(startCorsa){
-            if(Input.GetKeyDown("space")){  
+            if(Input.GetKeyDown(KeyCode.RightArrow)){  
                 FindObjectOfType<AudioManager>().Stop("coffee");
                 StartCoroutine(FindObjectOfType<AudioManager>().FadeIn("QteCorsa", 3, 1)); 
                 startCorsa = false;

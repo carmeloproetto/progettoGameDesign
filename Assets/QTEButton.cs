@@ -31,7 +31,7 @@ public class QTEButton : MonoBehaviour
                 _ringImage.fillAmount = fillingValue;
                 _currTime += Time.deltaTime;
 
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.Z))
                 {
                     keyPressed = true;
 

@@ -46,7 +46,7 @@ public class DialogueTriggerCap2_2 : MonoBehaviour
     private void Update(){
 
         if(playerInRange && !DialogueManagerCap2_2.GetInstance().dialogueIsPlaying){
-            if(Input.GetKeyDown("e") || startConv){
+            if(Input.GetKeyDown(KeyCode.Z) || startConv){
                 //visualCue.SetActive(false);
                 if(this.name == "triggerDialogueZoneGuardia"){
                     mom.GetComponent<DialogueManagerCap2_2>().whoSpeak = "Guardia";

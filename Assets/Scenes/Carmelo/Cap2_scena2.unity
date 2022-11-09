@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 467117973}
-  m_IndirectSpecularColor: {r: 0.14122896, g: 0.33630568, b: 0.6380209, a: 1}
+  m_IndirectSpecularColor: {r: 0.1412368, g: 0.33631372, b: 0.63772166, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1822,7 +1822,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
-  icon: {fileID: 21300000, guid: a48c205d27b9d4c9ab97d3f274d0bc6c, type: 3}
+  icon: {fileID: 21300000, guid: 13f8475b201d04807a4cc3c9ea68521f, type: 3}
   italian_text: PER PARLARE CON LA GUARDIA
   english_text: TO TALK WITH THE GUARD
   player: {fileID: 223255114}
@@ -17195,7 +17195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
-  icon: {fileID: 21300000, guid: a48c205d27b9d4c9ab97d3f274d0bc6c, type: 3}
+  icon: {fileID: 21300000, guid: 13f8475b201d04807a4cc3c9ea68521f, type: 3}
   italian_text: PER PARLARE CON IL MANIFESTANTE
   english_text: TO TALK WITH THE DEMONSTRATOR
   player: {fileID: 223255114}
@@ -21355,7 +21355,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
-  icon: {fileID: 21300000, guid: a48c205d27b9d4c9ab97d3f274d0bc6c, type: 3}
+  icon: {fileID: 21300000, guid: 13f8475b201d04807a4cc3c9ea68521f, type: 3}
   italian_text: PER PARLARE CON IL MANIFESTANTE
   english_text: TO TALK WITH THE DEMONSTRATOR
   player: {fileID: 223255114}
@@ -32683,7 +32683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: 1
-  icon: {fileID: 21300000, guid: a48c205d27b9d4c9ab97d3f274d0bc6c, type: 3}
+  icon: {fileID: 21300000, guid: 13f8475b201d04807a4cc3c9ea68521f, type: 3}
   italian_text: PER PARLARE CON IL MANIFESTANTE
   english_text: TO TALK WITH THE DEMONSTRATOR
   player: {fileID: 223255114}
