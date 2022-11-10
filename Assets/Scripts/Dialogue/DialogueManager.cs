@@ -69,6 +69,8 @@ public class DialogueManager : MonoBehaviour
     //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
     public bool disableSpace;
 
+    public bool disableSpace_camminataParco;
+
     //serve per verificare se il primo incontro dei genitori è andato a buon fine o meno, dipende dalla risposta alla seconda domanda nel cap 1
     public bool positiveMeet;
 
@@ -100,6 +102,8 @@ public class DialogueManager : MonoBehaviour
         viewChoice = false;
         countDialogue = 1;
         disableSpace = false;
+
+        disableSpace_camminataParco = false;
         //audioManager.GetComponent<AudioManager>().Play("birdsAudio");
     }
 
@@ -148,6 +152,11 @@ public class DialogueManager : MonoBehaviour
                 canvasTutorialDialogo.GetComponent<Canvas>().enabled = true;
             }
 
+            if(disableSpace_camminataParco == true){
+                 canvasTutorialDialogo.GetComponent<Canvas>().enabled = false;
+            }
+
+
         setFirstActiveButton();
         
 
@@ -157,7 +166,7 @@ public class DialogueManager : MonoBehaviour
 
         if((Keyboard.current.spaceKey.isPressed || Keyboard.current.enterKey.isPressed) && viewChoice == false){
             //disable space serve nelle scene dove la conversazione deve andare avanti in automatico senza premere lo spazio
-            if(disableSpace == false){
+            if(disableSpace == false && disableSpace_camminataParco == false){
                 FindObjectOfType<AudioManager>().Play("ui-text");
                 //disableSpace = true;
                 //StartCoroutine(disableSpaceFunction());
@@ -167,6 +176,7 @@ public class DialogueManager : MonoBehaviour
                 if(line == 1 && countDialogue == 3 && !cartellone){
                     Debug.Log("Siamo nella terza conversazione alla fine della prima frase frase!");
                     disableSpace = true;
+                    disableSpace_camminataParco = true;
                     dad.GetComponent<PlayerController>().enabled = false;
                     dad.GetComponent<limitZone>().enabled = false;
                     mom.GetComponent<followDestination3>().enabled = false;

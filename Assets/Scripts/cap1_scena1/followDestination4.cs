@@ -14,7 +14,7 @@ public class followDestination4 : MonoBehaviour
     private float velocity = 2f;
 
     public GameObject dlgManger;
-
+    public GameObject canvasTutorialDialogo;
 
 
     void Start()
@@ -48,6 +48,8 @@ public class followDestination4 : MonoBehaviour
         yield return new WaitForSeconds(1);
         dlgManger.GetComponent<DialogueManager>().ContinueStoryByOtherScript();
         dlgManger.GetComponent<DialogueManager>().disableSpace = false;
+        dlgManger.GetComponent<DialogueManager>().disableSpace_camminataParco = false;
+        canvasTutorialDialogo.GetComponent<Canvas>().enabled = true;
     }
 
 
