@@ -19,7 +19,7 @@ Have you visited many places?
 
 	 	 Well... Sea nomads survive through fishing and trade. Years ago fishermen discovered a substance to numb the fish and increase the catch, but at the same time both the sea and people have changed. #speaker:Dad
 	 	 They began to lose vitality and get sick. When the storms also increased, my parents decided to stop on an island where they could work safely away from the sea. #speaker:Dad
-	 	 In the end, however, the storms became violent even on the mainland and so there was the flood that flooded my house... #speaker:Dad
+	 	 In the end, however, the storms became violent even on the mainland and so there was the flood that inundated my island... #speaker:Dad
 		-- I’m really sorry for what happened, it must have been horrible for you. I’m sure you’ll fit right in here. #speaker:Mom
 
 - Come on, let’s keep seeing the city. #speaker:Mom

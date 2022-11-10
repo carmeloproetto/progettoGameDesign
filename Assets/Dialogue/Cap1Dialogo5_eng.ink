@@ -26,7 +26,7 @@ Get off him! #speaker:Dad
 What do you want? #speaker:Bully
 Good job, you find a sociopathic friend like you. You're both fanatics! #speaker:Bully
 Thank you, you've been so brave helping me. That idiot finally got the lesson he deserved. #speaker:Lad 
-I’ve been screaming for days for him to stop walking around with this kind of rigged scooter. It throw out disgusting smoke and it scares the animals in the park. He also endangers dogs and cats speeding with his friends. #speaker:Lad
+I’ve been screaming for days for him to stop walking around with this kind of rigged scooter. It throws out disgusting smoke and it scares the animals in the park. He also endangers dogs and cats speeding with his friends. #speaker:Lad
 I'm glad I finally found someone else who cares about protecting the weakest. #speaker:Lad
 ->final
 

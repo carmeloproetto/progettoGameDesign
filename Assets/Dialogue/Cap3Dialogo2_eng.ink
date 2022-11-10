@@ -3,7 +3,7 @@ VAR feeling = 1
 -> main
 
 === main ===
-Ehi! Where do you go with that? #speaker:Dad
+Ehi! Where are you going with that? #speaker:Dad
 	*[Who are you?]
 		->first
 		

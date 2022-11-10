@@ -29,7 +29,7 @@ My team is looking for another researcher. Even if you haven’t finished your P
 ->Continue
 
 === Continue ===
-Are you suggesting I follow you to Antarctica to retrieve columns of ice to be observed under a microscope all day? I think I could not have asked for a better opportunity to give my contribution. #speaker:Dad
+Are you suggesting I follow you to Antarctica to retrieve and observe columns of ice under a microscope all day? I think I could not have asked for a better opportunity to give my contribution. #speaker:Dad
 ->DONE
 
 === function changeEspulsione(newEspulsione) ===

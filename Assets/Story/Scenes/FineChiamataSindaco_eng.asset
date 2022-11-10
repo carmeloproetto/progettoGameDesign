@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sentences:
   - text: My mother did not understand exactly what was happening, but she thought
-      that in order to get a clearer idea, she should visit the farm offices.
+      that in order to get a clearer idea, she should have visit the farm offices.
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   background: {fileID: 0}
   nextScene: {fileID: 0}

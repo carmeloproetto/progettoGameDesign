@@ -16,7 +16,7 @@ MonoBehaviour:
   - text: In the end, my mother understood why the company was in such a hurry.
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   - text: In that moment she was lost. She decided that the best thing to do would
-      be to talk to his father and try to solve the issue by seeking his support.
+      have been to talk to her father and try to solve the issue by seeking his support.
     speaker: {fileID: 11400000, guid: 91663541b8829dc479111001c9464fe4, type: 2}
   background: {fileID: 0}
   nextScene: {fileID: 0}
