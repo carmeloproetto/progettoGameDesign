@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -33,15 +34,17 @@ public class PlayerController : MonoBehaviour
     private bool _inputEnabled = true;
     private bool _jumpEnabled = true;
     private bool _rotationEnabled = true; 
-    private bool _backwardEnabled = true; 
+    private bool _backwardEnabled = true;
 
-    
+    private Scene scene;
+
     // Start is called before the first frame update
     void Start()
     {
         _controller = GetComponent<CharacterController>();
         curTarDirection = transform.forward;
         _animator = this.GetComponent<Animator>();
+        scene = SceneManager.GetActiveScene();
     }
 
     // Update is called once per frame
@@ -137,6 +140,11 @@ public class PlayerController : MonoBehaviour
             this.GetComponent<Animator>().applyRootMotion = true;
         }
 
+        if (scene.name == "Cap1_scena1 - Copia")
+        {
+            Debug.Log("Tutto apposto!");
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -21.5f);
+        }
     }
 
     public void SetTargetDirection(Vector3 targetDirection)

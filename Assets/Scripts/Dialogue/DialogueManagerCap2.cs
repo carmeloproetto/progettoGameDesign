@@ -402,7 +402,7 @@ public class DialogueManagerCap2 : MonoBehaviour
             Debug.Log("lo spazio deve rimanere disabilitato");
         }
         else{
-            yield return new WaitForSeconds(0.4f);
+            yield return new WaitForSeconds(0.8f);
             disableSpace = false;
         }
     }
