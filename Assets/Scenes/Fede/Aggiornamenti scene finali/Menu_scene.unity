@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.04568377, g: 0.023627326, b: 0.10748316, a: 1}
+  m_IndirectSpecularColor: {r: 0.02388836, g: 0.022714615, b: 0.08769398, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -38865,9 +38865,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Are you ready to make a difference? \n\nUse A+D to move the character
+  m_Text: "Are you ready to make a difference? \n\nUse A/D to move the character
     on the left or on the right.\nUse SPACE to complete faster the sentence during
-    a dialogue.\nUse ENTER to answer questions during dialogues.\nUse E to complete
+    a dialogue.\nUse ENTER to answer questions during dialogues.\nUse Z to complete
     a special task. \n\nDiscover your impact!"
 --- !u!224 &2111584470343674826
 RectTransform:
@@ -52530,7 +52530,7 @@ MonoBehaviour:
   m_Text: "Are you ready to make a difference? \r\n\r\nUse A/D or arrows to move
     the character, SHIFT to run and SPACE to jump.\r\nUse SPACE to complete faster
     the sentence during a dialogue.\r\nUse ENTER to answer questions during dialogues.\r\nUse
-    E to complete a special task. \r\nUse ESC to enter in the pause menu.\r\nUse
+    Z to complete a special task. \r\nUse ESC to enter in the pause menu.\r\nUse
     R to reload the current scene.\r\n\r\nDiscover your impact!"
 --- !u!95 &4746331876884358743
 Animator:

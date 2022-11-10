@@ -50,10 +50,10 @@ public class changeLanguagePauseMenu : MonoBehaviour
             backBtn3Text.text = "I N D I E T R O";
 
             tutorialText.text = "Sei pronto per fare la differenza? \r\n\n" +
-                               "Usa A+D o le frecce per muovere il tuo personaggio, SHIFT per correre e SPAZIO per saltare.\r\n" +
+                               "Usa A/D o le frecce per muovere il tuo personaggio, SHIFT per correre e SPAZIO per saltare.\r\n" +
                                "Usa SPAZIO per completare più velocemente le frasi nei dialoghi.\r\n" +
                                "Usa INVIO per rispondere alle domande durante i dialoghi.\r\n" +
-                               "Usa E per completare un task speciale.\r\n" +
+                               "Usa Z per completare un task speciale.\r\n" +
                                "Usa ESC per aprire il menu di pausa.\r\n" +
                                "Usa R per ricaricare la scena corrente.\r\n\n" +
                                "Scopri il tuo impatto!";
